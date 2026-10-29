@@ -74,8 +74,8 @@ Data/arithmetic are executable in `data\model-quotes.json` / `film budgets`.
   attempt 720 = **810 credits**, with no video retry reserve.
 
 These exclude rejected/retried identity frames, extra references, licensing and
-labour. Approval is currently zero. The earlier 1200 figure is not a verified
-allowance or spend ceiling. A complete plan must reserve repairs and reprice the
+labour. Approval is currently zero; no monthly allowance or spend ceiling is
+verified. A complete plan must reserve repairs and reprice the
 actual inputs, not merely fit nominal first attempts into a balance.
 
 ## Separate versus native sound

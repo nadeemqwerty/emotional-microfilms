@@ -1,9 +1,13 @@
-# Film language: direct the relationship
+# Film language: direct the intended experience
 
 Source basis: research F1-F11. The microfilm applications below are our production
 hypotheses, not universal cinematic rules or guarantees of AI compliance.
 
-## Build the emotional event
+## Build the selected lane's event
+
+The following relationship pattern applies to **connection-led** films, not every
+genre. Observational poetry can develop a visual pattern without a character
+choice; comedy can end on its punchline without an explanatory reaction shot.
 
 Write: **someone wants/needs something -> someone notices -> a voluntary action
 changes the relationship**. A fantasy reveal changes the conditions; the
@@ -59,8 +63,10 @@ For a transformed-world cut, write two lists:
 | Camera height, framing and dominant light direction | Context that changes the gesture's meaning |
 
 Generate states separately if necessary; assemble the cut in editing. The model
-does not have to perform an anatomical morph. Reaction must come after the reveal
-and remain visible long enough to understand. See [pacing.md](pacing.md).
+does not have to perform an anatomical morph. When a relationship response supplies
+the meaning, it follows the reveal and remains visible long enough to understand.
+Other lanes need readable payoff exposure and a justified ending rhythm, not a
+compulsory response/hold. See [pacing.md](pacing.md).
 
 ## Sound is part of the shot design
 

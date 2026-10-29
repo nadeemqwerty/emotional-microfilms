@@ -30,9 +30,11 @@
   "continuity": {
     "geography": "Pip screen-left, Anu screen-right. Both hands/mitts visible against the same uncluttered bench surface. Camera stays in front of bench.",
     "gesture": "Pip makes exactly two slow visible taps with its right mitt. Anu returns two taps with the right hand in shot b, then rests that hand beside the mitt, not intertwined.",
+    "propOwnership": "Pip controls its right mitt; Anu controls their right hand. Neither takes or interlocks the other's hand.",
     "light": "Warm window at camera-left throughout. Amber eyes brighten once and remain steady; do not use rapid flicker.",
     "mustNotChange": ["robot eye count", "robot scratch", "Anu's curls and overshirt", "hand ownership", "bench height", "screen positions"],
-    "match": "Cut after Pip's two-tap greeting; maintain the table edge height and Anu's downward gaze."
+    "match": "Cut after Pip's two-tap greeting; maintain the table edge height and Anu's downward gaze.",
+    "intentionalChanges": ["robot eyes brighten once", "Anu returns the greeting after Pip's taps", "slightly tighter second shot"]
   },
   "lightingPlan": {
     "motivation": "One warm workshop window on camera-left; robot eyes are small secondary accents.",

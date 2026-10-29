@@ -79,8 +79,10 @@ include necessary exclusions in prose when the actual form lacks such fields.
 ## Pacing belongs inside the packet
 
 Every packet has `pacing.hook`, hypothesis, continuous beat timeline, reveal
-evidence, cut reasons and unfilled actual-event times. The validator rejects
-missing response/hold or gaps/overlaps. It does not judge whether the intervals
+or payoff evidence, cut reasons and unfilled actual-event times. The validator
+rejects gaps/overlaps. Connection-led structure requires response/hold; a declared
+non-connection `lane-specific` structure instead requires an ending rationale.
+It does not judge whether the intervals
 are emotionally sufficient. The pacing reviewer must inspect actual media.
 
 ## Audio prompting

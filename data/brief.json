@@ -35,8 +35,8 @@
   },
   "budget": {
     "approvedCredits": 0,
-    "monthlyPlanningReferenceCredits": 1200,
-    "note": "The user's earlier 1200-credit figure is a planning reference, not a verified allowance or spend authorization."
+    "monthlyPlanningReferenceCredits": null,
+    "note": "No monthly allowance is verified or published here. Cost examples are illustrative configurations, not an account balance or spend authorization."
   },
   "approvals": {
     "researchAndProjectFiles": true,

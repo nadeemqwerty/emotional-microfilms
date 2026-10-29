@@ -7,8 +7,9 @@
   "engines": {"node": ">=20"},
   "scripts": {
     "film": "node scripts/film.mjs",
+    "reverse": "node scripts/reverse.mjs",
     "test": "node --test test",
-    "check": "node --check lib/workflow.mjs && node --check lib/assembly.mjs && node --check lib/music.mjs && node --check scripts/film.mjs && node --check scripts/assemble.mjs",
+    "check": "node --check lib/workflow.mjs && node --check lib/assembly.mjs && node --check lib/music.mjs && node --check lib/reverse.mjs && node --check scripts/film.mjs && node --check scripts/assemble.mjs && node --check scripts/reverse.mjs",
     "validate": "node scripts/film.mjs validate"
   }
 }

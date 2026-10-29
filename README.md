@@ -7,7 +7,11 @@ and hash-bound production reviews.
 
 **Current state:** research and preproduction tooling, not a finished film.
 No scenario selected, creative assets generated, credits spent, uploads or posts made.
+Synthetic tool-test fixtures are not creative reference analyses or films.
 The existing InterviewReel repository is untouched.
+Three independent AI critic lenses passed scoped preproduction readiness;
+the integrated suite has **44 passing tests**, including real FFmpeg smoke.
+See the critic record for actual scope and remaining media/perception gates.
 
 ## Start
 
@@ -43,15 +47,19 @@ Skill discovery is not proof it is loaded into the present conversation.
 7. [Lighting/shadows](docs/lighting-shadows.md),
    [creative range](docs/creative-range.md), and
    [nostalgic/modern songs and singing](docs/song-adaptation.md).
+8. [Reference-Reel reverse engineering](docs/reverse-engineering.md),
+   [request coverage](docs/request-coverage.md) and [critic review](docs/critic-review.md).
+   [Earlier opportunity context](docs/opportunity-context.md) retains makeovers,
+   buyer-first real estate and product creatives as separate directions.
 
 ## Project-local operating system
 
 | Component | Purpose |
 |---|---|
-| Six [skills](.github/skills/emotional-microfilm/SKILL.md) | Studio, cinematography, lighting, music/pacing, song adaptation, reviews |
+| Seven [skills](.github/skills/emotional-microfilm/SKILL.md) | Studio, cinematography, lighting, music/pacing, song adaptation, reviews, reference reverse engineering |
 | Six [reviewer roles](.github/agents/microfilm-story-reviewer.agent.md) | Story, pacing, visuals, sound, evidence, delivery; read-only |
 | [Roadmap](data/roadmap.json) | Dependency-based milestones with actual exit evidence |
-| [Five workflows](data/workflows.json) | Develop, previsualize, produce, sound/finish, learn |
+| [Seven workflows](data/workflows.json) | Develop, previsualize, produce, sound/finish, learn, reverse engineer, critic loop |
 | [Evidence-to-practice map](docs/evidence-to-practice.md) | Each finding becomes a rule, artifact, reviewer check and failure condition |
 
 Reviewer definitions do not run automatically or establish that a film was
@@ -87,10 +95,33 @@ zero. The three example packets are unapproved creative drafts, not selections.
 | Create a resumable selected-story workspace | Upload references; submit and resume provider jobs |
 | Hash assets, record evidence, gate stages | Review identities, physical contact and soundtrack rights |
 | Assemble approved local clips with FFmpeg | Approve a final export and publish to Instagram |
+| Prepare full-span reference frames/audio and validate timecoded analysis | Actually watch/listen, distinguish observations from inference, provide real feedback |
+| Build an original adaptation handoff from validated analysis/feedback | Authorize reference reuse, select a new story and approve generation |
 
 An assembly script is available as `node scripts\assemble.mjs <edit.json>
 --ffmpeg <ffmpeg.exe>`. It needs an existing encoder and actual local media.
 See the workflow for its tested scope. Nothing installs tools or fetches binaries.
+
+## Reverse-engineer a reference Reel
+
+Use the project-local
+[`microfilm-reverse-engineering` skill](.github/skills/microfilm-reverse-engineering/SKILL.md)
+and [its tool guide](docs/reverse-engineering.md). It covers source-bound timecoded
+screenplay/action, script/text, camera/blocking, lighting/shadows, pacing, sound and
+feedback-driven original alternatives. Private source media stays in ignored
+workspace. Frame sampling is not a full-motion/listening pass, and inaccessible
+Instagram links require an authorized local export. No paid generation runs.
+
+```powershell
+npm run reverse -- prepare --input 'C:\exports\reference.mp4' --workspace reference-001 --ffmpeg 'C:\path\to\ffmpeg.exe'
+npm run reverse -- expand --workspace reference-001 --start 2 --end 4 --interval 0.25 --ffmpeg 'C:\path\to\ffmpeg.exe'
+npm run reverse -- validate-review --workspace reference-001
+npm run reverse -- remake-brief --workspace reference-001 --feedback 'workspace\reference-001\feedback.json'
+```
+
+Preparation intentionally starts pending. The skill guides analysis and proposes
+original scripts; the CLI extracts evidence, checks recorded inspection, and
+compiles the chosen original direction, not autonomous video comprehension.
 
 **Pricing snapshot, not a spend proposal:** two 5-second silent PixVerse shots
 cost 126 credits per pair at the inspected 720p configuration and current eligible

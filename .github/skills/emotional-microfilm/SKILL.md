@@ -16,6 +16,10 @@ or grief. Read `docs\creative-range.md` and `data\creative-lanes.json`; visual
 style and subtle local texture are separate decisions.
 
 Read `AGENTS.md`, `data\brief.json` and the relevant production manifest first.
+For an input video/Reel, use `microfilm-reverse-engineering` and
+`docs\reverse-engineering.md` before adapting it. Inspect the entire source with
+honest visual/audio coverage; learn craft mechanisms, then propose an original
+story from actual user feedback. A public link is not reuse permission.
 Use the existing repo/workspace; do not make a second studio or overwrite assets.
 Distinguish **primary experimental evidence**, **professional craft guidance**,
 **vendor capability/price**, **project hypothesis**, and **actual viewer result**.
@@ -50,8 +54,12 @@ Resume an existing job; a timeout is not permission to submit it again.
 4. **User feedback:** show a compact diverse shortlist with risk and rough cost.
    Record only feedback actually given. Keep user rating/decision separate from
    editorial score. Selection authorizes preproduction, not uploads or spending.
-5. **Story proof:** make three essential stills or an animatic: setup, turn,
-   consequence. Test without title, caption or music. Ask cold viewers what
+5. **Story proof:** make essential stills or an animatic of the lane's progression
+   and payoff. Visual-first: test without title, caption or music. Explicit
+   text-led format: include intended original text, mute audio and test phone-size
+   readability, contrast, duration and composition; do not use rescue captions.
+   Record `comprehensionMode:text-led` and `textPlan` in scenario and packet.
+   Ask cold viewers what
    happened before suggesting an emotion. Fix causality before polishing.
 6. **Direct:** create identity/prop bible, blocking map, action axis, eyelines,
    explicit lightingPlan/shadow map, camera/focus intent and accessible crop.
@@ -88,7 +96,8 @@ Resume an existing job; a timeout is not permission to submit it again.
 
 ## Required production packet
 
-- Intended first-view interpretation; setup / turn / chosen response.
+- Intended first-view interpretation; lane-appropriate progression/payoff.
+  Connection-led films retain setup / reveal / chosen response / hold.
 - Original identity bible and real-reference provenance/rights.
 - Blocking: screen side, gaze target, contact point, prop owner and action axis.
 - Camera: shot size, height, one movement or locked choice; focus priority.
@@ -97,7 +106,9 @@ Resume an existing job; a timeout is not permission to submit it again.
 - Literal keyframe prompts and endpoints; invariants versus intentional changes.
 - Per-shot motion prompts and a continuous/single-pass alternative, actual form
   parameter names, model/mode, exact quote and maximum repair attempts.
-- Beat/cut timeline, information density, reveal exposure and emotional hold.
+- Beat/cut timeline, information density, payoff exposure and ending rhythm.
+  Use `pacing.structure:lane-specific` with `endingRationale` for justified
+  non-connection poetry/comedy; no compulsory relationship choice or reaction shot.
 - Audio cue sheet with actual synchronization points, music brief and silence,
   licensing state and replaceability. Never invent a music API or stems.
 - Retry plan, manual review checklist, accessible description and test hypothesis.
@@ -105,7 +116,9 @@ Resume an existing job; a timeout is not permission to submit it again.
 ## Pacing and hook requirements
 
 The opening offers a readable situation and a genuine question, not clickbait.
-The turn resolves that question; the final response lets its meaning register.
+The development/payoff repays that question or establishes a deliberate poetic
+progression. A connection-led turn needs a voluntary response and time to register;
+a punchline can end directly and poetry need not invent a twist or relationship.
 Fast movement, fast cuts, loud music and high arousal are not interchangeable
 with pleasure, empathy or dopamine. If the story needs 12 seconds, test that
 version rather than forcing it into 10. Silent first-view confusion is a rewrite

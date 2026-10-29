@@ -22,8 +22,10 @@ For nostalgic/modern tracks, tempo adaptation and actual vocals, use the separat
 
 1. State intended feeling and the visible action that earns it.
 2. Write an honest opening question that the final action repays.
-3. Make the beat timeline: setup, optional anticipation, readable reveal, chosen
-   response, settled hold. Define what evidence must remain visible.
+3. Make the lane-appropriate beat timeline: setup, optional anticipation, readable
+   payoff; chosen response and settled hold where the selected lane needs them.
+   A comic sting or unresolved poetry need not add a reaction. Define the visible
+   evidence and explain any lane-specific ending.
 4. Give each cut a reason. Do not default to cuts on every beat or equate fast
    cuts/loudness with reward. Allow a 12-second version if needed.
 5. Build ambience/foley on the locked picture; note exact actual contact frames.

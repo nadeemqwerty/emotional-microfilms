@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "status": "pending",
+  "jobId": null,
+  "source": {"sha256": null, "seconds": null},
+  "rights": {
+    "status": "unknown",
+    "privateStudyOnly": true,
+    "publicUrlIsNotPermission": true,
+    "holder": null,
+    "permission": null,
+    "scope": null,
+    "evidence": null
+  },
+  "coverage": {
+    "wholeSpanSampling": {"status": "pending", "manifest": "manifest.json"},
+    "fullPlayback": {
+      "status": "pending", "sourceSha256": null, "artifact": "source.mp4",
+      "reviewer": null, "reviewedAt": null, "ranges": [], "notes": null
+    },
+    "audioListening": {"status": "pending", "tracks": []},
+    "transcript": {"status": "not-provided", "assetSha256": null, "provenance": null}
+  },
+  "timeline": [
+    {
+      "id": "segment-001",
+      "start": null,
+      "end": null,
+      "action": null,
+      "subjectRelationship": null,
+      "camera": {
+        "framing": null,
+        "movement": null,
+        "optics": {"claim": "approximation", "description": null}
+      },
+      "blockingContinuity": null,
+      "lighting": {
+        "motivatedSources": null,
+        "castShadows": null,
+        "contactShadows": null,
+        "temporalConsistency": null
+      },
+      "editing": {
+        "cutReason": null,
+        "beatRhythm": null,
+        "informationProgression": null,
+        "reveal": null,
+        "reactionHold": null
+      },
+      "audio": {
+        "speech": {"status": "pending", "evidence": null, "transcript": null},
+        "music": null,
+        "foley": null,
+        "rights": null
+      },
+      "observations": [],
+      "inferences": []
+    }
+  ],
+  "findings": {"mechanisms": [], "uncertainties": [], "denseReviewNeeded": []},
+  "approvals": {
+    "generationApproved": false,
+    "referenceUploadApproved": false,
+    "publicationApproved": false,
+    "scenarioSelected": false
+  },
+  "instructions": {
+    "state": "No reference has been supplied or reviewed. This template must fail validation.",
+    "location": "Copy/adapt only into the prepared ignored workspace; never put source scripts/media in tracked data.",
+    "ranges": "Each review range is {start:number,end:number,notes:actual evidence}. Cover 0 to exact metadata seconds without gaps/overlaps.",
+    "audioTracks": "For each actual stream, add {stream:number,status:reviewed,sourceSha256,reviewer,reviewedAt,notes,ranges}. All tracks and their entire durations require listening.",
+    "observations": "Each entry is {time:number,detail:actual observation,evidence:full-playback|frame|audio-listening}. Every segment requires motion evidence and, if audio is present, listening evidence.",
+    "inferences": "Each entry is {claim,basis,confidence:low|medium|high}. Exact gear, optics and color temperature cannot be established from pixels alone.",
+    "speech": "Resolve none|spoken|sung|mixed|no-audio-track with evidence. For words use {text,provenance:user-provided,assetSha256} from an actual supplied transcript, not ASR invention.",
+    "transcript": "Set verified-user-provided after checking the actual supplied text against listening; otherwise not-needed-no-speech or not-present, with the appropriate shot evidence.",
+    "complete": "Set status reviewed and sampling reviewed only after actual inspection. Keep every approval false. Dense review requests must be resolved, not waived."
+  }
+}

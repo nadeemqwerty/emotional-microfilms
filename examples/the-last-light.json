@@ -30,9 +30,11 @@
   "continuity": {
     "geography": "Robot always screen-left; clamped lamp at center; pot screen-right. Camera on same bench side, no axis crossing.",
     "propAction": "Ivo's right paddle nudges the short swivel lamp toward the right. Use a straight simple rotational action; it does not detach or move the pot.",
+    "propOwnership": "Ivo alone controls the lamp with its right paddle. Lamp clamp and pot remain fixed to their established positions.",
     "light": "Opening warm pool on robot; closing warm pool on seedling. Cool greenhouse fill stays constant. Robot's two eye lights stay on; no implied death.",
     "mustNotChange": ["robot face and ochre patch", "three leaves", "terracotta pot", "lamp clamp", "screen positions", "cool dusk fill"],
-    "match": "Cut between two separately approved lighting states; maintain lamp center position. Do not rely on exact continuous simulated light transport."
+    "match": "Cut between two separately approved lighting states; maintain lamp center position. Do not rely on exact continuous simulated light transport.",
+    "intentionalChanges": ["lamp points right after an elliptical cut", "warm light pool shifts from robot to plant", "robot lowers right paddle"]
   },
   "lightingPlan": {
     "motivation": "Single center-clamped warm task lamp plus unchanged weak cool dusk fill.",

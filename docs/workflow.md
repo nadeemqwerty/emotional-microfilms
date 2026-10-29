@@ -26,14 +26,20 @@ Retain all rejections/rewrites; missing feedback is not rejection.
 For the selected workspace create/revise the complete packet from the three
 examples. Make identity/prop bible, spatial map, literal frames, motion prompts,
 single-pass alternative, required lightingPlan/shadow map, sound plan and pacing
-timeline. Every beat needs a job;
-every cut a reason. Plan a readable reveal and visible response/hold.
+timeline. Every beat needs a job; every cut a reason. Connection-led films need
+readable reveal/response/hold. Declared lane-specific poetry/comedy may instead
+justify progression or a punchline ending; see `docs\pacing.md`.
 
 Use ungenerated sketches, existing cleared material or an animatic for initial
 story proof where practical; paid stills also need authorization. Ask cold
-viewers once without title or music. Record answers, not a fictional pass.
+viewers once without title or music for visual-first work. Explicit text-led
+formats include intended original text and test muted phone-size readability,
+contrast and exposure. Record answers, not a fictional pass.
 Use story/pacing/visual reviewer checklists. The actual user approves the
-storyboard; record `storyboardApproved:true` and approval evidence in the manifest.
+storyboard; record `storyboardApproved:true` and `storyboardApprovalEvidence` in
+the manifest. `productionDraft` must contain the complete validated packet,
+including custom scenarios. Advancement binds the approval to scenario, brief,
+packet and a fresh approval revision.
 
 ```powershell
 npm run film -- advance workspace\the-dry-seat\manifest.json preproduction
@@ -53,7 +59,9 @@ Manifest fields: `generationApproved`, exact `spendApprovalEvidence`,
 `approvedBudgetCredits`, `spentCredits`, `reservedCredits`,
 `nextRequestFingerprint`. Quotes include `at`, unit/quantity/discount and the
 same request fingerprint. `validateSpend` fails closed without matching request,
-freshness, exact arithmetic or remaining budget. Its 24h maximum is a conservative
+freshness, exact arithmetic or remaining budget. Pass current scenarios, brief
+and feedback as the helper's context argument; embedded revisions alone cannot
+establish that a current selection remains valid. Its 24h maximum is a conservative
 project guard, not a promise the vendor honors a price for 24h. Requote every call.
 
 No automatic balance check, cost reservation or job submission is implemented in
@@ -137,7 +145,8 @@ node scripts\assemble.mjs workspace\the-dry-seat\edit.json --ffmpeg "C:\path\to\
 
 No installation/download. The assembler checks source durations/audio presence,
 trims, fits portrait with letterboxing rather than cropping, concatenates shots,
-optionally mixes the supplied soundtrack or retains native audio, and writes
+optionally mixes the supplied soundtrack or retains native audio (padding each
+shot's short audio to its own picture duration), and writes
 H.264/AAC MP4 without overwriting existing output. Upscaling a 720p source does
 not create native 1080p detail. It does not evaluate narrative or perceptual quality.
 
@@ -159,9 +168,25 @@ No automatic upload or scheduling. Keep private feedback/identity out of public 
 
 `asset` computes SHA-256; changed assets clear spend/final approval and roll
 downstream stages back. Reviews bind to an asset-set hash; the newest matching
-review governs, so a later fail overrides an old pass. Adding/replacing media
+review governs, so a later fail overrides an old pass and immediately rolls back
+the corresponding approval/clears final and spend flags. Adding/replacing media
 requires affected review again. `status` and manifest validation fail if a file
 no longer matches its recorded hash.
+
+Resume/advance/assembly also check current scenario, brief and actual selection.
+Changing the packet invalidates its approval; changing an intended plan is not
+the same as logging observed `pacing.actualEventTimes`. Reviews bind to production
+revision as well as assets. Reject/rewrite/withdrawn selection blocks resumption.
+After actual reselection or approved revisions:
+
+```powershell
+npm run film -- refresh workspace\the-dry-seat\manifest.json
+```
+
+This retains assets, jobs, costs and review history, but returns to `selected` and
+clears approvals. Update the packet, obtain a new storyboard approval/evidence,
+and advance normally. Old revision-bound reviews cannot silently become current.
+Never use refresh to invent a user selection.
 
 These are local integrity checks, not tamper-proof permission enforcement.
 Never fabricate human review to satisfy a boolean. Resume existing manifests
@@ -169,9 +194,13 @@ and provider historyIds; preserve rejected assets and their cost ledger.
 
 ## Project-only persistence
 
-Six skills and six read-only reviewer definitions live under `.github\`.
+Project skills and six read-only reviewer definitions live under `.github\`.
 No personal/global pointer remains. Agent definitions describe available roles,
 not agents that have automatically executed. Use direct review for a small
 artifact; ask for/delegate only substantial independent review when appropriate.
 Persist useful changes in source-to-rule map, packet fields, reviewer checks and
 focused tests, then commit/push only under actual user authorization.
+
+Reference-driven work uses [reverse engineering](reverse-engineering.md);
+full-span frame samples alone are not full-motion/audio review. Studio-wide
+readiness uses the [critic loop](critic-review.md).

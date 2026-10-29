@@ -25,12 +25,18 @@ creative rules to global memory/knowledge files.
 - Report exactly what was tested. No generated film or model quality is validated
   merely because a schema, storyboard, prompt or assembly plan passes.
 - Pacing is a required packet and final-review dimension: hook, information
-  progression, reveal exposure, recognition and emotional hold must be explicit.
+  progression, payoff exposure and ending rhythm must be explicit. Connection-led
+  stories require reveal/response/hold; justified poetry or punchline endings may not.
+- Visual-first is the default, not a ban on text-led memes. Explicit text-led
+  packets require original text, composition/render stage and muted phone-readability proof.
 - Lighting/shadow plans are required; inspect caster/receiver direction, contact
   grounding, source changes and temporal consistency in actual motion.
 - Maintain multiple genres and visual styles. Universal stories may use subtle
   local details; do not force every concept into a tearjerker or twist.
 - For nostalgic/modern songs and singing use the project song-adaptation skill;
   tempo, perceived pace, phrase integrity and rights are separate decisions.
+- For an input reference/Reel use the project reverse-engineering skill. Keep
+  media and source-specific scripts private in ignored workspace; never mark a
+  contact sheet as full playback/listening or an inaccessible URL as ingested.
 - On resuming, read `data\roadmap.json`, relevant `data\workflows.json` entry,
   `data\feedback.json`, and the selected workspace manifest before new work.

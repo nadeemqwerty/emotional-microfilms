@@ -3,8 +3,9 @@ import {dirname, resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {
   assetSetFingerprint, diverseShortlist, estimatePlan, fileHash, inside, invariant, packetDraft,
-  rankScenarios, readJson, REVIEW_AREAS, stageReady, STAGES,
-  validateFeedback, validatePacket, validateRubric, validateScenario, verifyAssets,
+  productionRevision, rankScenarios, readJson, recordReview, refreshWorkspace,
+  REVIEW_AREAS, stageReady, STAGES,
+  validateFeedback, validatePacket, validateRubric, validateScenario, validateWorkspace, verifyAssets,
 } from '../lib/workflow.mjs';
 import {planSongCue} from '../lib/music.mjs';
 
@@ -61,16 +62,17 @@ function usage() {
   shortlist [count]
   budgets
   roadmap
-  workflow <develop|previsualize|produce|sound-and-finish|learn>
+  workflow <workflow-id>
   song-plan <workspace-relative-song-cue.json>
   feedback <scenario-id> <1-5> <shortlist|select|reject|rewrite> [note]
   packet <selected-scenario-id>
   status <workspace-relative-manifest.json>
+  refresh <workspace-relative-manifest.json>
   asset <manifest> <keyframe|video|audio|final> <project-relative-file>
   review <manifest> <area> <pass|fail> <observed-evidence>
   advance <manifest> <next-stage>
 
-Feedback/packet/asset/review/advance WRITE local files; obtain user approval.
+Feedback/packet/refresh/asset/review/advance WRITE local files; obtain user approval.
 Review areas: keyframes, motion, sound, ${REVIEW_AREAS.join(', ')}.
 Stages: ${STAGES.join(' -> ')}.
 No automatic spend, upload, publish, commit or push.`);
@@ -86,7 +88,11 @@ try {
       for (const id of ['the-dry-seat', 'same-old-handshake', 'the-last-light']) {
         validatePacket(load(`examples/${id}.json`), data.scenarios);
       }
-      if (args[0]) verifyAssets(root, load(args[0]));
+      if (args[0]) {
+        const manifest = load(args[0]);
+        validateWorkspace(manifest, data);
+        verifyAssets(root, manifest);
+      }
       console.log(`Valid: ${data.scenarios.length} scenarios, rubric, feedback, ${data.models.quotes.length} quotes, 3 prompt packets${args[0] ? ', supplied asset manifest' : ''}.`);
     } else if (command === 'rank') {
       const count = args[0] === undefined ? 6 : Number(args[0]);
@@ -111,7 +117,7 @@ try {
         ({id, title, status, dependsOn: dependsOn.join(', ')})));
     } else if (command === 'workflow') {
       const workflow = data.workflows.workflows.find(item => item.id === args[0]);
-      invariant(workflow, 'Unknown workflow. Use develop, previsualize, produce, sound-and-finish or learn.');
+      invariant(workflow, 'Unknown workflow. Inspect data/workflows.json for available IDs.');
       console.log(JSON.stringify(workflow, null, 2));
     } else if (command === 'feedback') {
       const [scenarioId, rating, decision, ...note] = args;
@@ -133,12 +139,17 @@ try {
       if (existsSync(examplePath)) manifest.productionDraft = readJson(examplePath);
       save(path, manifest);
       console.log(`Created ${path}; generation remains unapproved, budget zero.`);
-    } else if (['status', 'asset', 'review', 'advance'].includes(command)) {
+    } else if (['status', 'refresh', 'asset', 'review', 'advance'].includes(command)) {
       invariant(args[0]?.startsWith('workspace/') || args[0]?.startsWith('workspace\\'),
         'Use an ignored workspace-relative manifest path.');
       const path = inside(root, args[0]);
-      const manifest = readJson(path);
-      if (command === 'status') {
+      let manifest = readJson(path);
+      if (command !== 'refresh') validateWorkspace(manifest, data);
+      if (command === 'refresh') {
+        manifest = refreshWorkspace(manifest, data);
+        save(path, manifest);
+        console.log('Refreshed selection and brief; assets/jobs/review history retained, all approvals reset. Revise packet and renew storyboard approval.');
+      } else if (command === 'status') {
         verifyAssets(root, manifest);
         console.log(JSON.stringify({
           scenarioId: manifest.scenarioId, stage: manifest.stage,
@@ -171,13 +182,18 @@ try {
         invariant(['pass', 'fail'].includes(result) && evidence.join(' ').trim(),
           'Use pass/fail plus observed evidence; do not fabricate human review.');
         verifyAssets(root, manifest);
-        manifest.reviews.push({area, result, evidence: evidence.join(' '),
-          assetSetFingerprint: assetSetFingerprint(manifest.assets), at: new Date().toISOString()});
+        manifest = recordReview(manifest, {area, result, evidence: evidence.join(' ')});
         save(path, manifest);
         console.log('Review recorded against the current exact asset set.');
       } else {
         verifyAssets(root, manifest);
-        stageReady(manifest, args[1]);
+        stageReady(manifest, args[1], data);
+        if (args[1] === 'preproduction') {
+          manifest.approvalRevision = (manifest.approvalRevision ?? 0) + 1;
+          manifest.productionFingerprint = productionRevision(manifest);
+          manifest.generationApproved = false;
+          manifest.finalUserApproval = false;
+        }
         manifest.stage = args[1];
         save(path, manifest);
         console.log(`Advanced to ${manifest.stage}. Publication remains manual and separately approved.`);

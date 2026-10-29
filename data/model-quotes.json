@@ -1,6 +1,7 @@
 {
   "schemaVersion": 1,
   "checkedAt": "2026-10-30T00:45:00+05:30",
+  "timestampPolicy": "checkedAt and quote at fields are approximate snapshot labels from the research session, not authenticated individual tool-call timestamps or a last-verification timestamp. Independent critic re-quotes on 2026-10-30 matched the ten configurations; retrieve a fresh exact-request quote before any spend.",
   "source": "Live OpenArt MCP model_list, model_form_get and model_cost calls in this research session.",
   "evidenceClass": "verified-wrapper-schema-and-configuration-quotes-not-rendered-quality",
   "pricingPolicy": "List prices below; current eligible Plus MCP campaign discounts each unit by 10%, rounds half up to whole credits, then multiplies by quantity. Requote the exact full request immediately before every paid submission. No provider subscription outside OpenArt is priced here.",

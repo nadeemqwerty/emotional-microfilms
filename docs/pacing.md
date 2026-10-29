@@ -24,7 +24,7 @@ A fast musical pulse can accompany a held shot. A slow cue can sit under short
 cuts. A long shot can be busy; a brief shot can be simple. Do not equate BPM with
 emotional intensity, cut rate with attention, or arousal with pleasure.
 
-## Draft beat sheet
+## Draft beat sheet: connection-led default
 
 | Candidate interval | Information/performance goal | Common failure |
 |---|---|---|
@@ -58,7 +58,9 @@ reveal or a sound bridge if it protects the performance. Test rather than
 assuming synchronization is always stronger.
 
 The decisive action needs an **exposure interval** where viewers can actually
-see its evidence, followed by a **reaction interval** where its meaning changes.
+see its evidence. Connection-led stories then need a **reaction interval** where
+its meaning changes. A punchline ending or observational poem can omit a separate
+reaction and hold when its lane-specific ending rationale explains the choice.
 Do not count obscured or out-of-frame frames as useful exposure.
 
 ## Hooks that the ending can repay
@@ -73,15 +75,18 @@ rapid cuts as a supposed dopamine trigger.
 
 ## Pacing revision protocol
 
-1. Watch once on a normal phone at intended size, without a title; mute first.
-2. Before replay, ask what happened and which detail established the choice.
+1. Watch once on a normal phone at intended size; mute first. Visual-first work
+   excludes explanatory titles. Text-led work includes its intended text and
+   checks actual reading time, contrast and unobstructed placement.
+2. Before replay, ask what happened and which detail established the selected payoff.
 3. Inspect the actual timeline: earliest readable setup, reveal onset/last
    readable frame, recognition onset, response completion, final hold.
 4. If viewers miss the turn, simplify framing or action before adding speed,
    music or an explanatory caption.
 5. If the setup feels slow, remove redundant motion, not essential causal cues.
-6. If the ending feels flat, check whether there is a visible voluntary response
-   before adding a larger score.
+6. If a connection-led ending feels flat, check its visible voluntary response
+   before adding a larger score. For comedy/poetry, inspect punchline exposure
+   or visual progression; do not invent sentiment or a redundant reaction.
 7. Test a changed timing with a **fresh** viewer set; repeat exposure teaches the
    story and contaminates first-view comparison.
 
@@ -96,18 +101,22 @@ Rewatching to decode a confusing film is different from enjoying it again.
 
 ## Packet additions and review gate
 
-Every selected packet must add:
+Every selected packet requires exact contiguous beats, a hook, hypothesis,
+visible progression/payoff evidence and cut reasons. This connection-led example
+uses the default `structure:connection`:
 
 ```json
 {
   "pacing": {
-    "version": "p1",
+    "structure": "connection",
     "hypothesis": "The choice reads before music resolves.",
+    "hook": "Why is the empty seat covered?",
+    "revealEvidence": "The dry patch and invitation are simultaneously visible.",
     "beats": [
-      {"start": 0, "end": 2, "job": "read relationship / question"},
-      {"start": 2, "end": 5, "job": "notice and reveal"},
-      {"start": 5, "end": 7.5, "job": "recognize and choose"},
-      {"start": 7.5, "end": 10, "job": "consequence / hold"}
+      {"start": 0, "end": 2, "phase": "setup", "job": "read relationship / question"},
+      {"start": 2, "end": 5, "phase": "reveal", "job": "notice and reveal"},
+      {"start": 5, "end": 7.5, "phase": "response", "job": "recognize and choose"},
+      {"start": 7.5, "end": 10, "phase": "hold", "job": "consequence / hold"}
     ],
     "cutReasons": ["At 5s omit sitting motion and show the accepted seat."],
     "minimumReadableEvidence": "Dry patch and invitation are simultaneously visible.",
@@ -119,3 +128,10 @@ Every selected packet must add:
 These fields describe intentions; after generation log measured actual event
 times. No prose timestamp is a promise of model compliance. Pacing changes alter
 the asset hash and invalidate the affected motion/sound/final reviews.
+
+Non-connection lanes can explicitly use `structure:lane-specific`,
+`endingRationale` and `payoffEvidence`, with their own named beat phases. For
+example, `a-room-of-seasons` can progress through seasonal light and end on the
+completed visual pattern; a comic setup can expose the punchline and cut out.
+Neither needs a fictional relationship choice. This is a declared, reviewable
+alternative, not permission to hide a confused ending or an unreadable gag.
