@@ -76,6 +76,11 @@ test('real CLI validates custom packets, rejects stale resumes and rolls failed 
     'examples/the-dry-seat.json', 'examples/same-old-handshake.json', 'examples/the-last-light.json']) copy(file);
   for (const reviewer of readdirSync(resolve(root, '.github', 'agents'))) copy(`.github/agents/${reviewer}`);
   write('data/feedback.json', feedback);
+  const unrated = spawnSync(process.execPath, [resolve(fixture, 'scripts', 'film.mjs'),
+    'feedback', scenario.id, 'unrated', 'select', 'Actual selection without a numeric rating.'],
+  {encoding: 'utf8', windowsHide: true});
+  assert.equal(unrated.status, 0, unrated.stderr);
+  assert.equal(read('data/feedback.json').reviews[0].rating, null);
   const path = 'workspace/test/manifest.json';
   const draft = {...packetDraft(scenario, brief, feedback), storyboardApproved: true,
     storyboardApprovalEvidence: 'Synthetic actual-user field for testing only.'};

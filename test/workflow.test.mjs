@@ -8,7 +8,7 @@ import {
   recordReview, refreshWorkspace,
   REVIEW_AREAS, stageReady, validateFeedback, validateJob, validatePacket,
   validateLightingPlan, validatePacing, validateRubric, validateScenario, validateSpend, validateTimeline,
-  validateWorkspace,
+  validateWorkspace, validateMotionReferences,
 } from '../lib/workflow.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -83,6 +83,14 @@ test('feedback rejects unknown IDs, duplicates, out-of-range ratings and invente
   }
   assert.throws(() => validateFeedback({...selected,
     reviews: [selected.reviews[0], selected.reviews[0]]}, scenarios), /Duplicate/);
+});
+
+test('selection without a supplied numerical rating stays explicitly unrated', () => {
+  const feedback = {...selected, reviews: [{...selected.reviews[0], rating: null}]};
+  validateFeedback(feedback, scenarios);
+  const ranked = rankScenarios(scenarios, rubric, feedback).find(item => item.id === scenario.id);
+  assert.equal(ranked.userDecision, 'select');
+  assert.equal(ranked.userRating, null);
 });
 
 test('selection is required but never gives a production budget or spend approval', () => {
@@ -225,7 +233,8 @@ test('active job must resume its historyId rather than submitting again', () => 
 });
 
 test('changed asset hashes invalidate reviews and a later failure supersedes an old pass', () => {
-  const assets = [{path: 'media/a.png', kind: 'keyframe', sha256: 'a'.repeat(64)}];
+  const assets = packet.keyframes.map(frame => ({path: `media/${frame.id}.png`,
+    kind: 'keyframe', keyframeId: frame.id, sha256: 'a'.repeat(64)}));
   const manifest = workspace({assets});
   const review = reviewFor(manifest, 'keyframes');
   manifest.reviews = [review];
@@ -233,9 +242,42 @@ test('changed asset hashes invalidate reviews and a later failure supersedes an 
   assert.throws(() => stageReady({...manifest,
     reviews: [review, {...review, result: 'fail'}]}, 'keyframes-approved', context), /review/);
   assert.throws(() => stageReady({...manifest,
-    assets: [{...assets[0], sha256: 'b'.repeat(64)}]}, 'keyframes-approved', context), /stale review/);
+    assets: assets.map((asset, i) => i === 0 ? {...asset, sha256: 'b'.repeat(64)} : asset)},
+  'keyframes-approved', context), /stale review/);
 });
 
+test('all endpoints precede motion and exact approved provider frames must be used', () => {
+  const assets = packet.keyframes.map(frame => ({path: `media/${frame.id}.png`,
+    kind: 'keyframe', keyframeId: frame.id, sha256: 'a'.repeat(64)}));
+  const manifest = workspace({assets});
+  manifest.reviews = [reviewFor(manifest, 'keyframes')];
+  assert.throws(() => stageReady({...manifest, assets: assets.slice(0, 1)},
+    'keyframes-approved', context), /Missing accepted keyframe/);
+  assert.notEqual(assetSetFingerprint(assets), assetSetFingerprint(assets.map((asset, i) =>
+    i === 0 ? {...asset, keyframeId: 'different-binding'} : asset)));
+  manifest.stage = 'keyframes-approved';
+  manifest.keyframeReferences = Object.fromEntries(packet.keyframes.map(frame => [frame.id, {
+    type: 'image', id: `synthetic-${frame.id}`, url: `https://example.test/${frame.id}.png`,
+    label: `Synthetic test ${frame.id}`,
+  }]));
+  manifest.reviews = recordReview(manifest, {area: 'keyframes', result: 'pass',
+    evidence: 'Synthetic frame files and provider bindings reviewed together.'}).reviews;
+  const shot = packet.shots[0];
+  const params = {...shot.paramsToQuote, prompt: shot.prompt,
+    startFrame: manifest.keyframeReferences[shot.startFrameId],
+    endFrame: manifest.keyframeReferences[shot.endFrameId]};
+  assert.equal(validateMotionReferences(manifest, shot.id, params), true);
+  assert.throws(() => validateMotionReferences({...manifest, stage: 'preproduction'}, shot.id, params), /before paid motion/);
+  assert.throws(() => validateMotionReferences(manifest, shot.id, {...params, endFrame: null}), /endFrame/);
+  assert.throws(() => validateMotionReferences(manifest, shot.id, {...params, startFrame: params.endFrame}), /startFrame/);
+  assert.throws(() => validateMotionReferences(manifest, shot.id, {...params, duration: 10}), /duration/);
+  assert.throws(() => validateMotionReferences(manifest, shot.id, {...params, prompt: 'Unapproved change.'}), /prompt differs/);
+  assert.throws(() => validateMotionReferences(manifest, shot.id, {...params, fps: 60}), /Unapproved motion/);
+  const rebound = structuredClone(manifest);
+  rebound.keyframeReferences[shot.startFrameId] = params.endFrame;
+  assert.throws(() => validateMotionReferences(rebound, shot.id,
+    {...params, startFrame: params.endFrame}), /stale review/);
+});
 test('stage gates cannot skip, infer native sound inspection or publish', () => {
   assert.throws(() => stageReady({stage: 'selected'}, 'motion-approved'), /next workflow/);
   assert.throws(() => stageReady({stage: 'final-approved'}, 'published'), /manual/);

@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "a-seat-for-dad",
+  "seconds": 10,
+  "aspectRatio": "9:16",
+  "generationApproved": false,
+  "status": "Proposed father-son pilot; storyboard, cost ceiling and actual keyframes not yet approved.",
+  "intendedInterpretation": "The son has quietly kept a dry place for his father; care can travel in both directions.",
+  "anchorReusesKeyframeId": "a-start",
+  "pacing": {
+    "structure": "connection",
+    "hypothesis": "Readable dry-seat evidence and a restrained familiar response can carry a ten-second act of care without dialogue or shock.",
+    "hook": "Why is the boy keeping his coat across the empty seat?",
+    "revealEvidence": "The lifted coat exposes a lighter dry rectangle; the boy looks toward his father and the freed seat.",
+    "beats": [
+      {"start": 0, "end": 1.5, "phase": "setup", "job": "Read boy, standing father and coat-covered seat."},
+      {"start": 1.5, "end": 3.5, "phase": "anticipation", "job": "One controlled coat lift reveals the protected seat."},
+      {"start": 3.5, "end": 5, "phase": "reveal", "job": "Dry patch and boy's offered place remain visible; father notices."},
+      {"start": 5, "end": 7.5, "phase": "response", "job": "After an ellipse father is already seated; they turn slightly toward one another."},
+      {"start": 7.5, "end": 10, "phase": "hold", "job": "Small familiar smiles settle without a new gesture or event."}
+    ],
+    "cutReasons": ["At 5s omit sitting/contact mechanics and direct attention to the father's response; retain the bench axis and light."],
+    "actualEventTimes": null,
+    "review": "pending"
+  },
+  "identityBible": {
+    "Ishaan": "Fictional boy about seven, medium-brown skin, short dark curls, plain rust knitted sweater and beige trousers. Dry and comfortably sheltered. Natural child proportions; no requested likeness to a real child.",
+    "Ravi": "Fictional father about 38, medium-brown skin, short dark hair, short stubble, plain muted navy shirt damp at the shoulders and charcoal trousers. Tired but gentle posture, not angry or ill.",
+    "props": "One matte dark-olive rectangular coat, one straight three-board wooden bench, one modest unbranded park shelter. No bags, readable writing or extra people.",
+    "anchorPrompt": "Create the literal opening frame of an original 9:16 cinematic father-son film, not a character sheet. Under a modest park shelter during gentle rain, fictional Ishaan, a seven-year-old boy with medium-brown skin and short dark curls, sits screen-left on a straight three-board wooden bench, wearing a plain rust knitted sweater and beige trousers. His right hand rests on one matte dark-olive coat lying flat over the empty seat to his right. His fictional father Ravi, about 38, medium-brown skin, short dark hair and short stubble, stands screen-right facing the bench, wearing a plain muted navy shirt damp at the shoulders and charcoal trousers. He looks tired but gentle. Medium-wide two-shot at seated adult eye height, natural perspective and enough focus depth for both faces, the boy's right hand and the covered seat. Broad soft overcast daylight from camera-right, gentle shelter fill, soft grounded contact shadows and an unobtrusive rainy gray background. Keep the faces and story prop centrally readable in portrait framing. Ordinary clothed family, quiet natural expression. No text, logo, extra people, exaggerated tears, body contact, collage or dramatic camera effect."
+  },
+  "continuity": {
+    "geography": "Ishaan is always screen-left; Ravi is always screen-right. Camera stays on the path side of the bench axis. Both faces and the seat remain readable.",
+    "propOwnership": "Only Ishaan's right hand lifts the olive coat onto his own lap. Ravi does not take it. No coat duplication or switched hand.",
+    "light": "Broad cloudy daylight from camera-right throughout. The dry seat is lighter material amid damp darker wood, not a newly invented spotlight.",
+    "match": "The cut deliberately skips Ravi sitting: he is standing before it and already settled afterward. This is an ellipse, not continuous sitting motion.",
+    "mustNotChange": ["faces and age/scale", "rust sweater and navy shirt", "screen sides", "bench boards", "olive coat", "dry patch position", "cloudy right-side light"],
+    "intentionalChanges": ["coat moves from right seat to boy's lap", "father is already seated after the cut", "second shot is slightly tighter"]
+  },
+  "lightingPlan": {
+    "motivation": "Broad cloudy daylight entering the shelter, slightly stronger camera-right.",
+    "key": "Large diffuse source above camera-right; no sunny beam or hard spotlight.",
+    "fill": "Gentle ambient shelter bounce keeps both faces, hands and seat legible without an opposing hard shadow.",
+    "exposurePriority": "Dry/wet wood distinction and both natural facial responses in the same readable composition.",
+    "shadowMap": [
+      {"caster": "boy, father and coat", "receiver": "bench and ground", "behavior": "Soft contact grounding; no detached or sharply moving silhouette."},
+      {"caster": "coat before lift", "receiver": "right bench seat", "behavior": "Coat occludes the protected material; after lift the dry rectangle is not a magical light pool."}
+    ],
+    "invariants": ["cloudy source direction", "soft edges", "shelter fill", "steady exposure", "rain perspective"],
+    "intentionalChanges": ["Coat reveals material dryness; source lighting remains unchanged."],
+    "review": "pending"
+  },
+  "keyframes": [
+    {
+      "id": "a-start",
+      "prompt": "Generate the original identity/composition anchor AS the literal first frame, not a collage. Portrait 9:16, modest covered park bench during gentle rain. Fictional seven-year-old Ishaan, medium-brown skin, short dark curls, plain rust sweater and beige trousers, sits screen-left. His right hand rests on one matte dark-olive coat covering the empty right seat of the straight three-board bench. Fictional father Ravi, about 38, medium-brown skin, short dark hair and stubble, damp muted navy shirt and charcoal trousers, stands screen-right facing the bench with a gentle tired posture. Both faces, the boy's right hand and the full covered seat are clear in one medium-wide seated-eye-height view. Broad soft cloudy daylight from camera-right, gentle shelter fill, grounded soft shadows and restrained natural expressions. All key information central in the vertical frame. No title, text, brands, extra people, tears, hand contact, additional coat or extreme shallow blur."
+    },
+    {
+      "id": "a-end",
+      "prompt": "Use the accepted a-start as the strict identity, wardrobe, bench and camera reference. Same 9:16 medium-wide composition: Ishaan remains seated screen-left, exact short curls, rust sweater and beige trousers. His right hand has moved the single olive coat from the empty right seat onto his own lap; that hand still owns the coat. A clearly lighter dry rectangle is exposed on the otherwise damp darker wooden seat. The boy looks toward his father and the freed place, a small inviting expression without a large gesture. Ravi remains standing screen-right, same navy shirt, stubble and trousers, looking down at the newly revealed dry seat. Preserve age/scale, screen sides, three bench boards, gentle rain and soft cloudy light from camera-right. No sitting, duplicated coat, changed clothes, embrace, tears, text or new objects."
+    },
+    {
+      "id": "b-start",
+      "prompt": "Use the accepted a-start for exact Ishaan/Ravi identities and a-end for coat, dry-seat and spatial continuity. Make the literal first frame AFTER a deliberate elliptical edit. Same portrait 9:16 shelter and bench, slightly tighter medium two-shot from the same path side, seated eye height. Ishaan sits screen-left, rust sweater and beige trousers unchanged, olive coat resting on his own lap beneath his right hand. Ravi is now ALREADY SEATED screen-right on the dry place, exact short dark hair, stubble, muted navy shirt and charcoal trousers. His hands rest separately on his own knees; he begins a small head turn toward his son. Both faces and the edge of the dry seat remain clear, with a comfortable family distance. Same cloudy light from camera-right and quiet rainy background. No sitting action, body overlap, hug, text, new props or extra people."
+    },
+    {
+      "id": "b-end",
+      "prompt": "Use accepted b-start as a strict composition and identity reference. Same 9:16 medium two-shot: Ishaan screen-left with olive coat on his lap and Ravi already seated screen-right with hands on his own knees. They have completed only small head turns and share a restrained familiar smile. The boy remains visibly a seven-year-old in the rust sweater; father remains about 38 with short dark hair, stubble and navy shirt. Quiet softened shoulders, no embrace or new action. Preserve the same bench boards, dry patch position, central readable faces, rain, soft cloudy right-side light and natural scale. No tears, forced grin, text, changed clothing, duplicated fingers, extra coat or camera move."
+    }
+  ],
+  "shots": [
+    {
+      "id": "a", "start": 0, "end": 5, "startFrameId": "a-start", "endFrameId": "a-end",
+      "modelCandidate": "pixverseV6", "mode": "image2video",
+      "paramsToQuote": {"duration": 5, "resolution": "720p", "generateAudio": false, "videoCount": 1},
+      "prompt": "Animate only from the accepted literal opening image toward the accepted end image over five seconds. Locked 9:16 medium-wide bench composition, Ishaan seated left and Ravi standing right. Begin with a short readable pause on the coat-covered seat. Ishaan performs one controlled primary action: his right hand lifts the single olive coat from the empty right seat and places it on his own lap, exposing the lighter dry wood. He looks toward his father and the freed place; Ravi only shifts his gaze to the dry seat. End in the approved a-end state and let the evidence remain readable. Preserve the boy's child proportions and rust sweater, father's adult face/stubble/navy shirt, hand ownership, bench boards, screen sides, rain and soft cloudy right-side light. No sitting, camera move, embrace, morph, duplicate coat, extra people, dialogue, text or exaggerated tears. Exact action timing must be checked in the result."
+    },
+    {
+      "id": "b", "start": 5, "end": 10, "startFrameId": "b-start", "endFrameId": "b-end",
+      "modelCandidate": "pixverseV6", "mode": "image2video",
+      "paramsToQuote": {"duration": 5, "resolution": "720p", "generateAudio": false, "videoCount": 1},
+      "prompt": "Animate the accepted b-start toward accepted b-end over five seconds as one quiet response. Locked portrait medium two-shot. Ishaan stays seated left, olive coat on his lap; Ravi is ALREADY SEATED right on the dry bench place, hands separate on his own knees. They complete only small head turns toward one another, soften their shoulders and share a restrained familiar father-son smile, then hold the settled look. Keep exact child/adult identities and proportions, rust sweater, navy shirt, coat, bench geometry, screen sides, cloudy light from camera-right and gentle rain unchanged. Do not repeat the coat lift, animate sitting, add a hug, touch hands, change angle, insert people, speech, text, tears or another event. The previous shot supplied the invitation; this shot lets the response register."
+    }
+  ],
+  "singlePassPrompt": "Planning alternative only; do not use text-only video to bypass accepted keyframes. Ten-second original portrait father-son scene in a modest rainy park shelter. Seven-year-old Ishaan in a plain rust sweater sits screen-left with an olive coat covering an empty bench seat; father Ravi in a damp navy shirt stands screen-right. In the first half, one controlled right-hand coat lift reveals the dry place saved for his father. At the midpoint cut deliberately to the same geography in a slightly tighter shot: Ravi is already seated on the right, boy and coat remain left. They turn slightly toward each other, exchange small familiar smiles and settle. Stable identities, clear seat evidence and cloudy light from camera-right. No animated sitting, hug, transformation, dialogue, text or extra people. Actual timing and emotional reading require inspection, not assumed prompt compliance.",
+  "soundPlan": {
+    "routeHypothesis": "silent",
+    "cues": [],
+    "musicBrief": "First prove the visual pilot silently. Later compare quiet sheltered rain/one fabric lift with the same picture plus an original restrained warm motif after recognition. No recognizable song, lyrics or invented standalone OpenArt music endpoint.",
+    "rights": "No external recording selected or cleared. Native audio is a separately quoted option, not included or approved by this silent plan.",
+    "test": "Visual-first cold-viewer comprehension before music. Actual listening is mandatory before any native/separate-audio pass; stream metadata does not establish sound quality."
+  },
+  "retryPlan": "Start with a-start only: 18 quoted credits. If cast/scale/composition fails, diagnose before any more spending. Guide all later frames from accepted references; all four must pass before video. Initial silent route 198 credits including four stills; optional native route 234 after explicit selection/requote. At most one diagnosed frame repair plus one diagnosed clip repair within an expressly approved ceiling; never blind reroll or auto-upgrade models. Preserve all historyIds and charged failures.",
+  "reviewChecks": ["All four literal frames precede video", "Boy remains a child and father remains the same adult", "Dry patch reads at phone size", "Only one coat and correct right-hand ownership", "Father remains screen-right", "Sit is an explicit edit, not a morph", "Actual reveal has readable exposure", "Final response is not a forced grin", "Sound/listening and full-playback limits are recorded honestly"]
+}

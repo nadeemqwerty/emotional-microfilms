@@ -20,10 +20,12 @@ npm run film -- packet the-dry-seat
 The second command requires selection and refuses to overwrite an existing
 workspace. The resulting manifest starts at `selected`, budget 0, spend false.
 Retain all rejections/rewrites; missing feedback is not rejection.
+If selection came without a numerical rating, use `unrated`, not an invented
+score: `film feedback <id> unrated select "<actual selection evidence>"`.
 
 ## 2. Story proof and direction
 
-For the selected workspace create/revise the complete packet from the three
+For the selected workspace create/revise the complete packet from the
 examples. Make identity/prop bible, spatial map, literal frames, motion prompts,
 single-pass alternative, required lightingPlan/shadow map, sound plan and pacing
 timeline. Every beat needs a job; every cut a reason. Connection-led films need
@@ -89,11 +91,25 @@ Create original anchor, then guided literal endpoints. Side-by-side review
 identity, geography, hand/prop ownership, lighting and action phase. Use real
 accepted refs, never placeholders. Register accepted local files:
 
+Store the genuine provider objects in `manifest.keyframeReferences` before
+recording the keyframe review, so it binds both the files and reference map.
+Changing that map later requires renewed binding verification.
+
 ```powershell
 npm run film -- asset workspace\the-dry-seat\manifest.json keyframe media\the-dry-seat\a-start.png
+npm run film -- asset workspace\the-dry-seat\manifest.json keyframe media\the-dry-seat\a-end.png
+npm run film -- asset workspace\the-dry-seat\manifest.json keyframe media\the-dry-seat\b-start.png
+npm run film -- asset workspace\the-dry-seat\manifest.json keyframe media\the-dry-seat\b-end.png
 npm run film -- review workspace\the-dry-seat\manifest.json keyframes pass "Observed continuity evidence."
 npm run film -- advance workspace\the-dry-seat\manifest.json keyframes-approved
 ```
+
+Each file must map to a packet keyframe ID (inferred from its filename or given
+as the final `asset` argument). Every required frame must exist; one endpoint is
+not enough. Read [generation preflight](generation-preflight.md), persist genuine
+provider objects under `keyframeReferences`, and call `validateMotionReferences`
+with the exact shot parameters before paid motion. This local helper is not an
+automatic paid-generation client.
 
 Generate one simple shot at a time or an explicitly approved bounded batch.
 Review full motion, contact, actual reveal/response times, not just endpoints.

@@ -14,6 +14,10 @@ creative rules to global memory/knowledge files.
 - Use Agency defaults. No custom controller. Delegate only bounded independent
   research when requested; use GPT-family agents for delegated reasoning.
 - The project contains no paid-generation client, API secrets or automatic upload.
+- Generate and inspect every required keyframe before any video job. Motion must
+  use the genuine approved per-shot frame references; never substitute text-only
+  video or newly invented IDs. Check live limits and exact parameter combinations
+  before spending; use `docs\generation-preflight.md`.
 - Keep original source summaries, not copied articles/books or copyrighted media.
 - A score is an editorial hypothesis, not a forecast or measured audience response.
 - Update existing canonical files. Do not create versioned duplicate playbooks.

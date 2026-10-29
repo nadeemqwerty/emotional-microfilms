@@ -1,7 +1,7 @@
 # Emotional Microfilms
 
 An evidence-led, multi-genre studio for original 8-15 second films, initially **10
-seconds / 9:16**. It combines reusable agent skills, a 40-story development bank,
+seconds / 9:16**. It combines reusable agent skills, a 41-story development bank,
 scored shortlisting, user decisions, complete prompt packets, model-cost evidence,
 and hash-bound production reviews.
 
@@ -10,7 +10,8 @@ No scenario selected, creative assets generated, credits spent, uploads or posts
 Synthetic tool-test fixtures are not creative reference analyses or films.
 The existing InterviewReel repository is untouched.
 Three independent AI critic lenses passed scoped preproduction readiness;
-the integrated suite has **44 passing tests**, including real FFmpeg smoke.
+the current integrated suite has **46 passing tests**, including real FFmpeg
+smoke and the additional all-keyframes/reference-binding pilot gates.
 See the critic record for actual scope and remaining media/perception gates.
 
 ## Start
@@ -51,6 +52,7 @@ Skill discovery is not proof it is loaded into the present conversation.
    [request coverage](docs/request-coverage.md) and [critic review](docs/critic-review.md).
    [Earlier opportunity context](docs/opportunity-context.md) retains makeovers,
    buyer-first real estate and product creatives as separate directions.
+9. [Generation limits and failure-prevention preflight](docs/generation-preflight.md).
 
 ## Project-local operating system
 
@@ -68,7 +70,7 @@ discovery skill remains.
 
 ## Development, then explicit choice
 
-`data\scenarios.json` contains 40 original pitches across emotion, comedy,
+`data\scenarios.json` contains 41 original pitches across emotion, comedy,
 meme-stories, nostalgia, visual poetry and mystery. The rubric has seven anchored dimensions
 and separate feasibility gates. Editorial scores are **not viral probabilities**.
 User ratings and decisions never silently change the editorial scores.
@@ -83,13 +85,16 @@ npm run film -- packet the-dry-seat
 
 `packet` creates an ignored `workspace\<scenario-id>\manifest.json`, refuses to
 overwrite an existing workspace, and leaves generation approval false and budget
-zero. The three example packets are unapproved creative drafts, not selections.
+zero. The four example packets are unapproved creative drafts, not selections.
+`a-seat-for-dad` is a proposed father-son technical pilot: all four literal
+keyframes precede video and are bound to their actual provider references.
+Use `unrated` for a selection given without a numerical rating.
 
 ## What runs and what remains human/tool-driven
 
 | Executable locally | Deliberately not automated |
 |---|---|
-| Validate/rank 40 stories, diversify a slate and show feedback | Decide whether the selected genre/payoff lands |
+| Validate/rank 41 stories, diversify a slate and show feedback | Decide whether the selected genre/payoff lands |
 | Plan song phrase/tempo duration and clearance blockers | Sing, license or perceptually judge an actual recording |
 | Compare dated credit budgets | Refresh OpenArt forms/quotes and consent to spend |
 | Create a resumable selected-story workspace | Upload references; submit and resume provider jobs |

@@ -76,6 +76,11 @@ Resume an existing job; a timeout is not permission to submit it again.
    Create an initial original identity anchor, then reference-guided shot frames.
    Differentiate identity refs from literal start/end frames. Approve adjacent
    frames side by side before animation. Real provider references only.
+   Every required frame must pass, not just one anchor. Read
+   `docs\generation-preflight.md` for limits and conservative prompt ceilings;
+   bind accepted frame IDs/files/provider refs and validate exact motion inputs.
+   The literal opening may double as the original identity/composition anchor
+   when it actually contains the readable cast; avoid a redundant paid image.
 10. **Motion:** one readable primary action and one camera intention per shot.
     Preserve contact, geography and identity. Use separately rendered matched
     states plus an editorial cut for hard transformations; do not assume a model

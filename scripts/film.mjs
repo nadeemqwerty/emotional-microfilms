@@ -1,5 +1,5 @@
-import {existsSync, mkdirSync, writeFileSync} from 'node:fs';
-import {dirname, resolve} from 'node:path';
+import {existsSync, mkdirSync, readdirSync, writeFileSync} from 'node:fs';
+import {basename, dirname, extname, resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {
   assetSetFingerprint, diverseShortlist, estimatePlan, fileHash, inside, invariant, packetDraft,
@@ -64,11 +64,11 @@ function usage() {
   roadmap
   workflow <workflow-id>
   song-plan <workspace-relative-song-cue.json>
-  feedback <scenario-id> <1-5> <shortlist|select|reject|rewrite> [note]
+  feedback <scenario-id> <1-5|unrated> <shortlist|select|reject|rewrite> [note]
   packet <selected-scenario-id>
   status <workspace-relative-manifest.json>
   refresh <workspace-relative-manifest.json>
-  asset <manifest> <keyframe|video|audio|final> <project-relative-file>
+  asset <manifest> <keyframe|video|audio|final> <project-relative-file> [keyframe-id]
   review <manifest> <area> <pass|fail> <observed-evidence>
   advance <manifest> <next-stage>
 
@@ -85,15 +85,16 @@ try {
   } else {
     const data = project();
     if (command === 'validate') {
-      for (const id of ['the-dry-seat', 'same-old-handshake', 'the-last-light']) {
-        validatePacket(load(`examples/${id}.json`), data.scenarios);
+      const packets = readdirSync(inside(root, 'examples')).filter(file => file.endsWith('.json'));
+      for (const file of packets) {
+        validatePacket(load(`examples/${file}`), data.scenarios);
       }
       if (args[0]) {
         const manifest = load(args[0]);
         validateWorkspace(manifest, data);
         verifyAssets(root, manifest);
       }
-      console.log(`Valid: ${data.scenarios.length} scenarios, rubric, feedback, ${data.models.quotes.length} quotes, 3 prompt packets${args[0] ? ', supplied asset manifest' : ''}.`);
+      console.log(`Valid: ${data.scenarios.length} scenarios, rubric, feedback, ${data.models.quotes.length} quotes, ${packets.length} prompt packets${args[0] ? ', supplied asset manifest' : ''}.`);
     } else if (command === 'rank') {
       const count = args[0] === undefined ? 6 : Number(args[0]);
       invariant(Number.isInteger(count) && count > 0, 'Rank count must be a positive integer.');
@@ -121,7 +122,7 @@ try {
       console.log(JSON.stringify(workflow, null, 2));
     } else if (command === 'feedback') {
       const [scenarioId, rating, decision, ...note] = args;
-      const review = {scenarioId, rating: Number(rating), decision,
+      const review = {scenarioId, rating: rating === 'unrated' ? null : Number(rating), decision,
         note: note.join(' '), at: new Date().toISOString()};
       const updated = {...data.feedback, reviews: [
         ...data.feedback.reviews.filter(item => item.scenarioId !== scenarioId), review,
@@ -162,9 +163,14 @@ try {
       } else if (command === 'asset') {
         const [, kind, assetPath] = args;
         invariant(['keyframe', 'video', 'audio', 'final'].includes(kind), 'Invalid asset kind.');
-        const asset = {kind, path: assetPath, sha256: fileHash(inside(root, assetPath))};
+        const keyframeId = kind === 'keyframe' ? args[3] ?? basename(assetPath, extname(assetPath)) : null;
+        if (kind === 'keyframe') invariant(manifest.productionDraft?.keyframes.some(frame =>
+          frame.id === keyframeId), 'Provide a keyframe ID from the selected production packet.');
+        const asset = {kind, path: assetPath, sha256: fileHash(inside(root, assetPath)),
+          ...(keyframeId ? {keyframeId} : {})};
         const prior = manifest.assets.find(item => item.path === assetPath);
-        const changed = !prior || prior.sha256 !== asset.sha256 || prior.kind !== kind;
+        const changed = !prior || prior.sha256 !== asset.sha256 || prior.kind !== kind ||
+          prior.keyframeId !== asset.keyframeId;
         manifest.assets = [...manifest.assets.filter(item => item.path !== assetPath), asset];
         verifyAssets(root, manifest);
         if (changed) {

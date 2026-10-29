@@ -66,6 +66,7 @@ hypotheses unless a source explicitly establishes the claimed relationship.
 | V3 | [ByteDance Seedance 2.0](https://seed.bytedance.com/en/seedance2_0) | Vendor description of multimodal reference and director controls | Marketing claim, no project benchmark |
 | V4 | [BytePlus Seedance](https://www.byteplus.com/en/product/seedance) | Product context for native audiovisual generation | Mixed version copy; current OpenArt wrapper form takes precedence |
 | V5 | Live OpenArt MCP catalog, individual forms and configuration quotes | Actual exposed parameter names, modes and dated attempt costs | No project media generated; price may change at submission |
+| V6 | [PixVerse first/last frames](https://docs.platform.pixverse.ai/first-and-last-frame-video-43051213e0.md), [ordinary image mode](https://docs.platform.pixverse.ai/image-to-video-and-video-templates-13016633e0.md), [upload](https://docs.platform.pixverse.ai/upload-image-13016631e0.md), [concurrency](https://docs.platform.pixverse.ai/concurrency-rules-2394990m0.md) | Model-specific duration/quality, endpoint-dependent prompt ceilings, image compatibility and duplicate-job prevention | Direct vendor constraints are a cross-check, not OpenArt field names, quota or refund guarantees; see generation-preflight |
 
 The read-only OpenArt quote snapshot is in `data\model-quotes.json`. It excludes
 private account identity/balance and is deliberately incomplete as a generation
