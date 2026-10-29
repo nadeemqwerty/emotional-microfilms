@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "the-last-light",
+  "seconds": 10,
+  "aspectRatio": "9:16",
+  "generationApproved": false,
+  "status": "Unselected preproduction example. Lamp/robot assets and output compliance untested.",
+  "intendedInterpretation": "A small robot gives its comfortable pool of light to a seedling and accepts the shadow.",
+  "pacing": {
+    "hypothesis": "The benefit and relinquished comfort must be readable together before the ending holds.",
+    "hook": "What will the robot do when it notices the plant outside its light?",
+    "revealEvidence": "One light pool moves from robot to plant while the robot remains intact in cool fill.",
+    "beats": [
+      {"start": 0, "end": 2, "phase": "setup", "job": "Read warm robot and seedling outside the pool."},
+      {"start": 2, "end": 4.5, "phase": "anticipation", "job": "Robot notices plant and reaches toward lamp."},
+      {"start": 4.5, "end": 5.5, "phase": "reveal", "job": "Elliptical cut reveals the lamp aimed at plant."},
+      {"start": 5.5, "end": 7.5, "phase": "response", "job": "Robot lowers paddle and accepts shadow."},
+      {"start": 7.5, "end": 10, "phase": "hold", "job": "Benefit and cost share the final composition."}
+    ],
+    "cutReasons": ["At 5s jump between approved light states; a supported swivel click bridges the omitted rotation."],
+    "actualEventTimes": null,
+    "review": "pending"
+  },
+  "identityBible": {
+    "Ivo": "Original squat maintenance robot, matte slate-blue rounded body, simple pale ceramic faceplate, exactly two small warm-white circular eye lights, two broad paddle-like hands, a small ochre patch on left shoulder. No franchise reference.",
+    "plant": "One modest green seedling with exactly three broad leaves, gently drooping but alive, in a small terracotta pot.",
+    "lamp": "One practical warm task lamp with a short rigid swivel arm and a pale yellow cone shade, clamped to the center of the wooden bench.",
+    "anchorPrompt": "Create an original 9:16 cinematic still inside a quiet greenhouse at dusk. On a wooden workbench, original small robot Ivo sits screen-left: squat matte slate-blue rounded body, pale ceramic faceplate with exactly two small warm-white eye lights, two paddle-like hands, ochre patch on left shoulder. One pale-yellow-shaded task lamp is clamped at bench center with its short rigid swivel arm aimed left, making a warm pool of light around Ivo's hands. Screen-right outside that pool sits one small terracotta pot with a gently drooping green seedling of exactly three broad leaves, alive and intact. Medium two-shot including robot, lamp and plant in the central portrait frame, camera at bench height, natural 40 mm-equivalent perspective with all story objects legible. Weak cool dusk through greenhouse glass provides fill, warm lamp is the only strong source. Grounded miniature practical-effects realism. No extra lamps, plants, robot limbs, text, dying creature, extracted power core or recognizable franchise design."
+  },
+  "continuity": {
+    "geography": "Robot always screen-left; clamped lamp at center; pot screen-right. Camera on same bench side, no axis crossing.",
+    "propAction": "Ivo's right paddle nudges the short swivel lamp toward the right. Use a straight simple rotational action; it does not detach or move the pot.",
+    "light": "Opening warm pool on robot; closing warm pool on seedling. Cool greenhouse fill stays constant. Robot's two eye lights stay on; no implied death.",
+    "mustNotChange": ["robot face and ochre patch", "three leaves", "terracotta pot", "lamp clamp", "screen positions", "cool dusk fill"],
+    "match": "Cut between two separately approved lighting states; maintain lamp center position. Do not rely on exact continuous simulated light transport."
+  },
+  "lightingPlan": {
+    "motivation": "Single center-clamped warm task lamp plus unchanged weak cool dusk fill.",
+    "key": "Opening warm lamp pool aimed left at robot; after the deliberate cut it points right at plant.",
+    "fill": "Soft cool greenhouse dusk keeps robot silhouette and eye lights visible after the pool moves.",
+    "exposurePriority": "Both the plant's received light and the robot's relinquished warm pool remain visible.",
+    "shadowMap": [
+      {"caster": "robot", "receiver": "bench", "behavior": "Warm modeling/contact changes consistently when lamp no longer points left; cool grounding remains."},
+      {"caster": "plant leaves and pot", "receiver": "bench/pot", "behavior": "After turn, warm highlights/shadows agree with center lamp direction; no old duplicate pool."}
+    ],
+    "invariants": ["lamp clamp position", "cool dusk fill", "robot geometry", "three leaves", "two steady eyes"],
+    "intentionalChanges": ["Warm pool moves left to right across an elliptical cut; related highlights/shadows change with it."],
+    "review": "pending"
+  },
+  "keyframes": [
+    {"id": "a-start", "prompt": "Use approved Ivo/greenhouse identity anchor. Vertical 9:16 medium two-shot at bench height. Ivo, matte slate-blue squat robot with pale faceplate, exactly two warm-white eye lights and an ochre left-shoulder patch, sits screen-left with paddle hands in the warm pool from the center-clamped pale-yellow task lamp aimed left. Screen-right, the single terracotta pot and exactly three broad green leaves are visible in cooler shadow, gently drooping but alive. Ivo's head begins angled down toward its hands. Weak cool dusk fill remains throughout greenhouse. Keep robot, central lamp and pot legible in one plane; no shallow blur over the plant. No text, extra vegetation, dying robot, tears, additional eye lights or crowded background."},
+    {"id": "a-end", "prompt": "Using a-start as strict camera, identity and set reference, show the end of a small noticing action. Same portrait 9:16 bench geography: Ivo left in warm light, rigid lamp clamped at center and three-leaf seedling in terracotta pot right in cool shadow. Ivo's head is now turned toward the seedling and its right paddle rests lightly beside the lamp's short swivel arm, ready to redirect it. The lamp has not yet changed angle. Keep both eye lights on, ochre shoulder patch, leaf count, pot size, lamp shade and camera height identical. Still, restrained performance, soft cool fill and warm source at left. No grabbed plant, complex fingers, new props, detached lamp or text."},
+    {"id": "b-start", "prompt": "Use approved Ivo, plant and lamp references plus a-end for exact spatial continuity. Make the literal first frame after a clean elliptical edit to the new light state: same vertical 9:16 medium two-shot at bench height, Ivo screen-left and terracotta pot screen-right. Center-clamped pale-yellow task lamp now points right, its warm pool lighting the same three gently drooping green leaves. Ivo's right paddle rests on the bench near the swivel arm; Ivo is now in cool dusk shadow but both small warm-white eye lights remain steadily visible. Slate-blue body, pale faceplate and ochre left-shoulder patch unchanged. Pot and clamp have not moved. No instant plant growth, magical rays, dying robot, detached battery, text or duplicate light sources."},
+    {"id": "b-end", "prompt": "Use b-start as strict identity, camera and lighting reference. Same portrait 9:16 greenhouse bench, robot Ivo left in cool fill and the three-leaf seedling right in the warm pool of the single center-clamped pale-yellow task lamp. Ivo has lowered its paddle hands to rest quietly together on its own side of the bench, looking toward the illuminated plant. The robot remains intact and its exactly two eye lights remain on. Seedling leaf count, droop, pot and position are unchanged: no miraculous growth or movement required. Hold a calm final composition with both giver and benefit visible. No new shadows contradicting the lamp, extra plants, smiley text, battery removal or dramatic collapse."}
+  ],
+  "shots": [
+    {
+      "id": "a", "start": 0, "end": 5, "startFrameId": "a-start", "endFrameId": "a-end",
+      "modelCandidate": "pixverseV6", "mode": "image2video",
+      "paramsToQuote": {"duration": 5, "resolution": "720p", "generateAudio": false, "videoCount": 1},
+      "prompt": "Animate the approved a-start for five seconds as one noticing action, locked portrait medium two-shot at greenhouse bench height. Ivo stays screen-left in the lamp's warm light, center lamp stays clamped and aimed left, three-leaf seedling remains screen-right in cool shadow. Ivo pauses over its hands, then slowly turns its head toward the seedling and raises only the right paddle to rest beside the lamp's short swivel arm. Finish in a-end without rotating the lamp yet. Keep exactly two steady eye lights, slate-blue body, ochre shoulder patch, three leaves, terracotta pot and fixed greenhouse geometry. Cool dusk fill and lamp pool remain constant. No camera move, dialogue, plant growth, lamp deformation, battery removal, extra limbs or text."
+    },
+    {
+      "id": "b", "start": 5, "end": 10, "startFrameId": "b-start", "endFrameId": "b-end",
+      "modelCandidate": "pixverseV6", "mode": "image2video",
+      "paramsToQuote": {"duration": 5, "resolution": "720p", "generateAudio": false, "videoCount": 1},
+      "prompt": "Five-second quiet outcome shot from the approved b-start, after an intentional editorial ellipse. Locked same portrait greenhouse bench camera. The center-clamped pale-yellow lamp already points right and illuminates the three-leaf seedling in its unchanged terracotta pot. Ivo stays screen-left in soft cool shadow, both eye lights steadily on. Ivo slowly lowers its right paddle from beside the lamp to rest near the left paddle on its own side, keeping its gaze toward the plant, then remains still. Do not relight or grow the plant, dim robot eyes, rotate the lamp again, add a new action or move camera. Preserve robot identity, leaf count, bench, dusk fill and pot location. End with the giver and received light visible together; no dialogue, text or melodramatic collapse."
+    }
+  ],
+  "singlePassPrompt": "Ten-second original portrait gentle science-fiction microfilm in a dusk greenhouse. Approved small slate-blue robot Ivo sits screen-left on a wooden bench, single clamped yellow-shaded task lamp at center aimed left toward its paddle hands, a three-leaf seedling in a terracotta pot screen-right just outside the warm light. Begin on Ivo enjoying the small warm pool. Ivo notices the seedling, turns its head and moves the right paddle toward the lamp's swivel. At about the midpoint make one clean editorial cut: same geography and camera, lamp now aimed right so the seedling receives the warm pool and Ivo rests in cool dusk fill. Ivo lowers its paddle and quietly looks at the plant; exactly two eye lights remain on throughout. Hold the final image. No plant growth, extracted power source, robot death, moving pot, extra leaves, text or dialogue. If sound is enabled: faint greenhouse wind, a single gentle lamp-swivel click across the cut, a restrained warm sustained tone after the choice, no triumph fanfare or synthetic voice. The cut between light states is intentional; do not turn it into a morph.",
+  "soundPlan": {
+    "routeHypothesis": "separate",
+    "cues": [
+      {"from": 0, "to": 10, "sound": "Low greenhouse wind/room tone, same sound perspective across cut."},
+      {"from": 4.7, "to": 5.2, "sound": "A single small mechanical swivel click to bridge the lighting-state edit."},
+      {"from": 5.5, "to": 9.6, "sound": "Optional quiet warm harmonic opening, not an ominous power-down drone."}
+    ],
+    "musicBrief": "Original or licensed soft sustained instrumental cue, modest opening from a narrow interval to a warmer consonant texture after the light moves. Avoid a death-coded descending line or climactic crash. This is a testable aesthetic direction, not a biological promise.",
+    "rights": "No audio assets cleared yet; record recording/master and composition permissions before use.",
+    "test": "Ask what was given and whether the robot appears to die. Reject versions that imply death when the intended cost is comfort/light."
+  },
+  "retryPlan": "Keep the camera locked and render light states independently. If lamp mechanics fail, cut before rotation with a small supported click. If viewers do not identify a trade-off, reframe both warm plant and shadowed robot together; do not add an explanatory caption or exaggerated collapse.",
+  "reviewChecks": ["One lamp and three leaves throughout", "Visible loss of robot's pool of light", "Robot remains alive and steady", "No magical plant growth", "Lighting follows intended source", "Choice legible without music", "Click does not imply a fatal power-off"]
+}

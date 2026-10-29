@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "project": "Emotional Microfilms",
+  "createdAt": "2026-10-30T00:46:00+05:30",
+  "format": {
+    "aspectRatio": "9:16",
+    "targetSeconds": 10,
+    "minimumSeconds": 8,
+    "maximumSeconds": 15,
+    "deliveryWidth": 1080,
+    "deliveryHeight": 1920,
+    "fps": 30
+  },
+  "audience": "Broad adult/general audience; visual comprehension across languages. Not specifically child-directed.",
+  "creativeScope": "Multiple storytelling genres, mechanisms and visual styles; not a single tearjerker or emotional-twist formula.",
+  "localContext": "Universal stories with subtle local details.",
+  "creativeLaneRegistry": "data/creative-lanes.json",
+  "creativeDirection": [
+    "warmth",
+    "longing",
+    "reunion",
+    "sacrifice",
+    "unexpected kindness",
+    "emotional fantasy"
+  ],
+  "defaults": {
+    "dialogue": "none",
+    "maximumPrincipalCharacters": 2,
+    "maximumLocations": 1,
+    "maximumShots": 3,
+    "maximumPrimaryActions": 3,
+    "style": "Grounded cinematic realism or clearly intentional stylization; choose per scenario.",
+    "sound": "Emotionally legible when muted; sound can deepen or intentionally change interpretation.",
+    "graphicViolence": false
+  },
+  "budget": {
+    "approvedCredits": 0,
+    "monthlyPlanningReferenceCredits": 1200,
+    "note": "The user's earlier 1200-credit figure is a planning reference, not a verified allowance or spend authorization."
+  },
+  "approvals": {
+    "researchAndProjectFiles": true,
+    "scenarioSelection": false,
+    "referenceUploads": false,
+    "paidGeneration": false,
+    "publication": false
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "the-dry-seat",
+  "seconds": 10,
+  "aspectRatio": "9:16",
+  "generationApproved": false,
+  "status": "Unselected preproduction example; no media or real provider references yet.",
+  "intendedInterpretation": "What first looks like keeping a seat for oneself is preparation to offer a stranger a dry place.",
+  "pacing": {
+    "hypothesis": "Readable seat evidence followed by a quiet response feels earned without a fast-cut hook.",
+    "hook": "Why is the commuter keeping a coat across an empty seat?",
+    "revealEvidence": "The coat lifts to expose a dry lighter rectangle, with an open palm offering it.",
+    "beats": [
+      {"start": 0, "end": 1.5, "phase": "setup", "job": "Read people, coat and apparently occupied seat."},
+      {"start": 1.5, "end": 3.5, "phase": "anticipation", "job": "Wet stranger notices seat; coat begins lifting."},
+      {"start": 3.5, "end": 5, "phase": "reveal", "job": "Dry patch and invitation visible together."},
+      {"start": 5, "end": 7.5, "phase": "response", "job": "Already seated stranger turns with relief."},
+      {"start": 7.5, "end": 10, "phase": "hold", "job": "Shared small smile settles; no new event."}
+    ],
+    "cutReasons": ["At 5s omit difficult sitting motion while preserving geography and showing accepted kindness."],
+    "actualEventTimes": null,
+    "review": "pending"
+  },
+  "identityBible": {
+    "Mira": "Fictional adult woman about 40, medium-brown skin, oval face, dark hair in a low bun, plain rust knitted sweater, charcoal trousers, no jewelry. Quiet attentive posture. No resemblance to a real person requested.",
+    "Dev": "Fictional adult man about 35, medium-brown skin, short wavy dark hair, plain muted blue shirt wet at the shoulders, dark trousers, dark canvas bag on right shoulder. No logos.",
+    "props": "One matte dark-olive rectangular coat; one straight wooden bench with three wide seat boards; one narrow bus shelter. No readable writing.",
+    "anchorPrompt": "Create a single cinematic portrait-orientation reference image, 9:16. Under a small unbranded bus shelter during gentle rain, fictional Mira, an adult woman about 40 with medium-brown skin, oval face and dark hair in a low bun, sits screen-left on a straight three-board wooden bench. She wears a plain rust knitted sweater and charcoal trousers. A matte dark-olive coat lies flat across the empty seat to her right. Fictional Dev, an adult man about 35 with medium-brown skin, short wavy dark hair, a muted blue shirt wet at the shoulders, dark trousers and a dark canvas bag on his right shoulder, stands at the right edge, facing left toward the bench. Both faces and the covered seat are readable. Camera at seated eye level, medium-wide two-shot, restrained 35 mm-equivalent perspective, enough depth of field for the seat and both faces. Soft overcast daylight from camera-right, neutral gray rain background, gentle natural skin contrast. Contemporary grounded realism, ordinary adults, modest shelter. Keep the essential people, hands and seat in the central area of the vertical composition. No extra people, text, brands, exaggerated tears or visual effects."
+  },
+  "continuity": {
+    "geography": "Mira remains screen-left. Dev approaches from screen-right facing left. Camera remains on the pavement side of the bench axis.",
+    "propOwnership": "Mira lifts the coat with her right hand and places it on her own lap. Dev's bag stays on his right shoulder until the cut.",
+    "light": "Soft cloudy source from camera-right throughout; coat hides a visibly dry, lighter patch of otherwise darker damp wood.",
+    "match": "At the cut, Dev is standing at the right bench edge; in the next shot he is already settled there. This is a deliberate small ellipsis, not a purported continuous sit.",
+    "mustNotChange": ["faces", "sweater and shirt colors", "bench boards", "dry patch position", "screen sides", "coat color"],
+    "intentionalChanges": ["coat moves from right seat to Mira's lap", "Dev is settled after the edit"]
+  },
+  "lightingPlan": {
+    "motivation": "Broad cloudy daylight reaching the open shelter, slightly stronger camera-right.",
+    "key": "Large diffuse source from camera-right above faces; no hard spotlight or sunny beam.",
+    "fill": "Gentle ambient shelter bounce preserves both faces and the seat without a second hard shadow.",
+    "exposurePriority": "Dry/wet wood contrast, Mira's invitation and both faces remain readable together.",
+    "shadowMap": [
+      {"caster": "Mira, Dev and coat", "receiver": "bench/ground", "behavior": "Soft grounded contact shadows; no sharp moving silhouette under diffuse rain light."},
+      {"caster": "coat before lift", "receiver": "right bench seat", "behavior": "Seat is occluded, not darkened by a magical separate light; reveal shows material dryness."}
+    ],
+    "invariants": ["cloudy source direction", "soft edge quality", "no sudden exposure change", "gentle shelter fill"],
+    "intentionalChanges": ["Coat reveals the lighter dry material; source lighting itself does not change."],
+    "review": "pending"
+  },
+  "keyframes": [
+    {
+      "id": "a-start",
+      "prompt": "Using the approved Mira/Dev identity reference, make the literal first frame of a 9:16 film. Mira, same low bun, rust sweater and charcoal trousers, sits screen-left on the same three-board bench beneath the shelter. Her right hand rests lightly on the olive coat covering the empty right seat. Dev, same wet blue shirt and right-shoulder canvas bag, stands screen-right facing left, shoulders lowered, not yet invited to sit. His eyes glance at the occupied-looking seat. Medium-wide two-shot at seated eye height; both faces, Mira's right hand and the full covered seat visible. Soft overcast daylight from camera-right, faint rain outside shelter, gray unobtrusive background, natural restrained expressions. Keep central action clear of the extreme edges. No title, text, additional people, dramatic tears, duplicate limbs or changed clothing."
+    },
+    {
+      "id": "a-end",
+      "prompt": "Using the approved identities AND a-start as composition reference, produce the same 9:16 medium-wide camera position and bench geometry at the end of one simple coat-lift action. Mira remains seated screen-left in the rust sweater; the olive coat now rests on her own lap beneath her right hand. The empty right seat is revealed as a clearly lighter dry rectangle amid dark damp wood. Her left hand makes a small open-palm invitation toward that seat, with anatomically plausible relaxed fingers. Dev remains standing screen-right in his wet muted-blue shirt, canvas bag on his right shoulder; he looks down at the newly revealed dry seat, surprised gently. Same faces, left-right positions, camera height, cloudy light from right, rain and shelter. No new props, text, extra people, body morphing or a second coat."
+    },
+    {
+      "id": "b-start",
+      "prompt": "Using the approved Mira and Dev identities and a-end as spatial reference, make the first frame AFTER a deliberate elliptical cut. Same vertical 9:16 shelter and bench, slightly tighter medium two-shot at the same seated eye height, camera still on pavement side. Mira sits screen-left with olive coat on her lap, rust sweater unchanged. Dev is now already seated screen-right on the dry patch in his wet muted-blue shirt; his dark canvas bag rests beside his right foot. Maintain a small respectful gap between them. Dev begins to turn his head toward Mira; she looks at him, relaxed. Both faces and the edge of the dry seat remain readable. Soft cloudy light from camera-right; no change in rainfall or bench design. No sitting motion, hand contact, text, logos, extra people or exaggerated smiles."
+    },
+    {
+      "id": "b-end",
+      "prompt": "Use b-start as a strict composition and identity reference. Same 9:16 medium two-shot, Mira screen-left with coat on lap and Dev screen-right on the dry bench seat, bag beside his right foot. Dev has completed only a small head turn toward Mira. Their eyes meet with a restrained relieved smile, shoulders easing. Hands remain separate and still, no embrace. Preserve all clothes, hair, faces, bench boards, shelter, soft cloudy right-side light and muted rain background. Hold enough quiet space around the faces for the final feeling. No new objects, dramatic tears, text, camera angle change or forced grin."
+    }
+  ],
+  "shots": [
+    {
+      "id": "a", "start": 0, "end": 5, "startFrameId": "a-start", "endFrameId": "a-end",
+      "modelCandidate": "pixverseV6", "mode": "image2video",
+      "paramsToQuote": {"duration": 5, "resolution": "720p", "generateAudio": false, "videoCount": 1},
+      "prompt": "Animate the approved literal start frame for five seconds. Locked seated-eye-level medium-wide camera, portrait composition unchanged. Mira stays seated on the left; Dev remains standing on the right, facing left. Begin with a brief readable pause on the coat-covered seat and Dev's tired posture. Mira then performs one controlled action: with her right hand she lifts the olive coat from the empty right bench seat and settles it on her lap, revealing the lighter dry rectangle beneath. Finish with a small open left palm toward the dry place; Dev shifts his gaze to it. Preserve identity, wardrobe, bench geometry, hand ownership, rain and soft overcast light from camera-right. End in the approved a-end pose and hold briefly if possible. No camera movement, dialogue, new people, morph, sitting action, object duplication or changes of screen side. Exact beat timings and endpoint compliance must be checked in the result, not assumed."
+    },
+    {
+      "id": "b", "start": 5, "end": 10, "startFrameId": "b-start", "endFrameId": "b-end",
+      "modelCandidate": "pixverseV6", "mode": "image2video",
+      "paramsToQuote": {"duration": 5, "resolution": "720p", "generateAudio": false, "videoCount": 1},
+      "prompt": "Animate the approved b-start image for five seconds as one quiet reaction shot. Locked portrait medium two-shot at seated eye height, Mira on the left and Dev already seated on the right. Dev slowly completes a small head turn toward Mira; their gazes meet, their shoulders soften, and each gives a modest natural relieved smile. Mira's olive coat remains on her lap; Dev's bag remains beside his right foot. Keep their hands separate and still. Preserve their exact identities, clothing, bench and right-side cloudy lighting. Hold the settled shared look for the ending. No sitting down, embrace, tears, large gestures, orbit, focus pull, added text or invented people. The invitation occurred in the preceding shot; do not repeat it or create a new action."
+    }
+  ],
+  "singlePassPrompt": "Ten-second portrait cinematic scene, grounded realism, one small bus shelter during gentle rain. Use the approved literal starting composition: Mira in a rust sweater sits screen-left with an olive coat spread across the empty right bench seat; rain-soaked Dev in a muted-blue shirt stands screen-right facing left, canvas bag on right shoulder. Initially it can look as if she is reserving the seat. Over the first half, she lifts the coat with her right hand onto her lap, revealing the dry lighter wood beneath, then offers the seat with her open left palm. At approximately the middle, make one clean editorial cut to the same geography in a slightly tighter two-shot: Dev is already seated on the right, bag beside his right foot. He turns toward Mira; they exchange a small relieved smile and remain quiet through the ending. Keep faces, wardrobe, bench boards, light from camera-right and screen positions consistent. No sitting transition, morph, dialogue or text. Sound if enabled: low rain outside the shelter, one gentle fabric lift, subtle wood movement at the edit; no voices, lyrics, melodramatic swell or early musical reveal. Suggested timing is a target to evaluate, not an expectation of frame-exact control.",
+  "soundPlan": {
+    "routeHypothesis": "separate",
+    "cues": [
+      {"from": 0, "to": 10, "sound": "Soft sheltered rain, steady perspective; bridge it across the cut."},
+      {"from": 2, "to": 4.5, "sound": "One quiet coat-fabric movement, synchronized to actual motion."},
+      {"from": 5, "to": 5.3, "sound": "Subtle bench/cloth settling only if supported by the picture."},
+      {"from": 6, "to": 9.5, "sound": "Optional warm sparse two-note motif after recognition, not a cue that spoils the reveal."}
+    ],
+    "musicBrief": "Original or explicitly licensed restrained instrumental cue. Intimate soft felt-piano or plucked warm timbre, no lyrics or recognizable melody, small harmonic opening after the offered seat, low dynamic range relative to the foley. This is a creative brief, not an OpenArt music endpoint or a dopamine prescription.",
+    "rights": "Uncleared until the actual recording, licence, commercial scope, platforms and territories are recorded.",
+    "test": "Same locked picture: ambience/foley versus ambience/foley plus motif, randomized fresh viewers; silent comprehension tested separately."
+  },
+  "retryPlan": "First test the three key story stills silently. If dry patch is unreadable, improve contrast/composition before animation. If coat contact fails, shorten lift or cut between stable coat states. If Dev sitting causes artifacts, keep the already-seated second shot. Replace only the failed shot after a fresh quote and approval.",
+  "reviewChecks": ["Dry patch is unmistakable at phone size", "Coat never duplicates or changes hand", "Dev remains screen-right", "No contact artifacts", "Kindness reads without title or music", "Final reaction has enough time", "Rain bridge does not become an unexplained voice"]
+}

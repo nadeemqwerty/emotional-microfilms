@@ -1,0 +1,9 @@
+node_modules/
+workspace/
+media/
+outputs/
+.cache/
+.env
+.env.*
+!.env.example
+*.log

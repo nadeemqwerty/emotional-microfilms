@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "status": "template-no-song-selected",
+  "scenarioId": null,
+  "lane": null,
+  "audienceAndFamiliarity": null,
+  "candidates": [],
+  "method": "pitch-preserving",
+  "sourceBpm": null,
+  "targetBpm": null,
+  "sourceIn": null,
+  "sourceOut": null,
+  "filmSeconds": 10,
+  "recognitionCue": null,
+  "phraseCompleteness": null,
+  "actualPictureAlignment": [],
+  "vocalBrief": {
+    "mode": "Choose instrumental, original voice, hired singer or authorized synthetic voice.",
+    "language": null,
+    "rangeAndKey": null,
+    "dictionAndDelivery": null,
+    "breathAndPhrase": null,
+    "lyricsProvenance": null
+  },
+  "rights": {"compositionLyrics": "unknown", "recording": "unknown", "arrangement": "unknown", "voice": "unknown", "platformCommercialUse": "unknown"},
+  "sourceHash": null,
+  "listeningReview": "pending",
+  "generationOrRecordingApproved": false,
+  "note": "Planning template only. Do not store copyrighted lyrics or private licence evidence in public Git."
+}

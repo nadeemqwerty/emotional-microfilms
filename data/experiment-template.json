@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "status": "template-not-an-experiment-result",
+  "scenarioId": null,
+  "question": null,
+  "evidenceClass": "project-experiment",
+  "design": "Choose: randomized fresh-viewer audio; same-story pacing; whole-system comparison; observational Instagram.",
+  "primaryOutcome": "First-view essential comprehension, or predeclared meaningful felt emotion with comprehension gate.",
+  "essentialInterpretationElements": [],
+  "variants": [],
+  "randomizationAndPresentation": null,
+  "samplePlanAndStoppingRule": null,
+  "practicalImprovementWorthPursuing": null,
+  "observationWindows": [],
+  "currentMetricDefinitions": {},
+  "results": [],
+  "costs": {"chargedCredits": null, "acceptedFilms": null, "audioLicensingCost": null, "editMinutes": null},
+  "interpretation": null,
+  "limitations": ["No dopamine endpoint.", "Small convenience panels are diagnostic.", "Organic distribution is not randomized."],
+  "privacy": "Store actual private answers and identities only in ignored workspace; publish anonymized summaries with permission."
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "principle": "A multi-genre short-form studio. Emotional connection is one payoff, not the only permitted genre. Genre, narrative mechanism, visual style and local texture are separate decisions.",
+  "localContext": "Universal stories with subtle local details, as explicitly chosen by the user.",
+  "lanes": [
+    {"id": "emotion-led", "payoff": "Warmth, longing, connection, kindness, reunion, romance or sacrifice.", "test": "What visible action earns the feeling? No compulsory tragedy."},
+    {"id": "visual-comedy", "payoff": "Recognition, benign incongruity, comic escalation or an earned visual punchline.", "test": "What expectation changes, and can the joke read without explanation?"},
+    {"id": "meme-story", "payoff": "A relatable contradiction or recognizable behavior expressed with original scenes.", "test": "Does it work without copying an existing meme image, actor or recording?"},
+    {"id": "nostalgia", "payoff": "Recognition of a shared ritual, texture, game, place or ordinary remembered pleasure.", "test": "What concrete sensory/visual cue carries memory without requiring the same biography?"},
+    {"id": "visual-poetry", "payoff": "A clear image relationship, rhythm, atmosphere or metaphor; not necessarily a twist.", "test": "Is the intended visual experience legible, rather than a random effect montage?"},
+    {"id": "micro-mystery", "payoff": "An open but resolvable question, discovery or gentle suspense.", "test": "Does the answer repay the initial question without arbitrary withheld facts?"}
+  ],
+  "visualStyles": [
+    "grounded live-action realism",
+    "warm observational handheld",
+    "locked graphic tableaux",
+    "original 2D hand-drawn animation",
+    "cut-paper collage",
+    "stop-motion clay or practical miniature",
+    "watercolor or ink wash",
+    "stylized 3D",
+    "monochrome graphic shadows"
+  ],
+  "mechanisms": ["small choice", "misunderstanding", "visual irony", "pattern and variation", "callback", "reciprocity", "recognition", "contrast", "visual metaphor", "discovery", "comic escalation", "quiet observation"],
+  "localTextureExamples": ["a familiar metal cup", "balcony plants", "shoes beside a door", "a simple courtyard", "rain shelter", "paper boats", "everyday fabrics", "ambient neighborhood sound"],
+  "constraints": [
+    "Local texture is optional and non-explanatory; avoid caricature or requiring local slang to understand the plot.",
+    "Do not force a sad ending, reveal, hug or orchestral swell into every film.",
+    "Choose style before keyframes and preserve it across shots; do not confuse style variation with random within-film identity drift.",
+    "Caption-led memes may be chosen explicitly, with actual text-readability tests and rights checks. The current example packets and assembler are visual-first; captions need an approved composition/editing stage.",
+    "Scores measure intended impact across lanes; diversity shortlist is an editorial sampling policy, not a market or reach claim.",
+    "No genre/style is permanently locked; add new lanes with their own payoff and review criteria when useful."
+  ]
+}

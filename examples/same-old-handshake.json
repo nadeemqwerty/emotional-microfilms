@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "same-old-handshake",
+  "seconds": 10,
+  "aspectRatio": "9:16",
+  "generationApproved": false,
+  "status": "Unselected creative example. Robot/faces ungenerated; no accepted provider reference IDs.",
+  "intendedInterpretation": "A familiar repeated greeting reveals an old connection; the human chooses to respond.",
+  "pacing": {
+    "hypothesis": "Separated slow taps create a visible recognition pattern; the returned gesture needs its own time.",
+    "hook": "Will the apparently dormant robot recognize the person beside it?",
+    "revealEvidence": "Two robot taps are mirrored by two human taps, followed by voluntary proximity.",
+    "beats": [
+      {"start": 0, "end": 1.5, "phase": "setup", "job": "Read uncertain adult and dormant-looking robot."},
+      {"start": 1.5, "end": 3.8, "phase": "anticipation", "job": "Eyes brighten; two separated robot taps."},
+      {"start": 3.8, "end": 5, "phase": "reveal", "job": "Adult notices the greeting and softens."},
+      {"start": 5, "end": 8, "phase": "response", "job": "Adult mirrors two taps and rests hand nearby."},
+      {"start": 8, "end": 10, "phase": "hold", "job": "Recognition smile and steady eye lights remain."}
+    ],
+    "cutReasons": ["At 5s redirect attention from robot's cue to the adult's chosen response, without crossing the axis."],
+    "actualEventTimes": null,
+    "review": "pending"
+  },
+  "identityBible": {
+    "Anu": "Fictional adult about 35, medium-brown skin, short dark curls, olive overshirt over a cream tee, unbranded dark trousers, no jewelry. Gentle reserved performance.",
+    "Pip": "Original small bench-height companion robot, rounded matte-cream rectangular head, exactly two circular amber eye lights, faded teal torso, two short arms ending in simple three-pad mitts, small crescent scratch above its left eye. No resemblance to a known franchise robot.",
+    "set": "Quiet repair workshop, waist-high plain wooden bench, warm dusty window light from camera-left, muted teal/cream palette, no readable signs.",
+    "anchorPrompt": "Create an original cinematic 9:16 reference composition in a quiet repair workshop. Fictional adult Anu, about 35, medium-brown skin, short dark curls, olive overshirt and cream tee, stands screen-right beside a plain wooden workbench facing left. Original companion robot Pip sits screen-left on the bench: rounded matte-cream rectangular head, exactly two circular amber eye lights currently dim, faded teal torso, two short arms with simple three-pad padded mitts, one crescent scratch above its left eye. Anu's right hand rests on the table well separated from Pip's mitt. Medium two-shot at robot eye height, 40 mm-equivalent natural perspective, enough focus depth for both faces and the bench surface. One warm dusty window source from camera-left, soft fill, restrained realism with a practical-looking robot. Clear center framing; no extra robots, franchise design, text, weapons, cables through hands or crowded background."
+  },
+  "continuity": {
+    "geography": "Pip screen-left, Anu screen-right. Both hands/mitts visible against the same uncluttered bench surface. Camera stays in front of bench.",
+    "gesture": "Pip makes exactly two slow visible taps with its right mitt. Anu returns two taps with the right hand in shot b, then rests that hand beside the mitt, not intertwined.",
+    "light": "Warm window at camera-left throughout. Amber eyes brighten once and remain steady; do not use rapid flicker.",
+    "mustNotChange": ["robot eye count", "robot scratch", "Anu's curls and overshirt", "hand ownership", "bench height", "screen positions"],
+    "match": "Cut after Pip's two-tap greeting; maintain the table edge height and Anu's downward gaze."
+  },
+  "lightingPlan": {
+    "motivation": "One warm workshop window on camera-left; robot eyes are small secondary accents.",
+    "key": "Broad soft left-side window light slightly above faces, preserving robot form and human recognition.",
+    "fill": "Restrained room bounce; retain shadow detail in the mitt and human hand.",
+    "exposurePriority": "Both faces and separated contact/tap points on the wooden bench.",
+    "shadowMap": [
+      {"caster": "robot mitt and human hand", "receiver": "bench", "behavior": "Soft grounded shadows broadly away from left key; no floating or merged contact."},
+      {"caster": "robot head", "receiver": "robot torso/bench", "behavior": "Stable modeling through the small head turn; eye lights do not create a second large source."}
+    ],
+    "invariants": ["warm key from left", "room fill", "wood highlight direction", "no unmotivated flicker"],
+    "intentionalChanges": ["Two eye lights brighten once and remain steady."],
+    "review": "pending"
+  },
+  "keyframes": [
+    {"id": "a-start", "prompt": "Using the approved Anu/Pip reference, render the literal 9:16 opening shot in the identical repair workshop. Pip remains screen-left on the wooden workbench, original cream rounded rectangular head, two dim amber eyes, faded teal torso and crescent scratch above its left eye; right padded three-pad mitt near the table. Anu stands screen-right, same short dark curls, olive overshirt and cream tee, watching Pip with uncertainty, right hand resting separately on the bench. Medium two-shot at robot eye height, both faces and hands clear. Warm soft window light from camera-left, gentle neutral shadows. The robot looks dormant but intact, not distressed or disassembled. No extra eyes, fingers, people, text, logos, franchise motifs, dramatic tears or camera tilt."},
+    {"id": "a-end", "prompt": "Use a-start as the strict identity, camera and set reference. Same 9:16 medium two-shot, Pip screen-left and Anu screen-right. Pip's two amber eyes are now softly bright and its right padded mitt has just completed a second small downward tap on the wooden bench; mitt close to the surface, no new joints or fingers. Anu's gaze is directed at the mitt, brow beginning to soften in recognition, right hand still separate on the bench. Preserve Pip's cream head, teal body, crescent scratch, Anu's curls and olive overshirt, bench and warm left window lighting. No eye flicker, duplicate arms, physical hand overlap, text or new props."},
+    {"id": "b-start", "prompt": "Using the approved identities and a-end for continuity, create a slightly tighter 9:16 medium two-shot from the same side of the wooden bench. Pip stays screen-left with two steady amber eye lights, cream head, teal torso and crescent scratch; right padded mitt rests on the bench. Anu stays screen-right in the olive overshirt and cream tee, eyes looking from Pip's face toward the table, right hand raised only a few centimeters, ready to return a familiar two-tap greeting. Both hands and faces remain visible with a clear gap between human hand and robot mitt. Warm window source remains camera-left, same quiet repair workshop. No contact, new finger design, tearful grin, text or extra characters."},
+    {"id": "b-end", "prompt": "Use b-start as a strict reference for the same 9:16 medium two-shot. Anu has finished two small taps and now rests the right hand flat on the bench beside, not over or inside, Pip's right three-pad mitt. A small visible gap separates them. Anu's expression is a restrained recognition smile directed at Pip; Pip's two amber eyes stay steady and head tilts only slightly toward Anu. Exact cream head, teal torso, left-eye crescent scratch, olive overshirt, cream tee, warm left-side window light and bench geometry preserved. Emotional connection through stillness and proximity, not a hug. No new eyes, fingers, text, camera move or invented objects."}
+  ],
+  "shots": [
+    {
+      "id": "a", "start": 0, "end": 5, "startFrameId": "a-start", "endFrameId": "a-end",
+      "modelCandidate": "pixverseV6", "mode": "image2video",
+      "paramsToQuote": {"duration": 5, "resolution": "720p", "generateAudio": false, "videoCount": 1},
+      "prompt": "Five-second shot from the literal approved opening frame. Locked portrait medium two-shot at robot eye height; Pip stays left on the workbench, Anu stays right. Begin with a short readable still moment. Pip's exactly two amber eye lights gently brighten once, then its right padded mitt makes exactly two small slow taps on the table, separated enough to see. Anu keeps their own hand still and shifts their gaze toward the tapping mitt, expression becoming attentive. End after the second tap with Pip's mitt near the bench, holding the recognition setup. Preserve the robot's cream head, teal body, left-eye crescent scratch, two short arms, Anu's curls, olive overshirt, cream tee and soft warm window light from left. No fingers growing, interlocking hands, eye flicker, extra tap sequence, camera move, dialogue, text or transformation."
+    },
+    {
+      "id": "b", "start": 5, "end": 10, "startFrameId": "b-start", "endFrameId": "b-end",
+      "modelCandidate": "pixverseV6", "mode": "image2video",
+      "paramsToQuote": {"duration": 5, "resolution": "720p", "generateAudio": false, "videoCount": 1},
+      "prompt": "Five-second continuation from approved b-start in the same portrait workshop geography, Pip left and Anu right. Keep the slightly tighter camera locked. Anu returns exactly two gentle visible taps with the right hand on the bench, mirroring Pip's preceding greeting. Then Anu lowers that hand flat beside the robot's resting mitt, with a small clear gap and no interlocking contact, looks to Pip and gives a modest recognition smile. Pip's eyes remain softly amber and its head inclines slightly toward Anu. Hold the final connection rather than adding a second event. Preserve all identity, hand ownership, light from camera-left and bench details. No robot transformation, human aging, hug, tears, text, dialogue or extra people."
+    }
+  ],
+  "singlePassPrompt": "Make a ten-second original portrait emotional science-fiction scene from the approved workshop opening image. Pip, a small original cream-and-teal bench-top robot with two amber eyes and a crescent scratch above its left eye, sits screen-left. Anu, an adult with short dark curls, olive overshirt and cream tee, stands screen-right. Warm window light comes from left. In the first half Pip's eyes brighten and its right padded mitt makes two slow, unmistakable tabletop taps. Anu notices; a restrained change of expression suggests recognition. Around the middle, cut once to a slightly tighter two-shot on the same side. Anu returns two taps with the right hand and rests it beside Pip's mitt with a small gap; they look toward each other and hold still through the end. No interlocking fingers, complicated contact, text, dialogue, extra robot eyes or changing clothes. If sound is enabled, match four soft wooden taps to the actual actions, use quiet workshop room tone and a barely emerging warm sustained texture after recognition, without lyrics, voice or an early emotional swell. Timing targets and count compliance require output inspection.",
+  "soundPlan": {
+    "routeHypothesis": "separate",
+    "cues": [
+      {"from": 0, "to": 10, "sound": "Quiet workshop room tone, no busy machinery masking the greeting."},
+      {"from": 1.5, "to": 4.5, "sound": "Two robot tabletop knocks placed on actual contact frames, not assumed prompt timings."},
+      {"from": 5.5, "to": 7.5, "sound": "Two returned human taps; slightly softer timbre, same visible rhythm."},
+      {"from": 7.5, "to": 10, "sound": "Optional soft warm sustained interval after recognition, no grand crescendo."}
+    ],
+    "musicBrief": "Original or licensed non-lyrical intimate instrumental texture; a restrained unresolved interval can settle after the returned taps. Keep taps distinct and preserve room tone. No recognizable song or franchise sound.",
+    "rights": "Actual audio and provider output terms must be cleared; none has been sourced yet.",
+    "test": "Blind viewers must identify the mirrored greeting and human response without hearing the knocks. Compare foley-only and foley-plus-music on the same picture."
+  },
+  "retryPlan": "If taps are not visually countable, use a simpler single palm-raise greeting and rescore clarity. If reunion is not inferred, label this as recognition/acceptance rather than inventing a past. Keep hands adjacent instead of touching. Native-audio candidate is only worth a benchmark if synchronization work is material.",
+  "reviewChecks": ["Exactly two robot eyes", "Mirrored greeting is visible without sound", "No merged mitt and hand", "No franchise resemblance intended", "Same scratch and wardrobe", "Final voluntary response is readable", "Audio does not add accidental speech"]
+}

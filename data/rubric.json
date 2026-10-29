@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "scoreType": "editorial-hypothesis",
+  "scale": {"minimum": 1, "maximum": 5},
+  "criteria": [
+    {"id": "emotion", "weight": 20, "one": "No legible intended response or payoff.", "three": "Recognizable feeling, amusement or curiosity, but generic or dependent on inferred backstory.", "five": "A specific visible event, choice or payoff earns the intended response for this lane."},
+    {"id": "clarity", "weight": 20, "one": "Needs explanation, text, or more time than available.", "three": "Understandable with one possible ambiguity to test.", "five": "Setup, turn and consequence read in three stills without explanation."},
+    {"id": "reframe", "weight": 15, "one": "No meaningful development or an arbitrary trick.", "three": "A coherent reveal, comic development, recognition or poetic progression.", "five": "An earned payoff deepens or changes the opening through the selected lane; a surprise twist is not mandatory."},
+    {"id": "originality", "weight": 10, "one": "Near-copy of a known clip or a stock tearjerker.", "three": "Familiar mechanism with specific fresh details.", "five": "Distinctive visual expression without relying on novelty alone."},
+    {"id": "feasibility", "weight": 15, "one": "Uncontrolled crowd, complex contact or several transformations.", "three": "One difficult effect/contact that can be isolated or simplified.", "five": "One location, simple visible action, stable identities and controllable framing."},
+    {"id": "frugality", "weight": 10, "one": "Requires several high-cost takes with little asset reuse.", "three": "Two or three independently repairable shots.", "five": "One or two simple shots, reusable anchors, inexpensive animatic first."},
+    {"id": "silentRead", "weight": 10, "one": "Meaning requires dialogue, a lyric or explanatory caption.", "three": "Core connection reads; nuance may need sound.", "five": "The choice and changed relationship read without audio or text."}
+  ],
+  "hardGates": [
+    "original-or-cleared-concept",
+    "non-graphic-and-respectful",
+    "8-to-15-second-previsualization",
+    "no-required-explanatory-dialogue",
+    "silent-legible-core",
+    "one-comprehensible-development-or-payoff",
+    "feasible-repair-plan"
+  ],
+  "rankingPolicy": "Rank eligible ideas by editorial score, then ID. Keep user rating and decision separate; never invent user feedback or treat editorial score as probability.",
+  "shortlistPolicy": "Top six is only a provisional discussion queue. User can select, reject or request a rewrite regardless of score."
+}
