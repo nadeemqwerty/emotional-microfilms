@@ -193,6 +193,12 @@ signal, not proof the audience should watch more times.
 
 ## Evidence and tools
 
+Retrieve first: `film knowledge "<topic/question>"`. Use the versioned
+`data\knowledge.json` and source-bound local index under
+`docs\knowledge-base.md`; do not repeat broad web research for each script.
+Persist only new verified gaps. Cached vendor snapshots never replace live
+forms, exact reference-bound quotes or job reconciliation.
+
 - Research register: `docs\research.md`; neuroscience: `docs\music-brain-hooks.md`.
 - Craft: `docs\film-language.md`, `docs\pacing.md`, `docs\prompt-playbook.md`.
 - Light/shadow: `docs\lighting-shadows.md`; songs: `docs\song-adaptation.md`.

@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "policy": "Project-only reusable knowledge. Original summaries with evidence/read scope; no private jobs, account data, signed URLs or uninspected-source claims. Retrieve before external research.",
+  "entries": [
+    {
+      "id": "heavy-music-emotional-fit",
+      "title": "Heavy mismatched music can pass technical meters",
+      "tags": ["audio", "music", "heavy", "mismatch", "feelings", "emotion", "density", "bass", "mix"],
+      "summary": "The user liked the Korean toddler/father v2 picture but found its music heavy and emotionally mismatched. Technical audio continuity and healthy levels did not establish scene fit.",
+      "rules": ["Preserve good picture and improve the reusable workflow before rerolling media.", "Diagnose arrangement density, register, sustain, dramatic implication, timing and gain separately.", "Require actual joined listening, same-picture ambience/silence comparison and the seven-dimension audio-scene-fit review; absent perception stays blocked."],
+      "evidenceType": "actual-user-feedback and implemented project rule",
+      "freshness": "stable",
+      "reviewedAt": "2026-10-30",
+      "sources": [{"path": "data/feedback.json", "scope": "Actual user production feedback, not audience testing."}, {"path": "docs/audio-scene-fit.md", "scope": "Operational editorial protocol."}]
+    },
+    {
+      "id": "gaze-subtext-context",
+      "title": "Unspoken attraction uses context, not a universal eye-contact code",
+      "tags": ["teen", "teenage", "love", "romance", "gaze", "eyes", "subtext", "attraction"],
+      "summary": "Hietanen's 2018 integrative review reports context-sensitive and inconsistent explicit affective evaluations of direct versus averted gaze. The inspected abstract and selected sections distinguish attention/arousal from felt liking.",
+      "rules": ["Use restrained, reciprocal glances and clear eyelines as fictional craft choices.", "Provide a comfortable peer context and a visible small response; do not code prolonged unwanted staring as romance.", "Do not claim a glance scientifically proves attraction or predicts audience response."],
+      "evidenceType": "review abstract and selected full-text sections; craft application is a hypothesis",
+      "freshness": "stable",
+      "reviewedAt": "2026-10-30",
+      "sources": [{"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6121038/", "title": "Affective Eye Contact: An Integrative Review", "scope": "Abstract, introduction and explicit-affect sections actually read; not every reference inspected."}, {"path": "docs/film-language.md", "scope": "Existing researched eyeline/blocking craft."}]
+    },
+    {
+      "id": "adult-led-conflict-repair",
+      "title": "Parents regulate and repair; a child is not the mediator",
+      "tags": ["parents", "fighting", "conflict", "child", "children", "repair", "mental", "emotional", "health"],
+      "summary": "Child Mind Institute's DBT for Parents guidance describes adults modelling calm communication and pausing before reactive responses. Its STOP sequence is professional parent-training guidance, not a trial of a ten-second marital-conflict film.",
+      "rules": ["Show adults noticing the child and taking responsibility for calming the interaction.", "Use an original brief reassurance/apology if dialogue is chosen; never make the child solve the adults' dispute.", "Show one repair moment without implying all harm or the underlying disagreement is instantly cured.", "Do not present the film as therapy, diagnosis or a guaranteed mental-health benefit."],
+      "evidenceType": "professional guidance; original fictional application",
+      "freshness": "stable",
+      "reviewedAt": "2026-10-30",
+      "sources": [{"url": "https://childmind.org/article/dbt-for-parents/", "title": "DBT for Parents", "scope": "Article text read; page says updated July 1, 2026."}]
+    },
+    {
+      "id": "photograph-nostalgia-cue",
+      "title": "A grandmother photograph can cue a specific ordinary memory",
+      "tags": ["memory", "memories", "photo", "photograph", "grandmother", "nostalgia", "nostalgic", "past"],
+      "summary": "Scherman and colleagues' 2026 descriptive study used open responses from 256 participants about nostalgia cues. Photographs, music and other sensory/environmental elements were frequently mentioned; nostalgia was characterized as mixed-valence and predominantly positive.",
+      "rules": ["Use a recognizable photograph and a concrete remembered routine, not generic sepia as the entire story.", "Design a legible present-to-memory transition and a restrained present response.", "Do not assume the grandmother is dead or make grief mandatory.", "This cue study does not prove a specific cinematic device causes nostalgia or mental-health improvement."],
+      "evidenceType": "primary study abstract only",
+      "freshness": "stable",
+      "reviewedAt": "2026-10-30",
+      "sources": [{"url": "https://pubmed.ncbi.nlm.nih.gov/42610246/", "title": "What makes you feel nostalgic? A self-generated approach to nostalgia-evoking cues", "scope": "PubMed abstract actually read; full methods/results not inspected.", "doi": "10.1080/09658211.2026.2710049"}]
+    },
+    {
+      "id": "characters-frames-before-motion",
+      "title": "Actual cast and scene frames precede paid motion",
+      "tags": ["characters", "identity", "frames", "keyframes", "generation", "continuity", "approval"],
+      "summary": "The project requires real cast references, actual scene images, scoped personal/delegated acceptance and complete design before motion. Sketches are not production frames.",
+      "rules": ["Reconcile identity, age/scale, wardrobe, props, geography, contact and light using actual images.", "Complete the frame/beat requirements and all scene states before paid calls.", "Use genuine returned references, not invented IDs; no skipped cast or endpoint gate."],
+      "evidenceType": "implemented project rule and production lessons",
+      "freshness": "stable",
+      "reviewedAt": "2026-10-30",
+      "sources": [{"path": "AGENTS.md", "scope": "Current creation gates."}, {"path": "docs/visual-development.md", "scope": "Canonical staged production workflow."}]
+    },
+    {
+      "id": "topic-version-artifacts",
+      "title": "Topic/version bundles keep many scripts organized",
+      "tags": ["outputs", "clutter", "folders", "topic", "version", "scripts", "metadata", "frames", "tmpVids", "finalVid"],
+      "summary": "Production bundles keep department scripts, frames, metadata, source videos, audio, candidates and review records under outputs/topic/vNNN. One packet/timeline drives every department.",
+      "rules": ["Use film bundle with a claimed owner and a fresh version; verify hashes and retain originals.", "Distinguish a proposed next planning packet from the packet that actually produced retained media.", "The finalVid folder is not proof of personal release approval.", "Never delete history or move referenced files merely to make the root look clean."],
+      "evidenceType": "implemented local workflow",
+      "freshness": "stable",
+      "reviewedAt": "2026-10-30",
+      "sources": [{"path": "docs/production-bundles.md", "scope": "Layout, command and change-control contract."}, {"path": "lib/production.mjs", "scope": "Hash-bound local implementation, no paid client."}]
+    },
+    {
+      "id": "pixverse-reference-pricing",
+      "title": "PixVerse V6 pricing and reference limits need live refresh",
+      "tags": ["pixverse", "video", "model", "price", "cost", "credits", "limits", "native", "audio"],
+      "summary": "Planning snapshot on 2026-10-30: PixVerse V6 image2video accepts real start/end images, duration 1-15s and 360p/540p/720p/1080p. At 720p/count-one, inspected native-audio estimates were 90 list credits for 5s and 180 for 10s; eligible 10% per-unit half-up discount gives 81 and 162. These were configuration estimates without new pilot references, not spending quotes.",
+      "rules": ["Fetch the exact live form and a full-reference request quote immediately before submitting.", "The user cap is 1000 credits for the whole generation request, not per output.", "Do not add unsupported fps/aspectRatio/seed fields to this image2video form.", "Record historyId immediately and resume it; do not resubmit because waiting is slow.", "Do not attribute shared-account balance changes to this job without reconciliation."],
+      "evidenceType": "dated vendor form/configuration quote snapshot",
+      "freshness": "live-required",
+      "reviewedAt": "2026-10-30",
+      "sources": [{"tool": "openart_model_form_get", "scope": "pixverseV6/image2video live form inspected."}, {"tool": "openart_model_cost", "scope": "720p, duration 5/10, generateAudio true, videoCount 1; planning only."}]
+    },
+    {
+      "id": "wan-reference-image-pricing",
+      "title": "Wan 2.7 image reference and price snapshot",
+      "tags": ["wan", "image", "cast", "reference", "price", "credits", "limits", "provider", "429"],
+      "summary": "Inspected Wan 2.7 image forms support standard/pro tiers, 1K/2K/4K selections, aspect ratio choices and up to nine image references. The pro planning price was 15 list credits per image, 14 after eligible per-unit discount. Actual output metadata and reference transport limits still need verification.",
+      "rules": ["Use exact live forms and quote resolved counts/refs before spending.", "Prefer the already working researched route over blindly repeating a throttled provider.", "Inspect actual dimensions/bytes before dependent motion; a quality label is not transport validation."],
+      "evidenceType": "dated vendor form and prior observed production",
+      "freshness": "live-required",
+      "reviewedAt": "2026-10-30",
+      "sources": [{"tool": "openart_model_form_get", "scope": "wan2-7-image text2image/image2image forms inspected."}, {"path": "docs/generation-preflight.md", "scope": "Prior recovery, price and media constraints; requote live."}]
+    },
+    {
+      "id": "honest-release-review",
+      "title": "Playback, listening and personal release acceptance cannot be invented",
+      "tags": ["review", "release", "final", "listening", "playback", "quality", "phone", "production"],
+      "summary": "Frame sheets and technical software tests provide bounded evidence, not actual listening, joined full-motion playback, a phone test or personal final consent.",
+      "rules": ["Record what was actually inspected and leave unavailable perception blocked.", "Use explicit unapproved review previews to obtain evidence without fake passes.", "Require current audio-scene-fit and entertainment evidence plus genuine personal final acceptance before claiming release approval.", "No automatic publication or generation authority follows from knowledge retrieval."],
+      "evidenceType": "implemented project evidence boundary",
+      "freshness": "stable",
+      "reviewedAt": "2026-10-30",
+      "sources": [{"path": "docs/audio-scene-fit.md", "scope": "Actual listening gate."}, {"path": "docs/entertainment-review.md", "scope": "Actual playback and final judgment."}]
+    }
+  ],
+  "unavailableSources": [
+    {"url": "https://pubmed.ncbi.nlm.nih.gov/18179346/", "status": "cookie-challenge", "at": "2026-10-30", "tags": ["parents", "conflict", "children"], "rule": "Only search metadata/snippet seen; do not claim its abstract or full paper was inspected."},
+    {"url": "https://pubmed.ncbi.nlm.nih.gov/21452750/", "status": "cookie-challenge", "at": "2026-10-30", "tags": ["parents", "conflict", "children"], "rule": "Only search metadata/snippet seen; do not claim its abstract or full paper was inspected."}
+  ]
+}

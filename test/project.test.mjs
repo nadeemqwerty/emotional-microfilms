@@ -42,7 +42,7 @@ test('all local documentation links resolve and workflow reviewer dependencies a
 test('read-only CLI entry points validate, rank, budget and resume project workflows', () => {
   for (const args of [['validate'], ['rank', '3'], ['shortlist', '6'], ['budgets'], ['roadmap'], ['effects'],
     ['workflow', 'previsualize'], ['workflow', 'critic-loop'], ['workflow', 'reverse-engineer'],
-    ['workflow', 'coordinated-production']]) {
+    ['workflow', 'coordinated-production'], ['knowledge', 'heavy music scene emotion']]) {
     const result = spawnSync(process.execPath, [resolve(root, 'scripts', 'film.mjs'), ...args],
       {encoding: 'utf8', windowsHide: true});
     assert.equal(result.status, 0, result.stderr);
@@ -71,7 +71,7 @@ test('real CLI validates custom packets, rejects stale resumes and rolls failed 
     mkdirSync(dirname(resolve(fixture, file)), {recursive: true});
     copyFileSync(resolve(root, file), resolve(fixture, file));
   };
-  for (const file of ['scripts/film.mjs', 'lib/workflow.mjs', 'lib/music.mjs', 'lib/handoff.mjs', 'lib/production.mjs',
+  for (const file of ['scripts/film.mjs', 'lib/workflow.mjs', 'lib/music.mjs', 'lib/handoff.mjs', 'lib/production.mjs', 'lib/knowledge.mjs',
     'data/brief.json', 'data/rubric.json', 'data/scenarios.json', 'data/model-quotes.json',
     'data/roadmap.json', 'data/workflows.json', 'data/creative-lanes.json', 'data/visual-effects.json',
     'examples/the-dry-seat.json', 'examples/same-old-handshake.json', 'examples/the-last-light.json']) copy(file);
@@ -88,6 +88,12 @@ test('real CLI validates custom packets, rejects stale resumes and rolls failed 
   write(path, draft);
   const run = (...args) => spawnSync(process.execPath, [resolve(fixture, 'scripts', 'film.mjs'), ...args],
     {encoding: 'utf8', windowsHide: true, env: {...process.env, FILM_OWNER: 'synthetic-cli'}});
+  const packet = run('packet', scenario.id);
+  assert.equal(packet.status, 0, packet.stderr);
+  const retrieved = read(`workspace/${scenario.id}/manifest.json`).knowledgeContext;
+  assert.match(retrieved.sourceFingerprint, /^[a-f0-9]{64}$/);
+  assert.ok(Array.isArray(retrieved.hits));
+  assert.match(retrieved.policy, /cached knowledge is never spending or release approval/);
   assert.equal(run('claim', path, 'synthetic-cli').status, 0);
   let result = run('advance', path, 'preproduction');
   assert.equal(result.status, 1);

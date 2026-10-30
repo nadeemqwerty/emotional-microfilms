@@ -6,6 +6,12 @@ All instructions, skills, reviewers and roadmap state for this project live in
 this repository only. Do not create personal/global skill pointers or add its
 creative rules to global memory/knowledge files.
 
+Before external research run `film knowledge "<focused question>"` and read the
+cited evidence; see [local retrieval](docs/knowledge-base.md). Reuse known craft,
+research and production lessons. Research only a named unresolved gap, persist
+its read scope/limits, then stop. Never repeat failed URLs or treat search snippets
+as read papers. Live model forms/quotes/account/job checks remain mandatory.
+
 All hosts use [the common integration/handoff contract](docs/agent-integration.md).
 Claim a workspace and set `FILM_OWNER` before CLI writes; transfer explicitly.
 Keep personal `*-user` and explicitly authorized `*-delegated` decisions distinct.

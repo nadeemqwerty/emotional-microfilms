@@ -9,6 +9,7 @@ import {
   validateDirection, validateFeedback, validatePacket, validateRubric, validateScenario, validateWorkspace, verifyAssets,
 } from '../lib/workflow.mjs';
 import {planSongCue} from '../lib/music.mjs';
+import {knowledgeIndex, searchKnowledge} from '../lib/knowledge.mjs';
 import {claimWorkspace, handoffSnapshot, saveWorkspace, transferWorkspace, withWorkspaceLock, workspaceOwner} from '../lib/handoff.mjs';
 import {createProductionBundle, validateDeliveryPath} from '../lib/production.mjs';
 
@@ -70,6 +71,8 @@ function usage() {
   console.log(`Emotional Microfilms - local planning; never calls paid generation.
 
   validate [workspace-relative-manifest.json]
+  knowledge <focused query>
+  knowledge rebuild
   rank [count]
   shortlist [count]
   budgets
@@ -102,6 +105,12 @@ try {
   const [command = 'help', ...args] = process.argv.slice(2);
   if (['help', '--help', '-h'].includes(command)) {
     usage();
+  } else if (command === 'knowledge') {
+    if (args.length === 1 && args[0] === 'rebuild') {
+      const index = knowledgeIndex(root, {force: true});
+      console.log(JSON.stringify({engine: index.engine, sources: index.sourceCount,
+        chunks: index.docs.length, sourceFingerprint: index.sourceFingerprint}, null, 2));
+    } else console.log(JSON.stringify(searchKnowledge(root, args.join(' ')), null, 2));
   } else {
     const data = project();
     if (command === 'validate') {
@@ -158,6 +167,11 @@ try {
       const scenario = data.scenarios.find(item => item.id === args[0]);
       invariant(scenario, 'Unknown scenario.');
       const manifest = packetDraft(scenario, data.brief, data.feedback);
+      const knowledge = searchKnowledge(root,
+        [scenario.theme, scenario.logline, scenario.relationship].join(' '));
+      manifest.knowledgeContext = {at: new Date().toISOString(),
+        sourceFingerprint: knowledge.sourceFingerprint, policy: knowledge.policy,
+        hits: knowledge.hits.map(({id, citation, freshness, sources}) => ({id, citation, freshness, sources}))};
       const path = inside(root, `workspace/${scenario.id}/manifest.json`);
       const examplePath = inside(root, `examples/${scenario.id}.json`);
       if (existsSync(examplePath)) manifest.productionDraft = readJson(examplePath);

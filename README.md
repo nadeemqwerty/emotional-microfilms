@@ -116,6 +116,11 @@ discovery skill remains.
 
 ## Organized productions and coordinated scripts
 
+[Local knowledge retrieval](docs/knowledge-base.md) reuses verified research and
+lessons before new web calls: `npm run film -- knowledge "heavy music scene emotion"`.
+It is a dependency-free cached BM25 index with citations/read scope and live-data
+warnings, not a cloud vector service or a new automatic research controller.
+
 Use `outputs\<topic>\vNNN\` with `scripts`, `frames`, `metadata`, `tmpVids`,
 `audio`, `finalVid` and `reviews`. Ten department scripts derive from one packet
 and timeline: story, character/emotion, scene, frames, motion, lighting,
