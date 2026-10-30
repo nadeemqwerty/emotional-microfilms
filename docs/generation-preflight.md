@@ -78,6 +78,21 @@ before spending on remaining frames. Stop if the correction is not understood.
 All endpoints must pass before motion. Repair only a diagnosed failure within
 the specifically approved scope; no blind or repeated reroll.
 
+### Choose pacing before purchasing duration
+
+The live PixVerse V6 form permits integer durations from 1 to 15 seconds; five
+seconds is a default, not a minimum or a mandatory editing block. Same-day
+configuration quotes for one 720p silent clip were 42 list / 38 discounted
+credits at 3s, 56 / 50 at 4s and 70 / 63 at 5s. With four 18-credit stills,
+5s+3s costs an estimated 173, 5s+4s 185 and 5s+5s 198 before repairs.
+
+A shorter reaction is a proposed pacing alternative, not a proven improvement.
+The canonical father-son draft remains 10s until user feedback accepts a revision.
+Update its beats, shot ranges, duration parameters and prompts together before
+approval; do not silently substitute a shorter request. Requote the actual
+reference-bound request, and inspect achieved reveal/response/hold timing rather
+than assuming the model obeys timestamps. Audio-enabled costs differ.
+
 ## Other limits and failure handling
 
 - **Concurrency/queues:** vendor quota depends on account/configuration; OpenArt's
