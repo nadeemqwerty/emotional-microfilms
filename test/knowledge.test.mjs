@@ -22,6 +22,9 @@ test('real production questions retrieve their already researched finding first'
     ['teenage love gaze subtext', 'gaze-subtext-context'],
     ['parents conflict child repair', 'adult-led-conflict-repair'],
     ['grandmother photograph nostalgia memory', 'photograph-nostalgia-cue'],
+    ['camera locomotion tripod framing scale', 'motion-camera-and-locomotion-contract'],
+    ['editorial conformance held cutaway derivative', 'postmotion-editorial-conformance'],
+    ['ASR transcript dialogue speaker mouth', 'asr-does-not-verify-dialogue-speaker'],
   ]) {
     const result = searchKnowledge(root, query, 1);
     assert.equal(result.hits[0].id, id, query);

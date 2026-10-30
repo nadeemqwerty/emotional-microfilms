@@ -1,0 +1,602 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "the-quiet-crayon",
+  "seconds": 10,
+  "aspectRatio": "9:16",
+  "generationApproved": false,
+  "status": "Complete provisional plan; actual cast/scene/delegated review and exact paid preflight still required.",
+  "creativeException": "Three principals are necessary for the user's explicitly requested mother/father/child scenario; do not weaken the global two-principal default. This is one nonviolent repair moment, not a cure or a child-mediated reconciliation.",
+  "intendedInterpretation": "A child's crayon stops during a tense parental exchange; the parents notice, put the disagreement aside and reassure the child.",
+  "identityBible": {
+    "Eunji": "Original fictional Korean mother age 33, naturally attractive warm oval face, dark hair loosely tied back, muted sage blouse and beige trousers, natural skin and understated grooming. No celebrity resemblance.",
+    "Taesung": "Original fictional Korean father age 35, handsome natural adult face, short neat dark hair, muted blue casual shirt and charcoal trousers, no celebrity resemblance or exaggerated bodybuilder proportions.",
+    "Yuna": "Original fictional Korean child age six, visibly school-age child with soft round face and straight dark hair in a simple short bob, mustard-yellow long-sleeve top and navy trousers. Age-appropriate natural face, no makeup/adultification.",
+    "props": "One blue crayon held by the child over a simple unfinished drawing, plain paper, one closed household notebook. Each adult's hands remain separate on their own table area. No weapons, alcohol, thrown objects, readable writing or heavy prop transfers.",
+    "anchorPrompt": "Photorealistic original cinematic 9:16 still, a literal scene endpoint, not a montage. Image 1 supplies the exact accepted cast identities, age, wardrobe and proportions. One blue crayon held by the child over a simple unfinished drawing, plain paper, one closed household notebook. Each adult's hands remain separate on their own table area. No weapons, alcohol, thrown objects, readable writing or heavy prop transfers. Lighting and shadows: Broad soft neutral window light camera-left with warm interior bounce, all three faces and the paused crayon visible. Same steady exposure throughout; no red danger lighting, emotional spotlight or sudden warm light cue. Atmosphere: Calm ordinary home; faint background curtain movement only. No particles, butterflies or effects that trivialize the child's feelings. Natural expressive faces and anatomy, no camera-visible lamps/equipment, labels, logos or extra people. Portrait medium-wide table three-shot, mother LEFT and father RIGHT behind the table, six-year-old child CENTER foreground three-quarter to camera. Adults look tensely toward each other, not yelling or threatening; child's blue crayon pauses above paper and the child looks toward them. All three faces and the crayon remain visible; all are already seated."
+  },
+  "characterPlan": {
+    "requiredIdentities": [
+      "Eunji",
+      "Taesung",
+      "Yuna"
+    ],
+    "references": [
+      {
+        "id": "cast",
+        "covers": [
+          "Eunji",
+          "Taesung",
+          "Yuna"
+        ],
+        "prompt": "Photorealistic casting reference, not a film scene, collage or illustration. A single portrait 9:16 full-body group on a plain warm-gray seamless background, broad soft off-camera daylight, neutral fill and grounded soft foot shadows. Original fictional people: Eunji: Original fictional Korean mother age 33, naturally attractive warm oval face, dark hair loosely tied back, muted sage blouse and beige trousers, natural skin and understated grooming. No celebrity resemblance. Taesung: Original fictional Korean father age 35, handsome natural adult face, short neat dark hair, muted blue casual shirt and charcoal trousers, no celebrity resemblance or exaggerated bodybuilder proportions. Yuna: Original fictional Korean child age six, visibly school-age child with soft round face and straight dark hair in a simple short bob, mustard-yellow long-sleeve top and navy trousers. Age-appropriate natural face, no makeup/adultification. Relaxed separate poses with each face and full body visible, natural relative ages/heights, no physical contact, props, studio equipment, text or logos. Beautiful but believable casting, no celebrity likeness, plastic skin or adultified children."
+      }
+    ]
+  },
+  "keyframes": [
+    {
+      "id": "a-start",
+      "prompt": "Photorealistic original cinematic 9:16 still, a literal scene endpoint, not a montage. Image 1 supplies the exact accepted cast identities, age, wardrobe and proportions. One blue crayon held by the child over a simple unfinished drawing, plain paper, one closed household notebook. Each adult's hands remain separate on their own table area. No weapons, alcohol, thrown objects, readable writing or heavy prop transfers. Lighting and shadows: Broad soft neutral window light camera-left with warm interior bounce, all three faces and the paused crayon visible. Same steady exposure throughout; no red danger lighting, emotional spotlight or sudden warm light cue. Atmosphere: Calm ordinary home; faint background curtain movement only. No particles, butterflies or effects that trivialize the child's feelings. Natural expressive faces and anatomy, no camera-visible lamps/equipment, labels, logos or extra people. Portrait medium-wide table three-shot, mother LEFT and father RIGHT behind the table, six-year-old child CENTER foreground three-quarter to camera. Adults look tensely toward each other, not yelling or threatening; child's blue crayon pauses above paper and the child looks toward them. All three faces and the crayon remain visible; all are already seated."
+    },
+    {
+      "id": "a-end",
+      "previous": "a-end-rejected-KhvLCK",
+      "prompt": "Targeted photorealistic 9:16 final-state repair. Image 1 supplies the exact original fictional family cast. Image 2 is the strict accepted table/room/camera/wardrobe composition. Change the gaze and emotion of BOTH ADULTS: mother LEFT lowers her chin and turns her eyes DOWN and RIGHT toward the child's paper at center; father RIGHT lowers his chin and turns his eyes DOWN and LEFT toward the child's paper at center. BOTH LOOK AT THEIR CHILD AND THE DRAWING, NOT AT EACH OTHER. Their eyebrows/jaws/shoulders are relaxed, attentive and reassuring with a very small soft expression, not a grin. Keep six-year-old child CENTER looking down, mustard top unchanged, gently making ONE visible little blue crayon line on the paper. Adult hands rest separately on their own table areas, no touching or reaching. Same sage blouse, blue shirt, notebook, chairs, camera-left diffuse window light, natural faces/ages and plausible contact shadows. No mutual adult stare, anger, crying, embrace, merged fingers, extra limb/person, writing, new prop, camera change or light change."
+    }
+  ],
+  "shots": [
+    {
+      "id": "a",
+      "start": 0,
+      "end": 10,
+      "startFrameId": "a-start",
+      "endFrameId": "a-end",
+      "action": "The child's crayon visibly pauses while the adults exchange a brief tense look. Both parents notice the child and stop their exchange; shoulders and jaws relax. Parents turn their attention toward the child; mother gives the brief reassurance while father listens and stays calm. Child makes one small crayon stroke while both adults remain quietly attentive.",
+      "modelCandidate": "pixverseV6",
+      "mode": "image2video",
+      "paramsToQuote": {
+        "duration": 10,
+        "resolution": "720p",
+        "generateAudio": true,
+        "videoCount": 1
+      },
+      "prompt": "One continuous 10-second TRIPOD shot. Use the exact reference composition, framing, original fictional family, clothes, wooden table, crayon, paper and steady soft daylight. Everyone remains seated. Camera stays absolutely still at fixed focal length. 0-2 seconds: the TWO ADULTS briefly exchange a tense look and speak indistinctly in LOW voices to EACH OTHER, not to the child. Girl in mustard at CENTER notices and holds her blue crayon motionless over the paper, mouth CLOSED. 2-3 seconds: BOTH ADULTS stop, notice the paused child and turn eyes toward her; release their tense shoulders. 3-6.5 seconds: ONLY THE ADULT WOMAN ON THE LEFT IN SAGE GREEN speaks, using a gentle clearly ADULT FEMALE voice: 'We're sorry. This isn't your fault.' Synchronize ONLY THIS MOTHER'S LIPS to these words. Father RIGHT in blue and CHILD CENTER stay SILENT with mouths CLOSED. 6.5-10 seconds: mother finishes speaking, both parents stay calmly attentive to the child; the SILENT child resumes one small crayon stroke. A quiet repair, not sudden laughter. Child NEVER apologizes, talks, sings or mediates. Room tone, one faint crayon contact, no music, shouting or score. Preserve the still photo's original faces, hands, positions and believable paper contact. No walking, zoom, cuts, subtitles, camera movement, face morph or new person."
+    }
+  ],
+  "hookPlan": {
+    "firstFrame": "Portrait medium-wide table three-shot, mother LEFT and father RIGHT behind the table, six-year-old child CENTER foreground three-quarter to camera. Adults look tensely toward each other, not yelling or threatening; child's blue crayon pauses above paper and the child looks toward them. All three faces and the crayon remain visible; all are already seated.",
+    "firstMotion": "The child's crayon visibly pauses while the adults exchange a brief tense look.",
+    "inspectSeconds": 1,
+    "question": "A child's crayon stops during a tense parental exchange; the parents notice, put the disagreement aside and reassure the child.",
+    "payoff": "Exact same camera, cast, room and seated positions. Both adults have softened their shoulders and turned their attentive faces toward the child, their hands resting separately and openly on their own table areas. The child looks down and begins a small new blue crayon stroke. Adults show responsibility and calm, not celebratory grins or instant reconciliation.",
+    "test": "Inspect the actual opening muted at phone-size; no title or explanatory voice-over rescue."
+  },
+  "sceneChanges": [],
+  "atmospherePlan": {
+    "motionBudget": "Calm ordinary home; faint background curtain movement only. No particles, butterflies or effects that trivialize the child's feelings.",
+    "omissionRationale": "Beauty effects considered; preserve the specific human action. No unmotivated sparkle/butterfly/sakura layer.",
+    "effects": []
+  },
+  "continuity": {
+    "geography": "Eunji: Screen-left, seated behind the table. Taesung: Screen-right, seated behind the table. Yuna: Center foreground at the table, three-quarter face visible.",
+    "propOwnership": "One blue crayon held by the child over a simple unfinished drawing, plain paper, one closed household notebook. Each adult's hands remain separate on their own table area. No weapons, alcohol, thrown objects, readable writing or heavy prop transfers.",
+    "light": "Broad soft neutral window light camera-left with warm interior bounce, all three faces and the paused crayon visible. Same steady exposure throughout; no red danger lighting, emotional spotlight or sudden warm light cue.",
+    "match": "One continuous camera/space; do not hide the action with cuts.",
+    "mustNotChange": [
+      "accepted identities/ages",
+      "wardrobe and screen sides",
+      "prop counts and ownership",
+      "key/fill direction",
+      "plausible contact shadows"
+    ],
+    "intentionalChanges": [
+      "The child's crayon visibly pauses while the adults exchange a brief tense look.",
+      "Both parents notice the child and stop their exchange; shoulders and jaws relax.",
+      "Parents turn their attention toward the child; mother gives the brief reassurance while father listens and stays calm.",
+      "Child makes one small crayon stroke while both adults remain quietly attentive."
+    ]
+  },
+  "lightingPlan": {
+    "motivation": "Broad soft neutral window light camera-left with warm interior bounce, all three faces and the paused crayon visible. Same steady exposure throughout; no red danger lighting, emotional spotlight or sudden warm light cue.",
+    "key": "Broad soft neutral window light camera-left with warm interior bounce, all three faces and the paused crayon visible. Same steady exposure throughout; no red danger lighting, emotional spotlight or sudden warm light cue.",
+    "fill": "Soft plausible window/room or pavement bounce, no opposite hard shadow.",
+    "exposurePriority": "Faces/eyes and the story prop/action remain readable, no clipped highlights.",
+    "shadowMap": [
+      {
+        "caster": "people and hands",
+        "receiver": "table/ground and own clothing",
+        "behavior": "Attached soft grounding shadows with the stated source direction."
+      },
+      {
+        "caster": "story props",
+        "receiver": "table/hand/ground",
+        "behavior": "Consistent soft contact; no detached or flickering shadow."
+      }
+    ],
+    "invariants": [
+      "source direction",
+      "soft edges",
+      "face readability",
+      "contact grounding"
+    ],
+    "intentionalChanges": [
+      "None."
+    ],
+    "review": "pending"
+  },
+  "pacing": {
+    "structure": "connection",
+    "hypothesis": "A child's crayon stops during a tense parental exchange; the parents notice, put the disagreement aside and reassure the child.",
+    "hook": "Portrait medium-wide table three-shot, mother LEFT and father RIGHT behind the table, six-year-old child CENTER foreground three-quarter to camera. Adults look tensely toward each other, not yelling or threatening; child's blue crayon pauses above paper and the child looks toward them. All three faces and the crayon remain visible; all are already seated.",
+    "revealEvidence": "Both parents notice the child and stop their exchange; shoulders and jaws relax.",
+    "beats": [
+      {
+        "start": 0,
+        "end": 2,
+        "phase": "setup",
+        "job": "The child's crayon visibly pauses while the adults exchange a brief tense look."
+      },
+      {
+        "start": 2,
+        "end": 4,
+        "phase": "reveal",
+        "job": "Both parents notice the child and stop their exchange; shoulders and jaws relax."
+      },
+      {
+        "start": 4,
+        "end": 8,
+        "phase": "response",
+        "job": "Parents turn their attention toward the child; mother gives the brief reassurance while father listens and stays calm."
+      },
+      {
+        "start": 8,
+        "end": 10,
+        "phase": "hold",
+        "job": "Child makes one small crayon stroke while both adults remain quietly attentive."
+      }
+    ],
+    "cutReasons": [],
+    "actualEventTimes": null,
+    "review": "pending"
+  },
+  "direction": {
+    "soundPalette": {
+      "targetFeeling": "adult-led repair",
+      "avoidFeelings": [
+        "heavy melodrama",
+        "ominous tension",
+        "grand triumph",
+        "forced grief"
+      ],
+      "texture": "Begin with a brief low, nonviolent tense adult exchange without intelligible contested content; stop it when the crayon pauses. Mother gently says once in clear natural English: We're sorry. This isn't your fault. Quiet room tone and small crayon contact; no shouting, score, song, bass or melodramatic sting.",
+      "density": "Ambience/necessary quiet foley only; no continuous score.",
+      "register": "Natural source spectrum, no bass mass or piercing sweetener.",
+      "pulse": "Human timing; no metronomic beat or cut accents.",
+      "foregroundPriority": "Child cue and brief adult reassurance.",
+      "silence": "Music-free by design; room/weather ambience prevents an unexplained dead soundtrack.",
+      "ending": "Space and natural ambience, no swell.",
+      "comparison": "Same-picture native ambience versus silent/ambience-only baseline on actual listening; reject unwanted score."
+    },
+    "beats": [
+      {
+        "id": "beat-1",
+        "shotId": "a",
+        "from": 0,
+        "to": 2,
+        "characterIntent": "The child's crayon visibly pauses while the adults exchange a brief tense look.",
+        "visibleEmotion": "Concern without intimidation.",
+        "performanceRestraint": "Small natural gaze/posture/expression changes; no overacting, body collision or compulsory tears.",
+        "audioRole": "Begin with a brief low, nonviolent tense adult exchange without intelligible contested content; stop it when the crayon pauses. Mother gently says once in clear natural English: We're sorry. This isn't your fault. Quiet room tone and small crayon contact; no shouting, score, song, bass or melodramatic sting.",
+        "intensity": "low"
+      },
+      {
+        "id": "beat-2",
+        "shotId": "a",
+        "from": 2,
+        "to": 4,
+        "characterIntent": "Both parents notice the child and stop their exchange; shoulders and jaws relax.",
+        "visibleEmotion": "Recognition and self-regulation.",
+        "performanceRestraint": "Small natural gaze/posture/expression changes; no overacting, body collision or compulsory tears.",
+        "audioRole": "Begin with a brief low, nonviolent tense adult exchange without intelligible contested content; stop it when the crayon pauses. Mother gently says once in clear natural English: We're sorry. This isn't your fault. Quiet room tone and small crayon contact; no shouting, score, song, bass or melodramatic sting.",
+        "intensity": "low"
+      },
+      {
+        "id": "beat-3",
+        "shotId": "a",
+        "from": 4,
+        "to": 8,
+        "characterIntent": "Parents turn their attention toward the child; mother gives the brief reassurance while father listens and stays calm.",
+        "visibleEmotion": "Adult responsibility, not child mediation.",
+        "performanceRestraint": "Small natural gaze/posture/expression changes; no overacting, body collision or compulsory tears.",
+        "audioRole": "Begin with a brief low, nonviolent tense adult exchange without intelligible contested content; stop it when the crayon pauses. Mother gently says once in clear natural English: We're sorry. This isn't your fault. Quiet room tone and small crayon contact; no shouting, score, song, bass or melodramatic sting.",
+        "intensity": "low"
+      },
+      {
+        "id": "beat-4",
+        "shotId": "a",
+        "from": 8,
+        "to": 10,
+        "characterIntent": "Child makes one small crayon stroke while both adults remain quietly attentive.",
+        "visibleEmotion": "Tentative safety; no instant-cure claim.",
+        "performanceRestraint": "Small natural gaze/posture/expression changes; no overacting, body collision or compulsory tears.",
+        "audioRole": "Begin with a brief low, nonviolent tense adult exchange without intelligible contested content; stop it when the crayon pauses. Mother gently says once in clear natural English: We're sorry. This isn't your fault. Quiet room tone and small crayon contact; no shouting, score, song, bass or melodramatic sting.",
+        "intensity": "low"
+      }
+    ]
+  },
+  "soundPlan": {
+    "routeHypothesis": "native",
+    "cues": [
+      {
+        "from": 0,
+        "to": 10,
+        "sound": "Begin with a brief low, nonviolent tense adult exchange without intelligible contested content; stop it when the crayon pauses. Mother gently says once in clear natural English: We're sorry. This isn't your fault. Quiet room tone and small crayon contact; no shouting, score, song, bass or melodramatic sting."
+      }
+    ],
+    "musicBrief": "No score. Native ambience/foley matched to the specific scene; silence between events is allowed.",
+    "rights": "New original fictional generation, no supplied recordings, borrowed composition, sample or voice imitation. Platform/account output terms still govern use.",
+    "test": "Actually listen to joined export and compare same-picture ambience/silence. Check dialogue if present; ASR/meters are not listening."
+  },
+  "singlePassPrompt": "Planning-only summary: A child's crayon stops during a tense parental exchange; the parents notice, put the disagreement aside and reassure the child. Actual accepted per-shot endpoints required; never bypass scene/identity gates.",
+  "retryPlan": "Per whole request maximum 1000 credits; operator allocation 500 per film including diagnosed repairs, not a user-stated batch total. Exact live form/quote, one active job per film, immediate historyId persistence, resume not resubmit. Preserve useful media; repair only observed failure.",
+  "reviewChecks": [
+    "All actual cast/endpoints inspected before motion",
+    "Identity/age and prop contact stable",
+    "Story action readable muted",
+    "Every source frame and edit boundary inspected",
+    "Actual audio stream technically decodes",
+    "No invented full playback/listening/phone/personal approval"
+  ],
+  "framePlan": {
+    "schemaVersion": 1,
+    "fps": 30,
+    "characterDesigns": [
+      {
+        "identityId": "Eunji",
+        "appeal": "Naturally appealing, distinct original expressive face appropriate to the character.",
+        "agePresentation": "Original fictional Korean mother age 33, naturally attractive warm oval face, dark hair loosely tied back, muted sage blouse and beige trousers, natural skin and understated grooming. No celebrity resemblance.",
+        "distinctiveFeatures": "Original fictional Korean mother age 33, naturally attractive warm oval face, dark hair loosely tied back, muted sage blouse and beige trousers, natural skin and understated grooming. No celebrity resemblance.",
+        "wardrobeGrooming": "Original fictional Korean mother age 33, naturally attractive warm oval face, dark hair loosely tied back, muted sage blouse and beige trousers, natural skin and understated grooming. No celebrity resemblance.",
+        "naturalDetail": "Natural skin, believable hands, fabric and age; no plastic beauty filter.",
+        "avoid": [
+          "celebrity resemblance",
+          "age drift/adultified child",
+          "changing an accepted identity for beauty"
+        ],
+        "acceptance": [
+          "Exact age/wardrobe and recognizable natural face.",
+          "Plausible relative scale and anatomy."
+        ]
+      },
+      {
+        "identityId": "Taesung",
+        "appeal": "Naturally appealing, distinct original expressive face appropriate to the character.",
+        "agePresentation": "Original fictional Korean father age 35, handsome natural adult face, short neat dark hair, muted blue casual shirt and charcoal trousers, no celebrity resemblance or exaggerated bodybuilder proportions.",
+        "distinctiveFeatures": "Original fictional Korean father age 35, handsome natural adult face, short neat dark hair, muted blue casual shirt and charcoal trousers, no celebrity resemblance or exaggerated bodybuilder proportions.",
+        "wardrobeGrooming": "Original fictional Korean father age 35, handsome natural adult face, short neat dark hair, muted blue casual shirt and charcoal trousers, no celebrity resemblance or exaggerated bodybuilder proportions.",
+        "naturalDetail": "Natural skin, believable hands, fabric and age; no plastic beauty filter.",
+        "avoid": [
+          "celebrity resemblance",
+          "age drift/adultified child",
+          "changing an accepted identity for beauty"
+        ],
+        "acceptance": [
+          "Exact age/wardrobe and recognizable natural face.",
+          "Plausible relative scale and anatomy."
+        ]
+      },
+      {
+        "identityId": "Yuna",
+        "appeal": "Naturally appealing, distinct original expressive face appropriate to the character.",
+        "agePresentation": "Original fictional Korean child age six, visibly school-age child with soft round face and straight dark hair in a simple short bob, mustard-yellow long-sleeve top and navy trousers. Age-appropriate natural face, no makeup/adultification.",
+        "distinctiveFeatures": "Original fictional Korean child age six, visibly school-age child with soft round face and straight dark hair in a simple short bob, mustard-yellow long-sleeve top and navy trousers. Age-appropriate natural face, no makeup/adultification.",
+        "wardrobeGrooming": "Original fictional Korean child age six, visibly school-age child with soft round face and straight dark hair in a simple short bob, mustard-yellow long-sleeve top and navy trousers. Age-appropriate natural face, no makeup/adultification.",
+        "naturalDetail": "Natural skin, believable hands, fabric and age; no plastic beauty filter.",
+        "avoid": [
+          "celebrity resemblance",
+          "age drift/adultified child",
+          "changing an accepted identity for beauty"
+        ],
+        "acceptance": [
+          "Exact age/wardrobe and recognizable natural face.",
+          "Plausible relative scale and anatomy."
+        ]
+      }
+    ],
+    "intervals": [
+      {
+        "id": "interval-1",
+        "shotId": "a",
+        "beatId": "beat-1",
+        "fromFrame": 0,
+        "toFrame": 60,
+        "storyPurpose": "The child's crayon visibly pauses while the adults exchange a brief tense look.",
+        "audienceRead": "Concern without intimidation.",
+        "lightingChange": "Broad soft neutral window light camera-left with warm interior bounce, all three faces and the paused crayon visible. Same steady exposure throughout; no red danger lighting, emotional spotlight or sudden warm light cue.",
+        "characters": [
+          {
+            "identityId": "Eunji",
+            "visibility": "visible",
+            "intent": "Stop reacting to her partner and take responsibility for the child's safety.",
+            "emotion": "Concern without intimidation.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "The child's crayon visibly pauses while the adults exchange a brief tense look.",
+            "bodyLanguage": "The child's crayon visibly pauses while the adults exchange a brief tense look.",
+            "position": "Screen-left, seated behind the table."
+          },
+          {
+            "identityId": "Taesung",
+            "visibility": "visible",
+            "intent": "Notice his child and soften his own posture rather than win the disagreement.",
+            "emotion": "Concern without intimidation.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "The child's crayon visibly pauses while the adults exchange a brief tense look.",
+            "bodyLanguage": "The child's crayon visibly pauses while the adults exchange a brief tense look.",
+            "position": "Screen-right, seated behind the table."
+          },
+          {
+            "identityId": "Yuna",
+            "visibility": "visible",
+            "intent": "Keep drawing while watching whether the adults are calm.",
+            "emotion": "Concern without intimidation.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "The child's crayon visibly pauses while the adults exchange a brief tense look.",
+            "bodyLanguage": "The child's crayon visibly pauses while the adults exchange a brief tense look.",
+            "position": "Center foreground at the table, three-quarter face visible."
+          }
+        ],
+        "camera": {
+          "framing": "Portrait medium-wide table three-shot, mother LEFT and father RIGHT behind the table, six-year-old child CENTER foreground three-quarter to camera. Adults look tensely toward each other, not yelling or threatening; child's blue crayon pauses above paper and the child looks toward them. All three faces and the crayon remain visible; all are already seated.",
+          "focus": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+          "movement": "Locked."
+        },
+        "motion": {
+          "initialState": "Portrait medium-wide table three-shot, mother LEFT and father RIGHT behind the table, six-year-old child CENTER foreground three-quarter to camera. Adults look tensely toward each other, not yelling or threatening; child's blue crayon pauses above paper and the child looks toward them. All three faces and the crayon remain visible; all are already seated.",
+          "intermediateState": "The child's crayon visibly pauses while the adults exchange a brief tense look.",
+          "finalState": "The child's crayon visibly pauses while the adults exchange a brief tense look.",
+          "action": "The child's crayon visibly pauses while the adults exchange a brief tense look.",
+          "contactPhysics": "Keep separate hands/bodies, grounded posture and real supports; no prop teleport, fused fingers or body collision.",
+          "animationStyle": "Restrained natural live-action motion, not floaty animation."
+        },
+        "effectIds": [],
+        "transitionOut": {
+          "type": "continuous",
+          "reason": "Continue performance or let the final response breathe."
+        },
+        "acceptance": [
+          "Specific beat action and expression legible without captions.",
+          "Wardrobe, age, props, geography, lighting and contact retained."
+        ],
+        "forbiddenArtifacts": [
+          "extra limbs/people",
+          "identity or age drift",
+          "prop morph",
+          "camera jump",
+          "heavy music",
+          "ghost dissolve"
+        ]
+      },
+      {
+        "id": "interval-2",
+        "shotId": "a",
+        "beatId": "beat-2",
+        "fromFrame": 60,
+        "toFrame": 120,
+        "storyPurpose": "Both parents notice the child and stop their exchange; shoulders and jaws relax.",
+        "audienceRead": "Recognition and self-regulation.",
+        "lightingChange": "Broad soft neutral window light camera-left with warm interior bounce, all three faces and the paused crayon visible. Same steady exposure throughout; no red danger lighting, emotional spotlight or sudden warm light cue.",
+        "characters": [
+          {
+            "identityId": "Eunji",
+            "visibility": "visible",
+            "intent": "Stop reacting to her partner and take responsibility for the child's safety.",
+            "emotion": "Recognition and self-regulation.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Both parents notice the child and stop their exchange; shoulders and jaws relax.",
+            "bodyLanguage": "Both parents notice the child and stop their exchange; shoulders and jaws relax.",
+            "position": "Screen-left, seated behind the table."
+          },
+          {
+            "identityId": "Taesung",
+            "visibility": "visible",
+            "intent": "Notice his child and soften his own posture rather than win the disagreement.",
+            "emotion": "Recognition and self-regulation.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Both parents notice the child and stop their exchange; shoulders and jaws relax.",
+            "bodyLanguage": "Both parents notice the child and stop their exchange; shoulders and jaws relax.",
+            "position": "Screen-right, seated behind the table."
+          },
+          {
+            "identityId": "Yuna",
+            "visibility": "visible",
+            "intent": "Keep drawing while watching whether the adults are calm.",
+            "emotion": "Recognition and self-regulation.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Both parents notice the child and stop their exchange; shoulders and jaws relax.",
+            "bodyLanguage": "Both parents notice the child and stop their exchange; shoulders and jaws relax.",
+            "position": "Center foreground at the table, three-quarter face visible."
+          }
+        ],
+        "camera": {
+          "framing": "Portrait medium-wide table three-shot, mother LEFT and father RIGHT behind the table, six-year-old child CENTER foreground three-quarter to camera. Adults look tensely toward each other, not yelling or threatening; child's blue crayon pauses above paper and the child looks toward them. All three faces and the crayon remain visible; all are already seated.",
+          "focus": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+          "movement": "Locked."
+        },
+        "motion": {
+          "initialState": "The child's crayon visibly pauses while the adults exchange a brief tense look.",
+          "intermediateState": "Both parents notice the child and stop their exchange; shoulders and jaws relax.",
+          "finalState": "Both parents notice the child and stop their exchange; shoulders and jaws relax.",
+          "action": "Both parents notice the child and stop their exchange; shoulders and jaws relax.",
+          "contactPhysics": "Keep separate hands/bodies, grounded posture and real supports; no prop teleport, fused fingers or body collision.",
+          "animationStyle": "Restrained natural live-action motion, not floaty animation."
+        },
+        "effectIds": [],
+        "transitionOut": {
+          "type": "continuous",
+          "reason": "Continue performance or let the final response breathe."
+        },
+        "acceptance": [
+          "Specific beat action and expression legible without captions.",
+          "Wardrobe, age, props, geography, lighting and contact retained."
+        ],
+        "forbiddenArtifacts": [
+          "extra limbs/people",
+          "identity or age drift",
+          "prop morph",
+          "camera jump",
+          "heavy music",
+          "ghost dissolve"
+        ]
+      },
+      {
+        "id": "interval-3",
+        "shotId": "a",
+        "beatId": "beat-3",
+        "fromFrame": 120,
+        "toFrame": 240,
+        "storyPurpose": "Parents turn their attention toward the child; mother gives the brief reassurance while father listens and stays calm.",
+        "audienceRead": "Adult responsibility, not child mediation.",
+        "lightingChange": "Broad soft neutral window light camera-left with warm interior bounce, all three faces and the paused crayon visible. Same steady exposure throughout; no red danger lighting, emotional spotlight or sudden warm light cue.",
+        "characters": [
+          {
+            "identityId": "Eunji",
+            "visibility": "visible",
+            "intent": "Stop reacting to her partner and take responsibility for the child's safety.",
+            "emotion": "Adult responsibility, not child mediation.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Parents turn their attention toward the child; mother gives the brief reassurance while father listens and stays calm.",
+            "bodyLanguage": "Parents turn their attention toward the child; mother gives the brief reassurance while father listens and stays calm.",
+            "position": "Screen-left, seated behind the table."
+          },
+          {
+            "identityId": "Taesung",
+            "visibility": "visible",
+            "intent": "Notice his child and soften his own posture rather than win the disagreement.",
+            "emotion": "Adult responsibility, not child mediation.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Parents turn their attention toward the child; mother gives the brief reassurance while father listens and stays calm.",
+            "bodyLanguage": "Parents turn their attention toward the child; mother gives the brief reassurance while father listens and stays calm.",
+            "position": "Screen-right, seated behind the table."
+          },
+          {
+            "identityId": "Yuna",
+            "visibility": "visible",
+            "intent": "Keep drawing while watching whether the adults are calm.",
+            "emotion": "Adult responsibility, not child mediation.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Parents turn their attention toward the child; mother gives the brief reassurance while father listens and stays calm.",
+            "bodyLanguage": "Parents turn their attention toward the child; mother gives the brief reassurance while father listens and stays calm.",
+            "position": "Center foreground at the table, three-quarter face visible."
+          }
+        ],
+        "camera": {
+          "framing": "Portrait medium-wide table three-shot, mother LEFT and father RIGHT behind the table, six-year-old child CENTER foreground three-quarter to camera. Adults look tensely toward each other, not yelling or threatening; child's blue crayon pauses above paper and the child looks toward them. All three faces and the crayon remain visible; all are already seated.",
+          "focus": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+          "movement": "Locked."
+        },
+        "motion": {
+          "initialState": "Both parents notice the child and stop their exchange; shoulders and jaws relax.",
+          "intermediateState": "Parents turn their attention toward the child; mother gives the brief reassurance while father listens and stays calm.",
+          "finalState": "Parents turn their attention toward the child; mother gives the brief reassurance while father listens and stays calm.",
+          "action": "Parents turn their attention toward the child; mother gives the brief reassurance while father listens and stays calm.",
+          "contactPhysics": "Keep separate hands/bodies, grounded posture and real supports; no prop teleport, fused fingers or body collision.",
+          "animationStyle": "Restrained natural live-action motion, not floaty animation."
+        },
+        "effectIds": [],
+        "transitionOut": {
+          "type": "continuous",
+          "reason": "Continue performance or let the final response breathe."
+        },
+        "acceptance": [
+          "Specific beat action and expression legible without captions.",
+          "Wardrobe, age, props, geography, lighting and contact retained."
+        ],
+        "forbiddenArtifacts": [
+          "extra limbs/people",
+          "identity or age drift",
+          "prop morph",
+          "camera jump",
+          "heavy music",
+          "ghost dissolve"
+        ]
+      },
+      {
+        "id": "interval-4",
+        "shotId": "a",
+        "beatId": "beat-4",
+        "fromFrame": 240,
+        "toFrame": 300,
+        "storyPurpose": "Child makes one small crayon stroke while both adults remain quietly attentive.",
+        "audienceRead": "Tentative safety; no instant-cure claim.",
+        "lightingChange": "Broad soft neutral window light camera-left with warm interior bounce, all three faces and the paused crayon visible. Same steady exposure throughout; no red danger lighting, emotional spotlight or sudden warm light cue.",
+        "characters": [
+          {
+            "identityId": "Eunji",
+            "visibility": "visible",
+            "intent": "Stop reacting to her partner and take responsibility for the child's safety.",
+            "emotion": "Tentative safety; no instant-cure claim.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Child makes one small crayon stroke while both adults remain quietly attentive.",
+            "bodyLanguage": "Child makes one small crayon stroke while both adults remain quietly attentive.",
+            "position": "Screen-left, seated behind the table."
+          },
+          {
+            "identityId": "Taesung",
+            "visibility": "visible",
+            "intent": "Notice his child and soften his own posture rather than win the disagreement.",
+            "emotion": "Tentative safety; no instant-cure claim.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Child makes one small crayon stroke while both adults remain quietly attentive.",
+            "bodyLanguage": "Child makes one small crayon stroke while both adults remain quietly attentive.",
+            "position": "Screen-right, seated behind the table."
+          },
+          {
+            "identityId": "Yuna",
+            "visibility": "visible",
+            "intent": "Keep drawing while watching whether the adults are calm.",
+            "emotion": "Tentative safety; no instant-cure claim.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Child makes one small crayon stroke while both adults remain quietly attentive.",
+            "bodyLanguage": "Child makes one small crayon stroke while both adults remain quietly attentive.",
+            "position": "Center foreground at the table, three-quarter face visible."
+          }
+        ],
+        "camera": {
+          "framing": "Portrait medium-wide table three-shot, mother LEFT and father RIGHT behind the table, six-year-old child CENTER foreground three-quarter to camera. Adults look tensely toward each other, not yelling or threatening; child's blue crayon pauses above paper and the child looks toward them. All three faces and the crayon remain visible; all are already seated.",
+          "focus": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+          "movement": "Locked."
+        },
+        "motion": {
+          "initialState": "Parents turn their attention toward the child; mother gives the brief reassurance while father listens and stays calm.",
+          "intermediateState": "Child makes one small crayon stroke while both adults remain quietly attentive.",
+          "finalState": "Exact same camera, cast, room and seated positions. Both adults have softened their shoulders and turned their attentive faces toward the child, their hands resting separately and openly on their own table areas. The child looks down and begins a small new blue crayon stroke. Adults show responsibility and calm, not celebratory grins or instant reconciliation.",
+          "action": "Child makes one small crayon stroke while both adults remain quietly attentive.",
+          "contactPhysics": "Keep separate hands/bodies, grounded posture and real supports; no prop teleport, fused fingers or body collision.",
+          "animationStyle": "Restrained natural live-action motion, not floaty animation."
+        },
+        "effectIds": [],
+        "transitionOut": {
+          "type": "end",
+          "reason": "Continue performance or let the final response breathe."
+        },
+        "acceptance": [
+          "Specific beat action and expression legible without captions.",
+          "Wardrobe, age, props, geography, lighting and contact retained.",
+          "Both adults' eyes/chins visibly point DOWN toward the child and drawing at center, not across at one another; softened expressions and a visible small blue crayon stroke support a modest repair."
+        ],
+        "forbiddenArtifacts": [
+          "extra limbs/people",
+          "identity or age drift",
+          "prop morph",
+          "camera jump",
+          "heavy music",
+          "ghost dissolve"
+        ]
+      }
+    ]
+  },
+  "motionRepair": {
+    "shotId": "a",
+    "finding": "Full 241-frame audit found the tense exchange late and child drawing continuously; native detail crops show the child's mouth opening around the ASR apology at 7.66-9.72s while mother appears closed-mouth. ASR confirms words, NOT speaker identity. Do not retain a possible child-self-blame reading. Same accepted cast/endpoints; enforce adult-left speaker and correct action order.",
+    "personallyViewedByUser": false
+  }
+}

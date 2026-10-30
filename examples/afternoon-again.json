@@ -1,0 +1,771 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "afternoon-again",
+  "seconds": 15,
+  "aspectRatio": "9:16",
+  "generationApproved": false,
+  "status": "Complete provisional plan; actual cast/scene/delegated review and exact paid preflight still required.",
+  "creativeException": "Present and memory occupy the same familiar room/table in distinct time planes. Grandmother is explicitly offscreen in the present; no funeral, death or supernatural claim.",
+  "intendedInterpretation": "A grandmother photograph recalls an ordinary afternoon cup of tea, and the granddaughter returns to the present with a small familiar smile.",
+  "identityBible": {
+    "Nari": "Original fictional Korean adult woman about 27, naturally attractive oval face, expressive dark eyes, long dark hair loosely behind one ear, oatmeal knit sweater and muted blue trousers. Same original face in present and recent memory, no child transformation or celebrity resemblance.",
+    "Grandmother": "Original fictional Korean grandmother about 72, naturally warm lined face, kind dark eyes, short softly waved silver hair, dusty lavender cardigan over a plain cream blouse and dark comfortable trousers. Genuine older-adult skin texture, no celebrity resemblance.",
+    "props": "Present: a wooden framed photograph of the actual designed grandmother/tea scene and TWO stationary plain cream cups. Memory: the same table and two cream cups, NO photograph frame. Keep actual accepted prop counts and ownership within each shot; no pouring or hand transfers.",
+    "anchorPrompt": "Photorealistic original cinematic 9:16 still, a literal scene endpoint, not a montage. Image 1 supplies the exact accepted cast identities, age, wardrobe and proportions. One small wooden photo frame with a clear photograph of the actual designed grandmother/tea scene, one plain cream cup on the table. Memory uses two plain cream cups and a simple wooden table; grandmother keeps her cup on the table, no pouring or hand transfers. Lighting and shadows: Present: soft neutral window daylight from camera-left and gentle room bounce. Memory: the same source direction slightly warmer in late-afternoon sun, soft face light and tabletop contact shadows; no sepia wash, glowing person or light source jump within a shot. Return exactly to present light. Atmosphere: Memory has a small warm window patch and a gentle out-of-focus leaf shadow on the back wall; present is quieter/neutral. No floating glitter, butterflies, spectral figures or exaggerated dream dissolve. Natural expressive faces and anatomy, no camera-visible lamps/equipment, labels, logos or extra people. Image 2 supplies the actual memory photograph content ONLY, not present-day staging. Present: Nari sits RIGHT at a familiar wooden table, looking down at a small wooden photograph frame resting LEFT foreground angled toward the camera. It clearly depicts the exact silver-haired lavender-cardigan grandmother at the same table in the actual memory reference. Nari's hands rest separately near her own cup and frame, not gripping tiny objects. Present neutral daylight, not the memory's warm grade. Grandmother is NOT physically in this room; she appears ONLY in the framed photo. Make the photo recognizably the same grandmother/table scene from Image 2, with no garbled writing."
+  },
+  "characterPlan": {
+    "requiredIdentities": [
+      "Nari",
+      "Grandmother"
+    ],
+    "references": [
+      {
+        "id": "cast",
+        "covers": [
+          "Nari",
+          "Grandmother"
+        ],
+        "prompt": "Photorealistic casting reference, not a film scene, collage or illustration. A single portrait 9:16 full-body group on a plain warm-gray seamless background, broad soft off-camera daylight, neutral fill and grounded soft foot shadows. Original fictional people: Nari: Original fictional Korean adult woman about 27, naturally attractive oval face, expressive dark eyes, long dark hair loosely behind one ear, oatmeal knit sweater and muted blue trousers. Same original face in present and recent memory, no child transformation or celebrity resemblance. Grandmother: Original fictional Korean grandmother about 72, naturally warm lined face, kind dark eyes, short softly waved silver hair, dusty lavender cardigan over a plain cream blouse and dark comfortable trousers. Genuine older-adult skin texture, no celebrity resemblance. Relaxed separate poses with each face and full body visible, natural relative ages/heights, no physical contact, props, studio equipment, text or logos. Beautiful but believable casting, no celebrity likeness, plastic skin or adultified children."
+      }
+    ]
+  },
+  "keyframes": [
+    {
+      "id": "b-start",
+      "prompt": "Photorealistic 9:16 literal MEMORY endpoint repair. Image 1 supplies the accepted original cast. Image 2 is the strict actual memory scene: same silver-haired grandmother LEFT in lavender cardigan, Nari RIGHT in oatmeal knit, same faces, ages, bodies, wooden table, TWO cream cups, camera and warm window light from LEFT. Remove ONLY the small wooden photograph frame currently standing at front-center of the table; replace it with continuous matching bare wood and its natural light/shadow. There must be NO photograph, picture frame or image within this remembered scene. Keep both cups and hands separate and anatomically natural; grandmother rests her near hand next to her cup. Preserve the existing small familiar expressions, soft contact grounding and leaf shadow on the back wall. No text, new object, changed face, equipment, ghost or collage.",
+      "previous": "b-start-rejected-v001"
+    },
+    {
+      "id": "b-end",
+      "previous": "b-start",
+      "prompt": "Photorealistic 9:16 literal MEMORY endpoint. Image 1 is the exact original cast; Image 2 is the strict accepted repaired b-start camera/table reference. Keep silver-haired grandmother LEFT in lavender and Nari RIGHT in oatmeal, same faces, ages, positions, TWO cream cups on bare wood, warm soft camera-left window light and faint leaf shadow. Grandmother has gently settled her own cup and rests her hand separately beside it. They share small familiar closed-mouth smiles, no new event. NO photograph or picture frame exists in this memory shot. No pouring, prop transfer, embrace, ghost, tears, extra people, text or camera/composition change."
+    },
+    {
+      "id": "a-start",
+      "previous": "b-start",
+      "prompt": "Photorealistic original cinematic 9:16 still, a literal scene endpoint, not a montage. Image 1 supplies the exact accepted cast identities, age, wardrobe and proportions. One small wooden photo frame with a clear photograph of the actual designed grandmother/tea scene, one plain cream cup on the table. Memory uses two plain cream cups and a simple wooden table; grandmother keeps her cup on the table, no pouring or hand transfers. Lighting and shadows: Present: soft neutral window daylight from camera-left and gentle room bounce. Memory: the same source direction slightly warmer in late-afternoon sun, soft face light and tabletop contact shadows; no sepia wash, glowing person or light source jump within a shot. Return exactly to present light. Atmosphere: Memory has a small warm window patch and a gentle out-of-focus leaf shadow on the back wall; present is quieter/neutral. No floating glitter, butterflies, spectral figures or exaggerated dream dissolve. Natural expressive faces and anatomy, no camera-visible lamps/equipment, labels, logos or extra people. Image 2 supplies the actual memory photograph content ONLY, not present-day staging. Present: Nari sits RIGHT at a familiar wooden table, looking down at a small wooden photograph frame resting LEFT foreground angled toward the camera. It clearly depicts the exact silver-haired lavender-cardigan grandmother at the same table in the actual memory reference. Nari's hands rest separately near her own cup and frame, not gripping tiny objects. Present neutral daylight, not the memory's warm grade. Grandmother is NOT physically in this room; she appears ONLY in the framed photo. Make the photo recognizably the same grandmother/table scene from Image 2, with no garbled writing."
+    },
+    {
+      "id": "a-end",
+      "previous": "a-start",
+      "prompt": "Photorealistic 9:16 PRESENT endpoint, not a montage. Image 1 supplies the accepted original cast. Image 2 is the strict actual PRESENT composition: Nari alone RIGHT, oatmeal knit and blue trousers, same face, wooden table, small wooden photograph LEFT foreground, TWO cream cups in their exact positions, soft camera-left window light and faint wall leaf shadow. Preserve the actual photograph unchanged: the designed silver-haired lavender-cardigan grandmother appears ONLY inside it, never physically in the room. Keep camera, wardrobe, table and shadows fixed. Nari gently lowers her chin and focuses her gaze on the grandmother photograph. Her mouth is neutral, thoughtful, not sad. Her near hand remains on her own cup handle, other hand stays naturally on the table. No lifting, pouring, touching the photograph, extra person, ghost, tears, changed photograph, new object, text or camera move."
+    },
+    {
+      "id": "c-end",
+      "previous": "a-end",
+      "prompt": "Photorealistic 9:16 PRESENT endpoint, not a montage. Image 1 supplies the accepted original cast. Image 2 is the strict actual PRESENT composition: Nari alone RIGHT, oatmeal knit and blue trousers, same face, wooden table, small wooden photograph LEFT foreground, TWO cream cups in their exact positions, soft camera-left window light and faint wall leaf shadow. Preserve the actual photograph unchanged: the designed silver-haired lavender-cardigan grandmother appears ONLY inside it, never physically in the room. Keep camera, wardrobe, table and shadows fixed. Nari raises her chin and gaze slightly from the photograph, a small closed-mouth familiar smile settles. Keep her near hand naturally at her own cup handle and other hand resting, both cups remain on the table. No lifting, pouring, embracing, ghost, tears, physical grandmother, changed photograph, extra object, text or camera move."
+    }
+  ],
+  "shots": [
+    {
+      "id": "a",
+      "start": 0,
+      "end": 5,
+      "startFrameId": "a-start",
+      "endFrameId": "a-end",
+      "action": "Nari notices the clearly visible grandmother photograph on the table. Her gaze settles on the image; let the photographed grandmother/tea setting register before a motivated cut.",
+      "modelCandidate": "pixverseV6",
+      "mode": "image2video",
+      "paramsToQuote": {
+        "duration": 5,
+        "resolution": "720p",
+        "generateAudio": true,
+        "videoCount": 1
+      },
+      "prompt": "One uninterrupted photorealistic 5-second shot between these actual accepted start/end references, locked portrait camera, no internal cuts, morphs, dissolve, camera zoom or new scene. Preserve exact faces, ages, wardrobe, positions, props and soft contact shadows. Nari notices the clearly visible grandmother photograph on the table. Her gaze settles on the image; let the photographed grandmother/tea setting register before a motivated cut. Natural small movements, restrained micro-expressions and plausible weight/contact, no exaggerated grin or new person. Present: soft neutral window daylight from camera-left and gentle room bounce. Memory: the same source direction slightly warmer in late-afternoon sun, soft face light and tabletop contact shadows; no sepia wash, glowing person or light source jump within a shot. Return exactly to present light. SOUND: Present quiet room tone with a subtle frame/table contact. Memory has familiar room ambience and one delicate cup-settle sound, no pouring, speech or music. Return to the same present room tone; unobtrusive short ambience crossfades at the two cuts. No sad piano, swelling score, song, bass or funeral cue. No subtitles, captions, logos, added text or decorative overlays. This is the neutral present; grandmother exists ONLY inside the unchanged photograph."
+    },
+    {
+      "id": "b",
+      "start": 5,
+      "end": 10,
+      "startFrameId": "b-start",
+      "endFrameId": "b-end",
+      "action": "Memory: grandmother LEFT and Nari RIGHT sit together in warm daylight, hands separate; grandmother gently settles her cup on the table. Memory: a small exchanged smile holds, no new action or speech.",
+      "modelCandidate": "pixverseV6",
+      "mode": "image2video",
+      "paramsToQuote": {
+        "duration": 5,
+        "resolution": "720p",
+        "generateAudio": true,
+        "videoCount": 1
+      },
+      "prompt": "One uninterrupted photorealistic 5-second shot between these actual accepted start/end references, locked portrait camera, no internal cuts, morphs, dissolve, camera zoom or new scene. Preserve exact faces, ages, wardrobe, positions, props and soft contact shadows. Memory: grandmother LEFT and Nari RIGHT sit together in warm daylight, hands separate; grandmother gently settles her cup on the table. Memory: a small exchanged smile holds, no new action or speech. Natural small movements, restrained micro-expressions and plausible weight/contact, no exaggerated grin or new person. Present: soft neutral window daylight from camera-left and gentle room bounce. Memory: the same source direction slightly warmer in late-afternoon sun, soft face light and tabletop contact shadows; no sepia wash, glowing person or light source jump within a shot. Return exactly to present light. SOUND: Present quiet room tone with a subtle frame/table contact. Memory has familiar room ambience and one delicate cup-settle sound, no pouring, speech or music. Return to the same present room tone; unobtrusive short ambience crossfades at the two cuts. No sad piano, swelling score, song, bass or funeral cue. No subtitles, captions, logos, added text or decorative overlays. This is the warm remembered afternoon, grandmother physically present LEFT."
+    },
+    {
+      "id": "c",
+      "start": 10,
+      "end": 15,
+      "startFrameId": "a-end",
+      "endFrameId": "c-end",
+      "action": "Return to the matching present pose and photo; Nari slowly raises her eyes a little. A restrained familiar smile settles while the photograph remains in the frame.",
+      "modelCandidate": "pixverseV6",
+      "mode": "image2video",
+      "paramsToQuote": {
+        "duration": 5,
+        "resolution": "720p",
+        "generateAudio": true,
+        "videoCount": 1
+      },
+      "prompt": "One uninterrupted photorealistic 5-second shot between these actual accepted start/end references, locked portrait camera, no internal cuts, morphs, dissolve, camera zoom or new scene. Preserve exact faces, ages, wardrobe, positions, props and soft contact shadows. Return to the matching present pose and photo; Nari slowly raises her eyes a little. A restrained familiar smile settles while the photograph remains in the frame. Natural small movements, restrained micro-expressions and plausible weight/contact, no exaggerated grin or new person. Present: soft neutral window daylight from camera-left and gentle room bounce. Memory: the same source direction slightly warmer in late-afternoon sun, soft face light and tabletop contact shadows; no sepia wash, glowing person or light source jump within a shot. Return exactly to present light. SOUND: Present quiet room tone with a subtle frame/table contact. Memory has familiar room ambience and one delicate cup-settle sound, no pouring, speech or music. Return to the same present room tone; unobtrusive short ambience crossfades at the two cuts. No sad piano, swelling score, song, bass or funeral cue. No subtitles, captions, logos, added text or decorative overlays. This is the neutral present; grandmother exists ONLY inside the unchanged photograph."
+    }
+  ],
+  "hookPlan": {
+    "firstFrame": "Present: Nari sits RIGHT at a familiar wooden table, looking down at a small wooden photograph frame resting LEFT foreground angled toward the camera. It clearly depicts the exact silver-haired lavender-cardigan grandmother at the same table in the actual memory reference. Nari's hands rest separately near her own cup and frame, not gripping tiny objects.",
+    "firstMotion": "Nari notices the clearly visible grandmother photograph on the table.",
+    "inspectSeconds": 1,
+    "question": "A grandmother photograph recalls an ordinary afternoon cup of tea, and the granddaughter returns to the present with a small familiar smile.",
+    "payoff": "Return to precisely the present table, neutral window light, unchanged wooden photo frame and cream cup. Nari lifts her gaze slightly from the photograph, settles into a small closed-mouth familiar smile and keeps her hands resting separately. Grandmother remains only in the photograph, not physically present.",
+    "test": "Inspect the actual opening muted at phone-size; no title or explanatory voice-over rescue."
+  },
+  "sceneChanges": [
+    {
+      "at": 5,
+      "fromShot": "a",
+      "toShot": "b",
+      "type": "cut",
+      "informationChange": "Photo motivates a cut into that familiar afternoon.",
+      "lightingChange": "Neutral present to intentionally warmer remembered daylight; same key direction."
+    },
+    {
+      "at": 10,
+      "fromShot": "b",
+      "toShot": "c",
+      "type": "cut",
+      "informationChange": "Return to the exact present photograph/pose before a small response.",
+      "lightingChange": "Return to the original neutral present light, no ghost dissolve."
+    }
+  ],
+  "atmospherePlan": {
+    "motionBudget": "Memory has a small warm window patch and a gentle out-of-focus leaf shadow on the back wall; present is quieter/neutral. No floating glitter, butterflies, spectral figures or exaggerated dream dissolve.",
+    "omissionRationale": "Beauty effects considered; preserve the specific human action. No unmotivated sparkle/butterfly/sakura layer.",
+    "effects": []
+  },
+  "continuity": {
+    "geography": "Nari: Screen-right at the table in present and memory. Grandmother: Screen-left in the remembered afternoon and in its photograph; offscreen in present.",
+    "propOwnership": "Present: a wooden framed photograph of the actual designed grandmother/tea scene and TWO stationary plain cream cups. Memory: the same table and two cream cups, NO photograph frame. Keep actual accepted prop counts and ownership within each shot; no pouring or hand transfers.",
+    "light": "Present: soft neutral window daylight from camera-left and gentle room bounce. Memory: the same source direction slightly warmer in late-afternoon sun, soft face light and tabletop contact shadows; no sepia wash, glowing person or light source jump within a shot. Return exactly to present light.",
+    "match": "Actual a-end is also c-start; match the present room/pose at return. Memory is an intentional motivated time-plane cut.",
+    "mustNotChange": [
+      "accepted identities/ages",
+      "wardrobe and screen sides",
+      "prop counts and ownership",
+      "key/fill direction",
+      "plausible contact shadows"
+    ],
+    "intentionalChanges": [
+      "Nari notices the clearly visible grandmother photograph on the table.",
+      "Her gaze settles on the image; let the photographed grandmother/tea setting register before a motivated cut.",
+      "Memory: grandmother LEFT and Nari RIGHT sit together in warm daylight, hands separate; grandmother gently settles her cup on the table.",
+      "Memory: a small exchanged smile holds, no new action or speech.",
+      "Return to the matching present pose and photo; Nari slowly raises her eyes a little.",
+      "A restrained familiar smile settles while the photograph remains in the frame."
+    ]
+  },
+  "lightingPlan": {
+    "motivation": "Present: soft neutral window daylight from camera-left and gentle room bounce. Memory: the same source direction slightly warmer in late-afternoon sun, soft face light and tabletop contact shadows; no sepia wash, glowing person or light source jump within a shot. Return exactly to present light.",
+    "key": "Present: soft neutral window daylight from camera-left and gentle room bounce. Memory: the same source direction slightly warmer in late-afternoon sun, soft face light and tabletop contact shadows; no sepia wash, glowing person or light source jump within a shot. Return exactly to present light.",
+    "fill": "Soft plausible window/room or pavement bounce, no opposite hard shadow.",
+    "exposurePriority": "Faces/eyes and the story prop/action remain readable, no clipped highlights.",
+    "shadowMap": [
+      {
+        "caster": "people and hands",
+        "receiver": "table/ground and own clothing",
+        "behavior": "Attached soft grounding shadows with the stated source direction."
+      },
+      {
+        "caster": "story props",
+        "receiver": "table/hand/ground",
+        "behavior": "Consistent soft contact; no detached or flickering shadow."
+      }
+    ],
+    "invariants": [
+      "source direction",
+      "soft edges",
+      "face readability",
+      "contact grounding"
+    ],
+    "intentionalChanges": [
+      "Warmer memory daylight, neutral present restored at return."
+    ],
+    "review": "pending"
+  },
+  "pacing": {
+    "structure": "connection",
+    "hypothesis": "A grandmother photograph recalls an ordinary afternoon cup of tea, and the granddaughter returns to the present with a small familiar smile.",
+    "hook": "Present: Nari sits RIGHT at a familiar wooden table, looking down at a small wooden photograph frame resting LEFT foreground angled toward the camera. It clearly depicts the exact silver-haired lavender-cardigan grandmother at the same table in the actual memory reference. Nari's hands rest separately near her own cup and frame, not gripping tiny objects.",
+    "revealEvidence": "Her gaze settles on the image; let the photographed grandmother/tea setting register before a motivated cut.",
+    "beats": [
+      {
+        "start": 0,
+        "end": 2,
+        "phase": "setup",
+        "job": "Nari notices the clearly visible grandmother photograph on the table."
+      },
+      {
+        "start": 2,
+        "end": 5,
+        "phase": "reveal",
+        "job": "Her gaze settles on the image; let the photographed grandmother/tea setting register before a motivated cut."
+      },
+      {
+        "start": 5,
+        "end": 8,
+        "phase": "response",
+        "job": "Memory: grandmother LEFT and Nari RIGHT sit together in warm daylight, hands separate; grandmother gently settles her cup on the table."
+      },
+      {
+        "start": 8,
+        "end": 10,
+        "phase": "hold",
+        "job": "Memory: a small exchanged smile holds, no new action or speech."
+      },
+      {
+        "start": 10,
+        "end": 13,
+        "phase": "response",
+        "job": "Return to the matching present pose and photo; Nari slowly raises her eyes a little."
+      },
+      {
+        "start": 13,
+        "end": 15,
+        "phase": "hold",
+        "job": "A restrained familiar smile settles while the photograph remains in the frame."
+      }
+    ],
+    "cutReasons": [
+      "Photo-to-memory recognition at 5s.",
+      "Return to matching present at 10s; no dissolve or face morph."
+    ],
+    "actualEventTimes": null,
+    "review": "pending"
+  },
+  "direction": {
+    "soundPalette": {
+      "targetFeeling": "ordinary nostalgic memory",
+      "avoidFeelings": [
+        "heavy melodrama",
+        "ominous tension",
+        "grand triumph",
+        "forced grief"
+      ],
+      "texture": "Present quiet room tone with a subtle frame/table contact. Memory has familiar room ambience and one delicate cup-settle sound, no pouring, speech or music. Return to the same present room tone; unobtrusive short ambience crossfades at the two cuts. No sad piano, swelling score, song, bass or funeral cue.",
+      "density": "Ambience/necessary quiet foley only; no continuous score.",
+      "register": "Natural source spectrum, no bass mass or piercing sweetener.",
+      "pulse": "Human timing; no metronomic beat or cut accents.",
+      "foregroundPriority": "Visible human performance first, soft real-world space second.",
+      "silence": "Music-free by design; room/weather ambience prevents an unexplained dead soundtrack.",
+      "ending": "Space and natural ambience, no swell.",
+      "comparison": "Same-picture native ambience versus silent/ambience-only baseline on actual listening; reject unwanted score."
+    },
+    "beats": [
+      {
+        "id": "beat-1",
+        "shotId": "a",
+        "from": 0,
+        "to": 2,
+        "characterIntent": "Nari notices the clearly visible grandmother photograph on the table.",
+        "visibleEmotion": "Quiet recognition rather than announced grief.",
+        "performanceRestraint": "Small natural gaze/posture/expression changes; no overacting, body collision or compulsory tears.",
+        "audioRole": "Present quiet room tone with a subtle frame/table contact. Memory has familiar room ambience and one delicate cup-settle sound, no pouring, speech or music. Return to the same present room tone; unobtrusive short ambience crossfades at the two cuts. No sad piano, swelling score, song, bass or funeral cue.",
+        "intensity": "low"
+      },
+      {
+        "id": "beat-2",
+        "shotId": "a",
+        "from": 2,
+        "to": 5,
+        "characterIntent": "Her gaze settles on the image; let the photographed grandmother/tea setting register before a motivated cut.",
+        "visibleEmotion": "A familiar memory becoming present.",
+        "performanceRestraint": "Small natural gaze/posture/expression changes; no overacting, body collision or compulsory tears.",
+        "audioRole": "Present quiet room tone with a subtle frame/table contact. Memory has familiar room ambience and one delicate cup-settle sound, no pouring, speech or music. Return to the same present room tone; unobtrusive short ambience crossfades at the two cuts. No sad piano, swelling score, song, bass or funeral cue.",
+        "intensity": "low"
+      },
+      {
+        "id": "beat-3",
+        "shotId": "b",
+        "from": 5,
+        "to": 8,
+        "characterIntent": "Memory: grandmother LEFT and Nari RIGHT sit together in warm daylight, hands separate; grandmother gently settles her cup on the table.",
+        "visibleEmotion": "Ordinary affectionate companionship.",
+        "performanceRestraint": "Small natural gaze/posture/expression changes; no overacting, body collision or compulsory tears.",
+        "audioRole": "Present quiet room tone with a subtle frame/table contact. Memory has familiar room ambience and one delicate cup-settle sound, no pouring, speech or music. Return to the same present room tone; unobtrusive short ambience crossfades at the two cuts. No sad piano, swelling score, song, bass or funeral cue.",
+        "intensity": "low"
+      },
+      {
+        "id": "beat-4",
+        "shotId": "b",
+        "from": 8,
+        "to": 10,
+        "characterIntent": "Memory: a small exchanged smile holds, no new action or speech.",
+        "visibleEmotion": "Comfort in a specific remembered routine.",
+        "performanceRestraint": "Small natural gaze/posture/expression changes; no overacting, body collision or compulsory tears.",
+        "audioRole": "Present quiet room tone with a subtle frame/table contact. Memory has familiar room ambience and one delicate cup-settle sound, no pouring, speech or music. Return to the same present room tone; unobtrusive short ambience crossfades at the two cuts. No sad piano, swelling score, song, bass or funeral cue.",
+        "intensity": "low"
+      },
+      {
+        "id": "beat-5",
+        "shotId": "c",
+        "from": 10,
+        "to": 13,
+        "characterIntent": "Return to the matching present pose and photo; Nari slowly raises her eyes a little.",
+        "visibleEmotion": "Bittersweet warmth without a forced tear.",
+        "performanceRestraint": "Small natural gaze/posture/expression changes; no overacting, body collision or compulsory tears.",
+        "audioRole": "Present quiet room tone with a subtle frame/table contact. Memory has familiar room ambience and one delicate cup-settle sound, no pouring, speech or music. Return to the same present room tone; unobtrusive short ambience crossfades at the two cuts. No sad piano, swelling score, song, bass or funeral cue.",
+        "intensity": "low"
+      },
+      {
+        "id": "beat-6",
+        "shotId": "c",
+        "from": 13,
+        "to": 15,
+        "characterIntent": "A restrained familiar smile settles while the photograph remains in the frame.",
+        "visibleEmotion": "Memory kept close; no death or therapeutic claim.",
+        "performanceRestraint": "Small natural gaze/posture/expression changes; no overacting, body collision or compulsory tears.",
+        "audioRole": "Present quiet room tone with a subtle frame/table contact. Memory has familiar room ambience and one delicate cup-settle sound, no pouring, speech or music. Return to the same present room tone; unobtrusive short ambience crossfades at the two cuts. No sad piano, swelling score, song, bass or funeral cue.",
+        "intensity": "low"
+      }
+    ]
+  },
+  "soundPlan": {
+    "routeHypothesis": "native",
+    "cues": [
+      {
+        "from": 0,
+        "to": 15,
+        "sound": "Present quiet room tone with a subtle frame/table contact. Memory has familiar room ambience and one delicate cup-settle sound, no pouring, speech or music. Return to the same present room tone; unobtrusive short ambience crossfades at the two cuts. No sad piano, swelling score, song, bass or funeral cue."
+      }
+    ],
+    "musicBrief": "No score. Native ambience/foley matched to the specific scene; silence between events is allowed.",
+    "rights": "New original fictional generation, no supplied recordings, borrowed composition, sample or voice imitation. Platform/account output terms still govern use.",
+    "test": "Actually listen to joined export and compare same-picture ambience/silence. Check dialogue if present; ASR/meters are not listening."
+  },
+  "singlePassPrompt": "Planning-only summary: A grandmother photograph recalls an ordinary afternoon cup of tea, and the granddaughter returns to the present with a small familiar smile. Actual accepted per-shot endpoints required; never bypass scene/identity gates.",
+  "retryPlan": "Per whole request maximum 1000 credits; operator allocation 500 per film including diagnosed repairs, not a user-stated batch total. Exact live form/quote, one active job per film, immediate historyId persistence, resume not resubmit. Preserve useful media; repair only observed failure.",
+  "reviewChecks": [
+    "All actual cast/endpoints inspected before motion",
+    "Identity/age and prop contact stable",
+    "Story action readable muted",
+    "Every source frame and edit boundary inspected",
+    "Actual audio stream technically decodes",
+    "No invented full playback/listening/phone/personal approval"
+  ],
+  "framePlan": {
+    "schemaVersion": 1,
+    "fps": 30,
+    "characterDesigns": [
+      {
+        "identityId": "Nari",
+        "appeal": "Naturally appealing, distinct original expressive face appropriate to the character.",
+        "agePresentation": "Original fictional Korean adult woman about 27, naturally attractive oval face, expressive dark eyes, long dark hair loosely behind one ear, oatmeal knit sweater and muted blue trousers. Same original face in present and recent memory, no child transformation or celebrity resemblance.",
+        "distinctiveFeatures": "Original fictional Korean adult woman about 27, naturally attractive oval face, expressive dark eyes, long dark hair loosely behind one ear, oatmeal knit sweater and muted blue trousers. Same original face in present and recent memory, no child transformation or celebrity resemblance.",
+        "wardrobeGrooming": "Original fictional Korean adult woman about 27, naturally attractive oval face, expressive dark eyes, long dark hair loosely behind one ear, oatmeal knit sweater and muted blue trousers. Same original face in present and recent memory, no child transformation or celebrity resemblance.",
+        "naturalDetail": "Natural skin, believable hands, fabric and age; no plastic beauty filter.",
+        "avoid": [
+          "celebrity resemblance",
+          "age drift/adultified child",
+          "changing an accepted identity for beauty"
+        ],
+        "acceptance": [
+          "Exact age/wardrobe and recognizable natural face.",
+          "Plausible relative scale and anatomy."
+        ]
+      },
+      {
+        "identityId": "Grandmother",
+        "appeal": "Naturally appealing, distinct original expressive face appropriate to the character.",
+        "agePresentation": "Original fictional Korean grandmother about 72, naturally warm lined face, kind dark eyes, short softly waved silver hair, dusty lavender cardigan over a plain cream blouse and dark comfortable trousers. Genuine older-adult skin texture, no celebrity resemblance.",
+        "distinctiveFeatures": "Original fictional Korean grandmother about 72, naturally warm lined face, kind dark eyes, short softly waved silver hair, dusty lavender cardigan over a plain cream blouse and dark comfortable trousers. Genuine older-adult skin texture, no celebrity resemblance.",
+        "wardrobeGrooming": "Original fictional Korean grandmother about 72, naturally warm lined face, kind dark eyes, short softly waved silver hair, dusty lavender cardigan over a plain cream blouse and dark comfortable trousers. Genuine older-adult skin texture, no celebrity resemblance.",
+        "naturalDetail": "Natural skin, believable hands, fabric and age; no plastic beauty filter.",
+        "avoid": [
+          "celebrity resemblance",
+          "age drift/adultified child",
+          "changing an accepted identity for beauty"
+        ],
+        "acceptance": [
+          "Exact age/wardrobe and recognizable natural face.",
+          "Plausible relative scale and anatomy."
+        ]
+      }
+    ],
+    "intervals": [
+      {
+        "id": "interval-1",
+        "shotId": "a",
+        "beatId": "beat-1",
+        "fromFrame": 0,
+        "toFrame": 60,
+        "storyPurpose": "Nari notices the clearly visible grandmother photograph on the table.",
+        "audienceRead": "Quiet recognition rather than announced grief.",
+        "lightingChange": "Present: soft neutral window daylight from camera-left and gentle room bounce. Memory: the same source direction slightly warmer in late-afternoon sun, soft face light and tabletop contact shadows; no sepia wash, glowing person or light source jump within a shot. Return exactly to present light.",
+        "characters": [
+          {
+            "identityId": "Nari",
+            "visibility": "visible",
+            "intent": "Recognize the comfort of an ordinary remembered afternoon.",
+            "emotion": "Quiet recognition rather than announced grief.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Nari notices the clearly visible grandmother photograph on the table.",
+            "bodyLanguage": "Nari notices the clearly visible grandmother photograph on the table.",
+            "position": "Screen-right at the table in present and memory."
+          },
+          {
+            "identityId": "Grandmother",
+            "visibility": "offscreen",
+            "intent": "Offer ordinary familiar companionship, not a mystical farewell.",
+            "emotion": "Quiet recognition rather than announced grief.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Nari notices the clearly visible grandmother photograph on the table.",
+            "bodyLanguage": "Nari notices the clearly visible grandmother photograph on the table.",
+            "position": "Screen-left in the remembered afternoon and in its photograph; offscreen in present. Present only as the unchanged photograph, not physically in the room."
+          }
+        ],
+        "camera": {
+          "framing": "Present: Nari sits RIGHT at a familiar wooden table, looking down at a small wooden photograph frame resting LEFT foreground angled toward the camera. It clearly depicts the exact silver-haired lavender-cardigan grandmother at the same table in the actual memory reference. Nari's hands rest separately near her own cup and frame, not gripping tiny objects.",
+          "focus": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+          "movement": "Locked."
+        },
+        "motion": {
+          "initialState": "Present: Nari sits RIGHT at a familiar wooden table, looking down at a small wooden photograph frame resting LEFT foreground angled toward the camera. It clearly depicts the exact silver-haired lavender-cardigan grandmother at the same table in the actual memory reference. Nari's hands rest separately near her own cup and frame, not gripping tiny objects.",
+          "intermediateState": "Nari notices the clearly visible grandmother photograph on the table.",
+          "finalState": "Nari notices the clearly visible grandmother photograph on the table.",
+          "action": "Nari notices the clearly visible grandmother photograph on the table.",
+          "contactPhysics": "Keep separate hands/bodies, grounded posture and real supports; no prop teleport, fused fingers or body collision.",
+          "animationStyle": "Restrained natural live-action motion, not floaty animation."
+        },
+        "effectIds": [],
+        "transitionOut": {
+          "type": "continuous",
+          "reason": "Continue performance or let the final response breathe."
+        },
+        "acceptance": [
+          "Specific beat action and expression legible without captions.",
+          "Wardrobe, age, props, geography, lighting and contact retained."
+        ],
+        "forbiddenArtifacts": [
+          "extra limbs/people",
+          "identity or age drift",
+          "prop morph",
+          "camera jump",
+          "heavy music",
+          "ghost dissolve"
+        ]
+      },
+      {
+        "id": "interval-2",
+        "shotId": "a",
+        "beatId": "beat-2",
+        "fromFrame": 60,
+        "toFrame": 150,
+        "storyPurpose": "Her gaze settles on the image; let the photographed grandmother/tea setting register before a motivated cut.",
+        "audienceRead": "A familiar memory becoming present.",
+        "lightingChange": "Present: soft neutral window daylight from camera-left and gentle room bounce. Memory: the same source direction slightly warmer in late-afternoon sun, soft face light and tabletop contact shadows; no sepia wash, glowing person or light source jump within a shot. Return exactly to present light.",
+        "characters": [
+          {
+            "identityId": "Nari",
+            "visibility": "visible",
+            "intent": "Recognize the comfort of an ordinary remembered afternoon.",
+            "emotion": "A familiar memory becoming present.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Her gaze settles on the image; let the photographed grandmother/tea setting register before a motivated cut.",
+            "bodyLanguage": "Her gaze settles on the image; let the photographed grandmother/tea setting register before a motivated cut.",
+            "position": "Screen-right at the table in present and memory."
+          },
+          {
+            "identityId": "Grandmother",
+            "visibility": "offscreen",
+            "intent": "Offer ordinary familiar companionship, not a mystical farewell.",
+            "emotion": "A familiar memory becoming present.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Her gaze settles on the image; let the photographed grandmother/tea setting register before a motivated cut.",
+            "bodyLanguage": "Her gaze settles on the image; let the photographed grandmother/tea setting register before a motivated cut.",
+            "position": "Screen-left in the remembered afternoon and in its photograph; offscreen in present. Present only as the unchanged photograph, not physically in the room."
+          }
+        ],
+        "camera": {
+          "framing": "Present: Nari sits RIGHT at a familiar wooden table, looking down at a small wooden photograph frame resting LEFT foreground angled toward the camera. It clearly depicts the exact silver-haired lavender-cardigan grandmother at the same table in the actual memory reference. Nari's hands rest separately near her own cup and frame, not gripping tiny objects.",
+          "focus": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+          "movement": "Locked."
+        },
+        "motion": {
+          "initialState": "Nari notices the clearly visible grandmother photograph on the table.",
+          "intermediateState": "Her gaze settles on the image; let the photographed grandmother/tea setting register before a motivated cut.",
+          "finalState": "Her gaze settles on the image; let the photographed grandmother/tea setting register before a motivated cut.",
+          "action": "Her gaze settles on the image; let the photographed grandmother/tea setting register before a motivated cut.",
+          "contactPhysics": "Keep separate hands/bodies, grounded posture and real supports; no prop teleport, fused fingers or body collision.",
+          "animationStyle": "Restrained natural live-action motion, not floaty animation."
+        },
+        "effectIds": [],
+        "transitionOut": {
+          "type": "cut",
+          "reason": "Motivated present/memory information change; exact references and audio bridge."
+        },
+        "acceptance": [
+          "Specific beat action and expression legible without captions.",
+          "Wardrobe, age, props, geography, lighting and contact retained."
+        ],
+        "forbiddenArtifacts": [
+          "extra limbs/people",
+          "identity or age drift",
+          "prop morph",
+          "camera jump",
+          "heavy music",
+          "ghost dissolve"
+        ]
+      },
+      {
+        "id": "interval-3",
+        "shotId": "b",
+        "beatId": "beat-3",
+        "fromFrame": 150,
+        "toFrame": 240,
+        "storyPurpose": "Memory: grandmother LEFT and Nari RIGHT sit together in warm daylight, hands separate; grandmother gently settles her cup on the table.",
+        "audienceRead": "Ordinary affectionate companionship.",
+        "lightingChange": "Present: soft neutral window daylight from camera-left and gentle room bounce. Memory: the same source direction slightly warmer in late-afternoon sun, soft face light and tabletop contact shadows; no sepia wash, glowing person or light source jump within a shot. Return exactly to present light.",
+        "characters": [
+          {
+            "identityId": "Nari",
+            "visibility": "visible",
+            "intent": "Recognize the comfort of an ordinary remembered afternoon.",
+            "emotion": "Ordinary affectionate companionship.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Memory: grandmother LEFT and Nari RIGHT sit together in warm daylight, hands separate; grandmother gently settles her cup on the table.",
+            "bodyLanguage": "Memory: grandmother LEFT and Nari RIGHT sit together in warm daylight, hands separate; grandmother gently settles her cup on the table.",
+            "position": "Screen-right at the table in present and memory."
+          },
+          {
+            "identityId": "Grandmother",
+            "visibility": "visible",
+            "intent": "Offer ordinary familiar companionship, not a mystical farewell.",
+            "emotion": "Ordinary affectionate companionship.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Memory: grandmother LEFT and Nari RIGHT sit together in warm daylight, hands separate; grandmother gently settles her cup on the table.",
+            "bodyLanguage": "Memory: grandmother LEFT and Nari RIGHT sit together in warm daylight, hands separate; grandmother gently settles her cup on the table.",
+            "position": "Screen-left in the remembered afternoon and in its photograph; offscreen in present."
+          }
+        ],
+        "camera": {
+          "framing": "Present: Nari sits RIGHT at a familiar wooden table, looking down at a small wooden photograph frame resting LEFT foreground angled toward the camera. It clearly depicts the exact silver-haired lavender-cardigan grandmother at the same table in the actual memory reference. Nari's hands rest separately near her own cup and frame, not gripping tiny objects.",
+          "focus": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+          "movement": "Locked."
+        },
+        "motion": {
+          "initialState": "Her gaze settles on the image; let the photographed grandmother/tea setting register before a motivated cut.",
+          "intermediateState": "Memory: grandmother LEFT and Nari RIGHT sit together in warm daylight, hands separate; grandmother gently settles her cup on the table.",
+          "finalState": "Memory: grandmother LEFT and Nari RIGHT sit together in warm daylight, hands separate; grandmother gently settles her cup on the table.",
+          "action": "Memory: grandmother LEFT and Nari RIGHT sit together in warm daylight, hands separate; grandmother gently settles her cup on the table.",
+          "contactPhysics": "Keep separate hands/bodies, grounded posture and real supports; no prop teleport, fused fingers or body collision.",
+          "animationStyle": "Restrained natural live-action motion, not floaty animation."
+        },
+        "effectIds": [],
+        "transitionOut": {
+          "type": "continuous",
+          "reason": "Continue performance or let the final response breathe."
+        },
+        "acceptance": [
+          "Specific beat action and expression legible without captions.",
+          "Wardrobe, age, props, geography, lighting and contact retained."
+        ],
+        "forbiddenArtifacts": [
+          "extra limbs/people",
+          "identity or age drift",
+          "prop morph",
+          "camera jump",
+          "heavy music",
+          "ghost dissolve"
+        ]
+      },
+      {
+        "id": "interval-4",
+        "shotId": "b",
+        "beatId": "beat-4",
+        "fromFrame": 240,
+        "toFrame": 300,
+        "storyPurpose": "Memory: a small exchanged smile holds, no new action or speech.",
+        "audienceRead": "Comfort in a specific remembered routine.",
+        "lightingChange": "Present: soft neutral window daylight from camera-left and gentle room bounce. Memory: the same source direction slightly warmer in late-afternoon sun, soft face light and tabletop contact shadows; no sepia wash, glowing person or light source jump within a shot. Return exactly to present light.",
+        "characters": [
+          {
+            "identityId": "Nari",
+            "visibility": "visible",
+            "intent": "Recognize the comfort of an ordinary remembered afternoon.",
+            "emotion": "Comfort in a specific remembered routine.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Memory: a small exchanged smile holds, no new action or speech.",
+            "bodyLanguage": "Memory: a small exchanged smile holds, no new action or speech.",
+            "position": "Screen-right at the table in present and memory."
+          },
+          {
+            "identityId": "Grandmother",
+            "visibility": "visible",
+            "intent": "Offer ordinary familiar companionship, not a mystical farewell.",
+            "emotion": "Comfort in a specific remembered routine.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Memory: a small exchanged smile holds, no new action or speech.",
+            "bodyLanguage": "Memory: a small exchanged smile holds, no new action or speech.",
+            "position": "Screen-left in the remembered afternoon and in its photograph; offscreen in present."
+          }
+        ],
+        "camera": {
+          "framing": "Present: Nari sits RIGHT at a familiar wooden table, looking down at a small wooden photograph frame resting LEFT foreground angled toward the camera. It clearly depicts the exact silver-haired lavender-cardigan grandmother at the same table in the actual memory reference. Nari's hands rest separately near her own cup and frame, not gripping tiny objects.",
+          "focus": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+          "movement": "Locked."
+        },
+        "motion": {
+          "initialState": "Memory: grandmother LEFT and Nari RIGHT sit together in warm daylight, hands separate; grandmother gently settles her cup on the table.",
+          "intermediateState": "Memory: a small exchanged smile holds, no new action or speech.",
+          "finalState": "Memory: a small exchanged smile holds, no new action or speech.",
+          "action": "Memory: a small exchanged smile holds, no new action or speech.",
+          "contactPhysics": "Keep separate hands/bodies, grounded posture and real supports; no prop teleport, fused fingers or body collision.",
+          "animationStyle": "Restrained natural live-action motion, not floaty animation."
+        },
+        "effectIds": [],
+        "transitionOut": {
+          "type": "cut",
+          "reason": "Motivated present/memory information change; exact references and audio bridge."
+        },
+        "acceptance": [
+          "Specific beat action and expression legible without captions.",
+          "Wardrobe, age, props, geography, lighting and contact retained."
+        ],
+        "forbiddenArtifacts": [
+          "extra limbs/people",
+          "identity or age drift",
+          "prop morph",
+          "camera jump",
+          "heavy music",
+          "ghost dissolve"
+        ]
+      },
+      {
+        "id": "interval-5",
+        "shotId": "c",
+        "beatId": "beat-5",
+        "fromFrame": 300,
+        "toFrame": 390,
+        "storyPurpose": "Return to the matching present pose and photo; Nari slowly raises her eyes a little.",
+        "audienceRead": "Bittersweet warmth without a forced tear.",
+        "lightingChange": "Present: soft neutral window daylight from camera-left and gentle room bounce. Memory: the same source direction slightly warmer in late-afternoon sun, soft face light and tabletop contact shadows; no sepia wash, glowing person or light source jump within a shot. Return exactly to present light.",
+        "characters": [
+          {
+            "identityId": "Nari",
+            "visibility": "visible",
+            "intent": "Recognize the comfort of an ordinary remembered afternoon.",
+            "emotion": "Bittersweet warmth without a forced tear.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Return to the matching present pose and photo; Nari slowly raises her eyes a little.",
+            "bodyLanguage": "Return to the matching present pose and photo; Nari slowly raises her eyes a little.",
+            "position": "Screen-right at the table in present and memory."
+          },
+          {
+            "identityId": "Grandmother",
+            "visibility": "offscreen",
+            "intent": "Offer ordinary familiar companionship, not a mystical farewell.",
+            "emotion": "Bittersweet warmth without a forced tear.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Return to the matching present pose and photo; Nari slowly raises her eyes a little.",
+            "bodyLanguage": "Return to the matching present pose and photo; Nari slowly raises her eyes a little.",
+            "position": "Screen-left in the remembered afternoon and in its photograph; offscreen in present. Present only as the unchanged photograph, not physically in the room."
+          }
+        ],
+        "camera": {
+          "framing": "Present: Nari sits RIGHT at a familiar wooden table, looking down at a small wooden photograph frame resting LEFT foreground angled toward the camera. It clearly depicts the exact silver-haired lavender-cardigan grandmother at the same table in the actual memory reference. Nari's hands rest separately near her own cup and frame, not gripping tiny objects.",
+          "focus": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+          "movement": "Locked."
+        },
+        "motion": {
+          "initialState": "Memory: a small exchanged smile holds, no new action or speech.",
+          "intermediateState": "Return to the matching present pose and photo; Nari slowly raises her eyes a little.",
+          "finalState": "Return to the matching present pose and photo; Nari slowly raises her eyes a little.",
+          "action": "Return to the matching present pose and photo; Nari slowly raises her eyes a little.",
+          "contactPhysics": "Keep separate hands/bodies, grounded posture and real supports; no prop teleport, fused fingers or body collision.",
+          "animationStyle": "Restrained natural live-action motion, not floaty animation."
+        },
+        "effectIds": [],
+        "transitionOut": {
+          "type": "continuous",
+          "reason": "Continue performance or let the final response breathe."
+        },
+        "acceptance": [
+          "Specific beat action and expression legible without captions.",
+          "Wardrobe, age, props, geography, lighting and contact retained."
+        ],
+        "forbiddenArtifacts": [
+          "extra limbs/people",
+          "identity or age drift",
+          "prop morph",
+          "camera jump",
+          "heavy music",
+          "ghost dissolve"
+        ]
+      },
+      {
+        "id": "interval-6",
+        "shotId": "c",
+        "beatId": "beat-6",
+        "fromFrame": 390,
+        "toFrame": 450,
+        "storyPurpose": "A restrained familiar smile settles while the photograph remains in the frame.",
+        "audienceRead": "Memory kept close; no death or therapeutic claim.",
+        "lightingChange": "Present: soft neutral window daylight from camera-left and gentle room bounce. Memory: the same source direction slightly warmer in late-afternoon sun, soft face light and tabletop contact shadows; no sepia wash, glowing person or light source jump within a shot. Return exactly to present light.",
+        "characters": [
+          {
+            "identityId": "Nari",
+            "visibility": "visible",
+            "intent": "Recognize the comfort of an ordinary remembered afternoon.",
+            "emotion": "Memory kept close; no death or therapeutic claim.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "A restrained familiar smile settles while the photograph remains in the frame.",
+            "bodyLanguage": "A restrained familiar smile settles while the photograph remains in the frame.",
+            "position": "Screen-right at the table in present and memory."
+          },
+          {
+            "identityId": "Grandmother",
+            "visibility": "offscreen",
+            "intent": "Offer ordinary familiar companionship, not a mystical farewell.",
+            "emotion": "Memory kept close; no death or therapeutic claim.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "A restrained familiar smile settles while the photograph remains in the frame.",
+            "bodyLanguage": "A restrained familiar smile settles while the photograph remains in the frame.",
+            "position": "Screen-left in the remembered afternoon and in its photograph; offscreen in present. Present only as the unchanged photograph, not physically in the room."
+          }
+        ],
+        "camera": {
+          "framing": "Present: Nari sits RIGHT at a familiar wooden table, looking down at a small wooden photograph frame resting LEFT foreground angled toward the camera. It clearly depicts the exact silver-haired lavender-cardigan grandmother at the same table in the actual memory reference. Nari's hands rest separately near her own cup and frame, not gripping tiny objects.",
+          "focus": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+          "movement": "Locked."
+        },
+        "motion": {
+          "initialState": "Return to the matching present pose and photo; Nari slowly raises her eyes a little.",
+          "intermediateState": "A restrained familiar smile settles while the photograph remains in the frame.",
+          "finalState": "Return to precisely the present table, neutral window light, unchanged wooden photo frame and cream cup. Nari lifts her gaze slightly from the photograph, settles into a small closed-mouth familiar smile and keeps her hands resting separately. Grandmother remains only in the photograph, not physically present.",
+          "action": "A restrained familiar smile settles while the photograph remains in the frame.",
+          "contactPhysics": "Keep separate hands/bodies, grounded posture and real supports; no prop teleport, fused fingers or body collision.",
+          "animationStyle": "Restrained natural live-action motion, not floaty animation."
+        },
+        "effectIds": [],
+        "transitionOut": {
+          "type": "end",
+          "reason": "Continue performance or let the final response breathe."
+        },
+        "acceptance": [
+          "Specific beat action and expression legible without captions.",
+          "Wardrobe, age, props, geography, lighting and contact retained."
+        ],
+        "forbiddenArtifacts": [
+          "extra limbs/people",
+          "identity or age drift",
+          "prop morph",
+          "camera jump",
+          "heavy music",
+          "ghost dissolve"
+        ]
+      }
+    ]
+  },
+  "referenceConformance": {
+    "finding": "Actual inspected present opening has two stationary cream cups and a recognizable grandmother photograph. Preserve those actual props rather than changing count between endpoints. Original submitted prompts remain in job history.",
+    "changes": "Present-only prompts for ungenerated endpoints; no contradictory memory props or instructions. Grandmother physically absent in present. Two cups stay on the table.",
+    "personallyViewedByUser": false
+  }
+}

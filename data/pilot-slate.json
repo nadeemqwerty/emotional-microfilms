@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "status": "Agent-designed concrete stories under the user's explicit four-pilot autonomous-production instruction; not personal acceptance of generated media.",
+  "pilots": [
+    {
+      "id": "almost-looking",
+      "title": "Almost Looking",
+      "theme": "unspoken attraction",
+      "relationship": "Two fictional Korean college peers, both explicitly 18-19; nonsexual older-teen romance.",
+      "logline": "Two students pretend to read while their glances almost meet, until a brief caught look leaves both hiding a smile.",
+      "seconds": 10,
+      "researchQuery": "teenage love gaze subtext",
+      "characters": [
+        {"id": "Sora", "description": "Original fictional Korean woman age 18-19, clearly older teen/college adult, softly oval face, expressive dark eyes, straight shoulder-length black hair, ivory cardigan over a muted blue shirt, simple blue jeans. Natural attractive face and skin, no celebrity resemblance or sexual styling.", "position": "Screen-left.", "intent": "Notice her peer without making a declaration."},
+        {"id": "Jiwon", "description": "Original fictional Korean man age 18-19, clearly older teen/college adult, handsome youthful face, short slightly tousled black hair, plain light-denim overshirt over a white T-shirt, dark trousers. Natural attractive skin and features, no celebrity resemblance.", "position": "Screen-right.", "intent": "Look toward Sora, then try to hide being caught."}
+      ],
+      "props": "Two different plain open paperback books on a single library table, no readable writing or logos. Hands rest separately on books/table; no transfers or touch.",
+      "light": "Broad soft late-afternoon window light from camera-left with a faint warm edge; neutral room bounce, readable eyes, steady soft contact shadows beneath hands/books. No exposure or time-of-day change.",
+      "atmosphere": "Warm sunlit library depth and a very gentle distant curtain movement, not sparkles or a particle overlay. Both faces remain the visual priority.",
+      "audio": "Quiet library room tone, a very soft distant page movement and restrained natural cloth. No speech, voices, song, score, bass, swelling music or rhythmic bed.",
+      "setup": "Medium seated two-shot at one library table, Sora LEFT reading her book; Jiwon RIGHT glances toward her with his chin barely turned. Both faces three-quarter visible, bodies separate and hands resting on their own books.",
+      "landing": "Exact same composition, books, wardrobe and positions. Both have lowered their gaze to their own books after a briefly caught glance, with tiny suppressed closed-mouth smiles, not broad grins. Hands remain separate and still.",
+      "beats": [
+        {"from": 0, "to": 2, "phase": "setup", "action": "Jiwon's small sideways glance establishes the question while Sora reads.", "feeling": "Quiet curiosity, not staring or possession."},
+        {"from": 2, "to": 5, "phase": "reveal", "action": "Sora briefly looks up as Jiwon looks down, revealing mutual attention through timing.", "feeling": "Shy awareness."},
+        {"from": 5, "to": 8, "phase": "response", "action": "Their eyes briefly meet; a small caught reaction registers without big head turns.", "feeling": "Mutual pleasant surprise."},
+        {"from": 8, "to": 10, "phase": "hold", "action": "Both return their eyes to their books while trying to suppress a small smile.", "feeling": "Private warmth, left unspoken."}
+      ]
+    },
+    {
+      "id": "the-dry-side",
+      "title": "The Dry Side",
+      "theme": "unspoken care",
+      "relationship": "Two different fictional Korean college peers, both explicitly 18-19; nonsexual older-teen romance.",
+      "logline": "A student quietly tilts the shared umbrella toward his companion; she notices his exposed shoulder and moves a little closer without saying why.",
+      "seconds": 10,
+      "researchQuery": "teenage love gaze subtext",
+      "characters": [
+        {"id": "Hana", "description": "Original fictional Korean woman age 18-19, college adult, naturally attractive round-oval face, dark bob with a light fringe, dusty-rose raincoat over a cream top, dark blue jeans. No makeup-heavy or sexual styling, no celebrity resemblance.", "position": "Screen-left.", "intent": "Notice the small kindness and answer without saying it aloud."},
+        {"id": "Minho", "description": "Original fictional Korean man age 18-19, college adult, handsome softly angular face, neat side-parted black hair, olive-green light jacket over a beige T-shirt and dark trousers. Natural skin, no celebrity resemblance.", "position": "Screen-right.", "intent": "Keep Hana dry while pretending the umbrella shift is ordinary."}
+      ],
+      "props": "One plain dark navy umbrella held only by Minho in his own near-center hand. No umbrella transfer, logos, bags or hand-holding.",
+      "light": "Soft blue-gray rainy daylight, broad luminous cloud key from camera-left and subtle wet-pavement bounce; eyes stay readable under the canopy. Damp right shoulder darkens naturally, no spotlight, lightning or emissive rain.",
+      "atmosphere": "Fine gentle vertical rain BEHIND the faces and outside the canopy; subtle distant foliage sway, wet pavement reflection. No golden particles, hearts, butterflies or distracting weather burst.",
+      "audio": "Soft rain on the umbrella and distant pavement, restrained jacket rustle and one small shoe shift. No speech, song, score, dramatic bass or cinematic swell.",
+      "setup": "Portrait medium two-shot standing still under one navy umbrella on a quiet path, Hana LEFT and Minho RIGHT. The full canopy top and both faces are visible; umbrella initially centered, both look forward, small comfortable gap. Minho alone holds the handle.",
+      "landing": "Exact same camera, path, identities and wardrobe. Minho has shifted/tilted the SAME umbrella subtly LEFT toward Hana, leaving a portion of his outer RIGHT shoulder outside its edge and damp. Hana has made one small half-step closer and looks toward his face with a restrained grateful smile; he looks forward with a barely hidden smile. No touch or hug.",
+      "beats": [
+        {"from": 0, "to": 2, "phase": "setup", "action": "Read both peers, the shared umbrella and the rain at its edges.", "feeling": "Ordinary quiet companionship."},
+        {"from": 2, "to": 5, "phase": "reveal", "action": "Minho slowly offsets the canopy toward Hana with one small wrist/arm movement; his outer shoulder becomes exposed.", "feeling": "Unannounced care."},
+        {"from": 5, "to": 8, "phase": "response", "action": "Hana notices his damp shoulder, then looks up toward him and makes one small half-step closer.", "feeling": "Recognition and tentative affection."},
+        {"from": 8, "to": 10, "phase": "hold", "action": "They settle under the shifted umbrella, small suppressed smiles, no confession.", "feeling": "Warmth that stays unspoken."}
+      ]
+    },
+    {
+      "id": "the-quiet-crayon",
+      "title": "The Quiet Crayon",
+      "theme": "adult-led repair",
+      "relationship": "Two original fictional Korean parents in their thirties and their six-year-old child.",
+      "logline": "A child's crayon stops during a tense parental exchange; the parents notice, put the disagreement aside and reassure the child.",
+      "seconds": 10,
+      "researchQuery": "parents conflict child repair",
+      "creativeException": "Three principals are necessary for the user's explicitly requested mother/father/child scenario; do not weaken the global two-principal default. This is one nonviolent repair moment, not a cure or a child-mediated reconciliation.",
+      "characters": [
+        {"id": "Eunji", "description": "Original fictional Korean mother age 33, naturally attractive warm oval face, dark hair loosely tied back, muted sage blouse and beige trousers, natural skin and understated grooming. No celebrity resemblance.", "position": "Screen-left, seated behind the table.", "intent": "Stop reacting to her partner and take responsibility for the child's safety."},
+        {"id": "Taesung", "description": "Original fictional Korean father age 35, handsome natural adult face, short neat dark hair, muted blue casual shirt and charcoal trousers, no celebrity resemblance or exaggerated bodybuilder proportions.", "position": "Screen-right, seated behind the table.", "intent": "Notice his child and soften his own posture rather than win the disagreement."},
+        {"id": "Yuna", "description": "Original fictional Korean child age six, visibly school-age child with soft round face and straight dark hair in a simple short bob, mustard-yellow long-sleeve top and navy trousers. Age-appropriate natural face, no makeup/adultification.", "position": "Center foreground at the table, three-quarter face visible.", "intent": "Keep drawing while watching whether the adults are calm."}
+      ],
+      "props": "One blue crayon held by the child over a simple unfinished drawing, plain paper, one closed household notebook. Each adult's hands remain separate on their own table area. No weapons, alcohol, thrown objects, readable writing or heavy prop transfers.",
+      "light": "Broad soft neutral window light camera-left with warm interior bounce, all three faces and the paused crayon visible. Same steady exposure throughout; no red danger lighting, emotional spotlight or sudden warm light cue.",
+      "atmosphere": "Calm ordinary home; faint background curtain movement only. No particles, butterflies or effects that trivialize the child's feelings.",
+      "audio": "Begin with a brief low, nonviolent tense adult exchange without intelligible contested content; stop it when the crayon pauses. Mother gently says once in clear natural English: We're sorry. This isn't your fault. Quiet room tone and small crayon contact; no shouting, score, song, bass or melodramatic sting.",
+      "setup": "Portrait medium-wide table three-shot, mother LEFT and father RIGHT behind the table, six-year-old child CENTER foreground three-quarter to camera. Adults look tensely toward each other, not yelling or threatening; child's blue crayon pauses above paper and the child looks toward them. All three faces and the crayon remain visible; all are already seated.",
+      "landing": "Exact same camera, cast, room and seated positions. Both adults have softened their shoulders and turned their attentive faces toward the child, their hands resting separately and openly on their own table areas. The child looks down and begins a small new blue crayon stroke. Adults show responsibility and calm, not celebratory grins or instant reconciliation.",
+      "beats": [
+        {"from": 0, "to": 2, "phase": "setup", "action": "The child's crayon visibly pauses while the adults exchange a brief tense look.", "feeling": "Concern without intimidation."},
+        {"from": 2, "to": 4, "phase": "reveal", "action": "Both parents notice the child and stop their exchange; shoulders and jaws relax.", "feeling": "Recognition and self-regulation."},
+        {"from": 4, "to": 8, "phase": "response", "action": "Parents turn their attention toward the child; mother gives the brief reassurance while father listens and stays calm.", "feeling": "Adult responsibility, not child mediation."},
+        {"from": 8, "to": 10, "phase": "hold", "action": "Child makes one small crayon stroke while both adults remain quietly attentive.", "feeling": "Tentative safety; no instant-cure claim."}
+      ]
+    },
+    {
+      "id": "afternoon-again",
+      "title": "Afternoon, Again",
+      "theme": "ordinary nostalgic memory",
+      "relationship": "An original fictional adult Korean granddaughter and her grandmother.",
+      "logline": "A grandmother photograph recalls an ordinary afternoon cup of tea, and the granddaughter returns to the present with a small familiar smile.",
+      "seconds": 15,
+      "researchQuery": "grandmother photograph nostalgia memory",
+      "creativeException": "Present and memory occupy the same familiar room/table in distinct time planes. Grandmother is explicitly offscreen in the present; no funeral, death or supernatural claim.",
+      "characters": [
+        {"id": "Nari", "description": "Original fictional Korean adult woman about 27, naturally attractive oval face, expressive dark eyes, long dark hair loosely behind one ear, oatmeal knit sweater and muted blue trousers. Same original face in present and recent memory, no child transformation or celebrity resemblance.", "position": "Screen-right at the table in present and memory.", "intent": "Recognize the comfort of an ordinary remembered afternoon."},
+        {"id": "Grandmother", "description": "Original fictional Korean grandmother about 72, naturally warm lined face, kind dark eyes, short softly waved silver hair, dusty lavender cardigan over a plain cream blouse and dark comfortable trousers. Genuine older-adult skin texture, no celebrity resemblance.", "position": "Screen-left in the remembered afternoon and in its photograph; offscreen in present.", "intent": "Offer ordinary familiar companionship, not a mystical farewell."}
+      ],
+      "props": "One small wooden photo frame with a clear photograph of the actual designed grandmother/tea scene, one plain cream cup on the table. Memory uses two plain cream cups and a simple wooden table; grandmother keeps her cup on the table, no pouring or hand transfers.",
+      "light": "Present: soft neutral window daylight from camera-left and gentle room bounce. Memory: the same source direction slightly warmer in late-afternoon sun, soft face light and tabletop contact shadows; no sepia wash, glowing person or light source jump within a shot. Return exactly to present light.",
+      "atmosphere": "Memory has a small warm window patch and a gentle out-of-focus leaf shadow on the back wall; present is quieter/neutral. No floating glitter, butterflies, spectral figures or exaggerated dream dissolve.",
+      "audio": "Present quiet room tone with a subtle frame/table contact. Memory has familiar room ambience and one delicate cup-settle sound, no pouring, speech or music. Return to the same present room tone; unobtrusive short ambience crossfades at the two cuts. No sad piano, swelling score, song, bass or funeral cue.",
+      "setup": "Present: Nari sits RIGHT at a familiar wooden table, looking down at a small wooden photograph frame resting LEFT foreground angled toward the camera. It clearly depicts the exact silver-haired lavender-cardigan grandmother at the same table in the actual memory reference. Nari's hands rest separately near her own cup and frame, not gripping tiny objects.",
+      "landing": "Return to precisely the present table, neutral window light, unchanged wooden photo frame and cream cup. Nari lifts her gaze slightly from the photograph, settles into a small closed-mouth familiar smile and keeps her hands resting separately. Grandmother remains only in the photograph, not physically present.",
+      "beats": [
+        {"from": 0, "to": 2, "phase": "setup", "action": "Nari notices the clearly visible grandmother photograph on the table.", "feeling": "Quiet recognition rather than announced grief."},
+        {"from": 2, "to": 5, "phase": "reveal", "action": "Her gaze settles on the image; let the photographed grandmother/tea setting register before a motivated cut.", "feeling": "A familiar memory becoming present."},
+        {"from": 5, "to": 8, "phase": "response", "action": "Memory: grandmother LEFT and Nari RIGHT sit together in warm daylight, hands separate; grandmother gently settles her cup on the table.", "feeling": "Ordinary affectionate companionship."},
+        {"from": 8, "to": 10, "phase": "hold", "action": "Memory: a small exchanged smile holds, no new action or speech.", "feeling": "Comfort in a specific remembered routine."},
+        {"from": 10, "to": 13, "phase": "response", "action": "Return to the matching present pose and photo; Nari slowly raises her eyes a little.", "feeling": "Bittersweet warmth without a forced tear."},
+        {"from": 13, "to": 15, "phase": "hold", "action": "A restrained familiar smile settles while the photograph remains in the frame.", "feeling": "Memory kept close; no death or therapeutic claim."}
+      ]
+    }
+  ]
+}

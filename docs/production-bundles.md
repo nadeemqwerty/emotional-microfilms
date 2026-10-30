@@ -84,6 +84,21 @@ Ask what changes, what remains fixed, what the audience should notice and what
 emotion the combination communicates. The sound director spots before motion;
 actual timing is conformed after motion, never presumed from prompt timestamps.
 
+If postproduction changes source order, adds a held-frame cutaway or reuses
+another take's audio, preserve the submitted packet and provider jobs. Record
+an explicit editorial conformance: source hashes, exact source ranges/frame,
+crop/motion, new cuts, sound timing, derivative path/hash and known limitations.
+A held reaction is an editorial still, not newly generated natural performance.
+Cross-read this actual edit against every affected department script and renew
+the affected playback/listening checks; useful source reuse is not a review bypass.
+
+For a render created after bundle export, write `metadata\delivery.json` only
+after verifying the actual file's hash, complete decode, streams, exact duration
+and frame count. Include source/derivative lineage, actual review scope and
+unresolved blockers. The earlier `metadata\bundle.json` receipt covers the
+exported packet/media, not a final video that did not yet exist. Neither receipt
+grants personal release or publication approval.
+
 | Change | Preserve / renew |
 |---|---|
 | Sound feels heavy/mismatched | Preserve useful picture; revise palette/arrangement/entry/space, compare on the same picture and renew sound/fit/final reviews. |

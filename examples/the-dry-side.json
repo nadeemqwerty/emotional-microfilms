@@ -1,0 +1,589 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "the-dry-side",
+  "seconds": 10,
+  "aspectRatio": "9:16",
+  "generationApproved": false,
+  "status": "Complete provisional plan; actual cast/scene/delegated review and exact paid preflight still required.",
+  "creativeException": "None.",
+  "intendedInterpretation": "A student quietly tilts the shared umbrella toward his companion; she notices his exposed shoulder and moves a little closer without saying why.",
+  "identityBible": {
+    "Hana": "Original fictional Korean woman age 18-19, college adult, naturally attractive round-oval face, dark bob with a light fringe, dusty-rose raincoat over a cream top, dark blue jeans. No makeup-heavy or sexual styling, no celebrity resemblance.",
+    "Minho": "Original fictional Korean man age 18-19, college adult, handsome softly angular face, neat side-parted black hair, olive-green light jacket over a beige T-shirt and dark trousers. Natural skin, no celebrity resemblance.",
+    "props": "One plain dark navy umbrella held only by Minho in his own near-center hand. No umbrella transfer, logos, bags or hand-holding.",
+    "anchorPrompt": "Photorealistic original cinematic 9:16 still, a literal scene endpoint, not a montage. Image 1 supplies the exact accepted cast identities, age, wardrobe and proportions. One plain dark navy umbrella held only by Minho in his own near-center hand. No umbrella transfer, logos, bags or hand-holding. Lighting and shadows: Soft blue-gray rainy daylight, broad luminous cloud key from camera-left and subtle wet-pavement bounce; eyes stay readable under the canopy. Damp right shoulder darkens naturally, no spotlight, lightning or emissive rain. Atmosphere: Fine gentle vertical rain BEHIND the faces and outside the canopy; subtle distant foliage sway, wet pavement reflection. No golden particles, hearts, butterflies or distracting weather burst. Natural expressive faces and anatomy, no camera-visible lamps/equipment, labels, logos or extra people. Portrait medium two-shot standing still under one navy umbrella on a quiet path, Hana LEFT and Minho RIGHT. The full canopy top and both faces are visible; umbrella initially centered, both look forward, small comfortable gap. Minho alone holds the handle."
+  },
+  "characterPlan": {
+    "requiredIdentities": [
+      "Hana",
+      "Minho"
+    ],
+    "references": [
+      {
+        "id": "cast",
+        "covers": [
+          "Hana",
+          "Minho"
+        ],
+        "prompt": "Photorealistic casting reference, not a film scene, collage or illustration. A single portrait 9:16 full-body group on a plain warm-gray seamless background, broad soft off-camera daylight, neutral fill and grounded soft foot shadows. Original fictional people: Hana: Original fictional Korean woman age 18-19, college adult, naturally attractive round-oval face, dark bob with a light fringe, dusty-rose raincoat over a cream top, dark blue jeans. No makeup-heavy or sexual styling, no celebrity resemblance. Minho: Original fictional Korean man age 18-19, college adult, handsome softly angular face, neat side-parted black hair, olive-green light jacket over a beige T-shirt and dark trousers. Natural skin, no celebrity resemblance. Relaxed separate poses with each face and full body visible, natural relative ages/heights, no physical contact, props, studio equipment, text or logos. Beautiful but believable casting, no celebrity likeness, plastic skin or adultified children."
+      }
+    ]
+  },
+  "keyframes": [
+    {
+      "id": "a-start",
+      "prompt": "Photorealistic original cinematic 9:16 still, a literal scene endpoint, not a montage. Image 1 supplies the exact accepted cast identities, age, wardrobe and proportions. One plain dark navy umbrella held only by Minho in his own near-center hand. No umbrella transfer, logos, bags or hand-holding. Lighting and shadows: Soft blue-gray rainy daylight, broad luminous cloud key from camera-left and subtle wet-pavement bounce; eyes stay readable under the canopy. Damp right shoulder darkens naturally, no spotlight, lightning or emissive rain. Atmosphere: Fine gentle vertical rain BEHIND the faces and outside the canopy; subtle distant foliage sway, wet pavement reflection. No golden particles, hearts, butterflies or distracting weather burst. Natural expressive faces and anatomy, no camera-visible lamps/equipment, labels, logos or extra people. Portrait medium two-shot standing still under one navy umbrella on a quiet path, Hana LEFT and Minho RIGHT. The full canopy top and both faces are visible; umbrella initially centered, both look forward, small comfortable gap. Minho alone holds the handle."
+    },
+    {
+      "id": "a-end",
+      "previous": "a-end-rejected-C7csjZ",
+      "prompt": "Precise photorealistic edit of IMAGE 2; retain its original fictional cast from IMAGE 1. Keep the woman with bob and pink coat on the LEFT and man in olive jacket on the RIGHT, same faces/ages/clothes, rainy path and locked 9:16 camera. Correct ONLY the umbrella's placement plus a small shy reaction. The intended kindness is that the MAN shelters the WOMAN, exposing his own outer shoulder. Put the navy umbrella canopy center directly ABOVE THE WOMAN'S HEAD on the LEFT, around 30 percent of canvas width. The man's gripping hand stays near 52 percent canvas width at chest height. A single straight connected shaft must slope UP AND LEFT from that hand to the canopy, whose top center is around 30 percent canvas width, NOT above the man. Thus the canopy's RIGHT EDGE is inside the man's outer screen-right shoulder; that outer shoulder is uncovered and damp. Keep one believable umbrella, ribs and handle, natural hand grip and steady cloudy light. Woman moves a little closer, remains separate, and looks up at him with a tiny grateful smile; man looks forward, barely hiding a smile. No physical embrace, extra person, second umbrella, wardrobe/face change, text or camera move.",
+      "model": "gpt-image-2-5-sunburst",
+      "imageOptions": {
+        "imageCount": 1,
+        "aspectRatio": "9:16",
+        "resolutionTier": "2k",
+        "quality": "medium",
+        "outputFormat": "png",
+        "lockAspectRatio": true,
+        "autoEnhancePrompt": false
+      }
+    }
+  ],
+  "shots": [
+    {
+      "id": "a",
+      "start": 0,
+      "end": 10,
+      "startFrameId": "a-start",
+      "endFrameId": "a-end",
+      "action": "Read both peers, the shared umbrella and the rain at its edges. Minho slowly offsets the canopy toward Hana with one small wrist/arm movement; his outer shoulder becomes exposed. Hana notices his damp shoulder, then looks up toward him and makes one small half-step closer. They settle under the shifted umbrella, small suppressed smiles, no confession.",
+      "modelCandidate": "wan2-7",
+      "mode": "image2video",
+      "paramsToQuote": {
+        "duration": 10,
+        "resolution": "720p",
+        "videoCount": 1,
+        "negativePrompt": "zoom, dolly, push in, camera movement, walking toward camera, changing scale, cropped person, scene cut, face morph, detached umbrella handle",
+        "enablePromptExpansion": false
+      },
+      "prompt": "Static tripod full-body portrait two-shot, unchanged camera position and focal length throughout. Both people's entire heads and shoes stay in the frame and remain the same size, standing at the same distance from camera. The fictional woman stays screen-left in pink, man screen-right in olive, same original reference faces/clothes and wet path. Start with centered umbrella. His gripping hand slowly angles its single connected shaft upward-LEFT, shifting navy canopy over the woman on the LEFT, exposing his outer RIGHT shoulder to rain. She notices the damp shoulder and tilts her face up at him with a tiny grateful smile. They settle in the exact accepted ending positions. Tiny sideways closeness only; feet grounded, no forward walking. One restrained arm action, small eyeline response, no dialogue or new event. Preserve connected umbrella ribs/handle and believable grip, rain/pavement reflections, steady cloudy daylight. Camera and background remain completely fixed. No cut, morph, zoom or reframe."
+    }
+  ],
+  "hookPlan": {
+    "firstFrame": "Portrait medium two-shot standing still under one navy umbrella on a quiet path, Hana LEFT and Minho RIGHT. The full canopy top and both faces are visible; umbrella initially centered, both look forward, small comfortable gap. Minho alone holds the handle.",
+    "firstMotion": "Read both peers, the shared umbrella and the rain at its edges.",
+    "inspectSeconds": 1,
+    "question": "A student quietly tilts the shared umbrella toward his companion; she notices his exposed shoulder and moves a little closer without saying why.",
+    "payoff": "Exact same camera, path, identities and wardrobe. Minho has shifted/tilted the SAME umbrella subtly LEFT toward Hana, leaving a portion of his outer RIGHT shoulder outside its edge and damp. Hana has made one small half-step closer and looks toward his face with a restrained grateful smile; he looks forward with a barely hidden smile. No touch or hug.",
+    "test": "Inspect the actual opening muted at phone-size; no title or explanatory voice-over rescue."
+  },
+  "sceneChanges": [],
+  "atmospherePlan": {
+    "motionBudget": "Fine gentle vertical rain BEHIND the faces and outside the canopy; subtle distant foliage sway, wet pavement reflection. No golden particles, hearts, butterflies or distracting weather burst.",
+    "omissionRationale": "Beauty effects considered; preserve the specific human action. No unmotivated sparkle/butterfly/sakura layer.",
+    "effects": [
+      {
+        "id": "rain",
+        "route": "in-generation",
+        "shotIds": [
+          "a"
+        ],
+        "from": 0,
+        "to": 10,
+        "referenceFrameIds": [
+          "a-start",
+          "a-end"
+        ],
+        "appearance": "Fine translucent distant vertical rain.",
+        "density": "Gentle and sparse.",
+        "intensity": "Secondary texture.",
+        "scale": "Small distant streaks.",
+        "lightMode": "Reflective/transmissive, not emissive.",
+        "purpose": "Make the umbrella kindness visible.",
+        "depth": "Outside the canopy and behind faces.",
+        "motion": "Steady downward fall.",
+        "occlusion": "Never hide eyes, handle ownership or umbrella edge.",
+        "lightInteraction": "Soft cloudy reflection, no glow.",
+        "shadowInteraction": "Diffuse canopy shadow and foot grounding persist.",
+        "continuity": "Steady direction/rate across the single shot.",
+        "fallback": "Reduce density, preserve the story action; no decorative reroll."
+      }
+    ]
+  },
+  "continuity": {
+    "geography": "Hana: Screen-left. Minho: Screen-right.",
+    "propOwnership": "One plain dark navy umbrella held only by Minho in his own near-center hand. No umbrella transfer, logos, bags or hand-holding.",
+    "light": "Soft blue-gray rainy daylight, broad luminous cloud key from camera-left and subtle wet-pavement bounce; eyes stay readable under the canopy. Damp right shoulder darkens naturally, no spotlight, lightning or emissive rain.",
+    "match": "One continuous camera/space; do not hide the action with cuts.",
+    "mustNotChange": [
+      "accepted identities/ages",
+      "wardrobe and screen sides",
+      "prop counts and ownership",
+      "key/fill direction",
+      "plausible contact shadows"
+    ],
+    "intentionalChanges": [
+      "Read both peers, the shared umbrella and the rain at its edges.",
+      "Minho slowly offsets the canopy toward Hana with one small wrist/arm movement; his outer shoulder becomes exposed.",
+      "Hana notices his damp shoulder, then looks up toward him and makes one small half-step closer.",
+      "They settle under the shifted umbrella, small suppressed smiles, no confession."
+    ]
+  },
+  "lightingPlan": {
+    "motivation": "Soft blue-gray rainy daylight, broad luminous cloud key from camera-left and subtle wet-pavement bounce; eyes stay readable under the canopy. Damp right shoulder darkens naturally, no spotlight, lightning or emissive rain.",
+    "key": "Soft blue-gray rainy daylight, broad luminous cloud key from camera-left and subtle wet-pavement bounce; eyes stay readable under the canopy. Damp right shoulder darkens naturally, no spotlight, lightning or emissive rain.",
+    "fill": "Soft plausible window/room or pavement bounce, no opposite hard shadow.",
+    "exposurePriority": "Faces/eyes and the story prop/action remain readable, no clipped highlights.",
+    "shadowMap": [
+      {
+        "caster": "people and hands",
+        "receiver": "table/ground and own clothing",
+        "behavior": "Attached soft grounding shadows with the stated source direction."
+      },
+      {
+        "caster": "story props",
+        "receiver": "table/hand/ground",
+        "behavior": "Consistent soft contact; no detached or flickering shadow."
+      }
+    ],
+    "invariants": [
+      "source direction",
+      "soft edges",
+      "face readability",
+      "contact grounding"
+    ],
+    "intentionalChanges": [
+      "None."
+    ],
+    "review": "pending"
+  },
+  "pacing": {
+    "structure": "connection",
+    "hypothesis": "A student quietly tilts the shared umbrella toward his companion; she notices his exposed shoulder and moves a little closer without saying why.",
+    "hook": "Portrait medium two-shot standing still under one navy umbrella on a quiet path, Hana LEFT and Minho RIGHT. The full canopy top and both faces are visible; umbrella initially centered, both look forward, small comfortable gap. Minho alone holds the handle.",
+    "revealEvidence": "Minho slowly offsets the canopy toward Hana with one small wrist/arm movement; his outer shoulder becomes exposed.",
+    "beats": [
+      {
+        "start": 0,
+        "end": 2,
+        "phase": "setup",
+        "job": "Read both peers, the shared umbrella and the rain at its edges."
+      },
+      {
+        "start": 2,
+        "end": 5,
+        "phase": "reveal",
+        "job": "Minho slowly offsets the canopy toward Hana with one small wrist/arm movement; his outer shoulder becomes exposed."
+      },
+      {
+        "start": 5,
+        "end": 8,
+        "phase": "response",
+        "job": "Hana notices his damp shoulder, then looks up toward him and makes one small half-step closer."
+      },
+      {
+        "start": 8,
+        "end": 10,
+        "phase": "hold",
+        "job": "They settle under the shifted umbrella, small suppressed smiles, no confession."
+      }
+    ],
+    "cutReasons": [],
+    "actualEventTimes": null,
+    "review": "pending"
+  },
+  "direction": {
+    "soundPalette": {
+      "targetFeeling": "unspoken care",
+      "avoidFeelings": [
+        "heavy melodrama",
+        "ominous tension",
+        "grand triumph",
+        "forced grief"
+      ],
+      "texture": "Soft rain on the umbrella and distant pavement, restrained jacket rustle and one small shoe shift. No speech, song, score, dramatic bass or cinematic swell.",
+      "density": "Ambience/necessary quiet foley only; no continuous score.",
+      "register": "Natural source spectrum, no bass mass or piercing sweetener.",
+      "pulse": "Human timing; no metronomic beat or cut accents.",
+      "foregroundPriority": "Visible human performance first, soft real-world space second.",
+      "silence": "Music-free by design; room/weather ambience prevents an unexplained dead soundtrack.",
+      "ending": "Space and natural ambience, no swell.",
+      "comparison": "Same-picture native ambience versus silent/ambience-only baseline on actual listening; reject unwanted score."
+    },
+    "beats": [
+      {
+        "id": "beat-1",
+        "shotId": "a",
+        "from": 0,
+        "to": 2,
+        "characterIntent": "Read both peers, the shared umbrella and the rain at its edges.",
+        "visibleEmotion": "Ordinary quiet companionship.",
+        "performanceRestraint": "Small natural gaze/posture/expression changes; no overacting, body collision or compulsory tears.",
+        "audioRole": "Soft rain on the umbrella and distant pavement, restrained jacket rustle and one small shoe shift. No speech, song, score, dramatic bass or cinematic swell.",
+        "intensity": "low"
+      },
+      {
+        "id": "beat-2",
+        "shotId": "a",
+        "from": 2,
+        "to": 5,
+        "characterIntent": "Minho slowly offsets the canopy toward Hana with one small wrist/arm movement; his outer shoulder becomes exposed.",
+        "visibleEmotion": "Unannounced care.",
+        "performanceRestraint": "Small natural gaze/posture/expression changes; no overacting, body collision or compulsory tears.",
+        "audioRole": "Soft rain on the umbrella and distant pavement, restrained jacket rustle and one small shoe shift. No speech, song, score, dramatic bass or cinematic swell.",
+        "intensity": "low"
+      },
+      {
+        "id": "beat-3",
+        "shotId": "a",
+        "from": 5,
+        "to": 8,
+        "characterIntent": "Hana notices his damp shoulder, then looks up toward him and makes one small half-step closer.",
+        "visibleEmotion": "Recognition and tentative affection.",
+        "performanceRestraint": "Small natural gaze/posture/expression changes; no overacting, body collision or compulsory tears.",
+        "audioRole": "Soft rain on the umbrella and distant pavement, restrained jacket rustle and one small shoe shift. No speech, song, score, dramatic bass or cinematic swell.",
+        "intensity": "low"
+      },
+      {
+        "id": "beat-4",
+        "shotId": "a",
+        "from": 8,
+        "to": 10,
+        "characterIntent": "They settle under the shifted umbrella, small suppressed smiles, no confession.",
+        "visibleEmotion": "Warmth that stays unspoken.",
+        "performanceRestraint": "Small natural gaze/posture/expression changes; no overacting, body collision or compulsory tears.",
+        "audioRole": "Soft rain on the umbrella and distant pavement, restrained jacket rustle and one small shoe shift. No speech, song, score, dramatic bass or cinematic swell.",
+        "intensity": "low"
+      }
+    ]
+  },
+  "soundPlan": {
+    "routeHypothesis": "native",
+    "cues": [
+      {
+        "from": 0,
+        "to": 10,
+        "sound": "Soft rain on the umbrella and distant pavement, restrained jacket rustle and one small shoe shift. No speech, song, score, dramatic bass or cinematic swell."
+      }
+    ],
+    "musicBrief": "No score. Native ambience/foley matched to the specific scene; silence between events is allowed.",
+    "rights": "New original fictional generation, no supplied recordings, borrowed composition, sample or voice imitation. Platform/account output terms still govern use.",
+    "test": "Actually listen to joined export and compare same-picture ambience/silence. Check dialogue if present; ASR/meters are not listening."
+  },
+  "singlePassPrompt": "Planning-only summary: A student quietly tilts the shared umbrella toward his companion; she notices his exposed shoulder and moves a little closer without saying why. Actual accepted per-shot endpoints required; never bypass scene/identity gates.",
+  "retryPlan": "Per whole request maximum 1000 credits. Initial operator allocation 500 per film is not a user-stated budget; a diagnosed provider alternative requires an explicit bounded recovery-allocation record. Exact live form/quote, one active job per film, immediate historyId persistence, resume not resubmit. Preserve useful media; repair only observed failure.",
+  "reviewChecks": [
+    "All actual cast/endpoints inspected before motion",
+    "Identity/age and prop contact stable",
+    "Story action readable muted",
+    "Every source frame and edit boundary inspected",
+    "Actual audio stream technically decodes",
+    "No invented full playback/listening/phone/personal approval"
+  ],
+  "framePlan": {
+    "schemaVersion": 1,
+    "fps": 30,
+    "characterDesigns": [
+      {
+        "identityId": "Hana",
+        "appeal": "Naturally appealing, distinct original expressive face appropriate to the character.",
+        "agePresentation": "Original fictional Korean woman age 18-19, college adult, naturally attractive round-oval face, dark bob with a light fringe, dusty-rose raincoat over a cream top, dark blue jeans. No makeup-heavy or sexual styling, no celebrity resemblance.",
+        "distinctiveFeatures": "Original fictional Korean woman age 18-19, college adult, naturally attractive round-oval face, dark bob with a light fringe, dusty-rose raincoat over a cream top, dark blue jeans. No makeup-heavy or sexual styling, no celebrity resemblance.",
+        "wardrobeGrooming": "Original fictional Korean woman age 18-19, college adult, naturally attractive round-oval face, dark bob with a light fringe, dusty-rose raincoat over a cream top, dark blue jeans. No makeup-heavy or sexual styling, no celebrity resemblance.",
+        "naturalDetail": "Natural skin, believable hands, fabric and age; no plastic beauty filter.",
+        "avoid": [
+          "celebrity resemblance",
+          "age drift/adultified child",
+          "changing an accepted identity for beauty"
+        ],
+        "acceptance": [
+          "Exact age/wardrobe and recognizable natural face.",
+          "Plausible relative scale and anatomy."
+        ]
+      },
+      {
+        "identityId": "Minho",
+        "appeal": "Naturally appealing, distinct original expressive face appropriate to the character.",
+        "agePresentation": "Original fictional Korean man age 18-19, college adult, handsome softly angular face, neat side-parted black hair, olive-green light jacket over a beige T-shirt and dark trousers. Natural skin, no celebrity resemblance.",
+        "distinctiveFeatures": "Original fictional Korean man age 18-19, college adult, handsome softly angular face, neat side-parted black hair, olive-green light jacket over a beige T-shirt and dark trousers. Natural skin, no celebrity resemblance.",
+        "wardrobeGrooming": "Original fictional Korean man age 18-19, college adult, handsome softly angular face, neat side-parted black hair, olive-green light jacket over a beige T-shirt and dark trousers. Natural skin, no celebrity resemblance.",
+        "naturalDetail": "Natural skin, believable hands, fabric and age; no plastic beauty filter.",
+        "avoid": [
+          "celebrity resemblance",
+          "age drift/adultified child",
+          "changing an accepted identity for beauty"
+        ],
+        "acceptance": [
+          "Exact age/wardrobe and recognizable natural face.",
+          "Plausible relative scale and anatomy."
+        ]
+      }
+    ],
+    "intervals": [
+      {
+        "id": "interval-1",
+        "shotId": "a",
+        "beatId": "beat-1",
+        "fromFrame": 0,
+        "toFrame": 60,
+        "storyPurpose": "Read both peers, the shared umbrella and the rain at its edges.",
+        "audienceRead": "Ordinary quiet companionship.",
+        "lightingChange": "Soft blue-gray rainy daylight, broad luminous cloud key from camera-left and subtle wet-pavement bounce; eyes stay readable under the canopy. Damp right shoulder darkens naturally, no spotlight, lightning or emissive rain.",
+        "characters": [
+          {
+            "identityId": "Hana",
+            "visibility": "visible",
+            "intent": "Notice the small kindness and answer without saying it aloud.",
+            "emotion": "Ordinary quiet companionship.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Read both peers, the shared umbrella and the rain at its edges.",
+            "bodyLanguage": "Read both peers, the shared umbrella and the rain at its edges.",
+            "position": "Screen-left."
+          },
+          {
+            "identityId": "Minho",
+            "visibility": "visible",
+            "intent": "Keep Hana dry while pretending the umbrella shift is ordinary.",
+            "emotion": "Ordinary quiet companionship.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Read both peers, the shared umbrella and the rain at its edges.",
+            "bodyLanguage": "Read both peers, the shared umbrella and the rain at its edges.",
+            "position": "Screen-right."
+          }
+        ],
+        "camera": {
+          "framing": "Portrait medium two-shot standing still under one navy umbrella on a quiet path, Hana LEFT and Minho RIGHT. The full canopy top and both faces are visible; umbrella initially centered, both look forward, small comfortable gap. Minho alone holds the handle.",
+          "focus": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+          "movement": "Locked."
+        },
+        "motion": {
+          "initialState": "Portrait medium two-shot standing still under one navy umbrella on a quiet path, Hana LEFT and Minho RIGHT. The full canopy top and both faces are visible; umbrella initially centered, both look forward, small comfortable gap. Minho alone holds the handle.",
+          "intermediateState": "Read both peers, the shared umbrella and the rain at its edges.",
+          "finalState": "Read both peers, the shared umbrella and the rain at its edges.",
+          "action": "Read both peers, the shared umbrella and the rain at its edges.",
+          "contactPhysics": "Keep separate hands/bodies, grounded posture and real supports; no prop teleport, fused fingers or body collision.",
+          "animationStyle": "Restrained natural live-action motion, not floaty animation."
+        },
+        "effectIds": [
+          "rain"
+        ],
+        "transitionOut": {
+          "type": "continuous",
+          "reason": "Continue performance or let the final response breathe."
+        },
+        "acceptance": [
+          "Specific beat action and expression legible without captions.",
+          "Wardrobe, age, props, geography, lighting and contact retained."
+        ],
+        "forbiddenArtifacts": [
+          "extra limbs/people",
+          "identity or age drift",
+          "prop morph",
+          "camera jump",
+          "heavy music",
+          "ghost dissolve"
+        ]
+      },
+      {
+        "id": "interval-2",
+        "shotId": "a",
+        "beatId": "beat-2",
+        "fromFrame": 60,
+        "toFrame": 150,
+        "storyPurpose": "Minho slowly offsets the canopy toward Hana with one small wrist/arm movement; his outer shoulder becomes exposed.",
+        "audienceRead": "Unannounced care.",
+        "lightingChange": "Soft blue-gray rainy daylight, broad luminous cloud key from camera-left and subtle wet-pavement bounce; eyes stay readable under the canopy. Damp right shoulder darkens naturally, no spotlight, lightning or emissive rain.",
+        "characters": [
+          {
+            "identityId": "Hana",
+            "visibility": "visible",
+            "intent": "Notice the small kindness and answer without saying it aloud.",
+            "emotion": "Unannounced care.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Minho slowly offsets the canopy toward Hana with one small wrist/arm movement; his outer shoulder becomes exposed.",
+            "bodyLanguage": "Minho slowly offsets the canopy toward Hana with one small wrist/arm movement; his outer shoulder becomes exposed.",
+            "position": "Screen-left."
+          },
+          {
+            "identityId": "Minho",
+            "visibility": "visible",
+            "intent": "Keep Hana dry while pretending the umbrella shift is ordinary.",
+            "emotion": "Unannounced care.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Minho slowly offsets the canopy toward Hana with one small wrist/arm movement; his outer shoulder becomes exposed.",
+            "bodyLanguage": "Minho slowly offsets the canopy toward Hana with one small wrist/arm movement; his outer shoulder becomes exposed.",
+            "position": "Screen-right."
+          }
+        ],
+        "camera": {
+          "framing": "Portrait medium two-shot standing still under one navy umbrella on a quiet path, Hana LEFT and Minho RIGHT. The full canopy top and both faces are visible; umbrella initially centered, both look forward, small comfortable gap. Minho alone holds the handle.",
+          "focus": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+          "movement": "Locked."
+        },
+        "motion": {
+          "initialState": "Read both peers, the shared umbrella and the rain at its edges.",
+          "intermediateState": "Minho slowly offsets the canopy toward Hana with one small wrist/arm movement; his outer shoulder becomes exposed.",
+          "finalState": "Minho slowly offsets the canopy toward Hana with one small wrist/arm movement; his outer shoulder becomes exposed.",
+          "action": "Minho slowly offsets the canopy toward Hana with one small wrist/arm movement; his outer shoulder becomes exposed.",
+          "contactPhysics": "Keep separate hands/bodies, grounded posture and real supports; no prop teleport, fused fingers or body collision.",
+          "animationStyle": "Restrained natural live-action motion, not floaty animation."
+        },
+        "effectIds": [
+          "rain"
+        ],
+        "transitionOut": {
+          "type": "continuous",
+          "reason": "Continue performance or let the final response breathe."
+        },
+        "acceptance": [
+          "Specific beat action and expression legible without captions.",
+          "Wardrobe, age, props, geography, lighting and contact retained."
+        ],
+        "forbiddenArtifacts": [
+          "extra limbs/people",
+          "identity or age drift",
+          "prop morph",
+          "camera jump",
+          "heavy music",
+          "ghost dissolve"
+        ]
+      },
+      {
+        "id": "interval-3",
+        "shotId": "a",
+        "beatId": "beat-3",
+        "fromFrame": 150,
+        "toFrame": 240,
+        "storyPurpose": "Hana notices his damp shoulder, then looks up toward him and makes one small half-step closer.",
+        "audienceRead": "Recognition and tentative affection.",
+        "lightingChange": "Soft blue-gray rainy daylight, broad luminous cloud key from camera-left and subtle wet-pavement bounce; eyes stay readable under the canopy. Damp right shoulder darkens naturally, no spotlight, lightning or emissive rain.",
+        "characters": [
+          {
+            "identityId": "Hana",
+            "visibility": "visible",
+            "intent": "Notice the small kindness and answer without saying it aloud.",
+            "emotion": "Recognition and tentative affection.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Hana notices his damp shoulder, then looks up toward him and makes one small half-step closer.",
+            "bodyLanguage": "Hana notices his damp shoulder, then looks up toward him and makes one small half-step closer.",
+            "position": "Screen-left."
+          },
+          {
+            "identityId": "Minho",
+            "visibility": "visible",
+            "intent": "Keep Hana dry while pretending the umbrella shift is ordinary.",
+            "emotion": "Recognition and tentative affection.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "Hana notices his damp shoulder, then looks up toward him and makes one small half-step closer.",
+            "bodyLanguage": "Hana notices his damp shoulder, then looks up toward him and makes one small half-step closer.",
+            "position": "Screen-right."
+          }
+        ],
+        "camera": {
+          "framing": "Portrait medium two-shot standing still under one navy umbrella on a quiet path, Hana LEFT and Minho RIGHT. The full canopy top and both faces are visible; umbrella initially centered, both look forward, small comfortable gap. Minho alone holds the handle.",
+          "focus": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+          "movement": "Locked."
+        },
+        "motion": {
+          "initialState": "Minho slowly offsets the canopy toward Hana with one small wrist/arm movement; his outer shoulder becomes exposed.",
+          "intermediateState": "Hana notices his damp shoulder, then looks up toward him and makes one small half-step closer.",
+          "finalState": "Hana notices his damp shoulder, then looks up toward him and makes one small half-step closer.",
+          "action": "Hana notices his damp shoulder, then looks up toward him and makes one small half-step closer.",
+          "contactPhysics": "Keep separate hands/bodies, grounded posture and real supports; no prop teleport, fused fingers or body collision.",
+          "animationStyle": "Restrained natural live-action motion, not floaty animation."
+        },
+        "effectIds": [
+          "rain"
+        ],
+        "transitionOut": {
+          "type": "continuous",
+          "reason": "Continue performance or let the final response breathe."
+        },
+        "acceptance": [
+          "Specific beat action and expression legible without captions.",
+          "Wardrobe, age, props, geography, lighting and contact retained."
+        ],
+        "forbiddenArtifacts": [
+          "extra limbs/people",
+          "identity or age drift",
+          "prop morph",
+          "camera jump",
+          "heavy music",
+          "ghost dissolve"
+        ]
+      },
+      {
+        "id": "interval-4",
+        "shotId": "a",
+        "beatId": "beat-4",
+        "fromFrame": 240,
+        "toFrame": 300,
+        "storyPurpose": "They settle under the shifted umbrella, small suppressed smiles, no confession.",
+        "audienceRead": "Warmth that stays unspoken.",
+        "lightingChange": "Soft blue-gray rainy daylight, broad luminous cloud key from camera-left and subtle wet-pavement bounce; eyes stay readable under the canopy. Damp right shoulder darkens naturally, no spotlight, lightning or emissive rain.",
+        "characters": [
+          {
+            "identityId": "Hana",
+            "visibility": "visible",
+            "intent": "Notice the small kindness and answer without saying it aloud.",
+            "emotion": "Warmth that stays unspoken.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "They settle under the shifted umbrella, small suppressed smiles, no confession.",
+            "bodyLanguage": "They settle under the shifted umbrella, small suppressed smiles, no confession.",
+            "position": "Screen-left."
+          },
+          {
+            "identityId": "Minho",
+            "visibility": "visible",
+            "intent": "Keep Hana dry while pretending the umbrella shift is ordinary.",
+            "emotion": "Warmth that stays unspoken.",
+            "expression": "Restrained natural gaze and small expression; never forced grief/grin.",
+            "gaze": "They settle under the shifted umbrella, small suppressed smiles, no confession.",
+            "bodyLanguage": "They settle under the shifted umbrella, small suppressed smiles, no confession.",
+            "position": "Screen-right."
+          }
+        ],
+        "camera": {
+          "framing": "Portrait medium two-shot standing still under one navy umbrella on a quiet path, Hana LEFT and Minho RIGHT. The full canopy top and both faces are visible; umbrella initially centered, both look forward, small comfortable gap. Minho alone holds the handle.",
+          "focus": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+          "movement": "Locked."
+        },
+        "motion": {
+          "initialState": "Hana notices his damp shoulder, then looks up toward him and makes one small half-step closer.",
+          "intermediateState": "They settle under the shifted umbrella, small suppressed smiles, no confession.",
+          "finalState": "Exact same camera, path, identities and wardrobe. Minho has shifted/tilted the SAME umbrella subtly LEFT toward Hana, leaving a portion of his outer RIGHT shoulder outside its edge and damp. Hana has made one small half-step closer and looks toward his face with a restrained grateful smile; he looks forward with a barely hidden smile. No touch or hug.",
+          "action": "They settle under the shifted umbrella, small suppressed smiles, no confession.",
+          "contactPhysics": "Keep separate hands/bodies, grounded posture and real supports; no prop teleport, fused fingers or body collision.",
+          "animationStyle": "Restrained natural live-action motion, not floaty animation."
+        },
+        "effectIds": [
+          "rain"
+        ],
+        "transitionOut": {
+          "type": "end",
+          "reason": "Continue performance or let the final response breathe."
+        },
+        "acceptance": [
+          "Specific beat action and expression legible without captions.",
+          "Wardrobe, age, props, geography, lighting and contact retained.",
+          "Umbrella shaft/canopy visibly lean LEFT relative to the accepted opening, exposing the boy's outer screen-right shoulder; Hana's small closer position and gaze are readable.",
+          "Umbrella canopy center is above Hana on the LEFT, shaft rises LEFT from the boy's gripping hand, and the boy's outer screen-right shoulder is visibly outside the canopy."
+        ],
+        "forbiddenArtifacts": [
+          "extra limbs/people",
+          "identity or age drift",
+          "prop morph",
+          "camera jump",
+          "heavy music",
+          "ghost dissolve"
+        ]
+      }
+    ]
+  },
+  "motionRepair": {
+    "shotId": "a",
+    "finding": "Two actual PixVerse takes inserted the same major mid-shot push-in despite explicit tripod, scale and locomotion constraints. Do not retry PixVerse unchanged. Use the catalog's controlled-framing Wan 2.7 alternative, its actual negative-prompt field and disabled prompt expansion. Reuse original generated rain separately if this model has no native audio; never falsely approve sound.",
+    "personallyViewedByUser": false
+  }
+}

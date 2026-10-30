@@ -3,6 +3,61 @@
   "policy": "Project-only reusable knowledge. Original summaries with evidence/read scope; no private jobs, account data, signed URLs or uninspected-source claims. Retrieve before external research.",
   "entries": [
     {
+      "id": "scene-specific-time-plane-prompts",
+      "title": "Compile each prompt from its own scene and time plane",
+      "tags": ["prompt", "scene", "memory", "present", "props", "lighting", "continuity"],
+      "summary": "A generated memory endpoint included an unwanted photograph after its prompt mixed present-day and remembered props. A targeted edit removed it while preserving cast and camera. The actual present opening also had two cups, so subsequent ungenerated endpoints were explicitly conformed to that observed state.",
+      "rules": ["Keep shared identity invariants separate from scene-specific props, light and time plane.", "Do not paste every scene's requirements into every image or motion prompt.", "Inspect actual reference states before locking counts and ownership; record any deliberate conformance without rewriting submitted job history."],
+      "evidenceType": "bounded actual production observation and targeted image inspection",
+      "freshness": "stable",
+      "reviewedAt": "2026-10-30",
+      "sources": [{"tool": "actual local image inspection", "scope": "Memory image, failed frame inclusion, repaired image and present endpoints actually viewed; no final-video acceptance inferred."}, {"path": "examples/afternoon-again.json", "scope": "Reusable conformed design, not proof of final quality."}]
+    },
+    {
+      "id": "endpoint-visible-story-state-and-geometry",
+      "title": "An attractive endpoint must actually show the intended story change",
+      "tags": ["endpoint", "umbrella", "left", "right", "geometry", "spatial", "repair", "editor"],
+      "summary": "One umbrella endpoint changed expressions but not shelter geometry; a targeted repair tilted toward the wrong person. A precise-editor alternative using canvas positions produced the intended canopy over the woman and the man's exposed outer shoulder.",
+      "rules": ["Compare initial and final physical states, not image attractiveness alone.", "For failed spatial edits specify screen coordinates, shaft slope, prop ownership and coverage explicitly.", "After a diagnosed model failure, use a suitable editing alternative and inspect its actual output; no unchanged blind reroll or automatic approval."],
+      "evidenceType": "bounded actual image-production observations",
+      "freshness": "stable",
+      "reviewedAt": "2026-10-30",
+      "sources": [{"tool": "actual local image inspection", "scope": "Opening, two rejected umbrella endpoints and precise-editor correction viewed; model superiority beyond this case is not established."}, {"path": "examples/the-dry-side.json", "scope": "Specific corrected endpoint instructions."}]
+    },
+    {
+      "id": "motion-camera-and-locomotion-contract",
+      "title": "Locked-camera prose does not prove fixed framing",
+      "tags": ["motion", "camera", "zoom", "walking", "tripod", "framing", "scale", "audit"],
+      "summary": "Two actual PixVerse umbrella takes made large mid-shot reframes despite locked-camera constraints. A bounded Wan 2.7 alternative with explicit negative prompting and prompt expansion disabled retained stable full-body framing in all 300 inspected frames while completing the shelter gesture. This single case does not establish general model superiority.",
+      "rules": ["Audit every actual source frame and native face/hand details, including the middle of the shot.", "Distinguish a small lateral step or weight shift from walking toward the camera.", "State positive framing invariants and allowed movement, then verify the repair; prompt detail is not execution evidence.", "After the same diagnosed failure survives a targeted repair, retain the rejects and use a suitable live-quoted alternative instead of repeating unchanged paid requests.", "Vendor labels do not establish actual dimensions, duration, audio content or final emotional quality."],
+      "evidenceType": "full numbered-frame source audits and bounded observed provider alternative; no listening or real-time playback",
+      "freshness": "stable",
+      "reviewedAt": "2026-10-30",
+      "sources": [{"tool": "actual numbered-frame and native-detail inspection", "scope": "Both 241-frame rejected takes and all 300 alternative-source frames inspected with native details; no real-time playback or listening claimed."}, {"path": "examples/the-dry-side.json", "scope": "Alternative-provider camera/locomotion repair design; live forms/quotes must be refreshed."}]
+    },
+    {
+      "id": "postmotion-editorial-conformance",
+      "title": "Conform useful motion with explicit editorial lineage before another paid reroll",
+      "tags": ["editorial", "conformance", "cutaway", "held", "reaction", "pause", "timing", "derivative", "lineage"],
+      "summary": "A repaired family source preserved the child's silence and timed adult reassurance but did not make the crayon pause legible. A deterministic edit reordered useful existing footage and inserted a two-second held source-frame close-up. All 300 derivative frames were inspected. The insert is an editorial still, not a newly generated natural performance; real-time realism and listening remain unverified.",
+      "rules": ["Record source hashes, exact source ranges/frame/crop, edit boundaries, derivative hash and limitations; retain provider history and originals.", "Keep an actual editorial conformance separate from original planned/generated timing and include it in the delivery receipt.", "Preserve synchronized dialogue segments; verify earlier reordered sound/picture and transitions through actual listening/playback.", "Do not disguise a held frame as natural motion or mark review candidates release-approved.", "Prefer a small explicit edit of useful media when appropriate; it is not permission to hide a missing essential action."],
+      "evidenceType": "actual deterministic edit, complete decode and bounded numbered-frame inspection",
+      "freshness": "stable",
+      "reviewedAt": "2026-10-30",
+      "sources": [{"tool": "local FFmpeg edit and actual frame inspection", "scope": "Ten-second derivative, 3s/5s cuts, 2s held reaction and source-aligned later dialogue inspected; no hearing, full-speed playback or audience result."}, {"path": "docs/production-bundles.md", "scope": "Editorial conformance and delivery-receipt contract."}]
+    },
+    {
+      "id": "asr-does-not-verify-dialogue-speaker",
+      "title": "Correct transcribed words do not verify the right speaker",
+      "tags": ["dialogue", "speaker", "mouth", "lips", "ASR", "transcript", "synchronization", "reassurance"],
+      "summary": "Local ASR recognized the intended apology at 7.66-9.72s, but corresponding frame/detail inspection suggested the child's mouth moved while the mother's remained closed. This was treated as a suspected wrong-speaker failure, not accepted as adult reassurance.",
+      "rules": ["Cross-check transcript timing against actual mouth movement and intended role.", "Specify the speaking adult by screen side and wardrobe, and explicitly keep non-speakers silent.", "ASR cannot establish speaker identity, voice quality, emotional congruence or a listening pass; keep those gates pending without real perception.", "A child must not appear responsible for apologizing for the adults' disagreement."],
+      "evidenceType": "local machine transcription plus bounded visual evidence; wrong-speaker attribution remains an inference",
+      "freshness": "stable",
+      "reviewedAt": "2026-10-30",
+      "sources": [{"tool": "local faster-whisper base and numbered-frame inspection", "scope": "Actual ten-second source decoded locally; transcript and mouth timing compared, not heard."}, {"path": "examples/the-quiet-crayon.json", "scope": "Role-specific motion/dialogue repair design."}]
+    },
+    {
       "id": "heavy-music-emotional-fit",
       "title": "Heavy mismatched music can pass technical meters",
       "tags": ["audio", "music", "heavy", "mismatch", "feelings", "emotion", "density", "bass", "mix"],

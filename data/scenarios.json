@@ -515,6 +515,140 @@
       },
       "scoreRationale": "An editorial technical-pilot hypothesis, not a user rating: a visible small kindness and stable geography are easier to inspect than a spectacular transformation. Familiar mechanism; actual father-son reading and affect are untested.",
       "failedGates": []
+    },
+    {
+      "id": "almost-looking",
+      "title": "Almost Looking",
+      "theme": "unspoken attraction",
+      "lane": "emotion-led",
+      "visualStyle": "grounded cinematic realism",
+      "domain": "unspoken attraction",
+      "relationship": "Two fictional Korean college peers, both explicitly 18-19; nonsexual older-teen romance.",
+      "logline": "Two students pretend to read while their glances almost meet, until a brief caught look leaves both hiding a smile.",
+      "setup": "Medium seated two-shot at one library table, Sora LEFT reading her book; Jiwon RIGHT glances toward her with his chin barely turned. Both faces three-quarter visible, bodies separate and hands resting on their own books.",
+      "turn": "Sora briefly looks up as Jiwon looks down, revealing mutual attention through timing.",
+      "landing": "Exact same composition, books, wardrobe and positions. Both have lowered their gaze to their own books after a briefly caught glance, with tiny suppressed closed-mouth smiles, not broad grins. Hands remain separate and still.",
+      "seconds": 10,
+      "shots": 1,
+      "risks": [
+        "identity/age continuity",
+        "small expression legibility",
+        "hand/prop physics",
+        "actual native sound needs listening"
+      ],
+      "feasibilityNote": "Low-complexity locked composition; actual cast and every endpoint before motion. One continuous shot, no hidden scene transition.",
+      "scores": {
+        "emotion": 4,
+        "clarity": 4,
+        "reframe": 3,
+        "originality": 3,
+        "feasibility": 4,
+        "frugality": 4,
+        "silentRead": 4
+      },
+      "scoreRationale": "Agent editorial hypothesis under explicit autonomous slate instruction, not a user rating, audience measurement or prediction.",
+      "failedGates": []
+    },
+    {
+      "id": "the-dry-side",
+      "title": "The Dry Side",
+      "theme": "unspoken care",
+      "lane": "emotion-led",
+      "visualStyle": "grounded cinematic realism",
+      "domain": "unspoken care",
+      "relationship": "Two different fictional Korean college peers, both explicitly 18-19; nonsexual older-teen romance.",
+      "logline": "A student quietly tilts the shared umbrella toward his companion; she notices his exposed shoulder and moves a little closer without saying why.",
+      "setup": "Portrait medium two-shot standing still under one navy umbrella on a quiet path, Hana LEFT and Minho RIGHT. The full canopy top and both faces are visible; umbrella initially centered, both look forward, small comfortable gap. Minho alone holds the handle.",
+      "turn": "Minho slowly offsets the canopy toward Hana with one small wrist/arm movement; his outer shoulder becomes exposed.",
+      "landing": "Exact same camera, path, identities and wardrobe. Minho has shifted/tilted the SAME umbrella subtly LEFT toward Hana, leaving a portion of his outer RIGHT shoulder outside its edge and damp. Hana has made one small half-step closer and looks toward his face with a restrained grateful smile; he looks forward with a barely hidden smile. No touch or hug.",
+      "seconds": 10,
+      "shots": 1,
+      "risks": [
+        "identity/age continuity",
+        "small expression legibility",
+        "hand/prop physics",
+        "actual native sound needs listening"
+      ],
+      "feasibilityNote": "Low-complexity locked composition; actual cast and every endpoint before motion. One continuous shot, no hidden scene transition.",
+      "scores": {
+        "emotion": 4,
+        "clarity": 4,
+        "reframe": 3,
+        "originality": 3,
+        "feasibility": 4,
+        "frugality": 4,
+        "silentRead": 4
+      },
+      "scoreRationale": "Agent editorial hypothesis under explicit autonomous slate instruction, not a user rating, audience measurement or prediction.",
+      "failedGates": []
+    },
+    {
+      "id": "the-quiet-crayon",
+      "title": "The Quiet Crayon",
+      "theme": "adult-led repair",
+      "lane": "emotion-led",
+      "visualStyle": "grounded cinematic realism",
+      "domain": "adult-led repair",
+      "relationship": "Two original fictional Korean parents in their thirties and their six-year-old child.",
+      "logline": "A child's crayon stops during a tense parental exchange; the parents notice, put the disagreement aside and reassure the child.",
+      "setup": "Portrait medium-wide table three-shot, mother LEFT and father RIGHT behind the table, six-year-old child CENTER foreground three-quarter to camera. Adults look tensely toward each other, not yelling or threatening; child's blue crayon pauses above paper and the child looks toward them. All three faces and the crayon remain visible; all are already seated.",
+      "turn": "Both parents notice the child and stop their exchange; shoulders and jaws relax.",
+      "landing": "Exact same camera, cast, room and seated positions. Both adults have softened their shoulders and turned their attentive faces toward the child, their hands resting separately and openly on their own table areas. The child looks down and begins a small new blue crayon stroke. Adults show responsibility and calm, not celebratory grins or instant reconciliation.",
+      "seconds": 10,
+      "shots": 1,
+      "risks": [
+        "identity/age continuity",
+        "small expression legibility",
+        "hand/prop physics",
+        "actual native sound needs listening"
+      ],
+      "feasibilityNote": "Low-complexity locked composition; actual cast and every endpoint before motion. Three principals are necessary for the user's explicitly requested mother/father/child scenario; do not weaken the global two-principal default. This is one nonviolent repair moment, not a cure or a child-mediated reconciliation.",
+      "scores": {
+        "emotion": 4,
+        "clarity": 4,
+        "reframe": 3,
+        "originality": 3,
+        "feasibility": 4,
+        "frugality": 4,
+        "silentRead": 4
+      },
+      "scoreRationale": "Agent editorial hypothesis under explicit autonomous slate instruction, not a user rating, audience measurement or prediction.",
+      "failedGates": []
+    },
+    {
+      "id": "afternoon-again",
+      "title": "Afternoon, Again",
+      "theme": "ordinary nostalgic memory",
+      "lane": "emotion-led",
+      "visualStyle": "grounded cinematic realism",
+      "domain": "photo-cued ordinary nostalgia",
+      "relationship": "An original fictional adult Korean granddaughter and her grandmother.",
+      "logline": "A grandmother photograph recalls an ordinary afternoon cup of tea, and the granddaughter returns to the present with a small familiar smile.",
+      "setup": "Present: Nari sits RIGHT at a familiar wooden table, looking down at a small wooden photograph frame resting LEFT foreground angled toward the camera. It clearly depicts the exact silver-haired lavender-cardigan grandmother at the same table in the actual memory reference. Nari's hands rest separately near her own cup and frame, not gripping tiny objects.",
+      "turn": "Her gaze settles on the image; let the photographed grandmother/tea setting register before a motivated cut.",
+      "landing": "Return to precisely the present table, neutral window light, unchanged wooden photo frame and cream cup. Nari lifts her gaze slightly from the photograph, settles into a small closed-mouth familiar smile and keeps her hands resting separately. Grandmother remains only in the photograph, not physically present.",
+      "seconds": 15,
+      "shots": 3,
+      "risks": [
+        "identity/age continuity",
+        "small expression legibility",
+        "hand/prop physics",
+        "actual native sound needs listening",
+        "photo likeness",
+        "present-memory-return geography"
+      ],
+      "feasibilityNote": "Low-complexity locked composition; actual cast and every endpoint before motion. Present and memory occupy the same familiar room/table in distinct time planes. Grandmother is explicitly offscreen in the present; no funeral, death or supernatural claim.",
+      "scores": {
+        "emotion": 4,
+        "clarity": 4,
+        "reframe": 3,
+        "originality": 3,
+        "feasibility": 3,
+        "frugality": 4,
+        "silentRead": 4
+      },
+      "scoreRationale": "Agent editorial hypothesis under explicit autonomous slate instruction, not a user rating, audience measurement or prediction.",
+      "failedGates": []
     }
   ]
 }
