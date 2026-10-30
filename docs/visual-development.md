@@ -39,7 +39,7 @@ preserve the rejected take and diagnose the actual complaint.
 
 | Stage | Actual artifact and decision | What remains blocked |
 |---|---|---|
-| `preproduction` | Provisional story/style, character prompts and bounded authorization for the first real cast image | Scene and video generation |
+| `preproduction` | Complete provisional frame-wise requirements, character beauty/performance designs and bounded authorization for the first real cast image | Scene and video generation |
 | `characters-approved` | Real original cast images; user accepts faces, ages, wardrobe, style and relative scale | Motion; scene images without those references |
 | `keyframes-approved` | All literal scene endpoints and every changed composition/light state; side-by-side user review | Motion until the full design is locked |
 | `design-locked` | User accepts script, opening hook, beat timing, scene transitions, camera, lights/shadows, effects and sound route together | Unapproved alterations and unquoted jobs |
@@ -50,6 +50,23 @@ candidate, show it and incorporate feedback before paying for dependent variants
 Do not silently turn an iterative request into a large batch. A user may explicitly
 approve a bounded batch, but character and final scene review stops still apply.
 Each new paid step needs the applicable quote, authorization and remaining budget.
+
+Before that first generation, complete `framePlan` for the whole intended film:
+declared delivery FPS, contiguous integer ranges, actual shot/beat association,
+story/attention, every identity's visible/offscreen performance, camera,
+light/shadow change, initial/intermediate/final motion and contact physics,
+animation style, canonical effects/audio, transitions and acceptance.
+The [reviewed frame contract](completion-plan.md#9-pre-generation-framebeat-requirements-and-beautiful-characters)
+and four `examples` packets are the schema/working references. This is a
+provisional specification, reconciled against actual accepted cast/scenes before
+motion, not an assertion that nonexistent media was inspected.
+
+Beautiful characters means original appealing/charming faces or silhouettes,
+distinctive features, natural detail, coherent wardrobe/grooming and an
+age-appropriate chosen style. State observable acceptance and what to avoid.
+Retain diversity; do not mandate a skin tone, celebrity likeness, homogenized
+beauty filter or adult presentation for children. An existing accepted cast
+does not need replacement merely because the new design field exists.
 
 Use `characterPlan.references[].prompt` for the actual character image, not the
 older scene-oriented `identityBible.anchorPrompt` study. A neutral cast reference
@@ -96,9 +113,13 @@ Choose a coherent world/season and a small motion budget, not every effect at on
 
 | Motif | Potential story/attention job | Design and failure checks |
 |---|---|---|
+| Glitter / sparkle dust | A controlled reveal accent or material sparkle | Declare reflective/emissive material, grain size, count/density, intensity and no-strobe behavior; keep eyes/hands legible |
+| Neon glow / trails | Stylized energy, color rhythm or a purposeful path | Distinguish graphic halo from physical emission; stable tracking, controlled spill, no trails through bodies or clipped skin |
 | Golden shiny butterflies | A gentle gaze guide, wonder or a response accent | Count/path, wing form, foreground/background depth, no face occlusion; distinguish reflected gold from true emission |
+| Golden butterfly dust | A fine sparkle wake, magical detail or gaze guide | Dust has its own timed path/lifetime, depth and scale; no random swarms, mandatory glow or concealed action |
 | Flowers / a bloom | Reveal detail, renewal, an offered gift | Species/scale and stable petal geometry; growth is a separate primary action, not an assumed free background effect |
 | Sakura / drifting petals | Soft directional rhythm and environmental depth | Coherent season, wind and scale; petals do not become fingers, snow or facial features |
+| Sakura / flower dust | A softer floral particle veil, distinct from full petals | Specify pink/material/scale and density; avoid snow/confetti noise and unmotivated emission |
 | Rain | Texture, vulnerability, shelter or reflection | Wetness, rate, gravity/wind, shelter boundary and readable dry evidence |
 | Trees moving / breeze | Living background without another plot event | Subtle leaf motion, rooted trunks, consistent wind; no warped faces/architecture |
 | Autumn leaves | Warm texture, change or a motion guide | Species/season and fall direction; avoid unexplained simultaneous spring blossoms |
@@ -110,11 +131,55 @@ Select one main performance action and a restrained secondary environmental laye
 Visual poetry may make the environment itself the main action. Do not prohibit
 beauty merely because a grounded baseline is cheaper; show alternatives and cost.
 
+The shared machine-readable menu is [visual-effects.json](../data/visual-effects.json).
+Inspect it with `npm run film -- effects`. Its 14 named creative treatments are
+planning options, not model parameters, installed renderers or quality passes.
+Select a coherent subset or explicitly none with an omission rationale.
+Custom treatments may be planned with the same cue controls and real route
+preflight; a preset label never replaces a complete canonical effect cue.
+
 ## Required effect cue sheet
 
 `atmospherePlan` records the motion budget, chosen effects and why alternatives
 are omitted. Each effect has an ID, active shots, from/to times, purpose, depth,
 motion, occlusion, light interaction, shadow interaction, continuity and fallback.
+New frame-planned productions also require `appearance` (material/color),
+`density`, `intensity`, `scale` and `lightMode` (reflection/emission/graphic glow).
+Frame intervals name the exact active effect IDs; the resolved script retains
+their clipped subevent timing alongside every overlapping sound cue.
+
+Illustrative planning cue, not permission to decorate an existing film or an
+invented provider parameter:
+
+```json
+{
+  "id": "gold-dust",
+  "route": "in-generation",
+  "shotIds": ["a"],
+  "from": 0,
+  "to": 5,
+  "referenceFrameIds": ["a-start", "a-end"],
+  "purpose": "Guide the gaze to one revealed detail.",
+  "appearance": "Fine warm golden reflective motes; distinct from full butterfly wings.",
+  "density": "Sparse, approximately eight visible grains; clear central faces and hands.",
+  "intensity": "Subtle highlight sparkle below the face exposure; no flashing.",
+  "scale": "Tiny grains at background depth, not oversized confetti.",
+  "lightMode": "Reflective gold, not an emitting source; no new skin spill.",
+  "depth": "Behind the principals, before the distant background.",
+  "motion": "One gentle coherent drift, continuous entry and exit.",
+  "occlusion": "Pass behind bodies and props; never through them.",
+  "lightInteraction": "Reflect the declared warm source without changing the key.",
+  "shadowInteraction": "Negligible grain shadows; retain grounded subject shadows.",
+  "continuity": "Stable color, scale, path and brightness across the range.",
+  "fallback": "Reduce to a static reflected accent or omit if motion fails."
+}
+```
+
+For emissive neon or golden dust, replace the reflective assumption with an
+explicit source intensity/spill decision, affected receivers and coherent
+shadows/exposure. Tiny distant emission may have negligible spill; bright nearby
+emission cannot be justified by adding only a halo. Model/editor controls and
+actual result quality must be checked separately.
 `in-generation` effects must be designed in every affected literal endpoint and
 the actual motion prompt. Endpoints establish intended appearance, not successful
 motion. Inspect flutter, drift, deformation and light pumping in actual playback.
@@ -195,6 +260,9 @@ exercised by this implementation; composite execution remains BLOCKED until it i
 | Motif | Intended route / timing and depth | Light, failure and fallback | Demonstration state |
 |---|---|---|---|
 | Golden butterflies | In-generation for simple stable count/path; tracked/masked editor composite for controlled foreground flight; cue a gaze/payoff, never hide it | Gold reflection is not emission; inspect wing stability, face occlusion, spill/shadows. Fallback: one nonemissive distant butterfly or omit | NOT DEMONSTRATED |
+| Glitter / golden butterfly dust | Designed endpoints/motion or cleared particle layers with depth/occlusion; use explicit density, scale and timed entry/exit | Reflective versus emissive; no strobe, unmotivated spill or face occlusion. Fallback: sparse static accent or omit | NOT DEMONSTRATED; no particle compositor implemented |
+| Neon glow / trails | Generated accepted light states or a capable tracked/relit editor; distinguish graphic post glow from physical emission | Inspect tracked path, body occlusion, skin detail and actual light interaction. Fallback: fixed neon prop or nonemissive color accent | NOT DEMONSTRATED; a halo alone does not establish relighting |
+| Sakura / flower dust | Supported generation or cleared masked particle layers, distinct from full petals | Stable pink material/scale, coherent drift, no snow/confetti or finger morphs. Fallback: static blossoms | NOT DEMONSTRATED |
 | Flowers | Static in-generation set dressing or one primary bloom action with its own endpoints/time; mask behind hands/props | Inspect stable petals, scale, contact shadow and growth continuity. Fallback: already-open flower, no bloom | NOT DEMONSTRATED; static does not prove growth |
 | Sakura | In-generation background/petals; editor layers only with depth/occlusion design; restrain drift around payoff | Inspect season/wind, petal count/scale, no finger/petal morphs or flicker. Fallback: stationary blossoms | NOT DEMONSTRATED |
 | Rain | In-generation at accepted wet/dry endpoints and motion; foreground rain needs shelter/occlusion logic | Inspect gravity/wind, dry-seat evidence, faces, wet reflections and light pumping. Fallback: wet setting with sparse background rain | Pilot v1 has actual rainy clips and frame audit; full-playback entertainment acceptance still open; repair is active |

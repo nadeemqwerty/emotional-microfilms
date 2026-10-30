@@ -50,6 +50,22 @@ test('bundle exports coordinated scripts, hash-verified media and honest unappro
     assert.equal(fileHash(resolve(dir, asset.source)), asset.sha256);
     assert.equal(fileHash(join(result.path, asset.path)), asset.sha256);
   }
+  const frames = readJson(join(result.path, 'scripts', 'frame-plan.json'));
+  const first = frames.intervals[0];
+  assert.equal(frames.totalFrames, 300);
+  assert.deepEqual(frames.characterDesigns, manifest.productionDraft.framePlan.characterDesigns);
+  assert.deepEqual(first.lighting, manifest.productionDraft.lightingPlan);
+  assert.deepEqual(first.continuity, manifest.productionDraft.continuity);
+  assert.deepEqual(first.camera, manifest.productionDraft.framePlan.intervals[0].camera);
+  assert.equal(first.characters.length, manifest.productionDraft.characterPlan.requiredIdentities.length);
+  assert.ok(first.motion.intermediateState && first.audio.palette && first.audio.role);
+  assert.equal(first.audio.rights, manifest.productionDraft.soundPlan.rights);
+  const castScript = readJson(join(result.path, 'scripts', 'character-emotion.json'));
+  assert.deepEqual(castScript.characterDesigns, frames.characterDesigns);
+  assert.ok(first.effectCues[0].appearance && first.effectCues[0].lightMode);
+  assert.equal(first.effectCues[0].toFrame, first.toFrame);
+  assert.equal(first.audio.cues[0].fromFrame, 0);
+  assert.match(frames.status, /not proof/);
   assert.ok(existsSync(resolve(dir, deliveryPath(manifest.scenarioId, 'v002'))));
   assert.throws(() => createProductionBundle(dir, manifest, 'v002'), /version exists/);
 });

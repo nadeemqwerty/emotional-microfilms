@@ -14,6 +14,15 @@ For effects inspect intended path/density, depth, masks, season/wind continuity,
 emission versus reflection/glow and coherent spill/highlights/shadows. Flag an
 untested composite route or particles obscuring the emotional evidence.
 
+Before creation, inspect complete `framePlan` coverage and actual shot/beat timing.
+Require explicit beginning/intermediate/ending action states, camera, light/shadow
+changes, every identity's expression/gaze/body/position and canonical active
+effects. Judge planned character appeal through distinctive natural details,
+age-appropriate presentation and the chosen style, not a universal beauty score.
+Inspect glitter, neon, butterfly dust and sakura/flower dust for material, scale,
+density, emission/reflection and occlusion; a halo alone does not establish spill.
+Compare actual accepted images/motion to these requirements; prose is not proof.
+
 Check readable face/hand/prop relationships at phone size, screen geography,
 eyelines, action phase, prop owner/count, wardrobe and identity. Compare adjacent
 frames and declared cut invariants. Is light motivated and direction consistent?

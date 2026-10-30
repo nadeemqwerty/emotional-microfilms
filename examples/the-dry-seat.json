@@ -3,6 +3,37 @@
   "scenarioId": "the-dry-seat",
   "seconds": 10,
   "aspectRatio": "9:16",
+  "framePlan": {
+    "schemaVersion": 1, "fps": 30,
+    "characterDesigns": [
+      {"identityId": "Mira", "appeal": "Beautiful, characterful adult with a calm expressive face.", "agePresentation": "About forty; preserve mature natural features.", "distinctiveFeatures": "Original oval face, medium-brown skin and dark low bun.", "wardrobeGrooming": "Simple rust knit and charcoal trousers; practical tidy styling.", "naturalDetail": "Real skin and fabric texture without cosmetic smoothing.", "avoid": ["celebrity resemblance", "de-aging", "homogenized beauty-filter face"], "acceptance": ["Appeal and warmth coexist with the intended ordinary adult identity.", "Face and age remain consistent."]},
+      {"identityId": "Dev", "appeal": "Naturally handsome and approachable, with tiredness rather than glamour posing.", "agePresentation": "Original adult about thirty-five.", "distinctiveFeatures": "Medium-brown skin and short wavy dark hair.", "wardrobeGrooming": "Muted blue wet-shouldered shirt, dark trousers and canvas bag.", "naturalDetail": "Plausible rain-wet cloth and natural face detail.", "avoid": ["celebrity imitation", "plastic skin", "unmotivated wardrobe makeover"], "acceptance": ["Expression remains legible and natural.", "Chosen identity and modest styling persist."]}
+    ],
+    "intervals": [
+      {"id": "offer", "shotId": "a", "beatId": "offer", "fromFrame": 0, "toFrame": 150,
+        "storyPurpose": "Reveal the protected dry place and offer it.", "audienceRead": "Mira makes practical space for Dev.",
+        "characters": [
+          {"identityId": "Mira", "visibility": "visible", "intent": "Offer the dry seat.", "emotion": "Attentiveness without pity.", "expression": "Calm invitation.", "gaze": "Seat, then Dev.", "bodyLanguage": "Lift coat with right hand; indicate seat with left palm.", "position": "Seated screen-left."},
+          {"identityId": "Dev", "visibility": "visible", "intent": "Understand the offer.", "emotion": "Tiredness softens into surprise.", "expression": "Gentle recognition, not distress.", "gaze": "Coat and revealed dry patch.", "bodyLanguage": "Standing with lowered shoulders; bag stays on right shoulder.", "position": "Screen-right beside bench."}
+        ],
+        "camera": {"framing": "Seated-eye-level medium-wide portrait two-shot.", "focus": "Coat, dry patch and separate hands with both faces readable.", "movement": "Locked."},
+        "lightingChange": "Cloudy right key unchanged; material dryness, not a spotlight, reveals the patch.",
+        "motion": {"initialState": "Coat covers the empty right seat.", "intermediateState": "Right hand lifts coat clear while Dev follows the action.", "finalState": "Coat rests on Mira's lap; left palm invites toward exposed dry wood.", "action": "One coat lift and small invitation.", "contactPhysics": "Plausible cloth grip and gravity; no duplicated coat or fused hand.", "animationStyle": "Restrained grounded live action."},
+        "effectIds": ["rain"], "transitionOut": {"type": "ellipse", "reason": "Declared time omission to already-seated response; not a claim that sitting was shown."},
+        "acceptance": ["Dry/wet contrast is visible without captions.", "Offer does not imply payment or coercion."], "forbiddenArtifacts": ["magical spotlight", "coat duplication", "hand morph", "screen-side swap"]},
+      {"id": "acknowledge", "shotId": "b", "beatId": "acknowledge", "fromFrame": 150, "toFrame": 300,
+        "storyPurpose": "Show acceptance and a modest shared acknowledgment.", "audienceRead": "The offered kindness has been accepted.",
+        "characters": [
+          {"identityId": "Mira", "visibility": "visible", "intent": "Acknowledge Dev without demanding thanks.", "emotion": "Quiet connection.", "expression": "Small natural smile.", "gaze": "Toward Dev.", "bodyLanguage": "Relaxed seated posture; coat remains on lap.", "position": "Screen-left."},
+          {"identityId": "Dev", "visibility": "visible", "intent": "Accept the kindness.", "emotion": "Relief.", "expression": "Understated answering smile.", "gaze": "Toward Mira.", "bodyLanguage": "Already seated; small head turn; bag beside right foot.", "position": "Screen-right with respectful gap."}
+        ],
+        "camera": {"framing": "Slightly tighter portrait two-shot on same axis.", "focus": "Both faces and dry-seat edge.", "movement": "Locked."},
+        "lightingChange": "Same cloudy key/fill and contact shadows; no change in exposure.",
+        "motion": {"initialState": "Both already seated after the explicit ellipse.", "intermediateState": "Dev turns his head and shoulders ease.", "finalState": "Shared look and small smile held.", "action": "One acknowledgment then quiet hold.", "contactPhysics": "Separate hands and grounded seated bodies; no embrace.", "animationStyle": "Natural breathing and restrained micro-expression."},
+        "effectIds": ["rain"], "transitionOut": {"type": "end", "reason": "Finish once the response is readable; do not introduce another event."},
+        "acceptance": ["Offer and response connect despite the declared ellipse.", "The hold feels restful, not frozen."], "forbiddenArtifacts": ["forced tears", "identity drift", "bag teleport within shot", "new action"]}
+    ]
+  },
   "direction": {
     "soundPalette": {
       "targetFeeling": "A modest unexpected kindness becoming quiet relief.",
@@ -17,8 +48,8 @@
       "comparison": "Same picture with rain/foley only versus restrained music; assess meaning and weight separately from level."
     },
     "beats": [
-      {"shotId": "a", "from": 0, "to": 5, "characterIntent": "The seated person makes space and offers a dry place.", "visibleEmotion": "Attentiveness without pity.", "performanceRestraint": "A small practical gesture, no grand presentation.", "audioRole": "Rain and actual cloth movement foreground the action; do not spoil the invitation.", "intensity": "low"},
-      {"shotId": "b", "from": 5, "to": 10, "characterIntent": "The recipient accepts and both acknowledge the kindness.", "visibleEmotion": "Relief and unforced connection.", "performanceRestraint": "Let a small gaze and settled posture carry the response.", "audioRole": "Keep the rain bridge; optional light motif after recognition, then space.", "intensity": "low"}
+      {"id": "offer", "shotId": "a", "from": 0, "to": 5, "characterIntent": "The seated person makes space and offers a dry place.", "visibleEmotion": "Attentiveness without pity.", "performanceRestraint": "A small practical gesture, no grand presentation.", "audioRole": "Rain and actual cloth movement foreground the action; do not spoil the invitation.", "intensity": "low"},
+      {"id": "acknowledge", "shotId": "b", "from": 5, "to": 10, "characterIntent": "The recipient accepts and both acknowledge the kindness.", "visibleEmotion": "Relief and unforced connection.", "performanceRestraint": "Let a small gaze and settled posture carry the response.", "audioRole": "Keep the rain bridge; optional light motif after recognition, then space.", "intensity": "low"}
     ]
   },
   "generationApproved": false,
@@ -26,14 +57,19 @@
   "intendedInterpretation": "What first looks like keeping a seat for oneself is preparation to offer a stranger a dry place.",
   "characterPlan": {
     "requiredIdentities": ["Mira", "Dev"],
-    "references": [{"id": "cast", "covers": ["Mira", "Dev"], "prompt": "One original cast-reference portrait, not a bus-shelter scene. Fictional Mira about 40, medium-brown skin, oval face, dark low bun, plain rust knitted sweater and charcoal trousers, beside fictional Dev about 35, medium-brown skin, short wavy dark hair, plain muted blue shirt, dark trousers and a dark canvas bag on his right shoulder. Natural adult scale, readable faces and clothing, separate relaxed standing poses. Plain neutral background, soft neutral light, grounded feet, portrait 9:16. No bench, rain, text, collage, brands, extra people or requested real-person likeness."}]
+    "references": [{"id": "cast", "covers": ["Mira", "Dev"],     "prompt": "One original cast-reference portrait, not a bus-shelter scene. Beautiful, characterful natural adult casting with warm expressive eyes and real skin detail; preserve the specified ages and distinctive identities, without celebrity imitation or beauty-filter smoothing. Fictional Mira about 40, medium-brown skin, oval face, dark low bun, plain rust knitted sweater and charcoal trousers, beside fictional Dev about 35, medium-brown skin, short wavy dark hair, plain muted blue shirt, dark trousers and a dark canvas bag on his right shoulder. Natural adult scale, readable faces and clothing, separate relaxed standing poses. Plain neutral background, soft neutral light, grounded feet, portrait 9:16. No bench, rain, text, collage, brands, extra people or requested real-person likeness."}]
   },
   "hookPlan": {"firstFrame": "Coat occupies an empty place while a wet stranger stands nearby.", "firstMotion": "Restrained rain behind shelter; no distraction across faces or the seat.", "inspectSeconds": 1, "question": "Is the seat being withheld?", "payoff": "It was kept dry to be offered.", "test": "Inspect real 0s/1s opening muted at phone size; record what a fresh viewer can identify, not predicted retention."},
   "sceneChanges": [{"at": 5, "fromShot": "a", "toShot": "b", "type": "ellipse", "informationChange": "Skip sitting and show the offered place accepted.", "lightingChange": "Same soft overcast right-side source and shelter fill."}],
   "atmospherePlan": {
     "motionBudget": "One coat action and a small response; low-density background rain.",
     "omissionRationale": "No fantasy accents in this grounded baseline; select and previsualize any alternative palette before generation.",
-    "effects": [{"id": "rain", "route": "in-generation", "shotIds": ["a", "b"], "from": 0, "to": 10, "referenceFrameIds": ["a-start", "a-end", "b-start", "b-end"], "purpose": "Give the dry seat visible value.", "depth": "Background outside shelter.", "motion": "Steady gentle downward streaks.", "occlusion": "Keep faces, hands and dry patch clear.", "lightInteraction": "Soft damp-material highlights, no new light source.", "shadowInteraction": "Diffuse grounded shadows remain unchanged.", "continuity": "Match direction, density and perspective across cut.", "fallback": "Reduce background motion if it hides the story."}]
+    "effects": [{"id": "rain",
+    "appearance": "Fine translucent rain outside the shelter.",
+    "density": "Sparse background streaks; essential dry-seat evidence stays clear.",
+    "intensity": "Low secondary movement.",
+    "scale": "Depth-consistent fine rain, not large foreground particles.",
+    "lightMode": "Reflective/transmissive, not emissive; preserve cloudy material response.", "route": "in-generation", "shotIds": ["a", "b"], "from": 0, "to": 10, "referenceFrameIds": ["a-start", "a-end", "b-start", "b-end"], "purpose": "Give the dry seat visible value.", "depth": "Background outside shelter.", "motion": "Steady gentle downward streaks.", "occlusion": "Keep faces, hands and dry patch clear.", "lightInteraction": "Soft damp-material highlights, no new light source.", "shadowInteraction": "Diffuse grounded shadows remain unchanged.", "continuity": "Match direction, density and perspective across cut.", "fallback": "Reduce background motion if it hides the story."}]
   },
   "pacing": {
     "hypothesis": "Readable seat evidence followed by a quiet response feels earned without a fast-cut hook.",

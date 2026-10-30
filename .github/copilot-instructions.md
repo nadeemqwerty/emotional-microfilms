@@ -29,6 +29,17 @@ checks; it does not sing, license or listen. Effects routes and demonstration
 limits live in `docs\visual-development.md`. Keep unfinished real host/reference/
 voice/effect/viewer work visible in the completion plan and roadmap.
 
+Require complete `productionDraft.framePlan` before new preproduction or any
+paid creation: contiguous integer delivery-frame ranges, shot/beat timing,
+per-character performance and beauty design, camera, lighting/shadows, action
+states/physics/animation, active effect cues, sound, transitions and acceptance.
+The bundle exports resolved canonical requirements, not independent timelines.
+Read `data\visual-effects.json` (`film effects`): glitter/sparkle dust, neon
+glow/trails, golden butterflies/dust, sakura petals/flower dust and other options.
+Declare material/color, density, intensity, scale, emission/reflection,
+depth/occlusion/spill/shadows and route/fallback for selected effects. No default
+particle overload, child adultification, automatic recasting or renderer claims.
+
 After workflow changes run check, tests and validation; obtain approval before
 expensive/full checks. Commit/push only the explicitly authorized session delta;
 preserve other sessions' edits and keep production media/credentials private.

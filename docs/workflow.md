@@ -65,6 +65,25 @@ score: `film feedback <id> unrated select "<actual selection evidence>"`.
 
 ## 2. Story proof and direction
 
+Before the first creative generation, fill a complete provisional `framePlan`
+using [the reviewed requirements](completion-plan.md#9-pre-generation-framebeat-requirements-and-beautiful-characters).
+Declare delivery FPS and contiguous half-open integer ranges through the exact
+last frame. Every range names its actual shot/beat and specifies story/attention,
+each identity's performance/visibility, camera, lighting change, initial/
+intermediate/final motion, physics/animation, active effects, transition and
+observable acceptance/forbidden artifacts. Canonical lighting/continuity and
+all overlapping effects/audio are resolved into the bundle's frame script.
+Explicit stillness, unchanged lighting, offscreen presence and no effects are
+valid deliberate choices; omissions are not.
+
+Plan original beautiful/charming characters with distinctive natural details,
+style, age, wardrobe and acceptance criteria. Use `film effects` for selectable
+glitter/neon/butterfly/sakura dust and other treatments. Then reconcile the
+same plan against actual accepted cast/scene references before motion. New
+preproduction, paid-generation checks and scene/motion helpers require this
+complete plan; legacy packets without it remain inspectable, not authorized for
+new creation. Never rewrite a historical manifest or fabricate earlier approval.
+
 Use the [production-direction bundle contract](production-bundles.md) and
 [sound-direction/fit contract](audio-scene-fit.md). Fill coordinated
 `direction.beats` and `soundPalette` before design lock or motion spending.

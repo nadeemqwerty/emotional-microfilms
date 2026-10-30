@@ -3,6 +3,40 @@
   "scenarioId": "the-last-light",
   "seconds": 10,
   "aspectRatio": "9:16",
+  "framePlan": {
+    "schemaVersion": 1, "fps": 30,
+    "characterDesigns": [
+      {"identityId": "Ivo", "appeal": "Beautifully simple, appealing original miniature robot with a clear gentle silhouette.", "agePresentation": "Nonhuman maintenance machine; no human age styling.", "distinctiveFeatures": "Slate-blue body, pale ceramic face, two eyes and ochre shoulder patch.", "wardrobeGrooming": "No clothes; preserve paddle hands, compact proportions and modest wear.", "naturalDetail": "Tactile matte paint and ceramic, not glossy plastic smoothing.", "avoid": ["franchise imitation", "extra eyes", "humanized fingers"], "acceptance": ["Charm comes from original form and restrained expression.", "Two eyes and shoulder patch remain recognizable."]},
+      {"identityId": "plant", "appeal": "Graceful small living seedling, not a magical flower spectacle.", "agePresentation": "Young plant, alive and intact; no human traits.", "distinctiveFeatures": "Exactly three broad green leaves in one terracotta pot.", "wardrobeGrooming": "No clothing; natural leaf arrangement and modest pot.", "naturalDetail": "Leaf veins and believable subdued plant material.", "avoid": ["instant growth", "extra leaves", "human face"], "acceptance": ["Three leaves remain readable before and after the light change.", "The plant looks alive rather than resurrected."]},
+      {"identityId": "lamp", "appeal": "Simple pleasing practical lamp that supports the visual choice.", "agePresentation": "Inanimate prop; no anthropomorphic age or expression.", "distinctiveFeatures": "Pale yellow cone shade, short rigid swivel arm and center clamp.", "wardrobeGrooming": "No clothing; clean readable silhouette without brand marks.", "naturalDetail": "Plausible painted metal and local reflections.", "avoid": ["second lamp", "flexing rigid arm", "detached clamp"], "acceptance": ["Lamp geometry stays fixed except its declared direction.", "The single source produces consistent light/shadow states."]}
+    ],
+    "intervals": [
+      {"id": "notice", "shotId": "a", "beatId": "notice", "fromFrame": 0, "toFrame": 150,
+        "storyPurpose": "Show Ivo noticing the plant outside its light pool.", "audienceRead": "The robot can choose to share a useful resource.",
+        "characters": [
+          {"identityId": "Ivo", "visibility": "visible", "intent": "Notice the seedling and prepare to redirect light.", "emotion": "Quiet resolve, not theatrical sacrifice.", "expression": "Two steady eyes; small head turn.", "gaze": "Own hands toward plant.", "bodyLanguage": "Right paddle raises toward swivel arm.", "position": "Screen-left in warm pool."},
+          {"identityId": "plant", "visibility": "visible", "intent": "Remain the stable recipient; no agency implied.", "emotion": "No human emotion; visibly alive.", "expression": "Three gently drooping leaves.", "gaze": "Not applicable to a plant.", "bodyLanguage": "No growth or dramatic movement.", "position": "Screen-right in cool shadow."},
+          {"identityId": "lamp", "visibility": "visible", "intent": "Provide the single controlled light source.", "emotion": "Inanimate; no emotion.", "expression": "Fixed cone shade.", "gaze": "Beam aimed left.", "bodyLanguage": "Clamp and arm remain still.", "position": "Bench center."}
+        ],
+        "camera": {"framing": "Portrait bench-height two-shot including robot, lamp and plant.", "focus": "All three story elements, not shallow blur over seedling.", "movement": "Locked."},
+        "lightingChange": "Opening canonical state: warm pool on Ivo; plant in cool dusk fill. No light transport change within this interval.",
+        "motion": {"initialState": "Ivo looks down at hands; lamp points left.", "intermediateState": "Robot notices plant and raises right paddle.", "finalState": "Paddle beside swivel arm, ready to redirect; lamp has not turned.", "action": "One noticing/preparation action.", "contactPhysics": "Fixed clamp, rigid arm and pot; plausible paddle proximity.", "animationStyle": "Restrained practical miniature motion."},
+        "effectIds": ["task-light"], "transitionOut": {"type": "ellipse", "reason": "Declared cut between separately approved light states; continuous relighting is not promised."},
+        "acceptance": ["Robot's choice and plant's position are legible.", "The lamp remains aimed left until the declared edit."], "forbiddenArtifacts": ["eye blackout", "plant death", "premature light shift", "extra paddle"]},
+      {"id": "benefit-hold", "shotId": "b", "beatId": "benefit-hold", "fromFrame": 150, "toFrame": 300,
+        "storyPurpose": "Show the shared resource and continued presence of the giver.", "audienceRead": "Plant receives light; Ivo remains alive and attentive.",
+        "characters": [
+          {"identityId": "Ivo", "visibility": "visible", "intent": "Accept less light while watching the plant.", "emotion": "Care and continued presence.", "expression": "Both eye lights steadily on.", "gaze": "Toward plant.", "bodyLanguage": "Lower right paddle, then hold.", "position": "Screen-left in stable cool fill."},
+          {"identityId": "plant", "visibility": "visible", "intent": "Receive the light without magical transformation.", "emotion": "No human emotion; ordinary living seedling.", "expression": "Same three leaves.", "gaze": "Not applicable to a plant.", "bodyLanguage": "Stable, no growth.", "position": "Same screen-right pot."},
+          {"identityId": "lamp", "visibility": "visible", "intent": "Illuminate the recipient.", "emotion": "Inanimate; no emotion.", "expression": "Same cone shade and arm.", "gaze": "Beam now aimed right.", "bodyLanguage": "Remain fixed after the declared cut.", "position": "Same center clamp."}
+        ],
+        "camera": {"framing": "Same portrait bench-height view, robot and received light visible together.", "focus": "Benefit and cost without losing robot's eyes.", "movement": "Locked hold."},
+        "lightingChange": "Closing canonical state: warm pool on plant; warm shadows/highlights agree with lamp; cool fill keeps Ivo readable.",
+        "motion": {"initialState": "Lamp already points right after explicit ellipse; Ivo's paddle near arm.", "intermediateState": "Ivo lowers the right paddle to own side.", "finalState": "Plant lit and robot still present, held in quiet balance.", "action": "Small paddle lowering then unchanged hold.", "contactPhysics": "Pot/clamp fixed; no duplicate pool or unsupported prop movement.", "animationStyle": "Restrained robot movement and deliberate stillness."},
+        "effectIds": ["task-light"], "transitionOut": {"type": "end", "reason": "End on readable benefit, not a death cue or new action."},
+        "acceptance": ["Warm pool reaches plant with coherent shadows.", "Robot's two eyes and silhouette remain clearly alive."], "forbiddenArtifacts": ["magical plant growth", "lamp duplication", "melodramatic collapse", "old duplicate light pool"]}
+    ]
+  },
   "direction": {
     "soundPalette": {
       "targetFeeling": "Gentle generosity with a visible, nonfatal cost.",
@@ -17,8 +51,8 @@
       "comparison": "Same picture with room/click only versus music; explicitly ask whether the robot seems to die."
     },
     "beats": [
-      {"shotId": "a", "from": 0, "to": 5, "characterIntent": "The robot notices the seedling's need and chooses to redirect light.", "visibleEmotion": "Attention and quiet resolve.", "performanceRestraint": "One clear choice, not a theatrical sacrifice.", "audioRole": "Room tone and a justified swivel detail; no danger-building drone.", "intensity": "low"},
-      {"shotId": "b", "from": 5, "to": 10, "characterIntent": "The robot accepts less light while the seedling benefits.", "visibleEmotion": "Care and continued presence, not death.", "performanceRestraint": "Stable posture and a readable benefit/cost hold.", "audioRole": "A modest opening after the transfer if useful, then decay without a death cue.", "intensity": "low"}
+      {"id": "notice", "shotId": "a", "from": 0, "to": 5, "characterIntent": "The robot notices the seedling's need and chooses to redirect light.", "visibleEmotion": "Attention and quiet resolve.", "performanceRestraint": "One clear choice, not a theatrical sacrifice.", "audioRole": "Room tone and a justified swivel detail; no danger-building drone.", "intensity": "low"},
+      {"id": "benefit-hold", "shotId": "b", "from": 5, "to": 10, "characterIntent": "The robot accepts less light while the seedling benefits.", "visibleEmotion": "Care and continued presence, not death.", "performanceRestraint": "Stable posture and a readable benefit/cost hold.", "audioRole": "A modest opening after the transfer if useful, then decay without a death cue.", "intensity": "low"}
     ]
   },
   "generationApproved": false,
@@ -26,14 +60,19 @@
   "intendedInterpretation": "A small robot gives its comfortable pool of light to a seedling and accepts the shadow.",
   "characterPlan": {
     "requiredIdentities": ["Ivo", "plant", "lamp"],
-    "references": [{"id": "cast", "covers": ["Ivo", "plant", "lamp"], "prompt": "One original reference image with clear separate designs on a plain neutral surface, portrait 9:16. Original squat matte slate-blue maintenance robot Ivo with pale ceramic faceplate, exactly two warm-white circular eye lights, two broad paddle hands and an ochre left-shoulder patch. Beside it, one terracotta pot with one green seedling of exactly three broad leaves, and one pale-yellow task lamp with a short rigid swivel arm and clamp. Readable materials and relative scale, soft neutral illumination, no object overlap. Not a greenhouse scene or story keyframe. No franchise reference, collage, extra plants, text or magical growth."}]
+    "references": [{"id": "cast", "covers": ["Ivo", "plant", "lamp"],     "prompt": "One original reference image with clear separate designs on a plain neutral surface, portrait 9:16. Prioritize beautiful, simple original shapes and tactile materials: a charming restrained robot, graceful three-leaf seedling and pleasing practical lamp, with no franchise imitation or magical embellishment. Original squat matte slate-blue maintenance robot Ivo with pale ceramic faceplate, exactly two warm-white circular eye lights, two broad paddle hands and an ochre left-shoulder patch. Beside it, one terracotta pot with one green seedling of exactly three broad leaves, and one pale-yellow task lamp with a short rigid swivel arm and clamp. Readable materials and relative scale, soft neutral illumination, no object overlap. Not a greenhouse scene or story keyframe. No franchise reference, collage, extra plants, text or magical growth."}]
   },
   "hookPlan": {"firstFrame": "Robot enjoys warm light while the adjacent seedling remains outside the pool.", "firstMotion": "A restrained noticing head turn; light contrast already presents the question.", "inspectSeconds": 1, "question": "Who will receive the limited pool of light?", "payoff": "The robot gives its light to the seedling and accepts cool fill.", "test": "Check actual opening at phone size: both giver and excluded plant must read before motion or music explains anything."},
   "sceneChanges": [{"at": 5, "fromShot": "a", "toShot": "b", "type": "ellipse", "informationChange": "Omit lamp rotation and reveal the chosen new light state.", "lightingChange": "Warm pool moves left to right with matching highlights/shadows; cool dusk fill remains fixed."}],
   "atmospherePlan": {
     "motionBudget": "One noticing action then a small paddle response; the key light-state change happens across a deliberate cut.",
     "omissionRationale": "No instant bloom, extra flowers or swarming particles; plant benefit and robot's relinquished comfort must stay legible.",
-    "effects": [{"id": "task-light", "route": "in-generation", "shotIds": ["a", "b"], "from": 0, "to": 10, "referenceFrameIds": ["a-start", "a-end", "b-start", "b-end"], "purpose": "Make the transferred benefit visible.", "depth": "Practical lamp at bench center with real receivers on both sides.", "motion": "Lamp stays fixed within each clip; direction changes only across the cut.", "occlusion": "No blown-out lamp halo hiding robot, pot or three-leaf silhouette.", "lightInteraction": "Warm illumination shifts consistently to the plant; cool fill remains.", "shadowInteraction": "Caster/receiver highlights and cast shadows agree with each approved lamp state.", "continuity": "One lamp, one warm pool, fixed clamp, same plant and exactly two robot eyes.", "fallback": "Use independently approved light states and a supported cut rather than a faulty continuous relight."}]
+    "effects": [{"id": "task-light",
+    "appearance": "One warm practical task-lamp pool with declared opening/closing states.",
+    "density": "Exactly one strong source, plus unchanged cool dusk fill.",
+    "intensity": "Enough local contrast to show the transfer without blacking out Ivo.",
+    "scale": "A bench-scale pool, no large fantasy beam.",
+    "lightMode": "Physical emissive source; received highlights and cast/contact shadows follow the lamp.", "route": "in-generation", "shotIds": ["a", "b"], "from": 0, "to": 10, "referenceFrameIds": ["a-start", "a-end", "b-start", "b-end"], "purpose": "Make the transferred benefit visible.", "depth": "Practical lamp at bench center with real receivers on both sides.", "motion": "Lamp stays fixed within each clip; direction changes only across the cut.", "occlusion": "No blown-out lamp halo hiding robot, pot or three-leaf silhouette.", "lightInteraction": "Warm illumination shifts consistently to the plant; cool fill remains.", "shadowInteraction": "Caster/receiver highlights and cast shadows agree with each approved lamp state.", "continuity": "One lamp, one warm pool, fixed clamp, same plant and exactly two robot eyes.", "fallback": "Use independently approved light states and a supported cut rather than a faulty continuous relight."}]
   },
   "pacing": {
     "hypothesis": "The benefit and relinquished comfort must be readable together before the ending holds.",

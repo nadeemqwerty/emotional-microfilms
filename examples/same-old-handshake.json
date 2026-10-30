@@ -3,6 +3,37 @@
   "scenarioId": "same-old-handshake",
   "seconds": 10,
   "aspectRatio": "9:16",
+  "framePlan": {
+    "schemaVersion": 1, "fps": 30,
+    "characterDesigns": [
+      {"identityId": "Anu", "appeal": "Beautiful, distinctive adult whose natural warmth carries recognition.", "agePresentation": "About thirty-five, not de-aged.", "distinctiveFeatures": "Medium-brown skin and short dark curls; original face.", "wardrobeGrooming": "Olive overshirt, cream tee and understated practical grooming.", "naturalDetail": "Readable eyes, skin texture and real cloth.", "avoid": ["celebrity imitation", "generic cosmetic face", "glamour posing"], "acceptance": ["Natural appeal supports the quiet workshop relationship.", "Original face and curls remain consistent."]},
+      {"identityId": "Pip", "appeal": "Visually charming practical companion robot with a clear original silhouette.", "agePresentation": "Nonhuman machine; no human age or adult-child styling.", "distinctiveFeatures": "Exactly two amber eyes, cream head, teal torso and left-eye crescent scratch.", "wardrobeGrooming": "No clothing; preserve three-pad mitts and worn paint.", "naturalDetail": "Matte ceramic/paint response and restrained wear.", "avoid": ["franchise imitation", "extra eyes", "human fingers"], "acceptance": ["Robot is appealing without losing its distinctive worn geometry.", "Eye and mitt counts stay stable."]}
+    ],
+    "intervals": [
+      {"id": "greeting", "shotId": "a", "beatId": "greeting", "fromFrame": 0, "toFrame": 150,
+        "storyPurpose": "Offer a recognizable two-tap ritual.", "audienceRead": "A familiar greeting invites recognition.",
+        "characters": [
+          {"identityId": "Anu", "visibility": "visible", "intent": "Attend to the unexpected greeting.", "emotion": "Hesitation becoming recognition.", "expression": "Brow softens slightly.", "gaze": "Robot mitt and face.", "bodyLanguage": "Right hand remains still and separate.", "position": "Screen-right at bench."},
+          {"identityId": "Pip", "visibility": "visible", "intent": "Offer the familiar ritual.", "emotion": "Quiet mechanical attentiveness, not cartoon distress.", "expression": "Two eyes brighten once.", "gaze": "Toward Anu.", "bodyLanguage": "Right mitt makes two small taps.", "position": "Screen-left on workbench."}
+        ],
+        "camera": {"framing": "Portrait medium two-shot at robot eye height.", "focus": "Both faces and separated tap/contact points.", "movement": "Locked."},
+        "lightingChange": "Warm left window stays stable; small eye brightening is secondary.",
+        "motion": {"initialState": "Robot intact, eyes dim; human hand still.", "intermediateState": "Eyes brighten once; right mitt makes first tap then lifts.", "finalState": "Second tap completed; mitt near bench and human attentive.", "action": "Exactly two visible slow taps.", "contactPhysics": "Mitt meets tabletop twice with plausible grounding; no hand overlap.", "animationStyle": "Restrained practical-robot mechanics."},
+        "effectIds": ["amber-eyes"], "transitionOut": {"type": "cut", "reason": "After the offered rhythm, cut on the same axis to the returning gesture."},
+        "acceptance": ["Two taps are countable.", "Eye lights remain steady after the one brightening."], "forbiddenArtifacts": ["extra tap sequence", "flickering eyes", "new fingers", "floating mitt"]},
+      {"id": "reply", "shotId": "b", "beatId": "reply", "fromFrame": 150, "toFrame": 300,
+        "storyPurpose": "Return the ritual and hold recognition.", "audienceRead": "Anu remembers and reciprocates.",
+        "characters": [
+          {"identityId": "Anu", "visibility": "visible", "intent": "Answer the greeting.", "emotion": "Warm recognition.", "expression": "Modest smile.", "gaze": "Contact points, then Pip.", "bodyLanguage": "Two right-hand taps, then rest beside mitt.", "position": "Screen-right, same bench side."},
+          {"identityId": "Pip", "visibility": "visible", "intent": "Receive the reply.", "emotion": "Quiet companionship.", "expression": "Steady amber eyes.", "gaze": "Toward Anu.", "bodyLanguage": "Mitt stays down; small head inclination only.", "position": "Screen-left."}
+        ],
+        "camera": {"framing": "Slightly tighter same-axis portrait two-shot.", "focus": "Reply taps and final separated hand/mitt.", "movement": "Locked."},
+        "lightingChange": "No key/fill change or extra eye-light spill.",
+        "motion": {"initialState": "Human right hand poised above bench; robot mitt rests.", "intermediateState": "Human returns two gentle taps.", "finalState": "Hand rests beside mitt with visible gap; recognition held.", "action": "Two reply taps then stillness.", "contactPhysics": "Tabletop contact is separate; no interlocking or fused fingers.", "animationStyle": "Natural human gesture and tiny robot head adjustment."},
+        "effectIds": ["amber-eyes"], "transitionOut": {"type": "end", "reason": "Finish on mutual recognition without another ritual."},
+        "acceptance": ["Reply mirrors the offered rhythm.", "Pleasant hold preserves a visible gap between hand and mitt."], "forbiddenArtifacts": ["interlocked hands", "extra eyes", "human aging", "repeated greeting"]}
+    ]
+  },
   "direction": {
     "soundPalette": {
       "targetFeeling": "Familiar recognition through a shared small ritual.",
@@ -17,8 +48,8 @@
       "comparison": "Same picture: room/taps only versus a subtle cue; retain the greeting's meaning and clarity."
     },
     "beats": [
-      {"shotId": "a", "from": 0, "to": 5, "characterIntent": "The robot offers a familiar greeting and the human attends.", "visibleEmotion": "Hesitation and emerging recognition.", "performanceRestraint": "Precise small taps, no cartoon excitement.", "audioRole": "Place knocks on actual contact; music must not obscure the pattern or announce menace.", "intensity": "low"},
-      {"shotId": "b", "from": 5, "to": 10, "characterIntent": "The human returns the ritual and recognizes the bond.", "visibleEmotion": "Warm recognition and ease.", "performanceRestraint": "A small response followed by a quiet hold.", "audioRole": "Reply taps first; optional modest harmonic release after the answer.", "intensity": "low"}
+      {"id": "greeting", "shotId": "a", "from": 0, "to": 5, "characterIntent": "The robot offers a familiar greeting and the human attends.", "visibleEmotion": "Hesitation and emerging recognition.", "performanceRestraint": "Precise small taps, no cartoon excitement.", "audioRole": "Place knocks on actual contact; music must not obscure the pattern or announce menace.", "intensity": "low"},
+      {"id": "reply", "shotId": "b", "from": 5, "to": 10, "characterIntent": "The human returns the ritual and recognizes the bond.", "visibleEmotion": "Warm recognition and ease.", "performanceRestraint": "A small response followed by a quiet hold.", "audioRole": "Reply taps first; optional modest harmonic release after the answer.", "intensity": "low"}
     ]
   },
   "generationApproved": false,
@@ -26,14 +57,19 @@
   "intendedInterpretation": "A familiar repeated greeting reveals an old connection; the human chooses to respond.",
   "characterPlan": {
     "requiredIdentities": ["Anu", "Pip"],
-    "references": [{"id": "cast", "covers": ["Anu", "Pip"], "prompt": "One original character-reference image on a plain neutral background, portrait 9:16. Fictional adult Anu about 35 with medium-brown skin, short dark curls, olive overshirt over a cream tee and unbranded dark trousers, alongside original small companion robot Pip: matte-cream rounded rectangular head, exactly two circular amber eye lights, faded teal torso, two short arms ending in simple three-pad mitts, crescent scratch above its left eye. Show readable faces, materials, wardrobe and relative scale in separate relaxed poses. Soft neutral illumination and grounded feet/base. No workshop scene, greeting action, franchise design, text, collage or extra characters."}]
+    "references": [{"id": "cast", "covers": ["Anu", "Pip"],     "prompt": "One original character-reference image on a plain neutral background, portrait 9:16. Give Anu distinctive natural beauty and warm expressive eyes without cosmetic smoothing; make Pip charming through original proportions and tactile materials, not a franchise imitation. Fictional adult Anu about 35 with medium-brown skin, short dark curls, olive overshirt over a cream tee and unbranded dark trousers, alongside original small companion robot Pip: matte-cream rounded rectangular head, exactly two circular amber eye lights, faded teal torso, two short arms ending in simple three-pad mitts, crescent scratch above its left eye. Show readable faces, materials, wardrobe and relative scale in separate relaxed poses. Soft neutral illumination and grounded feet/base. No workshop scene, greeting action, franchise design, text, collage or extra characters."}]
   },
   "hookPlan": {"firstFrame": "Adult watches an apparently dormant original companion robot; faces and resting mitt visible together.", "firstMotion": "Two eye lights brighten gently once before the counted greeting.", "inspectSeconds": 1, "question": "Will the familiar robot respond?", "payoff": "The human recognizes and returns the greeting.", "test": "Inspect actual opening and muted greeting count; compare framing before buying another take, no guaranteed swipe prevention."},
   "sceneChanges": [{"at": 5, "fromShot": "a", "toShot": "b", "type": "cut", "informationChange": "Redirect attention from robot's cue to the adult's chosen reply.", "lightingChange": "Left window stays fixed; amber eyes remain steadily bright."}],
   "atmospherePlan": {
     "motionBudget": "Counted taps are primary; eye-light change is a single low-amplitude accent, not a flashing particle field.",
     "omissionRationale": "Avoid butterflies/petals around hands because they could obscure the counted greeting.",
-    "effects": [{"id": "amber-eyes", "route": "in-generation", "shotIds": ["a", "b"], "from": 0, "to": 10, "referenceFrameIds": ["a-start", "a-end", "b-start", "b-end"], "purpose": "Signal attention and recognition without replacing the gesture.", "depth": "Fixed in the robot faceplate.", "motion": "One gentle brightening, then stable emission; no strobe.", "occlusion": "Do not bloom over the robot silhouette, human eyes or tap points.", "lightInteraction": "Small restrained amber accent; warm window remains the key.", "shadowInteraction": "No large new opposing shadow from tiny eye lights.", "continuity": "Exactly two eye lights with stable brightness after activation.", "fallback": "Reduce bloom and keep two readable amber discs if glow damages identity."}]
+    "effects": [{"id": "amber-eyes",
+    "appearance": "Exactly two small warm amber eye lights.",
+    "density": "Two stable eye sources, no particle overlay.",
+    "intensity": "One gentle brightening, then restrained steady output.",
+    "scale": "Fixed eye size relative to Pip's head.",
+    "lightMode": "Emissive accents with negligible spill; never a second large key.", "route": "in-generation", "shotIds": ["a", "b"], "from": 0, "to": 10, "referenceFrameIds": ["a-start", "a-end", "b-start", "b-end"], "purpose": "Signal attention and recognition without replacing the gesture.", "depth": "Fixed in the robot faceplate.", "motion": "One gentle brightening, then stable emission; no strobe.", "occlusion": "Do not bloom over the robot silhouette, human eyes or tap points.", "lightInteraction": "Small restrained amber accent; warm window remains the key.", "shadowInteraction": "No large new opposing shadow from tiny eye lights.", "continuity": "Exactly two eye lights with stable brightness after activation.", "fallback": "Reduce bloom and keep two readable amber discs if glow damages identity."}]
   },
   "pacing": {
     "hypothesis": "Separated slow taps create a visible recognition pattern; the returned gesture needs its own time.",

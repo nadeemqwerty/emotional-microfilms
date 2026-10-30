@@ -3,6 +3,49 @@
   "scenarioId": "a-seat-for-dad",
   "seconds": 13,
   "aspectRatio": "9:16",
+  "framePlan": {
+    "schemaVersion": 1,
+    "fps": 30,
+    "characterDesigns": [
+      {"identityId": "Minjun", "appeal": "Naturally charming toddler with expressive curious eyes and an unforced smile.", "agePresentation": "Clearly about two; toddler proportions, no adultification.", "distinctiveFeatures": "Original round face and soft short dark hair from the chosen cast.", "wardrobeGrooming": "Simple rust knit, beige trousers and small shoes; natural tidy hair.", "naturalDetail": "Believable skin, hands and soft fabric; no beauty-filter smoothing.", "avoid": ["celebrity resemblance", "adult posing or makeup", "changing identity to chase generic cuteness"], "acceptance": ["Age and scale remain visibly toddler-like.", "Face is appealing, expressive and recognizable across poses."]},
+      {"identityId": "Junho", "appeal": "Handsome, approachable father with warmth rather than fashion-model performance.", "agePresentation": "Original adult in his early thirties.", "distinctiveFeatures": "Preserve the accepted clean-shaven face and neatly styled short hair.", "wardrobeGrooming": "Navy rolled sleeves and charcoal trousers; understated grooming.", "naturalDetail": "Natural skin texture, plausible anatomy and gentle eye expression.", "avoid": ["celebrity imitation", "plastic skin", "recasting accepted identity solely for beauty"], "acceptance": ["Attractive natural styling supports the familiar father-son relationship.", "The same face, age and wardrobe persist."]}
+    ],
+    "intervals": [
+      {"id": "invitation", "shotId": "a", "beatId": "invitation", "fromFrame": 0, "toFrame": 120,
+        "storyPurpose": "Establish the empty place and a small invitation.", "audienceRead": "The child wants Dad beside him, not to take the jacket.",
+        "characters": [
+          {"identityId": "Minjun", "visibility": "visible", "intent": "Invite Dad closer.", "emotion": "Trust and curiosity.", "expression": "Small inviting look, no pleading.", "gaze": "Up toward Dad, then the seat.", "bodyLanguage": "Seated; one short hand gesture while the other steadies the jacket.", "position": "Screen-left, feet dangling."},
+          {"identityId": "Junho", "visibility": "visible", "intent": "Notice the invitation.", "emotion": "Quiet attention.", "expression": "Soft attentive face.", "gaze": "Child and indicated seat.", "bodyLanguage": "Standing within reach; no premature sit.", "position": "Screen-right beside the empty seat."}
+        ],
+        "camera": {"framing": "Portrait bench two-shot; faces, small hand and empty seat visible.", "focus": "Child's invitation and father's recognition.", "movement": "Locked."},
+        "lightingChange": "Unchanged canonical cloudy key/fill; preserve face and hand readability.",
+        "motion": {"initialState": "Child seated with jacket on lap; Dad standing.", "intermediateState": "Child looks up and makes one short indication toward the seat.", "finalState": "Hand hovers in invitation; Dad has noticed.", "action": "One toddler invitation, no jacket lift.", "contactPhysics": "Bench supports the child; free hand must not merge with seat or Dad.", "animationStyle": "Restrained live-action movement; no exaggerated waving."},
+        "effectIds": ["rain"], "transitionOut": {"type": "match-cut", "reason": "Match standing poses into visible physical acceptance; no sitting ellipse."},
+        "acceptance": ["Empty seat and invitation read without explanation.", "Jacket stays on the child's lap."], "forbiddenArtifacts": ["aged-up child", "extra hands", "hidden seat", "identity drift"]},
+      {"id": "sitting", "shotId": "sit", "beatId": "sitting", "fromFrame": 120, "toFrame": 270,
+        "storyPurpose": "Show Dad accepting through continuous physical action.", "audienceRead": "Dad really turns and sits beside his son.",
+        "characters": [
+          {"identityId": "Minjun", "visibility": "visible", "intent": "Make room and watch Dad.", "emotion": "Comfortable expectation.", "expression": "Calm interest.", "gaze": "Dad's approach and settle.", "bodyLanguage": "Hand returns to lap; body stays supported and stable.", "position": "Same screen-left place."},
+          {"identityId": "Junho", "visibility": "visible", "intent": "Accept the seat.", "emotion": "Ordinary care.", "expression": "Relaxed, not a dramatic grin.", "gaze": "Seat during lowering, then child.", "bodyLanguage": "Turn, shift weight, bend knees, lower and settle.", "position": "Screen-right, standing to seated in the indicated place."}
+        ],
+        "camera": {"framing": "Same bench axis; knees/seat contact and both identities remain legible.", "focus": "Plausible turn, lowering and seated contact.", "movement": "Locked; no orbit to conceal contact."},
+        "lightingChange": "Same cloudy source and steady exposure throughout body movement.",
+        "motion": {"initialState": "Dad stands beside the invited seat.", "intermediateState": "He turns, bends knees and lowers with a visible weight shift.", "finalState": "Dad is seated and settled; toddler's hands rest on lap.", "action": "One complete continuous turn-and-sit.", "contactPhysics": "Feet remain grounded; hips meet the bench; no clipping or floating.", "animationStyle": "Natural adult mechanics, no morph or teleport."},
+        "effectIds": ["rain"], "transitionOut": {"type": "match-cut", "reason": "Match the seated settle into the shared response."},
+        "acceptance": ["Turn, lowering, contact and settle are all visible.", "Boundary poses match the neighboring shots."], "forbiddenArtifacts": ["standing-to-seated teleport", "ghost dissolve", "body intersection", "warped bench"]},
+      {"id": "shared-hold", "shotId": "b", "beatId": "shared-hold", "fromFrame": 270, "toFrame": 390,
+        "storyPurpose": "Let the familiar warmth register.", "audienceRead": "Both enjoy being together; no new plot event.",
+        "characters": [
+          {"identityId": "Minjun", "visibility": "visible", "intent": "Share Dad's attention.", "emotion": "Ease and warmth.", "expression": "Small natural smile.", "gaze": "Up at Dad.", "bodyLanguage": "Relaxed supported posture; hands on jacket.", "position": "Screen-left, feet dangling."},
+          {"identityId": "Junho", "visibility": "visible", "intent": "Acknowledge his son.", "emotion": "Warm companionship.", "expression": "Understated answering smile.", "gaze": "Toward child.", "bodyLanguage": "Small head turn; hands separately on own knees.", "position": "Seated screen-right with a comfortable gap."}
+        ],
+        "camera": {"framing": "Portrait seated two-shot on the same axis.", "focus": "Both expressions and shared gaze.", "movement": "Locked quiet hold."},
+        "lightingChange": "No new light source or exposure change; contact grounding remains.",
+        "motion": {"initialState": "Both already seated after the visible settle.", "intermediateState": "Small mutual head/gaze adjustment.", "finalState": "Relaxed shared smile held.", "action": "One restrained response then stillness.", "contactPhysics": "Separate hands and bodies; no new embrace.", "animationStyle": "Natural micro-expression and breathing, no frozen face."},
+        "effectIds": ["rain"], "transitionOut": {"type": "end", "reason": "End after recognition has room to register."},
+        "acceptance": ["Warmth is legible without exaggerated acting.", "Ending holds without inventing another event."], "forbiddenArtifacts": ["forced grin", "face morph", "extra gesture", "music-led melodrama"]}
+    ]
+  },
   "direction": {
     "soundPalette": {
       "targetFeeling": "Small, familiar father-toddler tenderness; safety and quiet companionship.",
@@ -17,9 +60,9 @@
       "comparison": "Same locked picture: ambience-only versus a sparse candidate at comfortable levels. Reject heaviness even if peak/LUFS pass."
     },
     "beats": [
-      {"shotId": "a", "from": 0, "to": 4, "characterIntent": "Minjun makes a small invitation; Junho notices rather than performing sadness.", "visibleEmotion": "Trust, attention and gentle curiosity.", "performanceRestraint": "One small hand gesture and natural glance; no exaggerated grin or pleading.", "audioRole": "Establish sheltered rain; leave the invitation unscored or almost unscored.", "intensity": "low"},
-      {"shotId": "sit", "from": 4, "to": 9, "characterIntent": "Junho accepts by turning and physically sitting near his son.", "visibleEmotion": "Ordinary care becoming shared comfort.", "performanceRestraint": "Plausible weight shift and settle; do not make bench contact a dramatic climax.", "audioRole": "Continuous ambience and supported quiet contact; no rising chord sequence or accent on every movement.", "intensity": "low"},
-      {"shotId": "b", "from": 9, "to": 13, "characterIntent": "Both recognize the familiar comfort of being together.", "visibleEmotion": "Understated warmth and ease.", "performanceRestraint": "Soft gaze and relaxed posture; let the hold register without overacting.", "audioRole": "Only if earned, one light musical gesture then space and decay; compare with ambience-only.", "intensity": "low"}
+      {"id": "invitation", "shotId": "a", "from": 0, "to": 4, "characterIntent": "Minjun makes a small invitation; Junho notices rather than performing sadness.", "visibleEmotion": "Trust, attention and gentle curiosity.", "performanceRestraint": "One small hand gesture and natural glance; no exaggerated grin or pleading.", "audioRole": "Establish sheltered rain; leave the invitation unscored or almost unscored.", "intensity": "low"},
+      {"id": "sitting", "shotId": "sit", "from": 4, "to": 9, "characterIntent": "Junho accepts by turning and physically sitting near his son.", "visibleEmotion": "Ordinary care becoming shared comfort.", "performanceRestraint": "Plausible weight shift and settle; do not make bench contact a dramatic climax.", "audioRole": "Continuous ambience and supported quiet contact; no rising chord sequence or accent on every movement.", "intensity": "low"},
+      {"id": "shared-hold", "shotId": "b", "from": 9, "to": 13, "characterIntent": "Both recognize the familiar comfort of being together.", "visibleEmotion": "Understated warmth and ease.", "performanceRestraint": "Soft gaze and relaxed posture; let the hold register without overacting.", "audioRole": "Only if earned, one light musical gesture then space and decay; compare with ambience-only.", "intensity": "low"}
     ]
   },
   "generationApproved": false,
@@ -37,7 +80,7 @@
           "Minjun",
           "Junho"
         ],
-        "prompt": "Photorealistic live-action casting reference for two original fictional Korean characters, not an illustration, collage or film scene. One vertical 9:16 full-body image. Screen-left: Minjun, a clearly TWO-YEAR-OLD Korean toddler boy with a round toddler face, soft short dark hair, natural toddler head-to-body proportions and short little legs, wearing a plain rust-orange knitted sweater, beige trousers and small unbranded shoes. He must look about two, not a school-age child. Screen-right: his father Junho, a handsome Korean man about 33, youthful adult features, neatly styled short black hair, clean-shaven, wearing a plain muted navy shirt with sleeves rolled to his forearms, charcoal trousers and simple unbranded shoes. Natural adult-toddler height difference. Relaxed separate standing poses close enough for a safe family portrait, both faces and complete bodies visible; calm gentle expressions, no exaggerated grin. Original faces, no requested celebrity or real-person likeness. Natural skin texture and believable anatomy. Plain warm-gray seamless background, broad soft OFF-CAMERA daylight and gentle fill, grounded soft contact shadows beneath the feet. No lighting equipment visible, no softbox, bench, coat, rain, glow, extra people, physical embrace, writing, labels, logos or panels. This establishes faces, relative age, scale and wardrobe only; later scenes will be separately staged and lit."
+        "prompt": "Photorealistic live-action casting reference for two original fictional Korean characters, not an illustration, collage or film scene. Deliberately beautiful, natural casting: a charming expressive toddler without adult posing or makeup, and a handsome approachable father with genuine skin texture and warm eyes, not a celebrity imitation. One vertical 9:16 full-body image. Screen-left: Minjun, a clearly TWO-YEAR-OLD Korean toddler boy with a round toddler face, soft short dark hair, natural toddler head-to-body proportions and short little legs, wearing a plain rust-orange knitted sweater, beige trousers and small unbranded shoes. He must look about two, not a school-age child. Screen-right: his father Junho, a handsome Korean man about 33, youthful adult features, neatly styled short black hair, clean-shaven, wearing a plain muted navy shirt with sleeves rolled to his forearms, charcoal trousers and simple unbranded shoes. Natural adult-toddler height difference. Relaxed separate standing poses close enough for a safe family portrait, both faces and complete bodies visible; calm gentle expressions, no exaggerated grin. Original faces, no requested celebrity or real-person likeness. Natural skin texture and believable anatomy. Plain warm-gray seamless background, broad soft OFF-CAMERA daylight and gentle fill, grounded soft contact shadows beneath the feet. No lighting equipment visible, no softbox, bench, coat, rain, glow, extra people, physical embrace, writing, labels, logos or panels. This establishes faces, relative age, scale and wardrobe only; later scenes will be separately staged and lit."
       }
     ]
   },
@@ -73,6 +116,11 @@
     "effects": [
       {
         "id": "rain",
+        "appearance": "Fine translucent rain behind the shelter, no luminous particles.",
+        "density": "Sparse; keep faces and indicated seat clear.",
+        "intensity": "Subtle secondary texture, never the main action.",
+        "scale": "Fine distant streaks consistent with shelter depth.",
+        "lightMode": "Reflective/transmissive rain, not emissive; no invented spill.",
         "route": "in-generation",
         "shotIds": [
           "a",

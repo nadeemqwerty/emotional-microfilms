@@ -27,6 +27,15 @@ function project() {
   const models = load('data/model-quotes.json');
   const roadmap = load('data/roadmap.json');
   const workflows = load('data/workflows.json');
+  const effects = load('data/visual-effects.json');
+  invariant(effects.schemaVersion === 1 && Array.isArray(effects.presets) &&
+    new Set(effects.presets.map(item => item.id)).size === effects.presets.length,
+  'Invalid visual-effects palette.');
+  for (const preset of effects.presets) {
+    for (const key of ['id', 'label', 'appearance', 'lightMode', 'route', 'risk']) {
+      invariant(typeof preset[key] === 'string' && preset[key].trim(), `Incomplete effect preset: ${key}`);
+    }
+  }
   const lanes = load('data/creative-lanes.json');
   validateRubric(rubric);
   invariant(new Set(scenarios.map(item => item.id)).size === scenarios.length, 'Duplicate scenario ID.');
@@ -54,7 +63,7 @@ function project() {
         `Missing project reviewer: ${reviewer}`);
     }
   }
-  return {brief, rubric, scenarios, feedback, models, roadmap, workflows};
+  return {brief, rubric, scenarios, feedback, models, roadmap, workflows, effects};
 }
 
 function usage() {
@@ -64,6 +73,7 @@ function usage() {
   rank [count]
   shortlist [count]
   budgets
+  effects
   roadmap
   workflow <workflow-id>
   song-plan <workspace-relative-song-cue.json>
@@ -119,6 +129,8 @@ try {
     } else if (command === 'song-plan') {
       invariant(args[0], 'Provide a filled song-cue JSON; the template is not a selected song.');
       console.log(JSON.stringify(planSongCue(load(args[0])), null, 2));
+    } else if (command === 'effects') {
+      console.log(JSON.stringify(data.effects, null, 2));
     } else if (command === 'budgets') {
       console.table(data.models.planningExamples.map(item => ({
         plan: item.id, credits: estimatePlan(item.lines, data.models.quotes),

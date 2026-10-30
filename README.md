@@ -47,6 +47,7 @@ npm run validate
 npm run film -- rank 6
 npm run film -- shortlist 6
 npm run film -- budgets
+npm run film -- effects
 npm run film -- roadmap
 npm run film -- workflow previsualize
 npm run check
@@ -80,6 +81,12 @@ Discovery is not proof a skill is loaded into the present conversation.
 
 ## Iterative production, not dummy frames
 
+Before creation, complete a gap-free delivery `framePlan`: story, beautiful
+original age-appropriate characters, acting/emotion, camera, lighting/shadows,
+motion phases/physics/animation, effects, audio, transitions and acceptance.
+New preproduction and every paid preflight enforce this; bundle scripts resolve
+the shared requirements. Legacy media and approval history stay untouched.
+
 **Real character image -> personal or scoped delegated acceptance ->
 reference-guided scene images for all changes -> acceptance ->
 lock script/hook/timing/transitions/lighting/shadows/
@@ -89,6 +96,9 @@ Nature/beauty options include golden butterflies, flowers, sakura, rain, wind/
 trees, autumn and illuminated/highlight accents, with explicit depth, motion,
 occlusion, light/spill/shadow and fallback design. No mandatory particle overlay
 or promise of dopamine/retention. The assembler does not implement a compositor.
+The inspectable palette also includes glitter/sparkle dust, neon glow/trails,
+golden butterfly dust and sakura flower dust. See
+[visual development](docs/visual-development.md) for controls and untested routes.
 
 ## Project-local operating system
 

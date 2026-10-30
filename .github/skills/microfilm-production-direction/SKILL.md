@@ -14,6 +14,16 @@ visible emotion, restraint and audio role for every beat. Cross-check all ten
 department scripts exported by `film bundle`; do not independently invent their
 durations, identities or scene boundaries. Sound direction starts before motion.
 
+Complete `framePlan` before the first cast/scene generation, not only at design
+lock. Use contiguous integer ranges and stable direction-beat IDs; specify each
+identity's visible/offscreen performance, camera, light/shadow change, initial/
+intermediate/final action, contact physics, animation, exact active effects,
+sound role and acceptance/forbidden artifacts. The frame script resolves the
+shared canonical plans and every overlapping timed cue. Include original
+appealing, age-appropriate character design; reconcile it with accepted images.
+Use `film effects` for glitter/neon/golden butterfly dust/sakura flower dust and
+other choices; a palette is not a renderer or reason to decorate every story.
+
 Real cast -> accepted scene frames -> coordinated design lock -> motion remains
 mandatory. Plan light/shadow/effect interplay, causal transitions, hook, reaction
 and hold where the lane needs them. Use the existing specialist skills; do not

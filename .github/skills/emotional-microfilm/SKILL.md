@@ -63,6 +63,17 @@ For every new production also use `microfilm-production-direction` and
 Feedback first repairs the reusable process; it is not automatic consent to
 reroll a good picture or regenerate music.
 
+Before the first creative generation, require the complete provisional
+`framePlan` described in `docs\completion-plan.md`, section 9. Every delivery
+frame belongs to a half-open range with story/attention, per-identity performance,
+camera, lighting/shadows, action states/physics/animation, canonical effects,
+sound, transitions and observable acceptance. Stable beat IDs must match their
+actual time, not merely exist. Original appealing character designs must retain
+natural distinctive features and age-appropriate presentation. Reconcile the
+plan with accepted actual references before motion; filled fields are not
+creative approval. Read `film effects` for glitter, neon, butterfly/dust,
+sakura/flower-dust and other options; select a coherent subset or explicitly none.
+
 1. **Brief:** confirm target feeling, audience/context, realism/fantasy, limits,
    dialogue, budget and boundaries. Use reasonable creative defaults, not a
    presumed paid-generation budget.
@@ -147,6 +158,9 @@ reroll a good picture or regenerate music.
 - Intended first-view interpretation; lane-appropriate progression/payoff.
   Connection-led films retain setup / reveal / chosen response / hold.
 - Original identity bible and real-reference provenance/rights.
+- Complete gap-free `framePlan` at declared delivery FPS, per-identity beauty/
+  age/style design and resolved canonical timed effects/audio. Explicit
+  stillness and offscreen states are valid; unspecified action phases are not.
 - Real character-reference plan and user-approved images, structured first-frame/
   first-motion hook, every scene transition and timed atmosphere/effect cue sheet.
 - Blocking: screen side, gaze target, contact point, prop owner and action axis.

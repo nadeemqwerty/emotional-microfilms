@@ -40,7 +40,7 @@ test('all local documentation links resolve and workflow reviewer dependencies a
 });
 
 test('read-only CLI entry points validate, rank, budget and resume project workflows', () => {
-  for (const args of [['validate'], ['rank', '3'], ['shortlist', '6'], ['budgets'], ['roadmap'],
+  for (const args of [['validate'], ['rank', '3'], ['shortlist', '6'], ['budgets'], ['roadmap'], ['effects'],
     ['workflow', 'previsualize'], ['workflow', 'critic-loop'], ['workflow', 'reverse-engineer'],
     ['workflow', 'coordinated-production']]) {
     const result = spawnSync(process.execPath, [resolve(root, 'scripts', 'film.mjs'), ...args],
@@ -73,7 +73,7 @@ test('real CLI validates custom packets, rejects stale resumes and rolls failed 
   };
   for (const file of ['scripts/film.mjs', 'lib/workflow.mjs', 'lib/music.mjs', 'lib/handoff.mjs', 'lib/production.mjs',
     'data/brief.json', 'data/rubric.json', 'data/scenarios.json', 'data/model-quotes.json',
-    'data/roadmap.json', 'data/workflows.json', 'data/creative-lanes.json',
+    'data/roadmap.json', 'data/workflows.json', 'data/creative-lanes.json', 'data/visual-effects.json',
     'examples/the-dry-seat.json', 'examples/same-old-handshake.json', 'examples/the-last-light.json']) copy(file);
   for (const reviewer of readdirSync(resolve(root, '.github', 'agents'))) copy(`.github/agents/${reviewer}`);
   write('data/feedback.json', feedback);

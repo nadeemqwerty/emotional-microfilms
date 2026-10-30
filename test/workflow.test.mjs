@@ -9,6 +9,7 @@ import {
   AUDIO_FIT_DIMENSIONS, ENTERTAINMENT_DIMENSIONS, REVIEW_AREAS, requireAcceptance, requireReview, stageReady, validateDirection, validateFeedback, validateJob, validatePacket,
   validateLightingPlan, validatePacing, validateRubric, validateScenario, validateSpend, validateTimeline,
   validateWorkspace, validateMotionReferences, validateSceneReferences, requireCharacterApproval,
+  deliveryFrame, resolveFramePlan, validateFramePlan,
 } from '../lib/workflow.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -67,9 +68,106 @@ test('coordinated direction covers all shots and blocks legacy packets at new de
   }
   const legacy = workspace({stage: 'keyframes-approved'});
   delete legacy.productionDraft.direction;
+  delete legacy.productionDraft.framePlan;
   legacy.productionFingerprint = productionRevision(legacy);
   assert.equal(validateWorkspace(legacy, context), true, 'Historical workspaces remain readable.');
   assert.throws(() => stageReady(legacy, 'design-locked', context), /Coordinated direction/);
+});
+
+test('complete frame requirements resolve every interval, overlapping sound, fractional boundaries and quiet holds', () => {
+  for (const file of ['the-dry-seat', 'a-seat-for-dad', 'same-old-handshake', 'the-last-light']) {
+    const draft = load(`examples/${file}.json`);
+    validateFramePlan(draft);
+    const resolved = resolveFramePlan(draft);
+    assert.equal(resolved.intervals[0].fromFrame, 0);
+    assert.equal(resolved.intervals.at(-1).toFrame, deliveryFrame(draft.seconds, resolved.fps));
+    assert.ok(resolved.intervals.every(interval => interval.lighting.shadowMap.length > 0 &&
+      interval.audio.role && interval.motion.intermediateState));
+  }
+  const draft = structuredClone(packet);
+  draft.soundPlan.cues = [
+    {from: 0.15, to: 0.45, sound: 'Synthetic early cue.'},
+    {from: 0.2, to: 0.5, sound: 'Synthetic overlapping cue.'},
+  ];
+  const first = resolveFramePlan(draft).intervals[0];
+  assert.deepEqual(first.audio.cues.map(({fromFrame, toFrame}) => [fromFrame, toFrame]),
+    [[5, 14], [6, 15]]);
+  assert.equal(first.audio.cues.length, 2, 'Never drop one overlapping sound.');
+  assert.match(resolveFramePlan(load('examples/the-last-light.json')).intervals[1].motion.action, /hold/i);
+});
+
+test('frame requirements reject omissions, gaps, stale references and invalid character/VFX controls', () => {
+  for (const mutate of [
+    draft => { delete draft.framePlan; },
+    draft => { draft.framePlan.intervals[0].fromFrame = 1; },
+    draft => { draft.framePlan.intervals[1].fromFrame -= 1; },
+    draft => { draft.framePlan.intervals.at(-1).toFrame -= 1; },
+    draft => { draft.framePlan.intervals[0].toFrame = 1.5; },
+    draft => { draft.framePlan.intervals[0].characters.pop(); },
+    draft => { draft.framePlan.intervals[0].characters[0].identityId = 'unknown'; },
+    draft => { draft.framePlan.intervals[0].camera.focus = ''; },
+    draft => { draft.framePlan.intervals[0].lightingChange = ''; },
+    draft => { draft.framePlan.intervals[0].motion.intermediateState = ''; },
+    draft => { draft.framePlan.intervals[0].transitionOut.type = 'continuous'; },
+    draft => { draft.framePlan.characterDesigns[0].agePresentation = ''; },
+    draft => { draft.framePlan.characterDesigns[0].acceptance = []; },
+    draft => { draft.atmospherePlan.effects[0].appearance = ''; },
+    draft => { draft.atmospherePlan.effects[0].route = 'invented-renderer'; },
+    draft => { draft.atmospherePlan.effects[0].shotIds = ['unknown']; },
+    draft => { draft.soundPlan.cues[0].sound = ''; },
+    draft => { draft.framePlan.intervals[0].effectIds = []; },
+    draft => { draft.direction.beats[1].id = draft.direction.beats[0].id; },
+    draft => { draft.soundPlan.cues = [{from: 0.001, to: 0.002, sound: 'Collapsed cue'}]; },
+  ]) {
+    const draft = structuredClone(packet);
+    mutate(draft);
+    assert.throws(() => validateFramePlan(draft), /[Ff]rame|[Cc]anonical|final|[Ee]ffect|character/);
+  }
+});
+
+test('known beat/effect IDs cannot attach to the wrong time', () => {
+  const draft = structuredClone(packet);
+  const beat = draft.direction.beats[0];
+  draft.direction.beats.splice(0, 1, {...beat, id: 'early', to: 2.5},
+    {...beat, id: 'late', from: 2.5});
+  draft.framePlan.intervals[0].beatId = 'late';
+  assert.throws(() => validateFramePlan(draft), /outside its actual timing/);
+  const effectDraft = structuredClone(packet);
+  const gold = {...effectDraft.atmospherePlan.effects[0], id: 'gold-dust', from: 5, to: 10, shotIds: ['b'],
+    referenceFrameIds: ['b-start', 'b-end'],
+    appearance: 'Fine golden butterfly dust.', lightMode: 'Emissive motes; negligible distant spill.'};
+  effectDraft.atmospherePlan.effects.push(gold);
+  effectDraft.framePlan.intervals[1].effectIds.push(gold.id);
+  assert.equal(resolveFramePlan(effectDraft).intervals[1].effectCues[1].appearance, gold.appearance);
+  effectDraft.framePlan.intervals[0].effectIds.push(gold.id);
+  assert.throws(() => validateFramePlan(effectDraft), /inactive or omitted/);
+});
+
+test('legacy packets stay readable but cannot enter new preproduction or paid creation without frame requirements', () => {
+  const legacy = workspace({stage: 'selected', generationApproved: true, nextGenerationKind: 'character'});
+  delete legacy.productionDraft.framePlan;
+  legacy.productionFingerprint = productionRevision(legacy);
+  assert.equal(validateWorkspace(legacy, context), true);
+  assert.throws(() => stageReady(legacy, 'preproduction', context), /framePlan required/);
+  for (const [kind, stage] of [['character', 'preproduction'], ['scene', 'characters-approved'],
+    ['motion', 'design-locked']]) {
+    assert.throws(() => validateSpend({...legacy, stage, nextGenerationKind: kind},
+      18, null, Date.now(), context), /framePlan required/);
+  }
+  assert.throws(() => validateSceneReferences({...legacy, stage: 'characters-approved'},
+    packet.keyframes[0].id, {}), /framePlan required/);
+  assert.throws(() => validateMotionReferences({...legacy, stage: 'design-locked'},
+    packet.shots[0].id, {}), /framePlan required/);
+  const planned = workspace({stage: 'selected', generationApproved: false});
+  assert.equal(stageReady(planned, 'preproduction', context), true);
+  assert.equal(planned.generationApproved, false, 'A complete plan never grants spending.');
+});
+
+test('beautiful-character redesign invalidates earlier cast acceptance', () => {
+  const manifest = withCast(workspace());
+  requireCharacterApproval(manifest);
+  manifest.productionDraft.framePlan.characterDesigns[0].appeal = 'Changed original facial appeal.';
+  assert.throws(() => requireCharacterApproval(manifest), /stale/);
 });
 
 test('audio fit rejects meter-only passes, heavy/mismatched segments and stale sound routes', () => {

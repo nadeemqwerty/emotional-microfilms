@@ -19,6 +19,19 @@ see [bundle layout](docs/production-bundles.md). Require actual
 final asset set. Heavy/mismatched music fails even when technical meters pass.
 Prioritize reusable workflow repairs over cosmetic rerolls; preserve good media.
 
+Before any creation/generation, complete `productionDraft.framePlan` under
+[frame requirements](docs/completion-plan.md#9-pre-generation-framebeat-requirements-and-beautiful-characters).
+Cover every delivery frame with explicit story, acting/emotion, camera,
+lighting/shadows, initial/intermediate/final motion, effects, sound and acceptance
+requirements. Plan original appealing, age-appropriate characters; never recast
+accepted identities just to add beauty prose. Use `film effects` and
+[visual development](docs/visual-development.md) to consider glitter, neon,
+golden butterflies/dust and sakura/flower dust alongside other coherent options.
+Effects are selectable, not compulsory or demonstrated renderers. Reconcile the
+provisional plan with actual approved references before design lock/motion.
+Legacy inspection remains readable; new preproduction and all paid preflights
+require the complete plan. Never retrofit historical media approval.
+
 - Ask before writes outside an already approved scope. Never delete existing work.
 - Research, model forms and quotes are free reads; generation, reference uploads,
   purchases, publication, commits and pushes require their own explicit approval.

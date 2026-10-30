@@ -63,6 +63,21 @@ inspect a rejected cue without manufacturing a pass; master gates stay closed.
 
 ## Coordination and change control
 
+The `frame-plan` script includes complete `framePlan` requirements, original
+age-appropriate character beauty designs and one gap-free delivery-frame
+timeline. Ranges are half-open `[fromFrame,toFrame)`; convert canonical seconds
+with `Math.round(seconds * fps)` (at most half-frame boundary rounding), reject
+collapsed cues and preserve all overlapping timed subevents. Each interval
+resolves its actual direction beat, lighting/shadows, continuity, camera,
+performance, action states/physics/animation, active effects and sound role/
+palette/cues. The packet fingerprint matches all other department scripts.
+This is a planned delivery specification, not provider frame-exact control.
+
+Complete this provisional plan before creation; reconcile against real accepted
+cast/scene images before the final design lock. Legacy bundles need a complete
+unapproved next-planning packet, not invented historical requirements. New
+beauty/effect prose is not grounds to relabel or automatically regenerate media.
+
 Before spending, cross-read acting/emotion, scene, frame, motion, camera/edit,
 lighting/shadow, atmosphere and sound scripts against the same beat IDs.
 Ask what changes, what remains fixed, what the audience should notice and what

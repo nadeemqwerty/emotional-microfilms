@@ -538,3 +538,154 @@ Finish line A is still open on the producer's repaired film and actual review.
 Finish line B has implemented local tooling but real host/reference/vocal/effect
 demonstrations remain open. Finish line C has no fresh audience/business result.
 No new paid generation/upload/publication was performed by this session.
+
+## 9. Pre-generation frame/beat requirements and beautiful characters
+
+User approval, 30 October 2026, IST: plan with a critic, then improve the
+workflow; include beautiful characters. This extends local tooling, not consent
+for generation, recasting, publication or a new soundtrack. Preserve other
+sessions' uncommitted direction/bundle/audio work and the production owner's
+private manifest. No automatic migration or re-approval of historical media.
+
+### What changes and why
+
+Before this extension, the packet had separate story, lighting, motion, effects
+and emotional direction. `frame-plan` export contained endpoints/timing only.
+Coordinated direction was enforced at design lock, too late to require a complete
+provisional specification before the first paid cast/scene operation.
+
+Add one structured `framePlan` covering the complete intended delivery timeline.
+Frame-wise means half-open integer frame ranges at a declared delivery FPS,
+plus explicit beginning/intermediate/ending action states. It is not hundreds
+of independently generated images or a promise that a provider obeys exact
+timestamps. Source-generation FPS/durations may differ; conform and inspect
+actual achieved timing after generation.
+Use one seconds-to-delivery-frame conversion in validation/export:
+`round(seconds * fps)` with a declared nearest-frame quantization tolerance of
+half a delivery frame. Reject collapsed intervals after conversion. Canonical
+direction beats have stable IDs; a frame interval must be contained in its
+actual shot AND referenced beat, not merely name an existing ID.
+Resolve all overlapping canonical effects/audio cues by converted timing.
+Split intervals at relevant timing changes or retain explicit timed subevents;
+never select only one overlapping sound or attach an inactive effect.
+
+| Requirement | Explicit planned evidence |
+|---|---|
+| Story/attention | Range's story purpose, information viewers should notice and direction-beat/shot association |
+| Character performance | Required identities, visible/offscreen state, intention, emotion, expression, gaze, body language and screen position |
+| Beauty/cast design | Per-identity intended appeal/style, age-appropriate presentation, distinctive natural features, wardrobe/grooming, avoid list and observable acceptance criteria |
+| Camera/composition | Framing, focus priority and camera motion or explicit locked choice |
+| Lighting/shadows | Resolve canonical lighting plan; declare interval-specific change or explicit unchanged state, with key/fill/exposure/contact/cast-shadow requirements visible in export |
+| Motion/animation | Initial, intermediate and final state, readable action, contact/weight/physics and animation style; explicit stillness is valid |
+| Effects/environment | Exact active canonical effect IDs, timing/depth/occlusion/light/shadow plan or explicit none |
+| Sound | Resolve canonical cue/palette/direction roles, including intentional silence and actual rights/route boundaries |
+| Transitions/continuity | Continuous action or planned cut at each boundary, causal justification and canonical continuity invariants |
+| Acceptance | Range-specific observable checks and forbidden artifacts; no automatic beauty/enjoyment certification from filled text |
+
+Reference canonical packet fields rather than fork lighting/effect/audio plans;
+export a resolved view so requirements can be reviewed together. Every range
+must identify its shot and emotional direction beat; reject gaps/overlaps,
+fractional/out-of-range frames, unknown identities/effects and cross-shot
+intervals. Effect changes and essential action boundaries must be represented,
+not hidden inside a generic whole-film statement. Explicitly assess whether
+start/end poses and transition mechanism can show the required intermediate
+action; a sitting beat cannot be satisfied by two unrelated endpoint poses.
+
+Beautiful characters means deliberate original, appealing, expressive and
+coherent casting for the chosen world, not a universal beauty score. Children
+remain naturally charming and age-appropriate; do not adultify a toddler.
+Adult beauty/handsomeness may be a style aim without celebrity imitation,
+compulsory skin tone, homogenized faces, cosmetic filtering or broken anatomy.
+Keep diversity, distinctive identities and natural material/skin detail.
+Existing accepted identities are not regenerated merely to satisfy new prose.
+
+Explicit VFX palette requested by the user: glitter/sparkle dust, neon glow and
+neon trails, golden shiny butterflies and golden butterfly dust, sakura petals/
+flower dust, plus optional fireflies, bokeh, soft bloom, light rays, rain, wind
+and autumn leaves. Extend the existing visual-development palette, not a second
+playbook. These are selectable treatments, not compulsory overlays or a claim
+that a renderer/model already implements them. For every activated effect,
+require appearance/material/color, density/intensity/scale and emission versus
+reflection intent in addition to the existing route/timing/motion/depth/
+occlusion/light/shadow/fallback fields. Link active frame intervals to these
+canonical effect cues, including timed starts/stops and overlapping particles.
+Neon/emissive dust needs an explicit spill/shadow decision; a glow halo does
+not prove relighting. Actual supported model/editor tests remain separate.
+
+### Implementation and compatibility
+
+1. Add `validateFramePlan` to the workflow contract. Read-only validation may
+   inspect legacy packets without this new field; if present, validate it.
+   New preproduction advancement and every paid-generation preflight require
+   the complete plan, including direction and character-design requirements.
+   Validate scene/motion helpers too so calling a different helper cannot
+   bypass the planning check. Reuse existing consent, hash, budget and owner gates.
+2. Before first generation, accept a complete provisional plan using intended
+   identities and planned states, without requiring nonexistent generated IDs.
+   After actual cast/scenes, reconcile the same plan with real accepted assets
+   and obtain the existing design lock before motion. No circular requirement
+   that motion exist before its own planning gate can pass.
+3. Keep the plan inside `productionDraft` so existing production fingerprints,
+   stale-packet rejection and review invalidation apply. A design/beauty change
+   is not an organization-only change; renew affected approval, no blanket reroll.
+4. Update all four existing example packets coherently, not by inserting
+   placeholders or inventing media acceptance. Keep scene/story differences
+   and explicit quiet/poetry/comedy possibilities. New expectations do not
+   retroactively describe how historical assets were generated.
+5. Upgrade the coordinated production bundle's frame script to include the
+   full resolved requirements, source revision and same shared timeline.
+   Link root AGENTS/instructions, studio/production-direction skills and
+   workflow/visual/bundle docs; do not create a second canonical playbook.
+6. Add focused regressions for missing/incomplete plans, coverage and reference
+   errors, action-state/camera/lighting/character-design omissions, unknown
+   effects, stale revision, consent remaining closed, and complete valid lane-
+   specific examples. Verify read-only legacy inspection still works but new
+   paid/preproduction operations cannot silently bypass the gate.
+7. Run scoped tests and required syntax/project validation; use existing full
+   suite approval for short local regressions, no paid media calls. Preserve
+   concurrent source deltas and report exact tested/untested scope. A critic
+   PASS for the plan is not a film/beauty/entertainment PASS.
+
+### Critic and reconciliation
+
+First critic: REVISE, one substantive finding. A known beat/effect ID can still
+refer to the wrong time. Reconciled above: one quantization policy, stable beat
+IDs, temporal containment and resolved overlapping cue timing. Add regressions
+for a known-but-wrong beat, inactive effect, overlapping sounds, fractional
+boundaries, unchanged hold and exact last-frame coverage. The critic otherwise
+accepted the provisional gate, action states, beauty and legacy safety scope.
+
+Follow-up critic: PASS for revised section 9, plan only. Timing repair and the
+explicit VFX palette/controls resolved the finding; no remaining substantive
+plan correction. No implementation, film, beauty or effect performance was
+verified by this critic. Implementation proceeds against this reconciled scope.
+
+### Execution evidence
+
+Implemented the reconciled scope in workflow validation, paid/reference
+preflights, resolved bundle exports and all four example packets. Character
+reviews now bind the new beauty designs without changing legacy review hashes
+when no frame plan exists. Original accepted media and the producer's manifest
+were not migrated, reapproved or regenerated.
+
+Added the 14-treatment inspectable `film effects` palette and documented
+glitter/sparkle dust, neon glow/trails, golden butterflies/dust and sakura
+petals/flower dust with appearance, density, intensity, scale, light mode,
+depth/occlusion/spill/shadow and fallback controls. Updated root instructions,
+studio/direction skills, visual reviewer and existing workflow/bundle/coverage
+playbooks. This adds planning capability, not a particle renderer.
+
+Validation: the shared working tree passed 78 tests, including four unrelated
+concurrent transcription tests. A separately restored exact session-only staged
+source then passed **74 tests, zero failures/skips**, with real synthetic FFmpeg
+checks enabled, syntax checks and project validation (41 scenarios, four
+packets). Targeted regressions cover complete/legacy gates for all generation
+kinds, coverage errors, wrong-time known IDs, malformed canonical effects,
+overlapping sounds, fractional/collapsed cues, quiet holds, stale beauty approval
+and fully resolved department exports. Whitespace checks passed.
+
+Persistence scope is 23 explicitly selected source/documentation files over the
+committed coordinated-production baseline; unrelated transcription/reverse-
+engineering changes remain excluded. Actual effect demonstrations, capable
+playback/listening, phone/enjoyment review and personal final acceptance remain
+separate production gates. No paid call, upload or publication occurred here.
