@@ -2,8 +2,9 @@
 
 Verified 30 October 2026 against live OpenArt catalog/forms/quotes and the official
 PixVerse references below. This is a conservative pilot policy, not proof that a
-valid request will render well or never fail. The first cast-image request failed
-with an upstream Google quota/rate-limit error; no creative output was produced.
+valid request will render well or never fail. The initial Google cast request and
+one recovery retry failed upstream quota; a researched Wan provider alternative
+then produced the first actual cast image. User character approval is pending.
 Account identity and balance must not be copied into this public document.
 
 ## Live wrapper constraints
@@ -12,6 +13,7 @@ Account identity and balance must not be copied into this public document.
 |---|---|---|
 | Nano Banana 2 text2image | imageCount 1-8; 1K/2K/4K; 9:16 supported; no exposed prompt maximum | One 1K portrait image per request, autoEnhancePrompt false |
 | Nano Banana 2 image2image | Same output options; 1-14 genuine visualReferences required | Reference the accepted original cast/composition, not independent text-only redraws |
+| Wan 2.7 Image text2image / image2image | prompt <=5000; imageCount 1-8; 9:16; 1K/2K/4K; params.mode standard/pro; thinkingMode; image2image needs 1-9 genuine references | Actual cast used pro, 4K, count 1, thinkingMode false; guided scenes need their own approved source and quote |
 | PixVerse V6 image2video | 1-15s; 360p/540p/720p/1080p; prompt 1-5000 chars; count 1-8; required startFrame; optional endFrame; generateAudio | One 5s / 720p clip, actual accepted start AND end frame; explicit audio flag |
 | Seedance Mini image2video | 4-15s; 480p/720p; prompt <=30000; count 1-8; portrait supported; required startFrame; optional endFrame | Costed alternative, not an automatic fallback |
 
@@ -43,6 +45,13 @@ Until the wrapper's routing is observed, keep every pilot motion prompt
    neither dimension >10000 pixels. These are vendor upload constraints, not a
    verified guarantee of OpenArt's internal importer. Prefer ordinary small
    PNG/JPEG outputs; exact model-specific minimum dimensions are not established.
+   The actual Wan 4K-mode cast PNG was 3056x5432 and 22,631,072 bytes: above
+   PixVerse's documented endpoint size limit. A free full-size JPEG conversion
+   was 1,853,801 bytes; a smaller viewing preview was also made. Preserve original
+   bytes/job hash and record each derivative's source hash and transform. Do not
+   label converted bytes as the provider's original output or regenerate good
+   identities just to change file size. The cast is not a literal video endpoint;
+   check the destination model's constraints and applicable upload approval.
 6. Confirm actual provider references are accessible immediately before quoting
    and submission. A filename, thumbnail, expired URL or invented label/ID is not
    a valid reference. Refresh metadata, not generation, if a URL expires.
@@ -70,19 +79,22 @@ is rounded per unit: floor(list * 0.9 + 0.5), then quantity.
 | Item | Settings | Current discounted attempt |
 |---|---|---|
 | Original/guided still | Nano Banana 2, one 1K / 9:16 | 18 credits |
+| Original cast alternative | Wan 2.7 Image Pro, text2image, one 4K / 9:16, thinkingMode false | 14 credits |
 | Silent clip | PixVerse V6, one 5s / 720p, audio false | 63 credits |
 | Native-audio clip | Same, audio true | 81 credits |
 | Native alternative | Seedance Mini, one 5s / 720p / 9:16, audio true | 180 credits |
 
-For `a-seat-for-dad`, the current separate cast plus four scene endpoints means
+For `a-seat-for-dad`, the original all-Nano-Banana-2 planning baseline means
 **five images = 90 credits**. The unchanged 10s draft is **90 + 126 = 216**
 silent or **90 + 162 = 252** with PixVerse native audio. One repaired frame plus
 one repaired native clip adds 99, giving **351**; the old proposed 350 cap would
-not cover that full reserve. No overall production budget is approved. The earlier 198/234 totals
-assumed four total images and are superseded, not actual charges.
+not cover that full reserve. No overall production budget is approved. The earlier
+198/234 totals assumed four total images and are superseded, not actual charges.
+The actual cast used Wan instead. These baseline totals are not the current
+remaining budget; re-quote guided scenes after user acceptance of the cast.
 
-Start with only the character image (18). If cast/scale/style is wrong, diagnose
-before spending on remaining frames. Stop if the correction is not understood.
+Start with only the character image at its current quote. If cast/scale/style is
+wrong, diagnose before spending on remaining frames. Stop if the correction is not understood.
 All endpoints must pass before motion. Repair only a diagnosed failure within
 the specifically approved scope; no blind or repeated reroll.
 
@@ -91,8 +103,8 @@ the specifically approved scope; no blind or repeated reroll.
 The live PixVerse V6 form permits integer durations from 1 to 15 seconds; five
 seconds is a default, not a minimum or a mandatory editing block. Same-day
 configuration quotes for one 720p silent clip were 42 list / 38 discounted
-credits at 3s, 56 / 50 at 4s and 70 / 63 at 5s. With the current five 18-credit
-images, 5s+3s costs an estimated 191, 5s+4s 203 and 5s+5s 216 before repairs.
+credits at 3s, 56 / 50 at 4s and 70 / 63 at 5s. For the original five-image Nano
+Banana 2 baseline, 5s+3s costs an estimated 191, 5s+4s 203 and 5s+5s 216 before repairs.
 Earlier 173/185/198 alternatives used only four images and are superseded.
 
 A shorter reaction is a proposed pacing alternative, not a proven improvement.
@@ -122,8 +134,14 @@ than assuming the model obeys timestamps. Audio-enabled costs differ.
   ended with HTTP 429 `RESOURCE_EXHAUSTED`, reported as `1006: rate_limit`.
   This is not a prompt/schema rejection or proof that the user's credits ran out.
   Record the terminal job and net balance observation; do not claim a refund
-  without refund evidence. No automatic retry or model fallback. A new paid step
-  needs an applicable fresh quote and authorization.
+  without refund evidence. Do not confuse an operator's one-attempt plan with a
+  user-imposed retry prohibition. An authorized bounded recovery may include one
+  unchanged-request retry after backoff, terminal-state confirmation, debit
+  reconciliation and a fresh quote within the remaining step budget. If the
+  same provider fails again, research an appropriate different provider rather
+  than blindly looping: check its live form, price, future reference support and
+  scope before one deliberate fallback. The per-request ceiling is not an
+  unlimited retry budget. Preserve every actual attempt.
 - **Moderation:** ordinary, clothed, fictional father/son; no real-person likeness,
   unsafe/graphic transformation, sexual content, logos or copyrighted soundtrack.
   A benign prompt is not a guarantee of acceptance. Never evade moderation.
@@ -149,12 +167,17 @@ test. The original father/son pilot does not pretend to adapt unseen source shot
 
 The user requested regeneration through the iterative flow and set a per-request
 credit ceiling. The father-son pilot was selected unrated for provisional
-preproduction, not final scene/design approval. One 18-credit-quoted cast request
-was submitted and reached a terminal upstream quota failure. The actual historyId,
-request fingerprint, error and balance reconciliation are recorded privately.
-No creative image/video exists; no upload, retry or publication occurred.
-Character/user approval, scenes and design lock remain pending. Full playback/
-listening and actual audience response remain untested.
+preproduction, not final scene/design approval. The initial cast request and one
+controlled retry both reached terminal Google quota failures. A fresh-quoted Wan
+2.7 Image Pro alternative then completed the same cast prompt within the original
+step budget. Actual historyIds, fingerprints, failures, completed output/hash,
+real provider reference, derivative lineage and debit reconciliation are private.
+The full image and native-detail face/hand crops were inspected: identity/wardrobe
+review passed with a visible softbox and facial-light-direction caveat, not a
+scene-lighting pass. The user feedback form returned unavailable. No human cast
+approval was recorded and no scene image, video, upload or publication occurred.
+The real scene gate was checked and correctly blocked missing `characters-user`
+approval. Full playback/listening and audience response remain untested.
 
 Validation passed: syntax checks, 51 tests with zero skips (including real FFmpeg
 smoke), 41-scenario/four-packet project validation and whitespace checks. The two

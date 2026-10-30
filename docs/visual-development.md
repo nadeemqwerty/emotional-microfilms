@@ -1,8 +1,10 @@
 # Iterative visual development: real cast, real scenes, then motion
 
 The earlier four-panel preview was a blocking sketch, not production keyframes.
-No creative image/video has been generated. A diagram can explain geography but
-cannot establish faces, wardrobe, materials, lighting quality or usable references.
+The first actual cast image now exists and has an identity-only operator review;
+user approval is pending. No scene images or video exist. A diagram can explain
+geography but cannot establish faces, wardrobe, materials, lighting quality or
+usable references.
 Do not present it as a substitute for the actual images the user must review.
 
 ## Required sequence and review stops
@@ -26,6 +28,11 @@ older scene-oriented `identityBible.anchorPrompt` study. A neutral cast referenc
 is NOT the film's first frame. Pair references can save credits only if both faces,
 wardrobe and scale are readable; otherwise propose separate references and quote
 the additional work. Changing a story location need not mean regenerating good cast.
+The actual first cast take includes a visible studio softbox and a facial-key
+direction that does not fully match the prompt. Those are reference-background
+caveats, not approved scene design. Preserve accepted faces, hair, wardrobe and
+scale only; explicitly exclude studio equipment and relight the actual location.
+User character acceptance remains independent of this operator assessment.
 
 The first scene uses accepted character references. Later scene images also use
 accepted geometry/prop references where useful. Preserve faces/wardrobe, but

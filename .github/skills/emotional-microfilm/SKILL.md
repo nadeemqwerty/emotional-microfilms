@@ -37,6 +37,11 @@ There is deliberately no autonomous generation controller. Use live Agency tools
 only after the user approves an exact request or bounded batch and credit ceiling.
 Record the quote, request fingerprint, consent and returned historyId immediately.
 Resume an existing job; a timeout is not permission to submit it again.
+Authorization may cover a bounded recovery sequence; do not mistake an
+operator-imposed one-attempt plan for a user-imposed retry ban. For an authorized
+recovery, check terminal status, backoff, net debit, fresh exact quote and remaining
+step budget. One controlled retry and a researched provider alternative are not
+permission for unlimited rerolls, creative variants or dependent scene spending.
 
 ## The working loop
 

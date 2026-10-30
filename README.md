@@ -6,9 +6,11 @@ scored shortlisting, user decisions, complete prompt packets, model-cost evidenc
 and hash-bound production reviews.
 
 **Current state:** research and preproduction tooling, not a finished film.
-The father-son pilot is provisionally selected. Its first cast-image attempt failed
-with an upstream quota error; no creative asset or video was produced. No uploads
-or posts made. Actual job and balance reconciliation stay in the private workspace.
+The father-son pilot has its first actual cast-reference image, generated with
+Wan 2.7 Image Pro after an initial Google quota failure and one failed recovery
+retry. Identity-only visual review is recorded with background/lighting caveats;
+user character approval is pending. No scene images, video, uploads or posts.
+Actual media, job IDs and balance reconciliation stay in the private workspace.
 Synthetic tool-test fixtures are not creative reference analyses or films.
 The existing InterviewReel repository is untouched.
 Three independent AI critic lenses passed the earlier scoped preproduction baseline.
