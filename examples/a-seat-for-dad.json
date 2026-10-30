@@ -1,58 +1,153 @@
 {
   "schemaVersion": 1,
   "scenarioId": "a-seat-for-dad",
-  "seconds": 10,
+  "seconds": 13,
   "aspectRatio": "9:16",
   "generationApproved": false,
-  "status": "Reusable unapproved template matching the Korean toddler/30s father silent pilot. Actual media, delegated decisions and credits are private; this file grants no spending or publication approval.",
-  "intendedInterpretation": "A toddler invites Dad to sit beside him; care can travel in both directions.",
+  "status": "Unapproved reusable template for the revised visible-sitting/sound pilot; private media and delegated decisions are not spending authorization.",
+  "intendedInterpretation": "A toddler invites Dad to sit beside him; care travels in both directions through one small gesture.",
   "characterPlan": {
-    "requiredIdentities": ["Minjun", "Junho"],
-    "references": [{"id": "cast", "covers": ["Minjun", "Junho"], "prompt": "Realistic casting reference, not a film scene or storyboard. Original fictional Korean toddler Minjun about two, soft short dark hair, round toddler face, rust-orange knitted sweater, beige trousers and small shoes. Beside him, fictional handsome Korean father Junho about 33, short black hair, clean-shaven, muted navy rolled-sleeve shirt and charcoal trousers. Separate relaxed full-body poses, readable faces and clothing, toddler head/body proportions, grounded feet. Plain neutral background, broad soft light and fill. No celebrity likeness, bench, rain, effects, studio equipment, text, collage, extra person or physical contact."}]
+    "requiredIdentities": [
+      "Minjun",
+      "Junho"
+    ],
+    "references": [
+      {
+        "id": "cast",
+        "covers": [
+          "Minjun",
+          "Junho"
+        ],
+        "prompt": "Photorealistic live-action casting reference for two original fictional Korean characters, not an illustration, collage or film scene. One vertical 9:16 full-body image. Screen-left: Minjun, a clearly TWO-YEAR-OLD Korean toddler boy with a round toddler face, soft short dark hair, natural toddler head-to-body proportions and short little legs, wearing a plain rust-orange knitted sweater, beige trousers and small unbranded shoes. He must look about two, not a school-age child. Screen-right: his father Junho, a handsome Korean man about 33, youthful adult features, neatly styled short black hair, clean-shaven, wearing a plain muted navy shirt with sleeves rolled to his forearms, charcoal trousers and simple unbranded shoes. Natural adult-toddler height difference. Relaxed separate standing poses close enough for a safe family portrait, both faces and complete bodies visible; calm gentle expressions, no exaggerated grin. Original faces, no requested celebrity or real-person likeness. Natural skin texture and believable anatomy. Plain warm-gray seamless background, broad soft OFF-CAMERA daylight and gentle fill, grounded soft contact shadows beneath the feet. No lighting equipment visible, no softbox, bench, coat, rain, glow, extra people, physical embrace, writing, labels, logos or panels. This establishes faces, relative age, scale and wardrobe only; later scenes will be separately staged and lit."
+      }
+    ]
   },
   "hookPlan": {
-    "firstFrame": "Toddler left with jacket on lap; Dad stands right beside an empty seat.",
-    "firstMotion": "One small inviting hand gesture and upward look; rain remains secondary.",
+    "firstFrame": "Toddler left with jacket on lap, Dad standing right beside an empty seat.",
+    "firstMotion": "Trim one second from the old opening pause; the toddler begins his upward look and invitation sooner.",
     "inspectSeconds": 1,
     "question": "Will Dad accept the little invitation?",
-    "payoff": "Dad is seated beside his son after the deliberate cut; they share a small familiar smile.",
-    "test": "Inspect actual opening, gesture and response muted at phone size. A quiet hook is a hypothesis, not a measured reduction in swiping."
+    "payoff": "Dad physically accepts the invitation by sitting beside the toddler, then they share a small familiar smile.",
+    "test": "Check the real opening, hand/seat visibility and shared response muted at phone-size."
   },
-  "sceneChanges": [{"at": 5, "fromShot": "a", "toShot": "b", "type": "ellipse", "informationChange": "Omit sitting and reveal Dad already accepting the toddler invitation; preserve the camera axis.", "lightingChange": "None: cloudy right-side key, shelter fill and exposure remain consistent."}],
+  "sceneChanges": [
+    {
+      "at": 4,
+      "fromShot": "a",
+      "toShot": "sit",
+      "type": "match-cut",
+      "informationChange": "Continue from the invitation into the visible turn-and-sit, not a time ellipse.",
+      "lightingChange": "None; preserve cloudy key, shelter fill and exposure."
+    },
+    {
+      "at": 9,
+      "fromShot": "sit",
+      "toShot": "b",
+      "type": "match-cut",
+      "informationChange": "Continue the already visible seated settle into the familiar response.",
+      "lightingChange": "None; no source or exposure change."
+    }
+  ],
   "atmospherePlan": {
-    "motionBudget": "One small invitation gesture, then tiny expression changes; secondary rain only.",
+    "motionBudget": "Toddler invitation, then one controlled adult turn-and-sit; tiny expression changes and secondary rain.",
     "omissionRationale": "Grounded baseline, not a rule against beauty. A golden-butterfly, sakura or autumn variant needs user style choice, revised scene images and a coherent season/light plan before it is activated.",
-    "effects": [{"id": "rain", "route": "in-generation", "shotIds": ["a", "b"], "from": 0, "to": 10, "referenceFrameIds": ["a-start", "a-end", "b-start", "b-end"], "purpose": "Establish a rainy pause and sheltered shared space without competing with the invitation.", "depth": "Outside the shelter, primarily behind the cast and seat.", "motion": "Low-density gentle downward rain, stable direction and scale.", "occlusion": "Keep faces, small hand and indicated seat readable.", "lightInteraction": "Soft cloudy highlights on damp material; no arbitrary glow or exposure jump.", "shadowInteraction": "Diffuse grounding persists; small streaks do not cast large hard shadows.", "continuity": "Consistent rain perspective and direction across the cut.", "fallback": "Reduce rain before motion if it obscures the action; do not rerender accepted motion solely to decorate it."}]
+    "effects": [
+      {
+        "id": "rain",
+        "route": "in-generation",
+        "shotIds": [
+          "a",
+          "sit",
+          "b"
+        ],
+        "from": 0,
+        "to": 13,
+        "referenceFrameIds": [
+          "a-start",
+          "a-end",
+          "b-start",
+          "b-end"
+        ],
+        "purpose": "Establish a rainy pause and sheltered shared space without competing with the invitation.",
+        "depth": "Outside the shelter, behind the cast and important seat evidence.",
+        "motion": "Low-density gentle downward rain, stable direction and scale.",
+        "occlusion": "Keep rain behind the shelter, off both faces and the small hand/empty-seat evidence.",
+        "lightInteraction": "Soft cloudy highlights on damp material; no arbitrary golden glow or exposure jump.",
+        "shadowInteraction": "Diffuse contact shadows persist; tiny rain streaks do not cast large hard shadows.",
+        "continuity": "Same rain perspective, rate and direction across the cut.",
+        "fallback": "Reduce rain density before motion if it competes with the reveal; never rerender good motion solely to decorate it."
+      }
+    ]
   },
   "pacing": {
     "structure": "connection",
-    "hypothesis": "A readable toddler invitation and restrained familiar response can carry ten seconds without dialogue.",
+    "hypothesis": "A shorter opening pause, visible physical acceptance and continuous music/rain can make the care gesture feel organic; actual user judgment is required.",
     "hook": "The toddler notices Dad standing beside the empty seat and invites him closer.",
-    "revealEvidence": "The toddler looks up and indicates the empty seat; the cut shows Dad accepting the invitation.",
+    "revealEvidence": "The small invitation is answered by Dad visibly turning and lowering onto the bench, followed by mutual attention.",
     "beats": [
-      {"start": 0, "end": 1.5, "phase": "setup", "job": "Read toddler, standing Dad, jacket on lap and empty place."},
-      {"start": 1.5, "end": 3.5, "phase": "anticipation", "job": "One short inviting hand gesture and upward look."},
-      {"start": 3.5, "end": 5, "phase": "reveal", "job": "The invitation remains readable; Dad notices."},
-      {"start": 5, "end": 7.5, "phase": "response", "job": "Dad is already seated after the ellipse; mutual attention registers."},
-      {"start": 7.5, "end": 10, "phase": "hold", "job": "Small familiar smiles settle without a new gesture or event."}
+      {
+        "start": 0,
+        "end": 0.5,
+        "phase": "setup",
+        "job": "Read toddler, Dad and empty seat."
+      },
+      {
+        "start": 0.5,
+        "end": 2,
+        "phase": "anticipation",
+        "job": "Small upward look and hand invitation."
+      },
+      {
+        "start": 2,
+        "end": 4,
+        "phase": "reveal",
+        "job": "Invitation remains clear as Dad prepares to accept."
+      },
+      {
+        "start": 4,
+        "end": 9,
+        "phase": "response",
+        "job": "Dad naturally turns, bends, sits and settles in continuous motion."
+      },
+      {
+        "start": 9,
+        "end": 13,
+        "phase": "hold",
+        "job": "Mutual attention and small smile; score resolves without a new action."
+      }
     ],
-    "cutReasons": ["At 5s omit sitting/contact mechanics and direct attention to the father's response; retain the bench axis and light."],
+    "cutReasons": [
+      "At 4s join matching standing poses to show the full sitting action.",
+      "At 9s join matching seated poses to continue the shared response; continuous sound across both joins."
+    ],
     "actualEventTimes": null,
     "review": "pending"
   },
   "identityBible": {
-    "Minjun": "Original fictional Korean toddler about two, round toddler face, soft short dark hair, rust sweater, beige trousers and small shoes. Short toddler limbs and natural large head/body proportion. Bench supports his back; feet dangle; father within reach.",
-    "Junho": "Original fictional handsome Korean father about 33, clean-shaven, short black hair, muted navy rolled-sleeve shirt and charcoal trousers. Same accepted face and wardrobe; no celebrity likeness.",
-    "props": "One matte olive jacket on the toddler lap, one wooden bench with backrest, one modest park shelter. No bags, writing, studio equipment or extra people.",
-    "anchorPrompt": "Use the separately accepted cast reference for exact toddler/father identities and wardrobe. Literal 9:16 rainy park-shelter opening: toddler left on a wooden bench, jacket on his own lap under his hands, supported back and dangling feet; Dad standing right within reach beside the empty seat. Natural perspective, both faces and seat readable, soft cloudy off-camera-right light, shelter fill and grounded shadows. Quiet expression, no text, collage, contact, extra person or added effect."
+    "Minjun": "Original fictional Korean toddler about two, round toddler face, soft short dark hair, rust-orange knitted sweater, beige trousers and small shoes. Short toddler limbs and natural large head-to-body proportion. Bench supports his back; feet dangle. Father remains within reach.",
+    "Junho": "Original fictional handsome Korean father about 33, clean-shaven, short neatly styled black hair, muted navy shirt with rolled forearm sleeves, charcoal trousers, plain shoes. Same face and wardrobe as the accepted new cast reference; no celebrity likeness requested.",
+    "props": "One lightweight matte olive jacket, one straight three-board wooden bench with a backrest, one modest park shelter. No readable writing, studio equipment, extra people or bags.",
+    "anchorPrompt": "Use the accepted actual opening scene: same Korean toddler Minjun seated LEFT under the park shelter, short legs dangling and one olive jacket already on his own lap under both little hands. His same clean-shaven Korean father Junho in his 30s stands RIGHT beside the empty bench place, within reach. Preserve the actual camera, diagonal wooden bench and backrest, rust/beige and navy/charcoal wardrobe, soft overcast light and quiet background rain. This is the readable setup before a small hand-to-seat invitation, not a jacket-lifting scene. No studio equipment, extra person, text or body contact."
   },
   "continuity": {
-    "geography": "Minjun left, Junho right. Camera stays on the path side of the bench axis.",
-    "propOwnership": "One olive jacket stays on the toddler lap. His bench-side hand briefly indicates the seat, then returns to his lap across the edit. Father never takes the jacket.",
-    "light": "Broad soft cloudy daylight from camera-right; no material-dryness reveal or new spotlight.",
-    "match": "Dad is standing before the cut and already seated afterward. Sitting is an ellipse, not a generated transformation.",
-    "mustNotChange": ["faces and toddler scale", "rust/navy wardrobe", "screen sides", "bench axis", "one jacket on toddler lap", "soft overcast light"],
-    "intentionalChanges": ["one small hand invitation", "father already seated after the cut", "tiny expression changes"]
+    "geography": "Minjun is always screen-left; Junho is always screen-right. Camera stays on the path side of the bench axis. Both faces and the seat remain readable.",
+    "propOwnership": "One olive jacket stays on the toddler lap in all frames. His bench-side hand briefly indicates the seat, then returns to his lap across the deliberate edit. Father never takes the jacket.",
+    "light": "Soft cloudy off-camera-right light and shelter fill remain consistent; no invented spotlight or material-dryness reveal.",
+    "match": "Sitting is shown as one continuous physical action, never hidden by a standing-to-seated cut. Match accepted endpoint poses at both boundaries; preserve axis, bench and light.",
+    "mustNotChange": [
+      "faces and toddler scale",
+      "rust/navy wardrobe",
+      "screen sides",
+      "bench axis",
+      "one jacket on toddler lap",
+      "soft overcast light"
+    ],
+    "intentionalChanges": [
+      "one toddler invitation",
+      "father visibly turns, lowers and sits",
+      "toddler hand returns to lap during the bridge",
+      "small mutual expressions"
+    ]
   },
   "lightingPlan": {
     "motivation": "Broad cloudy daylight entering the shelter, slightly stronger camera-right.",
@@ -60,53 +155,119 @@
     "fill": "Gentle ambient shelter bounce keeps both faces, hands and seat legible without an opposing hard shadow.",
     "exposurePriority": "Both faces, small hand and indicated empty seat remain readable without a spotlight.",
     "shadowMap": [
-      {"caster": "toddler, father and jacket", "receiver": "bench and ground", "behavior": "Soft contact grounding; no detached or sharply moving silhouette."},
-      {"caster": "small hovering hand", "receiver": "bench", "behavior": "Plausible soft nearby shadow; no required flat-palm contact or new source."}
+      {
+        "caster": "boy, father and coat",
+        "receiver": "bench and ground",
+        "behavior": "Soft contact grounding; no detached or sharply moving silhouette."
+      },
+      {
+        "caster": "small hovering toddler hand",
+        "receiver": "bench",
+        "behavior": "Soft plausible nearby shadow, not a required flat-palm contact or new light source."
+      }
     ],
-    "invariants": ["cloudy source direction", "soft edges", "shelter fill", "steady exposure", "rain perspective"],
-    "intentionalChanges": ["None; light remains consistent across invitation and response."],
+    "invariants": [
+      "cloudy source direction",
+      "soft edges",
+      "shelter fill",
+      "steady exposure",
+      "rain perspective"
+    ],
+    "intentionalChanges": [
+      "None; lighting remains consistent across the invitation and response."
+    ],
     "review": "pending"
   },
   "keyframes": [
     {
       "id": "a-start",
-      "prompt": "Use the accepted Korean toddler/father cast for exact faces and rust/beige and navy/charcoal wardrobe. Literal 9:16 park-shelter opening: Minjun about two seated left, supported back and dangling feet, one olive jacket on his own lap under both hands. Junho about 33 stands right within reach beside an empty seat. Locked natural perspective, both faces/hand/seat readable, soft cloudy right-side light, shelter fill and grounded shadows; gentle rain outside. No extra person, studio prop, text, collage, contact or jacket over the empty seat."
+      "prompt": "Use the accepted actual opening scene: same Korean toddler Minjun seated LEFT under the park shelter, short legs dangling and one olive jacket already on his own lap under both little hands. His same clean-shaven Korean father Junho in his 30s stands RIGHT beside the empty bench place, within reach. Preserve the actual camera, diagonal wooden bench and backrest, rust/beige and navy/charcoal wardrobe, soft overcast light and quiet background rain. This is the readable setup before a small hand-to-seat invitation, not a jacket-lifting scene. No studio equipment, extra person, text or body contact."
     },
     {
       "id": "a-end",
-      "prompt": "Use accepted cast and a-start as strict identity/composition references. Same toddler left and standing father right. Jacket remains on toddler lap under one hand; his other small hand hovers toward the adjacent empty seat as an invitation, and he looks up at Dad. Preserve toddler scale, exact wardrobe, camera, bench geometry, cloudy light and rain. No required palm contact, jacket lift, sitting, contact, duplicated object, tears, text or new person."
+      "prompt": "Image 1 supplies the exact Korean toddler/father faces and wardrobe; Image 2 is the STRICT accepted opening-scene camera, bench, shelter and scale reference. Make only one small invitation gesture. Toddler Minjun stays seated LEFT with dangling feet and the single olive jacket STILL ON HIS LAP. His bench-side hand now reaches a SHORT distance to rest palm-down on the EMPTY WOODEN SEAT immediately to his RIGHT, a clear little pat inviting Dad to sit. His other hand stays on the jacket. The toddler looks UP toward Dad with a small inviting expression; father Junho remains STANDING RIGHT and notices the hand/empty place. Keep that hand and seat visible, not hidden behind Dad. Preserve the same diagonal bench, background, natural proportions, navy rolled sleeves, rust knit, soft overcast right-side light and restrained rain behind the shelter. No jacket movement, sitting, spotlight, body contact, text, extra person, studio gear or camera change."
     },
     {
       "id": "b-start",
-      "prompt": "Use accepted cast and a-end for identities and continuity. Literal first frame after the deliberate cut: Minjun left with dangling feet and the single jacket on his lap under both hands. Junho ALREADY SEATED right, hands separately on his own knees, looking warmly down at his son. Same portrait bench axis, wardrobe, camera, soft cloudy light and rain. No animated sitting, contact, embrace, new object, text or extra person."
+      "prompt": "Image 1 is the exact Korean toddler/father cast; Image 2 supplies the accepted shelter, diagonal bench and olive-jacket continuity. Literal frame AFTER an editorial cut that skips sitting. Photorealistic 9:16 medium two-shot from the SAME front/path side, slightly tighter. Toddler Minjun sits LEFT against the backrest, short legs dangling, rust sweater and beige trousers unchanged, the single olive jacket on his own lap with both hands resting there again. Handsome Korean father Junho about 33 is ALREADY SEATED RIGHT in the place the toddler indicated, same clean-shaven face, navy rolled sleeves and charcoal trousers; his hands rest separately on his own knees. Comfortable family distance, no overlapping bodies. Both faces visible: Dad begins a small head turn toward his son; toddler begins to look up at Dad. Preserve bench axis, wood, soft cloudy right-side lighting and gentle rain behind the shelter. No sitting motion, hug, hand contact, text, extra person or studio equipment."
     },
     {
       "id": "b-end",
-      "prompt": "Use accepted cast and b-start as strict identity/composition references. Same seated toddler left and father right, one jacket on toddler lap beneath both hands, father hands on his own knees. Tiny completed expression change and small familiar mutual smile, not a broad grin. Preserve toddler age/scale, father 30s face, wardrobe, camera, bench, soft cloudy right-side light and rain. No hug, tears, overlap, new object, text or extra person."
+      "prompt": "Image 1 supplies exact Korean toddler/father identities; Image 2 is the STRICT b-start scene composition reference. Change only a small completed head turn and gentle expression. Same 9:16 seated two-shot: toddler Minjun LEFT with dangling feet, rust sweater, beige trousers and the single olive jacket on his own lap under both hands. Father Junho ALREADY SEATED RIGHT, same handsome clean-shaven 30s face, navy rolled sleeves and hands separately on his own knees. They now look toward each other and share a small warm familiar smile, not a wide grin. Toddler remains clearly about two, with toddler head/body proportions; do not age him up. Preserve exact bench, camera position, body scale, jacket, soft cloudy off-camera-right light, contact grounding and quiet rain outside the shelter. No embrace, tears, large gesture, leaning overlap, new object, text, studio equipment or added person."
     }
   ],
   "shots": [
     {
-      "id": "a", "start": 0, "end": 5, "startFrameId": "a-start", "endFrameId": "a-end",
-      "modelCandidate": "pixverseV6", "mode": "image2video",
-      "paramsToQuote": {"duration": 5, "resolution": "720p", "generateAudio": false, "videoCount": 1},
-      "prompt": "Animate actual accepted a-start toward actual accepted a-end over five seconds. Locked portrait bench shot: Korean toddler Minjun left, father Junho standing right within reach. Jacket stays on toddler lap. After a short readable pause, toddler lifts his bench-side hand toward the empty seat and looks up at Dad: ONE small invitation. Other hand stays on jacket. Finish in the actual endpoint pose with hand hovering toward the seat; hold. Preserve identities, toddler scale, wardrobe, bench, soft cloudy right-side light and gentle rain. No forced palm contact, jacket lift, sitting, camera move, body contact, repeated wave, morph, added person, speech or text. Check actual timing."
+      "id": "a",
+      "start": 0,
+      "end": 4,
+      "startFrameId": "a-start",
+      "endFrameId": "a-end",
+      "modelCandidate": "pixverseV6",
+      "mode": "image2video",
+      "paramsToQuote": {
+        "duration": 5,
+        "resolution": "720p",
+        "generateAudio": false,
+        "videoCount": 1
+      },
+      "prompt": "Animate the actual accepted start image toward the actual accepted end image over five seconds. Locked portrait bench shot: Korean toddler Minjun seated LEFT with dangling feet; father Junho STANDING RIGHT within reach. The single olive jacket stays on the toddler lap throughout. After a brief readable pause, the toddler makes ONE short inviting gesture: his bench-side hand lifts from his lap and indicates the EMPTY SEAT beside him to his RIGHT, while he looks up at Dad. His other hand stays on the jacket. Dad only notices the little invitation. Finish in the actual end-image pose, with the small hand hovering toward the seat, and hold the look. Preserve exact faces, toddler proportions, rust sweater, navy rolled sleeves, jacket, bench geometry, soft overcast right-side light and restrained background rain. No forced hand-to-seat contact, jacket lift, sitting, camera move, body contact, repeated waving, morph, extra person, speech or text."
     },
     {
-      "id": "b", "start": 5, "end": 10, "startFrameId": "b-start", "endFrameId": "b-end",
-      "modelCandidate": "pixverseV6", "mode": "image2video",
-      "paramsToQuote": {"duration": 5, "resolution": "720p", "generateAudio": false, "videoCount": 1},
-      "prompt": "Animate actual accepted b-start toward actual accepted b-end over five seconds. Locked portrait camera. Same Korean toddler Minjun seated left with dangling feet and jacket on his lap under both hands. Same father Junho in his 30s ALREADY SEATED right, hands separately on his own knees. Maintain mutual gaze, tiny natural head/expression adjustments and small familiar smiles, then settle. Preserve identities, toddler scale, wardrobe, jacket, bench, soft cloudy light and gentle rain. No sitting action, jacket movement, hug, hand contact, large head turn, overlap, camera drift, added person, speech, text or new event."
+      "id": "sit",
+      "start": 4,
+      "end": 9,
+      "startFrameId": "a-end",
+      "endFrameId": "b-start",
+      "modelCandidate": "pixverseV6",
+      "mode": "image2video",
+      "paramsToQuote": {
+        "duration": 5,
+        "resolution": "720p",
+        "generateAudio": false,
+        "videoCount": 1
+      },
+      "prompt": "A single uninterrupted realistic five-second shot connecting these exact start and end images. Same fictional Korean toddler and handsome father in his 30s under the rainy wooden shelter. Locked portrait camera; no cut or dissolve. The father starts STANDING on the RIGHT of the toddler and naturally accepts the invitation: he makes a small turn so the bench is behind his hips, bends his knees and hips, lowers his weight smoothly onto the empty bench seat beside the child, then settles with both hands resting separately on his own knees as in the actual final reference. Show the complete physical action, including lowering and believable seat contact; do NOT teleport or fade between standing and seated. The toddler stays seated LEFT, looks up at Dad, retracts his little inviting hand onto the single olive jacket on his own lap and watches quietly. Preserve the same toddler face, short limbs and dangling feet, same adult face, rust/beige and navy/charcoal wardrobe, bench geometry, camera axis, soft cloudy daylight, contact shadows and restrained background rain. One controlled adult sitting action, normal weight and anatomy. No hand holding, hug, body collision, changed face, extra limbs, new person, dialogue, text, morph, camera zoom or new scene. End already seated with the final reference pose and a brief natural settle."
+    },
+    {
+      "id": "b",
+      "start": 9,
+      "end": 13,
+      "startFrameId": "b-start",
+      "endFrameId": "b-end",
+      "modelCandidate": "pixverseV6",
+      "mode": "image2video",
+      "paramsToQuote": {
+        "duration": 5,
+        "resolution": "720p",
+        "generateAudio": false,
+        "videoCount": 1
+      },
+      "prompt": "Animate the actual accepted b-start toward the actual accepted b-end over five seconds as a restrained warm response. Locked portrait camera. The same Korean toddler Minjun stays seated LEFT with dangling feet and the single olive jacket on his lap under both little hands. His same handsome Korean father Junho in his 30s is ALREADY SEATED RIGHT, hands separately on his own knees. They maintain their mutual gaze, make only tiny natural head/expression adjustments, soften into small familiar smiles and settle into the ending. Preserve both exact identities, toddler scale, rust/beige and navy/charcoal wardrobe, jacket, bench, broad soft overcast light and gentle rain behind the shelter. No sitting action, new jacket movement, hug, hand contact, large head turn, leaning overlap, camera drift, added person, dialogue, text or new event."
     }
   ],
-  "singlePassPrompt": "Planning only; never use text-only video to bypass actual accepted endpoints. Ten-second rainy-shelter scene: Korean toddler Minjun left, jacket on lap, invites standing father Junho with one small hand gesture toward the empty seat. Cut at five seconds to Dad already seated right. Mutual attention and small familiar smiles settle. Same cast, wardrobe, bench axis and soft cloudy right-side light. No animated sitting, jacket lift, contact, transformation, speech, text or extra person. Actual timing and emotional reading require inspection.",
+  "singlePassPrompt": "Planning only. Same Korean toddler and father: invitation, visible natural turn-and-sit, familiar response under a rainy shelter. Preserve actual cast and endpoint references; no text-only bypass, teleport, dissolve, camera move or contact-heavy embrace.",
   "soundPlan": {
-    "routeHypothesis": "silent",
-    "cues": [],
-    "musicBrief": "First prove the visual pilot silently. A later separately authorized comparison may use sheltered rain and an original restrained motif. No recognizable song, lyrics or invented standalone music endpoint.",
-    "rights": "No external recording selected or cleared. Native audio is a separately quoted option, not included or approved by this silent plan.",
-    "test": "Visual-first cold-viewer comprehension before music. Actual listening is mandatory before any native/separate-audio pass; stream metadata does not establish sound quality."
+    "routeHypothesis": "separate",
+    "cues": [
+      {
+        "from": 0,
+        "to": 13,
+        "sound": "Continuous restrained synthesized rain bed and original soft-keyboard instrumental; no speech."
+      }
+    ],
+    "musicBrief": "Original sparse warm keyboard arpeggios at 88 BPM, gentle evolving consonant harmony and final resolution. Continuous across edits, no famous melody, lyrics or old-song imitation.",
+    "rights": "New local synthesis from authored notes and deterministic noise, no external recordings, samples, copyrighted melody or paid music API.",
+    "test": "Verify actual audio stream, full duration, loudness, true peak, no clipping/dropouts and joins. Metering is not human listening; subjective sound approval remains pending."
   },
-  "retryPlan": "This public template grants no generation approval. Obtain bounded authorization and fresh live forms/quotes. Review real cast, then all four guided endpoints, then lock exact script/design before motion. Use genuine provider references, one active job at a time and the user-set 1000-credit whole-request cap. Reuse accepted assets; diagnose before any scoped repair. Record quotes, returned historyIds, derivatives, failed charges and actual net debit. Personal human review and explicit delegated agent decisions must remain distinct.",
-  "reviewChecks": ["All real endpoints precede motion", "Toddler scale and same father maintained", "One readable invitation; no required palm contact", "Jacket stays on lap", "Father right and toddler left", "Sitting omitted by edit", "Consistent light and grounding", "Small familiar response, not forced grin", "Actual event times recorded", "Frame review, human playback/phone checks and listening distinguished"]
+  "retryPlan": "Obtain scoped authorization, fresh live form and exact quote; use only genuine accepted references. One active job, 1000-credit whole-request cap, diagnose before repair, no blind rerolls. Review actual sitting motion, contact, boundaries and real sound; never substitute technical checks for subjective approval.",
+  "reviewChecks": [
+    "Real cast and all endpoints retained",
+    "Father visibly turns, lowers and makes seat contact",
+    "No standing-to-seated teleport or ghost dissolve",
+    "Boundary poses, bench axis and light match",
+    "Toddler remains supported and jacket on lap",
+    "Continuous music/rain present in actual export",
+    "Subjective listening and human response not inferred from meters"
+  ]
 }

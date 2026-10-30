@@ -483,14 +483,36 @@
       "failedGates": []
     },
     {
-      "id": "a-seat-for-dad", "title": "A Seat for Dad", "theme": "care returned", "lane": "emotion-led", "visualStyle": "grounded cinematic realism", "domain": "everyday parent-child kindness", "relationship": "fictional Korean father in his 30s and toddler son",
+      "id": "a-seat-for-dad",
+      "title": "A Seat for Dad",
+      "theme": "care returned",
+      "lane": "emotion-led",
+      "visualStyle": "grounded cinematic realism",
+      "domain": "everyday parent-child kindness",
+      "relationship": "fictional Korean father in his 30s and toddler son",
       "logline": "A toddler gestures toward the empty place beside him, inviting his rain-damp father to sit together.",
       "setup": "The toddler sits with a light jacket on his lap while his father stands beside the empty bench place.",
       "turn": "One small hand indicates the empty seat and the toddler looks up at Dad: a simple invitation.",
-      "landing": "Across a deliberate cut, father is already seated; they share a quiet familiar smile.",
-      "seconds": 10, "shots": 2, "risks": ["adult-toddler identity and scale", "small inviting hand gesture", "invitation legibility", "endpoint adherence", "audio interpretation untested"],
-      "feasibilityNote": "Toddler makes one short hand invitation toward the empty seat; jacket stays on his lap. Father stays within reach, feet dangle naturally from the supported bench seat. One locked setup and a matching response; no animated sitting, hand intertwining, embrace or transformation. Generate and inspect all four endpoints before motion.",
-      "scores": {"emotion": 4, "clarity": 4, "reframe": 4, "originality": 3, "feasibility": 4, "frugality": 5, "silentRead": 4},
+      "landing": "Dad turns and sits beside his son in visible continuous motion; they share a quiet familiar smile.",
+      "seconds": 13,
+      "shots": 3,
+      "risks": [
+        "adult-toddler identity and scale",
+        "natural turn and bench contact",
+        "invitation legibility",
+        "endpoint and boundary matching",
+        "sound quality needs listening"
+      ],
+      "feasibilityNote": "Reuse accepted cast/endpoints and useful invitation/response clips. Add one continuous five-second turn-and-sit bridge from actual standing to actual seated endpoints. No dissolve, body overlap, hug or hidden sitting jump. Keep the toddler supported, jacket on lap, bench/light/axis stable. Continuous original music and rain bridge the joins.",
+      "scores": {
+        "emotion": 4,
+        "clarity": 4,
+        "reframe": 4,
+        "originality": 3,
+        "feasibility": 4,
+        "frugality": 5,
+        "silentRead": 4
+      },
       "scoreRationale": "An editorial technical-pilot hypothesis, not a user rating: a visible small kindness and stable geography are easier to inspect than a spectacular transformation. Familiar mechanism; actual father-son reading and affect are untested.",
       "failedGates": []
     }

@@ -5,19 +5,19 @@ seconds / 9:16**. It combines reusable agent skills, a 41-story development bank
 scored shortlisting, user decisions, complete prompt packets, model-cost evidence,
 and hash-bound production reviews.
 
-**Current state:** an actual ten-second silent father-son picture pilot exists,
-but the user rejected its absent soundtrack and abrupt sitting ellipse. The
-producer is repairing motion/transition/audio with a 13-second revised packet;
-v1 is retained, not an accepted delivery. New tooling does not approve the repair.
-It uses an original fictional Korean toddler and father in his 30s: one small
-invitation, then a cut to Dad already seated beside him. The revised real cast,
-four guided scene endpoints and two PixVerse clips were produced in that order.
-All 242 source frames and native face/hand crops were inspected; the 300-frame
-H.264 export passed full decode and black/freeze checks. Delivery is 1080x1920/
-30fps, upscaled/rate-converted from 720p/24fps sources, not native 1080p motion.
-Reviews were agent decisions under explicit autonomous-completion authority,
-not personal user viewing. Human real-time/phone review, final release approval
-and audience response remain pending. No soundtrack or publication is claimed.
+**Current state:** a 13-second father-son sound review preview exists.
+The user rejected the first silent edit because Dad abruptly became seated.
+The revision retains the Korean toddler/30s father, actual cast and four guided
+endpoints, adds a continuous turn-and-sit clip, shortens the opening pause and
+carries original locally synthesized keyboard music/rain across both joins.
+All 121 new bridge frames and native contact details were inspected; boundary
+poses were compared. The 390-frame H.264/AAC preview passed full video/audio
+decode, black/freeze/dropout checks and audio-level measurement.
+Delivery is 1080x1920/30fps, upscaled/rate-converted from 720p/24fps sources.
+This is a **review preview**, not a sound/entertainment-approved master. Technical
+checks do not establish that the music or emotional flow is enjoyable. Actual
+listening, real-time/phone review, Wow/Enjoyment and personal final acceptance
+remain pending. No publication or audience result is claimed.
 Actual media, job IDs, delegated decisions and credit reconciliation stay private.
 Synthetic tool-test fixtures are not creative reference analyses or films.
 The existing InterviewReel repository is untouched.

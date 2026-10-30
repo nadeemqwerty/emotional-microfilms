@@ -192,6 +192,40 @@ smoke), 41-scenario/four-packet project validation and whitespace checks. Both
 actual motion prompts fit the conservative 2000-character ceiling. Software
 checks and actual bounded frame review are separate evidence, not audience proof.
 
+### User-rejected first edit and organic-action repair
+
+The user rejected the first silent edit: missing music/sound and the skipped
+sitting action made its scene change feel abrupt. The first export is retained,
+not treated as accepted because its decode and frame checks passed.
+
+The revised 13s review preview reuses the actual cast, four scene frames and
+useful invitation/response clips. One additional exact-reference five-second
+720p/silent/count-one PixVerse request connects standing `a-end` to seated
+`b-start`; its actual discounted charge was 63 credits. The motion shows a step,
+bend, lowering and seated settle. All 121 new frames, native contact details and
+both final boundary poses were inspected. A continuous original locally
+synthesized keyboard/rain bed adds no OpenArt charge and uses no external song
+or recording. The actual 390-frame H.264/AAC preview passed full decode,
+black/freeze/dropout checks and peak measurement (about -6 dBFS).
+
+This is a review preview, not a fully approved soundtrack or entertainment pass.
+Actual listening, real-time joined playback, physical phone checks and human
+final acceptance remain pending. A frame audit or healthy audio meter must not
+be relabelled as those missing perceptual reviews. No further paid reroll is
+implied, and publication remains unauthorized.
+
+Use a dedicated OpenArt project per production rather than accumulating new
+jobs in the default project. Persist the actual project-create/list ID and pass
+it explicitly on future uploads/generations. A project is an organization
+container inside the current workspace, not a new account/team. Verify uploaded
+review media with acceptance metadata and the destination project's library.
+Creating a project does not move earlier generation history; never claim it did
+or delete old assets to simulate organization.
+
+Repair software validation: syntax checks, 62 tests with zero failures/skips
+(including real FFmpeg), 41-scenario/four-packet validation and whitespace checks
+passed. This is separate from the missing perceptual reviews above.
+
 ## Primary sources actually inspected
 
 - [PixVerse first/last-frame request](https://docs.platform.pixverse.ai/first-and-last-frame-video-43051213e0.md)

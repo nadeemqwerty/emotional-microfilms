@@ -2,7 +2,9 @@
 
 The earlier four-panel preview was a blocking sketch, not production keyframes.
 The Korean toddler/30s father revision now has a real cast image, all four guided
-scene endpoints and an assembled silent video. Decisions were explicitly
+scene endpoints, a superseded silent edit and a revised sound review preview.
+The revision adds visible continuous sitting after the user rejected the abrupt
+standing-to-seated ellipse. Decisions were explicitly
 delegated to the agent for autonomous completion, not personally viewed by the
 user. Human playback/phone and final-release review remain pending. A diagram can explain
 geography but cannot establish faces, wardrobe, materials, lighting quality or
@@ -14,6 +16,24 @@ the exact authorizing instruction, scope and `personallyViewedByUser:false`;
 do not fabricate personal approval. This does not authorize publication.
 Refine motion against accepted actual endpoint poses: this pilot uses a hovering
 hand invitation, not an unsupported coat lift or guaranteed palm-seat contact.
+
+## Organic action and sound are acceptance requirements
+
+A technically valid ellipse is not automatically a good emotional transition.
+The user rejected the silent first pilot and its skipped sitting action. When
+physical acceptance matters, show the turn, weight shift, lowering, seat contact
+and settle; inspect actual motion and both boundary poses. Do not mask a missing
+action with a dissolve that ghosts bodies, or call a teleport organic.
+
+Muted story proof is an intermediate test, not permission to deliver an
+unrequested silent finish. Plan a continuous ambience/music route and rights
+before motion, then verify the real track in the exported file. The revised
+pilot uses original local keyboard synthesis and filtered-noise rain, not an
+invented OpenArt music endpoint or a copied song. Meters/stream checks establish
+presence, continuity and level only. Until actual listening and joined playback
+occur, label it a review preview and leave sound, entertainment and human final
+approval pending. User rejection supersedes an earlier agent creative pass;
+preserve the rejected take and diagnose the actual complaint.
 
 ## Required sequence and review stops
 
