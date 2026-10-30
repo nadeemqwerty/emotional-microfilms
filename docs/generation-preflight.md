@@ -2,7 +2,8 @@
 
 Verified 30 October 2026 against live OpenArt catalog/forms/quotes and the official
 PixVerse references below. This is a conservative pilot policy, not proof that a
-valid request will render well or never fail. No generation has run for this pilot.
+valid request will render well or never fail. The first cast-image request failed
+with an upstream Google quota/rate-limit error; no creative output was produced.
 Account identity and balance must not be copied into this public document.
 
 ## Live wrapper constraints
@@ -58,6 +59,11 @@ Until the wrapper's routing is observed, keep every pilot motion prompt
 ## Configuration prices and staged waste cap
 
 These are configuration quotes, not authorized or fully resolved media requests.
+The user set a **1000-credit ceiling per generation request**, not a spending
+target, overall production budget or blanket approval. The spend check applies it
+to the entire discounted job, including output quantity; existing staged approval
+and remaining-budget checks still apply. The provider does not expose a server-side
+maximum-charge field, so obtain fresh exact quotes and reconcile actual charges.
 Refresh each exact request after the real references exist. Eligible MCP discount
 is rounded per unit: floor(list * 0.9 + 0.5), then quantity.
 
@@ -72,7 +78,7 @@ For `a-seat-for-dad`, the current separate cast plus four scene endpoints means
 **five images = 90 credits**. The unchanged 10s draft is **90 + 126 = 216**
 silent or **90 + 162 = 252** with PixVerse native audio. One repaired frame plus
 one repaired native clip adds 99, giving **351**; the old proposed 350 cap would
-not cover that full reserve. No ceiling is approved. The earlier 198/234 totals
+not cover that full reserve. No overall production budget is approved. The earlier 198/234 totals
 assumed four total images and are superseded, not actual charges.
 
 Start with only the character image (18). If cast/scale/style is wrong, diagnose
@@ -111,6 +117,13 @@ than assuming the model obeys timestamps. Audio-enabled costs differ.
 - **Failed jobs/refunds:** preserve error/status and distinguish quoted, observed
   and confirmed charges. PixVerse's direct API refund behavior is not a promise
   that an OpenArt attempt is free. Reconcile OpenArt's actual records.
+- **Observed upstream quota failure:** an affordable quote and accepted request
+  did not establish Google backend capacity. The first Nano Banana 2 cast request
+  ended with HTTP 429 `RESOURCE_EXHAUSTED`, reported as `1006: rate_limit`.
+  This is not a prompt/schema rejection or proof that the user's credits ran out.
+  Record the terminal job and net balance observation; do not claim a refund
+  without refund evidence. No automatic retry or model fallback. A new paid step
+  needs an applicable fresh quote and authorization.
 - **Moderation:** ordinary, clothed, fictional father/son; no real-person likeness,
   unsafe/graphic transformation, sexual content, logos or copyrighted soundtrack.
   A benign prompt is not a guarantee of acceptance. Never evade moderation.
@@ -134,13 +147,16 @@ test. The original father/son pilot does not pretend to adapt unseen source shot
 
 ## Pilot execution checkpoint
 
-The father-son packet is a proposal, not an accepted storyboard or generated film.
-Explicit story/bounded-credit approval was requested but has not been received.
-No generation, upload, paid retry or publication has run. The opening quote is a
-first gate, not permission to spend. Full playback/listening and actual audience
-response remain untested; software checks do not substitute for either.
+The user requested regeneration through the iterative flow and set a per-request
+credit ceiling. The father-son pilot was selected unrated for provisional
+preproduction, not final scene/design approval. One 18-credit-quoted cast request
+was submitted and reached a terminal upstream quota failure. The actual historyId,
+request fingerprint, error and balance reconciliation are recorded privately.
+No creative image/video exists; no upload, retry or publication occurred.
+Character/user approval, scenes and design lock remain pending. Full playback/
+listening and actual audience response remain untested.
 
-Validation passed: syntax checks, 50 tests with zero skips (including real FFmpeg
+Validation passed: syntax checks, 51 tests with zero skips (including real FFmpeg
 smoke), 41-scenario/four-packet project validation and whitespace checks. The two
 proposed motion prompts are 923 and 805 characters, within the conservative
 2000-character ceiling. These are software/request checks, not media-quality proof.

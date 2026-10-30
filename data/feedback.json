@@ -1,4 +1,12 @@
 {
   "schemaVersion": 1,
-  "reviews": []
+  "reviews": [
+    {
+      "scenarioId": "a-seat-for-dad",
+      "rating": null,
+      "decision": "select",
+      "note": "Proceed with the provisional father-son pilot for character development only. Generated cast, scenes and final design remain subject to review.",
+      "at": "2026-10-30T16:05:27.161Z"
+    }
+  ]
 }

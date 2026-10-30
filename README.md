@@ -6,14 +6,18 @@ scored shortlisting, user decisions, complete prompt packets, model-cost evidenc
 and hash-bound production reviews.
 
 **Current state:** research and preproduction tooling, not a finished film.
-No scenario selected, creative assets generated, credits spent, uploads or posts made.
+The father-son pilot is provisionally selected. Its first cast-image attempt failed
+with an upstream quota error; no creative asset or video was produced. No uploads
+or posts made. Actual job and balance reconciliation stay in the private workspace.
 Synthetic tool-test fixtures are not creative reference analyses or films.
 The existing InterviewReel repository is untouched.
 Three independent AI critic lenses passed the earlier scoped preproduction baseline.
 The iterative character/scene/design flow is a subsequent correction, not proof
 that a film has passed review. The current checks include real FFmpeg smoke and
 character provenance/user approval, scene references, hook/effect/light plans and
-design-lock gates. **50 tests pass**, with zero skips.
+design-lock gates. The user-set **1,000-credit per-generation ceiling** is enforced
+on the discounted whole-request estimate, independently of total approved budget.
+**51 tests pass**, with zero skips when the real FFmpeg checks are enabled.
 See the critic record for actual scope and remaining media/perception gates.
 
 ## Start

@@ -223,6 +223,23 @@ test('spend check binds exact quote and request, expiry, reserved budget and act
     productionDraft: {...packet, singlePassPrompt: 'Changed plan'}}, 63, quote, at, context), /approval is stale/);
 });
 
+test('per-generation cap applies to discounted whole-job cost independently of total budget', () => {
+  const at = Date.parse('2026-10-30T01:00:00+05:30');
+  for (const [unitCredits, quantity, discountPercent, expected, allowed] of [
+    [1111, 1, 10, 1000, true], [1112, 1, 10, 1001, false],
+    [500, 2, 0, 1000, true], [501, 2, 0, 1002, false],
+  ]) {
+    const request = fingerprint({unitCredits, quantity, discountPercent});
+    const quote = {at: new Date(at).toISOString(), unitCredits, quantity,
+      discountPercent, requestFingerprint: request};
+    const manifest = workspace({generationApproved: true, nextGenerationKind: 'character',
+      spendApprovalEvidence: 'Synthetic bounded test approval.', nextRequestFingerprint: request,
+      approvedBudgetCredits: 3000});
+    if (allowed) assert.equal(validateSpend(manifest, expected, quote, at, context), true);
+    else assert.throws(() => validateSpend(manifest, expected, quote, at, context), /per-generation credit cap/);
+  }
+});
+
 test('resume checks current scenario, brief and selection; refresh retains ledgers but renews approvals', () => {
   const manifest = workspace({stage: 'final-approved', jobs: [{historyId: 'synthetic-only'}]});
   assert.throws(() => validateWorkspace(manifest, {...context,

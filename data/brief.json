@@ -35,8 +35,9 @@
   },
   "budget": {
     "approvedCredits": 0,
+    "perGenerationCapCredits": 1000,
     "monthlyPlanningReferenceCredits": null,
-    "note": "No monthly allowance is verified or published here. Cost examples are illustrative configurations, not an account balance or spend authorization."
+    "note": "User-set ceiling: 1000 credits per generation request, including output quantity after applicable discounts. This is not a spending target or blanket generation approval. No monthly allowance is verified or published here. Cost examples are illustrative configurations, not an account balance or spend authorization."
   },
   "approvals": {
     "researchAndProjectFiles": true,
