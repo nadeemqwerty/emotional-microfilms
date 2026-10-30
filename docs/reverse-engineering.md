@@ -2,12 +2,16 @@
 
 This project-local skill and CLI prepare a complete-duration reference, enforce
 explicit review evidence, then compile an **original adaptation planning brief**
-from actual feedback. No external package, ffprobe, provider client, upload,
-paid generation, publication, global configuration or controller is involved.
-Node 20+ and a separately available FFmpeg executable are sufficient.
+from actual feedback. Local preparation needs no external Node package or
+ffprobe. No provider client, upload, paid generation, publication, global
+configuration or controller is involved.
+Node 20+ and a separately available FFmpeg executable are sufficient for local
+sources. Public Instagram Reel import optionally uses a separately installed
+[yt-dlp](https://github.com/yt-dlp/yt-dlp); it is never installed automatically.
 
-No reference has been supplied yet. The tracked template remains pending. A
-prepared directory is not a claim that an AI watched, listened, or understood.
+The tracked template remains pending; real source state belongs in private
+workspaces. A prepared directory is not a claim that an AI watched, listened,
+or understood.
 
 ## Commands (PowerShell, repository root)
 
@@ -27,17 +31,67 @@ letters/digits/hyphens, not paths. Default analysis is `analysis.json`;
 `--analysis reviewed-analysis.json` selects another simple filename in the
 same workspace. `--out new-brief.json` is likewise a new workspace filename.
 
-An Instagram Reel URL produces actionable `NEEDS_LOCAL_EXPORT` (exit 2), with
-no network request or falsely completed job:
+Without explicit download opt-in, an Instagram Reel URL produces actionable
+`NEEDS_LOCAL_EXPORT` (exit 2), with no network request or falsely completed job:
 
 ```powershell
 node scripts\reverse.mjs prepare --input 'https://www.instagram.com/reel/EXAMPLE/' --workspace reference-003
 ```
 
-There is **no authorized Instagram resolver configured**. Use the platform's
-normal download/export where available and permitted, request the owner's
-original, then prepare the local file. No login/cookie extraction, private
-content scraping, access circumvention or undocumented page parsing.
+### Optional anonymous public-Reel import
+
+yt-dlp lists Instagram support, but its
+[supported-sites guide](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md)
+warns that site changes and access restrictions can break extraction. This
+integration is best-effort, not a guarantee of downloading every public Reel.
+Use it only for media you are permitted to download for private study.
+
+Install the optional utility separately after approval, for example
+`python -m pip install yt-dlp`, or obtain the official Windows standalone
+executable from its [installation guide](https://github.com/yt-dlp/yt-dlp#installation).
+Supply the real executable, not a shell command or Python module string:
+
+```powershell
+node scripts\reverse.mjs prepare --input 'https://www.instagram.com/reel/EXAMPLE/' --workspace reference-reel-001 --download-instagram --yt-dlp 'C:\tools\yt-dlp.exe' --ffmpeg $ffmpeg
+```
+
+`YT_DLP_PATH` may replace `--yt-dlp`; neither implies consent without
+`--download-instagram`. The importer accepts only HTTPS Reel URLs at
+`instagram.com` or `www.instagram.com`, canonicalizes to `www`, and strips
+sharing queries/fragments. Posts, profiles and arbitrary subdomains are not
+accepted. It invokes only the Instagram extractor with no local configuration,
+plugins, runtime downloads, browser cookies, saved cookies, netrc login or
+geo-spoofing. No login, private-media retrieval or access bypass is implemented.
+The utility resolves metadata only; it does not download the media or write
+metadata/caches. Resolver output is bounded to 2 MiB/30s, socket timeouts to 10s,
+and retries to zero. Raw provider diagnostics and signed URLs are not logged.
+
+Only a single non-live progressive HTTPS MP4 rendition is eligible; HLS,
+separate audio/video merging and playlists are not supported. The existing
+public-IPv4-pinned, no-redirect downloader retrieves the rendition, enforcing
+250 MiB/30s limits even when provider size metadata is absent. FFmpeg then
+validates duration, streams and dimensions, and the normal hash-bound
+preparation flow creates samples, listening aids and a pending analysis.
+These are exact retrieved rendition bytes, not a claim to the camera master.
+Only the Reel ID, public hostname and resolver name are added to source
+provenance; signed CDN URLs and sharing parameters are not persisted.
+
+Missing utility, login/rate restrictions, unsupported formats, resolver errors,
+or media download failure return `NEEDS_LOCAL_EXPORT` (exit 2). A failed resolver
+allocates no workspace; a failed media download can leave an incomplete private
+preparation but never a completed manifest. Existing work is not overwritten
+or deleted. Supply a new workspace name after a failed partial preparation.
+Use Instagram's permitted export/download or obtain the owner's original
+instead; do not extract cookies, scrape private content or bypass restrictions.
+The external resolver is a trusted executable, not a decoder/network sandbox.
+The application's public-IP pinning applies to the direct media download,
+not the resolver's internal requests.
+
+Successful import still leaves full playback, every audio track and rights
+review pending. Continue through `validate-review`, actual feedback and
+`remake-brief`, then the studio's script/cinematography, cast, keyframe,
+design-lock, exact-quote and generation-approval gates. Download approval
+does not authorize reference uploads, generation, source reuse or publication.
 
 Explicitly permitted direct public video retrieval only:
 
@@ -66,7 +120,10 @@ URL. All other commands are offline.
   requested and actual interval plus the small unsampled tail. Frame count is
   capped; long clips automatically use a coarser interval. Image labels are
   requested seek times, not independently measured decoded frame PTS; the
-  decoder may select the nearest available frame.
+  decoder may select the nearest available frame. If container/audio duration
+  slightly exceeds video duration, the final seek alone can retry up to 0.25s
+  earlier; the frame records both requested/used seek times and the manifest
+  reports the larger actual unsampled tail. This is not a full-playback review.
 - `audio-track-<stream>.wav`: each full audio track as 16kHz mono listening aid;
   also listen to the original for mix/stereo meaning.
 - `manifest.json`: **last-written completion marker**, source/asset hashes,

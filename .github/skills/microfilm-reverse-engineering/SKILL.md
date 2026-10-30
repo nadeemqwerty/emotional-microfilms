@@ -14,10 +14,17 @@ plugin or autonomous controller. Read `docs\reverse-engineering.md`.
 1. Obtain a local video the user is permitted to study. Run `node
    scripts\reverse.mjs prepare --input "<video>" --workspace "<new-name>"
    --ffmpeg "<executable>"`. Full original bytes stay in ignored `workspace\`.
-2. An Instagram page URL is accepted as an input request, but this workbench has
-   no authorized Instagram resolver: report `NEEDS_LOCAL_EXPORT` and instructions.
-   Never claim ingestion succeeded, scrape a login, extract cookies, bypass
-   access restrictions or request a private account login.
+2. An Instagram Reel URL defaults to `NEEDS_LOCAL_EXPORT`, with no network.
+   When the user explicitly approves downloading a permitted public reference,
+   add `--download-instagram --yt-dlp "<existing-executable>"` (or `YT_DLP_PATH`).
+   The optional yt-dlp utility resolves anonymous public media only; local
+   config/plugins/cookies/login are disabled. The existing bounded downloader
+   retrieves a single progressive HTTPS rendition and records private
+   provenance. Installation requires separate approval; nothing auto-installs.
+   Blocked access, unsupported media or resolver/download failure returns
+   `NEEDS_LOCAL_EXPORT`, not completed ingestion. Never scrape a login, extract
+   cookies, bypass restrictions or request a private account login. Continue
+   normal playback/listening/rights review after a successful import.
 3. Only when specifically authorized, use `--download-public-video` for a direct
    public HTTPS video. No redirects/auth; bounded size/time; no hidden network.
    Public accessibility does not grant adaptation, upload, voice or music rights.

@@ -6,12 +6,15 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const help = `Private local reverse-engineering workbench (Node 20+, no installed plugin).
   node scripts\\reverse.mjs prepare --input <local-video-or-URL> --workspace <NEW-name> --ffmpeg <exe>
     [--interval 2] [--max-frames 120] [--transcript <user-text-file>] [--download-public-video]
+    [--download-instagram --yt-dlp <exe>]
   node scripts\\reverse.mjs expand --workspace <name> --start 2 --end 4 --interval 0.25 --ffmpeg <exe>
   node scripts\\reverse.mjs validate-review --workspace <name> [--analysis analysis.json]
   node scripts\\reverse.mjs remake-brief --workspace <name> --feedback <actual-feedback.json>
     [--analysis analysis.json] [--out <new-filename.json>]
 FFMPEG_PATH can replace --ffmpeg. Workspace names live only under ignored workspace\\.
-Instagram pages return NEEDS_LOCAL_EXPORT, never scrape/auth-bypass. Direct HTTPS video
+Instagram import is opt-in, anonymous public Reels only, using an explicit yt-dlp
+executable (or YT_DLP_PATH). No cookies/login/config/plugins; failures return
+NEEDS_LOCAL_EXPORT. Without opt-in, supply a permitted local export. Direct HTTPS video
 download is opt-in, public IPv4 only, no redirects, <=250 MiB/30s. No hidden network calls.
 Every prepare starts pending. Watch/listen to the entire exact source, review every
 segment, and supply actual structured feedback. No generation/upload/publication approval.
@@ -21,7 +24,8 @@ function parse(argv) {
   const [command, ...args] = argv;
   if (!command || command === '--help' || command === 'help') return {command: 'help'};
   const accepted = {
-    prepare: ['input', 'workspace', 'ffmpeg', 'interval', 'max-frames', 'transcript', 'download-public-video'],
+    prepare: ['input', 'workspace', 'ffmpeg', 'interval', 'max-frames', 'transcript',
+      'download-public-video', 'download-instagram', 'yt-dlp'],
     expand: ['workspace', 'start', 'end', 'interval', 'max-frames', 'ffmpeg'],
     'validate-review': ['workspace', 'analysis'],
     'remake-brief': ['workspace', 'feedback', 'analysis', 'out'],
@@ -33,7 +37,7 @@ function parse(argv) {
     if (!args[i].startsWith('--') || !accepted[command].includes(key) || key in flags) {
       throw new Error(`Unknown/duplicate option: ${args[i]}`);
     }
-    if (key === 'download-public-video') flags[key] = true;
+    if (key === 'download-public-video' || key === 'download-instagram') flags[key] = true;
     else {
       if (!args[i + 1] || args[i + 1].startsWith('--')) throw new Error(`Missing value: --${key}`);
       flags[key] = args[++i];
@@ -59,7 +63,8 @@ try {
   else if (command === 'prepare') {
     result = await prepareReference(root, {input: f.input, workspace: f.workspace,
       ffmpeg: f.ffmpeg ?? process.env.FFMPEG_PATH, interval: f.interval, maxFrames: f['max-frames'],
-      transcript: f.transcript, allowDownload: f['download-public-video']});
+      transcript: f.transcript, allowDownload: f['download-public-video'],
+      allowInstagram: f['download-instagram'], ytDlp: f['yt-dlp'] ?? process.env.YT_DLP_PATH});
   } else if (command === 'expand') {
     result = await expandReference(root, {workspace: f.workspace, start: f.start, end: f.end,
       interval: f.interval, maxFrames: f['max-frames'], ffmpeg: f.ffmpeg ?? process.env.FFMPEG_PATH});

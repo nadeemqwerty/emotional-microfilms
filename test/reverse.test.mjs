@@ -5,9 +5,11 @@ import {resolve, dirname, join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {randomUUID} from 'node:crypto';
 import {spawnSync} from 'node:child_process';
+import {EventEmitter} from 'node:events';
+import {PassThrough} from 'node:stream';
 import {parseReferenceMetadata, sampleTimes, classifyInput, isPublicIPv4, createPendingAnalysis,
   validateRanges, validateReview, validateFeedback, buildRemakeBrief, hashFile, workspacePath,
-  reviewWorkspace} from '../lib/reverse.mjs';
+  reviewWorkspace, resolveInstagramVideo, pinnedIPv4Lookup} from '../lib/reverse.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const fixtureName = `reverse-test-${randomUUID()}`;
@@ -123,6 +125,105 @@ test('Instagram is honest local-export state; public downloads are explicit and 
     assert.equal(isPublicIPv4(address), false, address);
   }
   assert.equal(isPublicIPv4('8.8.8.8'), true);
+});
+
+test('public Reel opt-in accepts only canonical HTTPS Reel URLs and discards tracking', () => {
+  const result = classifyInput('https://instagram.com/reel/Ab_c-123/?tracking=private#fragment', false, true);
+  assert.equal(result.kind, 'instagram-reel');
+  assert.equal(result.url.href, 'https://www.instagram.com/reel/Ab_c-123/');
+  for (const url of ['http://instagram.com/reel/id/', 'https://instagram.com:444/reel/id/',
+    'https://help.instagram.com/reel/id/', 'https://instagram.com/p/id/',
+    'https://instagram.com/reel/id/extra', 'https://instagram.com/reel/']) {
+    assert.throws(() => classifyInput(url, false, true), /Instagram import/);
+  }
+});
+
+test('pinned public DNS lookup supports both single-address and Node all-address callbacks', () => {
+  const lookup = pinnedIPv4Lookup('8.8.8.8');
+  lookup('example.com', {family: 4}, (error, address, family) => {
+    assert.equal(error, null);
+    assert.equal(address, '8.8.8.8');
+    assert.equal(family, 4);
+  });
+  lookup('example.com', {all: true}, (error, addresses) => {
+    assert.equal(error, null);
+    assert.deepEqual(addresses, [{address: '8.8.8.8', family: 4}]);
+  });
+  assert.throws(() => pinnedIPv4Lookup('127.0.0.1'), /publicly routed/);
+});
+
+function resolverProcess(output, {code = 0, stderr = '', inspect = () => {}} = {}) {
+  return (executable, args, options) => {
+    inspect(executable, args, options);
+    const child = new EventEmitter();
+    child.stdout = new PassThrough();
+    child.stderr = new PassThrough();
+    child.kill = () => queueMicrotask(() => child.emit('close', null));
+    queueMicrotask(() => {
+      child.stdout.end(output);
+      child.stderr.end(stderr);
+      child.emit('close', code);
+    });
+    return child;
+  };
+}
+
+test('Reel resolver is anonymous, config/plugin-free, single-video and never passes sharing parameters', async () => {
+  const media = {url: 'https://cdn.example.com/source.mp4?signature=private',
+    duration: 10, filesize: 500, vcodec: 'h264', acodec: 'none'};
+  const result = await resolveInstagramVideo(process.execPath,
+    'https://www.instagram.com/reel/abc/?tracking=private', {
+      spawnProcess: resolverProcess(JSON.stringify(media), {inspect: (executable, args, options) => {
+        assert.equal(executable, process.execPath);
+        assert.equal(options.shell, false);
+        assert.equal(options.stdio[0], 'ignore');
+        for (const flag of ['--ignore-config', '--no-plugin-dirs', '--no-cache-dir',
+          '--no-cookies', '--no-cookies-from-browser', '--no-playlist', '--skip-download',
+          '--no-js-runtimes', '--no-remote-components', '--no-check-formats']) {
+          assert.ok(args.includes(flag), flag);
+        }
+        assert.equal(args.at(-2), '--');
+        assert.equal(args.at(-1), 'https://www.instagram.com/reel/abc/');
+        assert.equal(args[args.indexOf('--xff') + 1], 'never');
+      }}),
+    });
+  assert.equal(result.kind, 'direct-public-video');
+  assert.equal(result.url.href, media.url);
+  assert.equal(result.reelId, 'abc');
+  assert.equal(result.resolver, 'yt-dlp');
+});
+
+test('Reel resolver fails closed without leaking provider URLs, cookies advice or pending success', async () => {
+  const url = 'https://www.instagram.com/reel/abc/';
+  const missing = await resolveInstagramVideo(join(fixtureDir, 'missing-executable'), url);
+  assert.equal(missing.code, 'NEEDS_LOCAL_EXPORT');
+  assert.match(missing.message, /--yt-dlp/);
+  const outputs = [
+    {output: 'not JSON'},
+    {output: '{}', code: 1, stderr: 'secret signed URL; extract cookies-from-browser'},
+    {output: JSON.stringify({url: 'http://example.com/v.mp4'})},
+    {output: JSON.stringify({url: 'https://instagram.com/reel/abc/'})},
+    {output: JSON.stringify({url: 'https://example.com/v.mp4', entries: [{}]})},
+    {output: JSON.stringify({url: 'https://example.com/v.mp4', is_live: true})},
+    {output: JSON.stringify({url: 'https://example.com/v.mp4', vcodec: 'none'})},
+    {output: JSON.stringify({url: 'https://example.com/v.mp4', duration: 601})},
+    {output: JSON.stringify({url: 'https://example.com/v.mp4', filesize: 251 * 1024 * 1024})},
+    {output: 'x'.repeat(2 * 1024 * 1024 + 1)},
+  ];
+  for (const {output, ...options} of outputs) {
+    const result = await resolveInstagramVideo(process.execPath, url,
+      {spawnProcess: resolverProcess(output, options)});
+    assert.equal(result.code, 'NEEDS_LOCAL_EXPORT');
+    assert.doesNotMatch(JSON.stringify(result), /secret|signature|cookies-from-browser/);
+  }
+  const failed = await resolveInstagramVideo(process.execPath, url, {spawnProcess: () => {
+    const child = new EventEmitter();
+    child.stdout = new PassThrough();
+    child.stderr = new PassThrough();
+    queueMicrotask(() => child.emit('error', new Error('private provider error')));
+    return child;
+  }});
+  assert.equal(failed.code, 'NEEDS_LOCAL_EXPORT');
 });
 
 test('coverage rejects gaps, overlap, missing tail, string times and pending review', () => {
@@ -314,13 +415,25 @@ test('optional real FFmpeg CLI smoke: full-span stills, exact playback, audio, p
     const source = join(fixtureDir, 'synthetic-source.mp4');
     const encode = spawnSync(ffmpeg, ['-hide_banner', '-nostdin', '-v', 'error', '-n',
       '-f', 'lavfi', '-i', 'testsrc2=s=90x160:r=10:d=3',
-      '-f', 'lavfi', '-i', 'sine=frequency=440:sample_rate=16000:duration=3',
-      '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-shortest', source],
+      '-f', 'lavfi', '-i', 'sine=frequency=440:sample_rate=16000:duration=3.1',
+      '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-c:a', 'aac', source],
     {encoding: 'utf8', windowsHide: true, timeout: 30_000});
     assert.equal(encode.status, 0, encode.stderr || encode.error?.message);
     const name = `reverse-test-${randomUUID()}`;
     const cli = args => spawnSync(process.execPath, [join(root, 'scripts', 'reverse.mjs'), ...args],
       {encoding: 'utf8', windowsHide: true, timeout: 60_000});
+    const missingName = `${name}-missing-resolver`;
+    const missing = cli(['prepare', '--input', 'https://www.instagram.com/reel/abc/',
+      '--workspace', missingName, '--download-instagram', '--yt-dlp',
+      join(fixtureDir, 'missing-executable'), '--ffmpeg', ffmpeg]);
+    assert.equal(missing.status, 2, missing.stderr);
+    assert.equal(JSON.parse(missing.stdout).code, 'NEEDS_LOCAL_EXPORT');
+    assert.equal(existsSync(join(root, 'workspace', missingName)), false);
+    const wrongInput = cli(['prepare', '--input', source, '--workspace', missingName,
+      '--download-instagram', '--ffmpeg', ffmpeg]);
+    assert.equal(wrongInput.status, 1);
+    assert.match(wrongInput.stderr, /only for an Instagram Reel/);
+    assert.equal(existsSync(join(root, 'workspace', missingName)), false);
     const args = ['prepare', '--input', source, '--workspace', name, '--ffmpeg', ffmpeg,
       '--interval', '1', '--max-frames', '6'];
     const prepared = cli(args);
@@ -330,10 +443,12 @@ test('optional real FFmpeg CLI smoke: full-span stills, exact playback, audio, p
     assert.equal(manifest.status, 'prepared');
     assert.equal(manifest.source.sha256, await hashFile(source));
     assert.equal(await hashFile(join(dir, 'source.mp4')), manifest.source.sha256);
-    assert.equal(manifest.source.metadata.seconds, 3);
+    assert.equal(manifest.source.metadata.seconds, 3.1);
     assert.equal(manifest.source.metadata.hasAudio, true);
     assert.equal(manifest.sampling.frames[0].timestamp, 0);
-    assert.ok(manifest.sampling.frames.at(-1).timestamp >= 2.8);
+    assert.equal(manifest.sampling.frames.at(-1).requestedTimestamp, 3);
+    assert.equal(manifest.sampling.frames.at(-1).timestamp, 2.75);
+    assert.equal(manifest.sampling.tailUnsampledSeconds, 3.1 - 2.75);
     assert.ok(manifest.sampling.frames.every(frame => existsSync(join(dir, frame.path))));
     assert.ok(existsSync(join(dir, manifest.sampling.contactSheet)));
     assert.ok(existsSync(join(dir, manifest.audio[0].path)));
@@ -350,5 +465,12 @@ test('optional real FFmpeg CLI smoke: full-span stills, exact playback, audio, p
       '--interval', '0.25', '--max-frames', '10', '--ffmpeg', ffmpeg]);
     assert.equal(dense.status, 0, dense.stderr || dense.error?.message);
     assert.ok(existsSync(join(JSON.parse(dense.stdout).directory, 'sampling.json')));
+    const tail = cli(['expand', '--workspace', name, '--start', '2', '--end', '3.1',
+      '--interval', '1', '--max-frames', '10', '--ffmpeg', ffmpeg]);
+    assert.equal(tail.status, 0, tail.stderr || tail.error?.message);
+    const expanded = JSON.parse(readFileSync(join(JSON.parse(tail.stdout).directory, 'sampling.json')));
+    assert.equal(expanded.frames.at(-1).requestedTimestamp, 3);
+    assert.equal(expanded.sampling.timestamps.at(-1), 2.75);
+    assert.equal(expanded.sampling.tailUnsampledSeconds, 3.1 - 2.75);
     assert.equal(await hashFile(join(dir, 'manifest.json')), before);
   });
