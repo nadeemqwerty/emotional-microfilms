@@ -10,7 +10,7 @@
 | Sound/final export | Actual listening, sync, transitions, phone crop/playback | Dopamine quantity or platform distribution |
 | Viewer/platform results | Defined outcomes in stated conditions | Universal recipe or causal algorithm effect |
 
-Use the shared `microfilm-review` contract and six project-local read-only roles.
+Use the shared `microfilm-review` contract and seven project-local read-only roles.
 PASS always names scope/hash; missing essential evidence is BLOCKED. Review
 definitions do not mean those agents have run. Human media inspection is required
 if this host cannot play/hear the result.
@@ -39,6 +39,19 @@ loop if possible. Ask before replay:
 Record first-view answers separately from replay answers. Distinguish enjoyment,
 new detail and confusion as replay reasons. Store anonymized counts/denominators,
 not private reviewer identities in Git. Fresh viewers after major revisions.
+
+## Enjoyment is a first-class outcome
+
+Use [the Wow & Enjoyment Analyst](entertainment-review.md) for editorial craft
+feedback, separate from fresh-viewer answers. Predeclare audience/lane and
+enjoyment criteria in the experiment template. After unprompted comprehension
+ask what was enjoyable (including "nothing"), where boredom began, what detail/
+payoff stayed with them, and why they would replay/share. Only then offer
+beauty/surprise/warmth/laughter/nostalgia/awe labels; never lead with dopamine.
+Record exact anonymized first-view and replay answers separately with actual
+counts, version/hash, exposure conditions and limitations. No invented answers,
+score threshold or audience PASS from an agent's taste. Keep primary outcome,
+sample/stopping rule and windows fixed before seeing results.
 
 ## Sound and pacing experiments
 

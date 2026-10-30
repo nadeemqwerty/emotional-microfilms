@@ -21,3 +21,8 @@ what cannot be heard or cleared from the supplied evidence.
 Check phrase completeness, preserved pitch/timbre, intelligible diction/breath,
 warp artifacts and voice authorization; a sped-up old song is not automatically
 cleared, contemporary or emotionally effective.
+Inspect any `audio.mjs` preparation receipt/source hash/rights scope and actual
+result. Its limiter measures sample peak, not true-peak/loudness mastering;
+synthetic-tone tests do not establish singing, diction or listened-to sync.
+Assess the chosen genre's pleasure/anticipation/payoff with the entertainment
+analyst, without leading viewers or inventing a dopamine endpoint.

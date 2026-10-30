@@ -33,7 +33,7 @@ commits and pushes need explicit user authorization. A rating, quote, account
 balance, allowance assumption or "full workflow" is not consent to spend.
 No destructive edits. Leave InterviewReel and unrelated dirty work alone.
 
-There is deliberately no autonomous generation controller. Use live Agency tools
+There is deliberately no autonomous generation controller. Use genuinely available host tools
 only after the user approves an exact request or bounded batch and credit ceiling.
 Record the quote, request fingerprint, consent and returned historyId immediately.
 Resume an existing job; a timeout is not permission to submit it again.
@@ -51,6 +51,9 @@ review stops still apply without that instruction. Keep final human approval
 and publication separately gated. A complete numbered-frame audit plus native
 detail checks is bounded agent visual evidence, not real-time playback, a
 physical phone test, cold-viewer comprehension or audio listening.
+Use typed `characters-delegated`, `keyframes-delegated`, `design-delegated`
+acceptance, not `*-user` labels. Read `docs\workflow.md` for authority records and
+`docs\agent-integration.md` for capabilities, ownership and host handoff.
 
 ## The working loop
 
@@ -75,6 +78,8 @@ physical phone test, cold-viewer comprehension or audio listening.
    Record `comprehensionMode:text-led` and `textPlan` in scenario and packet.
    Ask cold viewers what
    happened before suggesting an emotion. Fix causality before polishing.
+   Apply the Wow & Enjoyment Analyst early to concepts/stills for the stated
+   audience/lane; an early scope-limited PASS is not a final playback verdict.
 6. **Direct:** create identity/prop bible, blocking map, action axis, eyelines,
    explicit lightingPlan/shadow map, camera/focus intent and accessible crop.
    Use `microfilm-cinematography` and `microfilm-lighting`, not a soup of adjectives.
@@ -88,9 +93,10 @@ physical phone test, cold-viewer comprehension or audio listening.
    composition. Inspect the specific model, not just its family marketing.
 9. **Characters then scenes:** follow `docs\visual-development.md` and
    `characterPlan.references[].prompt`. Generate a real cast reference and STOP
-   for user feedback on faces, ages, wardrobe, style and scale before scenes.
+   for user feedback on faces, ages, wardrobe, style and scale before scenes,
+   unless those specific creative decisions were explicitly delegated.
    Then make reference-guided literal scene images for every changed composition
-   and light state; show the images, not diagrams, for user approval.
+   and light state; show the images, not diagrams, for user or scoped delegated acceptance.
    Differentiate identity refs from literal start/end frames. Approve adjacent
    frames side by side before animation. Real provider references only.
    Every required frame must pass, not just one anchor. Read
@@ -121,6 +127,10 @@ physical phone test, cold-viewer comprehension or audio listening.
     Render only from accepted media. Publish only after explicit approval.
     Follow `docs\review-measurement.md`; report counts and denominators and do not
     call watch-time/duration "completion" or reach/view ratios "rewatch rate".
+    Apply the Wow & Enjoyment Analyst in `docs\entertainment-review.md`: beauty/
+    freshness, pleasure, anticipation, earned payoff, boredom and voluntary
+    replay. Predeclare audience/lane/criteria, give timecoded evidence, and
+    distinguish an editorial judgment from actual viewer enjoyment.
 
 ## Required production packet
 
@@ -162,6 +172,9 @@ signal, not proof the audience should watch more times.
 - Operations: `docs\workflow.md`; quote snapshot: `data\model-quotes.json`.
 - Validate: `npm run check`, `npm test`, `npm run validate`.
 - Review tools verify structure/file integrity, not emotional or perceptual quality.
+- Common host/ownership contract: `docs\agent-integration.md`; enjoyment:
+  `docs\entertainment-review.md`; full implementation/blockers:
+  `docs\completion-plan.md`.
 - Short local checks need no packages. Ask before expensive renders/benchmarks.
 - Use GPT-family delegated research if delegation is explicitly requested;
   otherwise work directly and keep research scoped. No swarm or custom controller.

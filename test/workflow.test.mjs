@@ -5,8 +5,8 @@ import {fileURLToPath} from 'node:url';
 import {
   assetSetFingerprint, discountedCredits, diverseShortlist, editorialScore, ensureNoDuplicateJob,
   estimatePlan, fingerprint, inside, packetDraft, productionRevision, rankScenarios, readJson,
-  recordReview, refreshWorkspace,
-  REVIEW_AREAS, stageReady, validateFeedback, validateJob, validatePacket,
+  recordReview, refreshWorkspace, migrateDelegatedAcceptances,
+  ENTERTAINMENT_DIMENSIONS, REVIEW_AREAS, requireAcceptance, requireReview, stageReady, validateFeedback, validateJob, validatePacket,
   validateLightingPlan, validatePacing, validateRubric, validateScenario, validateSpend, validateTimeline,
   validateWorkspace, validateMotionReferences, validateSceneReferences, requireCharacterApproval,
 } from '../lib/workflow.mjs';
@@ -27,12 +27,21 @@ const context = {scenarios, brief, feedback: selected};
 function workspace(patch = {}) {
   const manifest = {...packetDraft(scenario, brief, selected), stage: 'preproduction',
     productionDraft: structuredClone(packet), approvalRevision: 1,
+    entertainmentBrief: {audience: 'Synthetic test audience', lane: 'connection',
+      acceptanceCriteria: 'Synthetic test: readable, rewarding invitation, no unresolved boredom finding.'},
     storyboardApproved: true, storyboardApprovalEvidence: 'Synthetic unit-test approval.', ...patch};
   manifest.productionFingerprint = productionRevision(manifest);
   return manifest;
 }
-const reviewFor = (manifest, area, result = 'pass') => recordReview(manifest,
-  {area, result, evidence: 'Synthetic review'}).reviews.at(-1);
+const entertainmentReport = () => ({picture: 'full-playback', audio: 'no-audio-streams',
+  dimensions: ENTERTAINMENT_DIMENSIONS.map(id => ({id, score: 3,
+    evidence: [{from: 0, to: 1, observation: 'Synthetic evidence, not a media review.'}]})),
+  criteriaAssessment: 'Synthetic criteria met for fixture only.', unresolvedFailures: []});
+const reviewFor = (manifest, area, result = 'pass') => recordReview(manifest, {
+  area, result, evidence: 'Synthetic review',
+  ...(area.endsWith('-user') ? {authority: {type: 'personal-user', personallyViewedByUser: true}} : {}),
+  ...(area === 'entertainment-wow-enjoyment' ? {report: entertainmentReport()} : {}),
+}).reviews.at(-1);
 const sceneAssets = () => packet.keyframes.map(frame => ({path: `media/${frame.id}.png`,
   kind: 'keyframe', keyframeId: frame.id, sha256: 'a'.repeat(64), origin: 'generated',
   sourceHistoryId: `synthetic-${frame.id}`}));
@@ -406,7 +415,8 @@ test('stage gates cannot skip, infer native sound inspection or publish', () => 
 test('final approval requires every current review including pacing and actual user consent', () => {
   const assets = [{path: 'outputs/final.mp4', kind: 'final', sha256: 'c'.repeat(64)}];
   const manifest = workspace({stage: 'sound-approved', assets, finalUserApproval: true});
-  const reviews = REVIEW_AREAS.map(area => reviewFor(manifest, area));
+  manifest.soundDecision = 'silent';
+  const reviews = [...REVIEW_AREAS, 'final-user'].map(area => reviewFor(manifest, area));
   manifest.reviews = reviews;
   assert.equal(stageReady(manifest, 'final-approved', context), true);
   assert.throws(() => stageReady({...manifest, reviews: reviews.filter(item =>
@@ -414,10 +424,102 @@ test('final approval requires every current review including pacing and actual u
   assert.throws(() => stageReady({...manifest, reviews: reviews.filter(item =>
     item.area !== 'lighting-shadow-continuity')}, 'final-approved', context), /lighting/);
   assert.throws(() => stageReady({...manifest, finalUserApproval: false}, 'final-approved', context), /user approval/);
+  assert.throws(() => stageReady({...manifest, reviews: reviews.filter(item =>
+    item.area !== 'final-user')}, 'final-approved', context), /final-user/);
   const failed = recordReview({...manifest, stage: 'final-approved', generationApproved: true},
     {area: 'phone-and-export', result: 'fail', evidence: 'Synthetic later failure.'});
   assert.equal(failed.stage, 'sound-approved');
   assert.equal(failed.finalUserApproval, false);
   assert.equal(failed.generationApproved, false);
   assert.throws(() => stageReady(failed, 'final-approved', context), /failed review/);
+});
+
+test('personal acceptance cannot be forged from legacy or delegated user labels', () => {
+  const manifest = withCast(workspace());
+  const personal = manifest.reviews.at(-1);
+  assert.equal(requireAcceptance(manifest, 'characters').area, 'characters-user');
+  for (const authority of [undefined, 'user-delegated autonomous agent review',
+    {type: 'personal-user', personallyViewedByUser: false}]) {
+    assert.throws(() => requireAcceptance({...manifest, reviews: [
+      ...manifest.reviews.slice(0, -1), {...personal, authority}]}, 'characters'), /Personal-user/);
+    assert.throws(() => recordReview(manifest, {...personal, authority}), /Personal-user/);
+  }
+});
+
+test('delegated acceptance is scoped, revocable, expiring and source-bound, never final user approval', () => {
+  const manifest = withCast(workspace());
+  manifest.reviews = manifest.reviews.filter(item => item.area !== 'characters-user');
+  const delegation = {id: 'synthetic', status: 'active', scope: ['characters'],
+    instruction: 'Synthetic explicit bounded delegation; no real user instruction.',
+    productionFingerprint: manifest.productionFingerprint, creditCeiling: 0,
+    authorizedAt: new Date(Date.now() - 1000).toISOString(),
+    expiresAt: new Date(Date.now() + 60000).toISOString()};
+  manifest.delegations = [delegation];
+  const review = {area: 'characters-delegated', result: 'pass', evidence: 'Synthetic actual inspection.',
+    authority: {type: 'delegated', delegationId: 'synthetic', personallyViewedByUser: false}};
+  const accepted = recordReview(manifest, review);
+  assert.equal(requireAcceptance(accepted, 'characters').area, 'characters-delegated');
+  assert.equal(stageReady(accepted, 'characters-approved', context), true);
+  assert.throws(() => requireAcceptance({...accepted, delegations: []}, 'characters'), /delegation/);
+  assert.throws(() => requireAcceptance({...accepted, assets: accepted.assets.map(asset =>
+    ({...asset, sha256: 'e'.repeat(64)}))}, 'characters'), /stale review/);
+  for (const patch of [{status: 'withdrawn'}, {scope: ['design']}, {instruction: ''},
+    {productionFingerprint: 'stale'}, {expiresAt: new Date(0).toISOString()}]) {
+    assert.throws(() => requireAcceptance({...accepted, delegations: [{...delegation, ...patch}]},
+      'characters'), /delegation/);
+  }
+  const failed = recordReview({...accepted, stage: 'characters-approved'}, {...review, result: 'fail'});
+  assert.equal(failed.stage, 'preproduction');
+  assert.throws(() => requireAcceptance(failed, 'characters'), /Missing or stale/);
+  assert.throws(() => recordReview(accepted, {...review, area: 'final-delegated'}), /cannot be delegated/);
+  assert.throws(() => recordReview(accepted, {...review, area: 'final-user'}), /Personal-user/);
+});
+
+test('entertainment requires actual scoped evidence and invalidates on brief/media changes or later failure', () => {
+  const manifest = workspace({stage: 'sound-approved', soundDecision: 'silent', finalUserApproval: true,
+    assets: [{path: 'outputs/final.mp4', kind: 'final', sha256: 'c'.repeat(64)}]});
+  manifest.reviews = [...REVIEW_AREAS.filter(area => area !== 'entertainment-wow-enjoyment'),
+    'final-user'].map(area => reviewFor(manifest, area));
+  assert.throws(() => stageReady(manifest, 'final-approved', context), /entertainment/);
+  const review = {area: 'entertainment-wow-enjoyment', result: 'pass',
+    evidence: 'Synthetic review', report: entertainmentReport()};
+  for (const report of [undefined, {...review.report, picture: 'sampled-frames'},
+    {...review.report, dimensions: review.report.dimensions.slice(1)},
+    {...review.report, unresolvedFailures: ['Boring payoff']},
+    {...review.report, dimensions: review.report.dimensions.map(item => ({...item,
+      evidence: [{from: 0, to: 11, observation: 'Outside film'}]}))}]) {
+    assert.throws(() => recordReview(manifest, {...review, report}), /Entertainment|entertainment|Assess/);
+  }
+  const accepted = recordReview(manifest, review);
+  assert.equal(stageReady(accepted, 'final-approved', context), true);
+  assert.throws(() => requireReview({...accepted, entertainmentBrief: {
+    ...manifest.entertainmentBrief, lane: 'visual-poetry'}}, review.area), /stale/);
+  assert.throws(() => requireReview({...accepted, assets: [{...manifest.assets[0],
+    sha256: 'd'.repeat(64)}]}, review.area), /stale/);
+  const failed = recordReview({...accepted, stage: 'final-approved'}, {
+    area: review.area, result: 'fail', evidence: 'Synthetic boredom finding at 5s.'});
+  assert.equal(failed.stage, 'sound-approved');
+  assert.equal(failed.finalUserApproval, false);
+  assert.throws(() => stageReady(failed, 'final-approved', context), /failed review/);
+});
+
+test('explicit legacy migration preserves history but cannot rebind stale evidence or invent personal approval', () => {
+  const manifest = withCast(workspace());
+  const original = {...manifest.reviews.at(-1), authority: 'user-delegated autonomous agent review',
+    personallyViewedByUser: false, delegationInstruction: 'Synthetic explicit autonomous completion.'};
+  manifest.reviews[manifest.reviews.length - 1] = original;
+  const delegation = {id: 'legacy-test', status: 'active', scope: ['characters'],
+    instruction: original.delegationInstruction, creditCeiling: 0,
+    productionFingerprint: manifest.productionFingerprint,
+    authorizedAt: new Date(Date.now() - 1000).toISOString(),
+    expiresAt: new Date(Date.now() + 60000).toISOString()};
+  const updated = migrateDelegatedAcceptances(manifest, delegation);
+  assert.deepEqual(updated.reviews.slice(0, -1), manifest.reviews);
+  assert.equal(requireAcceptance(updated, 'characters').area, 'characters-delegated');
+  assert.equal(updated.finalUserApproval, false);
+  assert.equal(updated.generationApproved, false);
+  assert.throws(() => migrateDelegatedAcceptances(updated, delegation), /already exists/);
+  assert.throws(() => migrateDelegatedAcceptances({...manifest, reviews: [{
+    ...original, assetSetFingerprint: 'stale'}]}, delegation), /never rebind stale/);
+  assert.throws(() => migrateDelegatedAcceptances({...manifest, reservedCredits: 1}, delegation), /terminal-job/);
 });

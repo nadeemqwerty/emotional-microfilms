@@ -39,6 +39,9 @@ Output `data\song-cue-template.json` filled in the ignored selected workspace,
 candidate rationale, exact phrase/timing and vocal brief, rights state,
 replaceable alternative and sound-review checks. `film song-plan <cue.json>`
 checks timing math without modifying audio or authorizing generation.
+For approved local editing use `scripts\audio.mjs` and the private preparation
+cue in `docs\song-adaptation.md`. Its bounded atempo/fades/level tests do not
+establish diction, actual singing, licensing or listened-to picture sync.
 
 Actual audio editing, singing services, uploads, spending and publication remain
 separately approved operations. Old age, short duration, "sped up", "cover",

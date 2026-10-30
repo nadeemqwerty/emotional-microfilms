@@ -45,6 +45,9 @@ Rank findings by story-breaking impact before polish.
   choice for connection-led stories, not compulsory sentimentality for comedy.
 - Hook promise, information progression, payoff exposure and justified ending
   rhythm; response/hold for connection-led work, not compulsory for poetry/comedy.
+- Wow, freshness/beauty, enjoyment, anticipation, earned reward, boredom and replay
+  reason under `docs\entertainment-review.md`. Required final area:
+  `entertainment-wow-enjoyment`; missing playback/listening is BLOCKED.
 - Declared visual-first/text-led comprehension mode. Intentional format text is
   included in muted tests; require phone-size contrast, exposure and composition.
 - Identity, screen direction, gaze, prop ownership and plausible contacts.
@@ -56,6 +59,8 @@ Rank findings by story-breaking impact before polish.
 - Phone preview, actual encoding/audio inspection and accessible description.
 - Exact quote/consent, all charged attempts and resumable historyId ledger.
 - Current asset hashes and final user approval; publication is separate.
+- Typed personal-user versus scoped/active delegated acceptance; a delegated
+  reviewer never claims the user watched or grants final/publication consent.
 
 Use `npm run film -- review ...` only to record a real observed review with user
 permission. The latest review for an area/hash governs; a failure supersedes an

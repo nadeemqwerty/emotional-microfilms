@@ -11,6 +11,40 @@ Read [visual development](visual-development.md) for hook design, butterflies/
 nature/glow options, provenance and light/shadow integration. Schematics are
 planning aids only, never generated keyframes or accepted character references.
 
+## Authority and writer ownership (current contract)
+
+Use [the host-neutral contract](agent-integration.md); claim the existing
+workspace and set `FILM_OWNER` before mutation. Source/tooling ownership does
+not transfer production ownership or authorize new spending.
+
+Personal acceptance uses `characters-user`, `keyframes-user`, `design-user`
+with `authority:{"type":"personal-user","personallyViewedByUser":true}`.
+Only record this after real personal feedback. Delegated acceptance instead uses
+`characters-delegated`, `keyframes-delegated`, `design-delegated` with
+`authority:{"type":"delegated","delegationId":"<recorded-id>","personallyViewedByUser":false}`.
+Both use actual `evidence` and `result`; record via `review-json`, not a pretend
+user pass through the free-text command.
+
+Private `manifest.delegations` entries contain `id`, `instruction` (exact actual
+authorization), `scope` (subset of `characters`, `keyframes`, `design`),
+`status:"active"`, current `productionFingerprint`, `authorizedAt`, `expiresAt`
+and nonnegative integer `creditCeiling`. Operator restrictions may narrow but
+never expand user authority. Check exact budget/retry consent separately.
+Withdrawn/expired/out-of-scope/stale delegation cannot authorize later work.
+The newest acceptance path governs; a stale personal label is not a fallback.
+Final approval cannot be delegated: require `finalUserApproval:true` AND a
+current `final-user` review with personal-user authority. Publication is separate.
+
+Old delegated records under `*-user` remain history. For explicitly evidenced,
+still-current legacy records only, `migrate-acceptance <manifest> <receipt.json>`
+appends distinct delegated records without changing history or rebinding stale
+media. Receipt: checkpoint `manifestSha256` and the bounded `delegation` object.
+Test against a checkpoint copy first; terminal jobs and zero reservations are
+required. Migration clears spend/final/publication flags. Do not migrate an
+actively changing producer's manifest or replace newer typed decisions.
+The later walkthrough's `*-user` steps mean the personal path; substitute the
+typed delegated path only where the actual instruction covers it.
+
 ## 1. Develop -> choose
 
 Read brief, rubric, existing ideas and actual feedback. Generate original varied
@@ -121,9 +155,13 @@ npm run film -- asset workspace\the-dry-seat\manifest.json keyframe media\the-dr
 npm run film -- asset workspace\the-dry-seat\manifest.json keyframe media\the-dry-seat\b-start.png
 npm run film -- asset workspace\the-dry-seat\manifest.json keyframe media\the-dry-seat\b-end.png
 npm run film -- review workspace\the-dry-seat\manifest.json keyframes pass "Observed continuity evidence."
-npm run film -- review workspace\the-dry-seat\manifest.json keyframes-user pass "<actual user scene approval>"
+npm run film -- review-json workspace\the-dry-seat\manifest.json workspace\the-dry-seat\scene-user-review.json
 npm run film -- advance workspace\the-dry-seat\manifest.json keyframes-approved
 ```
+
+The private scene review JSON must contain `area:"keyframes-user"`, `result`,
+actual `evidence` and the personal-user `authority` object defined above. For
+delegated acceptance use the distinct area/authority/delegation record instead.
 
 Record provenance for every scene image too; a PNG of a sketch is not a real
 production endpoint. Before the next step finalize `hookPlan`, `sceneChanges`,
@@ -200,7 +238,10 @@ Register the output as `final`, inspect actual phone playback and record all
 final areas: silent-comprehension, intended-payoff, continuity,
 pacing-hook-reveal-hold, lighting-shadow-continuity, motion-contact,
 audio-rights-and-mix, research-claims,
-phone-and-export. Record actual user approval as `finalUserApproval:true`.
+phone-and-export. Include `opening-hook`, `atmosphere-effects` and `entertainment-wow-enjoyment`;
+the latter needs the [structured playback report](entertainment-review.md).
+Record actual user approval as `finalUserApproval:true` and a typed `final-user`
+review against the current final assets.
 Only then advance to `final-approved`.
 
 ## 6. Publish and learn - separate authorization
@@ -240,7 +281,7 @@ and provider historyIds; preserve rejected assets and their cost ledger.
 
 ## Project-only persistence
 
-Project skills and six read-only reviewer definitions live under `.github\`.
+Project skills and seven read-only reviewer definitions live under `.github\`.
 No personal/global pointer remains. Agent definitions describe available roles,
 not agents that have automatically executed. Use direct review for a small
 artifact; ask for/delegate only substantial independent review when appropriate.

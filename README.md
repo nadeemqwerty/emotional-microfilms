@@ -5,7 +5,10 @@ seconds / 9:16**. It combines reusable agent skills, a 41-story development bank
 scored shortlisting, user decisions, complete prompt packets, model-cost evidence,
 and hash-bound production reviews.
 
-**Current state:** an actual ten-second silent father-son picture pilot exists.
+**Current state:** an actual ten-second silent father-son picture pilot exists,
+but the user rejected its absent soundtrack and abrupt sitting ellipse. The
+producer is repairing motion/transition/audio with a 13-second revised packet;
+v1 is retained, not an accepted delivery. New tooling does not approve the repair.
 It uses an original fictional Korean toddler and father in his 30s: one small
 invitation, then a cut to Dad already seated beside him. The revised real cast,
 four guided scene endpoints and two PixVerse clips were produced in that order.
@@ -24,12 +27,16 @@ that a film has passed review. The current checks include real FFmpeg smoke and
 character provenance/user approval, scene references, hook/effect/light plans and
 design-lock gates. The user-set **1,000-credit per-generation ceiling** is enforced
 on the discounted whole-request estimate, independently of total approved budget.
-**51 tests pass**, with zero skips when the real FFmpeg checks are enabled.
+The prior producer checkpoint reported 51 passing tests. Current implementation
+validation is recorded in [the completion plan](docs/completion-plan.md).
 See the critic record for actual scope and remaining media/perception gates.
 
 ## Start
 
 Node 20+; no packages to install.
+For Claude, ChatGPT, Copilot and other hosts, use
+[the shared execution/handoff contract](docs/agent-integration.md), not a second
+pipeline. Real unavailable host transports/perception stay explicitly blocked.
 
 ```powershell
 Set-Location .\emotional-microfilms
@@ -45,9 +52,9 @@ npm test
 
 The canonical agent skill is
 [`.github\skills\emotional-microfilm\SKILL.md`](.github/skills/emotional-microfilm/SKILL.md).
-All skills and reviewer definitions are project-local. Reload project skills in a fresh session or with
-`/skills reload`; verify with `/skills info emotional-microfilm`.
-Skill discovery is not proof it is loaded into the present conversation.
+All skills and reviewer definitions are project-local. Copilot/Agency exposes
+`/skills`; other hosts read the common entrypoint and linked canonical files.
+Discovery is not proof a skill is loaded into the present conversation.
 
 ## Read in this order
 
@@ -70,8 +77,9 @@ Skill discovery is not proof it is loaded into the present conversation.
 
 ## Iterative production, not dummy frames
 
-**Real character image -> user feedback -> reference-guided scene images for all
-changes -> user feedback -> lock script/hook/timing/transitions/lighting/shadows/
+**Real character image -> personal or scoped delegated acceptance ->
+reference-guided scene images for all changes -> acceptance ->
+lock script/hook/timing/transitions/lighting/shadows/
 effects/sound route -> motion.** Sketches are planning aids, never production
 references. Unchanged cast can be reused; replacements invalidate its approvals.
 Nature/beauty options include golden butterflies, flowers, sakura, rain, wind/
@@ -84,7 +92,7 @@ or promise of dopamine/retention. The assembler does not implement a compositor.
 | Component | Purpose |
 |---|---|
 | Seven [skills](.github/skills/emotional-microfilm/SKILL.md) | Studio, cinematography, lighting, music/pacing, song adaptation, reviews, reference reverse engineering |
-| Six [reviewer roles](.github/agents/microfilm-story-reviewer.agent.md) | Story, pacing, visuals, sound, evidence, delivery; read-only |
+| Seven [reviewer roles](.github/agents/microfilm-entertainment-reviewer.agent.md) | Story, pacing, visuals, sound, evidence, delivery, Wow & Enjoyment; read-only |
 | [Roadmap](data/roadmap.json) | Dependency-based milestones with actual exit evidence |
 | [Seven workflows](data/workflows.json) | Develop, previsualize, produce, sound/finish, learn, reverse engineer, critic loop |
 | [Evidence-to-practice map](docs/evidence-to-practice.md) | Each finding becomes a rule, artifact, reviewer check and failure condition |
@@ -120,13 +128,21 @@ Use `unrated` for a selection given without a numerical rating.
 | Executable locally | Deliberately not automated |
 |---|---|
 | Validate/rank 41 stories, diversify a slate and show feedback | Decide whether the selected genre/payoff lands |
-| Plan song phrase/tempo duration and clearance blockers | Sing, license or perceptually judge an actual recording |
+| Plan phrase/tempo; prepare cleared audio with trim, bounded atempo, fades and sample-peak checks | Sing, license or perceptually judge an actual recording |
 | Compare dated credit budgets | Refresh OpenArt forms/quotes and consent to spend |
 | Create a resumable selected-story workspace | Upload references; submit and resume provider jobs |
 | Hash assets, record evidence, gate stages | Review identities, physical contact and soundtrack rights |
 | Assemble approved local clips with FFmpeg | Approve a final export and publish to Instagram |
 | Prepare full-span reference frames/audio and validate timecoded analysis | Actually watch/listen, distinguish observations from inference, provide real feedback |
 | Build an original adaptation handoff from validated analysis/feedback | Authorize reference reuse, select a new story and approve generation |
+| Exclusive workspace writes, typed user/delegated reviews and private handoff | Authenticate another host or claim it watched/listened |
+
+The required [entertainment gate](docs/entertainment-review.md) assesses wow/
+freshness, enjoyment, anticipation, earned reward, boredom and voluntary replay
+from actual playback. Scores are creative hypotheses, never dopamine measures.
+Claim a workspace and set `FILM_OWNER` before existing-manifest CLI writes.
+Personal `*-user` acceptance requires actual user viewing; explicitly delegated
+decisions use `*-delegated`. Final personal acceptance/publication stay separate.
 
 An assembly script is available as `node scripts\assemble.mjs <edit.json>
 --ffmpeg <ffmpeg.exe>`. It needs an existing encoder and actual local media.

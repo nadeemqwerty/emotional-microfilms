@@ -161,3 +161,35 @@ obtain/reassert only the specifically applicable repair authorization, fresh
 request/quote and remaining budget before another call. The earlier-stage repair
 must remain possible without falsely passing the failed image; replace the actual
 asset and repeat its affected reviews. No automatic retries or approval recycling.
+
+## Route capability and demonstration ledger
+
+This is not a compositor feature list. Shared in-generation workflow: put the
+motif in literal endpoints AND exact motion prompts, quote the real supported
+model/form, generate only with consent, download/hash and inspect the whole clip.
+Shared composite workflow: use an available capable editor with original/cleared
+assets, document layers/masks/tracking/light treatment, export/register the
+resulting clip and pass `effect-preflight`. No such editor is installed or
+exercised by this implementation; composite execution remains BLOCKED until it is.
+
+| Motif | Intended route / timing and depth | Light, failure and fallback | Demonstration state |
+|---|---|---|---|
+| Golden butterflies | In-generation for simple stable count/path; tracked/masked editor composite for controlled foreground flight; cue a gaze/payoff, never hide it | Gold reflection is not emission; inspect wing stability, face occlusion, spill/shadows. Fallback: one nonemissive distant butterfly or omit | NOT DEMONSTRATED |
+| Flowers | Static in-generation set dressing or one primary bloom action with its own endpoints/time; mask behind hands/props | Inspect stable petals, scale, contact shadow and growth continuity. Fallback: already-open flower, no bloom | NOT DEMONSTRATED; static does not prove growth |
+| Sakura | In-generation background/petals; editor layers only with depth/occlusion design; restrain drift around payoff | Inspect season/wind, petal count/scale, no finger/petal morphs or flicker. Fallback: stationary blossoms | NOT DEMONSTRATED |
+| Rain | In-generation at accepted wet/dry endpoints and motion; foreground rain needs shelter/occlusion logic | Inspect gravity/wind, dry-seat evidence, faces, wet reflections and light pumping. Fallback: wet setting with sparse background rain | Pilot v1 has actual rainy clips and frame audit; full-playback entertainment acceptance still open; repair is active |
+| Wind/trees | In-generation subtle background secondary motion, or editor mesh/tracking where actually available | Rooted trunks, coherent leaf/cloth direction, no warped bodies/architecture/shadows. Fallback: still foliage | Pilot background is not a controlled wind/tree-behavior demonstration |
+| Autumn | In-generation coherent season; editor leaf layers need scale/depth/timed masks | Inspect fall direction, ground contact and leaf/face separation. Fallback: static ground leaves | NOT DEMONSTRATED |
+| Illuminated/glow accents | Genuine generated light state or lit 3D/editor workflow with declared spill/shadows; distant negligible-spill lights may be simpler | Inspect material response, exposure, flicker, caster/receiver relationships. Fallback: reflected gold/nonemissive accent | NOT DEMONSTRATED; a halo/alpha overlay would not establish relighting |
+
+For each real demonstration retain source/result hashes, cue interval, rights,
+route/model/editor settings, inspection scope and reviewer findings privately.
+The tested assembler performs trim/fit/cuts/audio, not overlays, tracking, masks
+or relighting. Do not mark one motif operational from another's demonstration.
+Select effects for beauty/enjoyment under the entertainment analyst, not because
+the menu exists. No extra generation or pilot rerender is authorized by this table.
+
+Use the typed personal/delegated authority contract in
+[workflow](workflow.md); earlier `*-user` examples apply only to genuine user
+viewing. Preserve active producer decisions rather than migrating their labels
+again. A rejected cut remains rejected until diagnosed repair/review.

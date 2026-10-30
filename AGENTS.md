@@ -6,6 +6,13 @@ All instructions, skills, reviewers and roadmap state for this project live in
 this repository only. Do not create personal/global skill pointers or add its
 creative rules to global memory/knowledge files.
 
+All hosts use [the common integration/handoff contract](docs/agent-integration.md).
+Claim a workspace and set `FILM_OWNER` before CLI writes; transfer explicitly.
+Keep personal `*-user` and explicitly authorized `*-delegated` decisions distinct.
+Legacy delegated records under user labels are history, not human acceptance.
+Require the [Wow & Enjoyment Analyst](docs/entertainment-review.md) on actual
+final playback; no dopamine measurement or audience result is inferred.
+
 - Ask before writes outside an already approved scope. Never delete existing work.
 - Research, model forms and quotes are free reads; generation, reference uploads,
   purchases, publication, commits and pushes require their own explicit approval.
@@ -15,7 +22,8 @@ creative rules to global memory/knowledge files.
   research when requested; use GPT-family agents for delegated reasoning.
 - The project contains no paid-generation client, API secrets or automatic upload.
 - Follow `docs\visual-development.md`: generate real cast references, show them
-  for user approval, then develop real scene images and obtain scene approval.
+  for personal user or explicitly scoped delegated acceptance, then develop
+  real scene images and obtain acceptance through the same honest authority path.
   Sketches are not production keyframes. Lock script/hook/timing/transitions,
   lighting/shadows, atmosphere/effects and sound route together before motion.
   Consider beauty/nature accents deliberately, not as a compulsory overlay.

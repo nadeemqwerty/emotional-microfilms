@@ -74,6 +74,47 @@ their phrasing. Do not quantize every breath by default.
 modify, sing, upload or clear a recording. The main assembler expects an already
 prepared accepted mix; it does not perform warping or compose stems.
 
+## Executable local preparation
+
+`node scripts\audio.mjs workspace\<film>\audio-prep.json --ffmpeg "C:\path\to\ffmpeg.exe"`
+prepares existing cleared audio; it does not sing, compose, separate stems or
+license anything. It uses FFmpeg trim, pitch-preserving `atempo` restricted to
+0.8-1.25, fades and a -1dB sample-peak limiter (not true-peak/loudness mastering).
+It validates full decode, expected duration and sample peak, emits PCM 48kHz
+stereo WAV plus a hash-bound receipt, and refuses overwrite. No downloads or
+package installs. Actual phrase boundaries, timbre/diction and sync still need
+listening; "pitch-preserving" does not promise artifact-free vocals.
+
+Fill a PRIVATE cue with actual source/hash/rights:
+
+```json
+{
+  "schemaVersion": 1,
+  "source": "media/selected-film/cleared-original.wav",
+  "sourceSha256": "<actual SHA-256>",
+  "in": 1, "out": 13, "tempo": 1.2,
+  "fadeIn": 0.02, "fadeOut": 0.1, "gain": 0.8,
+  "phraseBoundariesVerified": true,
+  "rights": {"status": "cleared", "evidence": "<actual evidence>",
+    "scope": "<recording, composition, voice, platform/territory/commercial scope>"},
+  "output": "outputs/selected-film/prepared.wav"
+}
+```
+
+This placeholder is not executable or a licence. Select a whole phrase before
+setting `phraseBoundariesVerified:true`; failed duration/tempo fits need another
+excerpt or authorized performance, not truncated words. Register accepted output
+as `audio`, set separate sound route, cue/mix with picture, listen and record
+sound review through the existing assembly workflow. The receipt deliberately
+remains perceptually PENDING.
+
+Software proof uses an original synthetic tone: real CLI trim/tempo/fades,
+duration/peak checks, pitch-frequency check, missing encoder and no-overwrite.
+It is not a sung example. Operational full music/vocal proof still requires
+cleared nostalgic/modern/original comparisons, authorized real voice/service,
+actual listening and the same locked picture. This implementation buys no
+service and invents no provider endpoint.
+
 ## Actual singing / vocal-production brief
 
 Record:

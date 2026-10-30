@@ -70,7 +70,7 @@ test('real CLI validates custom packets, rejects stale resumes and rolls failed 
     mkdirSync(dirname(resolve(fixture, file)), {recursive: true});
     copyFileSync(resolve(root, file), resolve(fixture, file));
   };
-  for (const file of ['scripts/film.mjs', 'lib/workflow.mjs', 'lib/music.mjs',
+  for (const file of ['scripts/film.mjs', 'lib/workflow.mjs', 'lib/music.mjs', 'lib/handoff.mjs',
     'data/brief.json', 'data/rubric.json', 'data/scenarios.json', 'data/model-quotes.json',
     'data/roadmap.json', 'data/workflows.json', 'data/creative-lanes.json',
     'examples/the-dry-seat.json', 'examples/same-old-handshake.json', 'examples/the-last-light.json']) copy(file);
@@ -86,7 +86,8 @@ test('real CLI validates custom packets, rejects stale resumes and rolls failed 
     storyboardApprovalEvidence: 'Synthetic actual-user field for testing only.'};
   write(path, draft);
   const run = (...args) => spawnSync(process.execPath, [resolve(fixture, 'scripts', 'film.mjs'), ...args],
-    {encoding: 'utf8', windowsHide: true});
+    {encoding: 'utf8', windowsHide: true, env: {...process.env, FILM_OWNER: 'synthetic-cli'}});
+  assert.equal(run('claim', path, 'synthetic-cli').status, 0);
   let result = run('advance', path, 'preproduction');
   assert.equal(result.status, 1);
   assert.match(result.stderr, /missing production packet/);
@@ -117,7 +118,12 @@ test('real CLI validates custom packets, rejects stale resumes and rolls failed 
   result = run('advance', path, 'characters-approved');
   assert.equal(result.status, 1);
   assert.match(result.stderr, /characters-user/);
-  assert.equal(run('review', path, 'characters-user', 'pass', 'Synthetic user evidence, not actual feedback.').status, 0);
+  assert.match(run('review', path, 'characters-user', 'pass', 'Unstructured synthetic evidence.').stderr,
+    /Personal-user/);
+  write('workspace/user-review.json', {area: 'characters-user', result: 'pass',
+    authority: {type: 'personal-user', personallyViewedByUser: true},
+    evidence: 'Synthetic user evidence, not actual feedback.'});
+  assert.equal(run('review-json', path, 'workspace/user-review.json').status, 0);
   result = run('advance', path, 'characters-approved');
   assert.equal(result.status, 0, result.stderr);
   manifest = read(path);

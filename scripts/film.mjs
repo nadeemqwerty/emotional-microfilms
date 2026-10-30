@@ -4,10 +4,12 @@ import {fileURLToPath} from 'node:url';
 import {
   assetSetFingerprint, diverseShortlist, estimatePlan, fileHash, inside, invariant, packetDraft,
   productionRevision, rankScenarios, readJson, recordReview, refreshWorkspace,
-  REVIEW_AREAS, stageReady, STAGES,
+  migrateDelegatedAcceptances,
+  ACCEPTANCE_AREAS, REVIEW_AREAS, stageReady, STAGES,
   validateFeedback, validatePacket, validateRubric, validateScenario, validateWorkspace, verifyAssets,
 } from '../lib/workflow.mjs';
 import {planSongCue} from '../lib/music.mjs';
+import {claimWorkspace, handoffSnapshot, saveWorkspace, transferWorkspace, withWorkspaceLock} from '../lib/handoff.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const load = path => readJson(inside(root, path));
@@ -67,13 +69,19 @@ function usage() {
   feedback <scenario-id> <1-5|unrated> <shortlist|select|reject|rewrite> [note]
   packet <selected-scenario-id>
   status <workspace-relative-manifest.json>
+  handoff <manifest>
+  claim <manifest> <owner-id>
+  transfer <manifest> <next-owner-id> <private-reconciliation.json>
   refresh <workspace-relative-manifest.json>
   asset <manifest> <character|keyframe|effect|video|audio|final> <project-relative-file> [reference-id]
   review <manifest> <area> <pass|fail> <observed-evidence>
+  review-json <manifest> <private-review.json>
+  migrate-acceptance <manifest> <private-migration-receipt.json>
   advance <manifest> <next-stage>
 
 Feedback/packet/refresh/asset/review/advance WRITE local files; obtain user approval.
-Review areas: characters, characters-user, keyframes, keyframes-user, design-user, effect-preflight, motion, sound, ${REVIEW_AREAS.join(', ')}.
+Workspace writes require claim and FILM_OWNER. Use review-json for personal/delegated authority and structured entertainment evidence.
+Review areas: characters, characters-user, characters-delegated, keyframes, keyframes-user, keyframes-delegated, design-user, design-delegated, final-user, effect-preflight, motion, sound, ${REVIEW_AREAS.join(', ')}.
 Stages: ${STAGES.join(' -> ')}.
 No automatic spend, upload, publish, commit or push.`);
 }
@@ -135,20 +143,39 @@ try {
       invariant(scenario, 'Unknown scenario.');
       const manifest = packetDraft(scenario, data.brief, data.feedback);
       const path = inside(root, `workspace/${scenario.id}/manifest.json`);
-      invariant(!existsSync(path), 'Workspace exists; resume its manifest rather than overwriting it.');
       const examplePath = inside(root, `examples/${scenario.id}.json`);
       if (existsSync(examplePath)) manifest.productionDraft = readJson(examplePath);
-      save(path, manifest);
+      withWorkspaceLock(path, () => {
+        invariant(!existsSync(path), 'Workspace exists; resume its manifest rather than overwriting it.');
+        save(path, manifest);
+      });
       console.log(`Created ${path}; generation remains unapproved, budget zero.`);
-    } else if (['status', 'refresh', 'asset', 'review', 'advance'].includes(command)) {
+    } else if (['status', 'handoff', 'claim', 'transfer', 'refresh', 'asset', 'review', 'review-json', 'migrate-acceptance', 'advance'].includes(command)) {
       invariant(args[0]?.startsWith('workspace/') || args[0]?.startsWith('workspace\\'),
         'Use an ignored workspace-relative manifest path.');
       const path = inside(root, args[0]);
+      const expectedHash = fileHash(path);
       let manifest = readJson(path);
+      const persist = () => saveWorkspace(path, manifest, process.env.FILM_OWNER, expectedHash);
       if (command !== 'refresh') validateWorkspace(manifest, data);
-      if (command === 'refresh') {
+      if (command === 'claim') {
+        console.log(JSON.stringify(claimWorkspace(path, args[1]), null, 2));
+      } else if (command === 'transfer') {
+        verifyAssets(root, manifest);
+        console.log(JSON.stringify(transferWorkspace(path, process.env.FILM_OWNER, args[1], load(args[2])), null, 2));
+      } else if (command === 'handoff') {
+        verifyAssets(root, manifest);
+        console.log(JSON.stringify(handoffSnapshot(path, manifest), null, 2));
+      } else if (command === 'migrate-acceptance') {
+        const receipt = load(args[1]);
+        invariant(receipt.manifestSha256 === expectedHash, 'Migration checkpoint hash changed.');
+        verifyAssets(root, manifest);
+        manifest = migrateDelegatedAcceptances(manifest, receipt.delegation);
+        persist();
+        console.log('Appended typed delegated acceptance; legacy history retained. No spend/final/publication approval.');
+      } else if (command === 'refresh') {
         manifest = refreshWorkspace(manifest, data);
-        save(path, manifest);
+        persist();
         console.log('Refreshed selection and brief; assets/jobs/review history retained, all approvals reset. Revise packet and renew storyboard approval.');
       } else if (command === 'status') {
         verifyAssets(root, manifest);
@@ -189,17 +216,20 @@ try {
           manifest.generationApproved = false;
           manifest.publicationApproval = null;
         }
-        save(path, manifest);
+        persist();
         console.log('Asset hashed. Changed assets invalidate downstream stage and spend approvals.');
-      } else if (command === 'review') {
+      } else if (command === 'review' || command === 'review-json') {
         const [, area, result, ...evidence] = args;
-        invariant(['characters', 'characters-user', 'keyframes', 'keyframes-user', 'design-user',
-          'effect-preflight', 'motion', 'sound', ...REVIEW_AREAS].includes(area), 'Unknown review area.');
-        invariant(['pass', 'fail'].includes(result) && evidence.join(' ').trim(),
+        const review = command === 'review-json' ? load(args[1]) :
+          {area, result, evidence: evidence.join(' ')};
+        invariant(['characters', 'keyframes', ...ACCEPTANCE_AREAS.flatMap(scope =>
+          [`${scope}-user`, `${scope}-delegated`]), 'final-user',
+        'effect-preflight', 'motion', 'sound', ...REVIEW_AREAS].includes(review.area), 'Unknown review area.');
+        invariant(['pass', 'fail'].includes(review.result) && review.evidence?.trim(),
           'Use pass/fail plus observed evidence; do not fabricate human review.');
         verifyAssets(root, manifest);
-        manifest = recordReview(manifest, {area, result, evidence: evidence.join(' ')});
-        save(path, manifest);
+        manifest = recordReview(manifest, review);
+        persist();
         console.log('Review recorded against the current exact asset set.');
       } else {
         verifyAssets(root, manifest);
@@ -211,7 +241,7 @@ try {
           manifest.finalUserApproval = false;
         }
         manifest.stage = args[1];
-        save(path, manifest);
+        persist();
         console.log(`Advanced to ${manifest.stage}. Publication remains manual and separately approved.`);
       }
     } else {

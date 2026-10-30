@@ -4,6 +4,34 @@ Audit: 30 October 2026, IST. Reconciled against the original conversation, inclu
 the follow-up clarifications. This is coverage of the **studio implementation**,
 not a claim that a film, song, audience experiment or business has been validated.
 
+## Current implementation reconciliation
+
+The older table below is the historical preproduction audit, NOT live production
+status. There are now 41 scenarios/four packets and an actual v1 film. The user
+rejected its missing sound and sitting ellipse; the producer owns an active
+13-second motion/audio repair. Do not equate asset existence with acceptance.
+The reviewed [completion plan](completion-plan.md) tracks all W0-W9 work.
+
+| Gap | Implemented in this session | Still pending / owner / next action |
+|---|---|---|
+| Honest authority | Typed personal/delegated acceptance; scoped expiring/revocable delegation, bound final-user gate; non-destructive explicit legacy migration | Producer has adopted typed records for the new repair; do not overwrite its changing manifest |
+| Agent integration | Common entrypoint/Claude adapter, host matrix, operator-assisted ChatGPT route, CLI handoff, exclusive writer/CAS and pending-job transfer | Host operator: real Claude/ChatGPT/Codex transport/accounts/perception exercise; synthetic relocation is not a real host PASS |
+| Wow & Enjoyment Analyst | Seventh read-only reviewer, anchored playbook, required final review with actual playback/timecodes, genre-sensitive criteria | Capable reviewer: inspect actual repaired film; frame audit cannot pass this gate |
+| Finished pilot | Existing cast/endpoints/clips/final preserved; actual rejection and producer repair not hidden | Producer: finish approved motion/audio repair; capable reviewer/user: playback/phone, entertainment and final acceptance |
+| Full reference analysis | Existing reverse workbench retained; no supplied source invented | User/operator: authorized playable export/transcript and real feedback; full perception still required |
+| Actual audio/singing | Local FFmpeg trim/tempo/fades/peak/duration route with real tone tests and receipts | Sound operator: listened-to cleared track comparisons and authorized sung phrase; synthetic tone is not singing |
+| Effects/beauty | Per-motif route/depth/timing/light/failure/fallback table and honest demonstration ledger | Visual operator: actual relevant motif/editor tests; rain frames do not prove butterflies, growth, masks or relighting |
+| Enjoyment/demand | Experiment template includes unprompted enjoyment/boredom/payoff/replay questions and predeclared criteria | Research/viewer owner: fresh direct-competitor evidence, real anonymous viewers, authorized release/windows; no audience result fabricated |
+| Persistence | Session-only source commit/push explicitly authorized; private media excluded | Verify exact staging/remote SHA and private restore scope; report actual results in plan |
+
+Public-web refresh attempt in this implementation: search tool returned a 504;
+a normal Bing query returned generic AI portals, not a usable direct-competitor
+sample. No new metric or market validation is claimed. Continue with a bounded
+direct-source sample when usable access is available; preserve the earlier
+[opportunity snapshot](opportunity-context.md) as historical, not refreshed data.
+
+## Historical baseline audit (superseded where above)
+
 | Request | Durable implementation / finding | Remaining evidence or gate |
 |---|---|---|
 | Put unused OpenArt credits to useful Instagram-oriented work; consider alternatives | Brief, exact configuration quote snapshot, budget arithmetic, opportunity context | No verified monthly allowance/expiry; no spend authorization inferred from a planning figure |
@@ -29,12 +57,13 @@ not a claim that a film, song, audience experiment or business has been validate
 | Reiterate all asks; professional-style multi-lens critic loop until green | Independent creative, evidence/music and workflow/code critics; findings, repairs and re-review recorded | Green is scoped to preproduction readiness, never missing production evidence |
 | Read/describe an input Reel in full and reverse-engineer its craft; improve with feedback | Project-local reverse-engineering skill/workbench, full-span evidence and complete timecoded analysis, feedback-driven original brief | Input reference, actual full playback/listening and real feedback still required; no inaccessible-link or screenshot-only full-video claim |
 
-## What is deliberately not marked complete
+## Historical completion boundary
 
-Actual user choice, storyboard acceptance, reference permissions, budget,
+At that earlier baseline, actual user choice, storyboard acceptance, reference permissions, budget,
 generation jobs, model-output comparison, media playback, real singing, soundtrack
 clearance, cold-viewer tests, final film approval and publication remain downstream
-roadmap gates. They cannot be manufactured by setting a status flag.
+roadmap gates. The current matrix above supersedes this snapshot. No missing
+approval or perception can be manufactured by setting a status flag.
 
 The current objective does not authorize paid generation or publishing a film.
 Completing the studio and its critic loop means it is ready to undertake those
