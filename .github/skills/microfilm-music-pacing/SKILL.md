@@ -7,6 +7,9 @@ description: Project-specific emotional music, sound design, hook and pacing wor
 
 Read `AGENTS.md`, `docs\music-brain-hooks.md`, `docs\pacing.md` and the selected
 packet. This skill applies only in this project, not to unrelated work.
+Use `microfilm-sound-direction` and `docs\audio-scene-fit.md` for spotting and
+actual emotional-fit acceptance. A low peak or gentle-instrument label does not
+rule out oppressive density, register, sustain or a misplaced musical climax.
 For nostalgic/modern tracks, tempo adaptation and actual vocals, use the separate
 `microfilm-song-adaptation` skill and `docs\song-adaptation.md`.
 

@@ -12,7 +12,7 @@ test('all local documentation links resolve and workflow reviewer dependencies a
   const markdownFiles = [];
   function walk(dir) {
     for (const item of readdirSync(dir, {withFileTypes: true})) {
-      if (['.git', 'workspace', 'outputs', 'media', 'node_modules'].includes(item.name)) continue;
+      if (['.git', '.cache', 'workspace', 'outputs', 'media', 'node_modules'].includes(item.name)) continue;
       const path = resolve(dir, item.name);
       if (item.isDirectory()) walk(path);
       else if (item.name.endsWith('.md')) markdownFiles.push(path);
@@ -41,7 +41,8 @@ test('all local documentation links resolve and workflow reviewer dependencies a
 
 test('read-only CLI entry points validate, rank, budget and resume project workflows', () => {
   for (const args of [['validate'], ['rank', '3'], ['shortlist', '6'], ['budgets'], ['roadmap'],
-    ['workflow', 'previsualize'], ['workflow', 'critic-loop'], ['workflow', 'reverse-engineer']]) {
+    ['workflow', 'previsualize'], ['workflow', 'critic-loop'], ['workflow', 'reverse-engineer'],
+    ['workflow', 'coordinated-production']]) {
     const result = spawnSync(process.execPath, [resolve(root, 'scripts', 'film.mjs'), ...args],
       {encoding: 'utf8', windowsHide: true});
     assert.equal(result.status, 0, result.stderr);
@@ -70,7 +71,7 @@ test('real CLI validates custom packets, rejects stale resumes and rolls failed 
     mkdirSync(dirname(resolve(fixture, file)), {recursive: true});
     copyFileSync(resolve(root, file), resolve(fixture, file));
   };
-  for (const file of ['scripts/film.mjs', 'lib/workflow.mjs', 'lib/music.mjs', 'lib/handoff.mjs',
+  for (const file of ['scripts/film.mjs', 'lib/workflow.mjs', 'lib/music.mjs', 'lib/handoff.mjs', 'lib/production.mjs',
     'data/brief.json', 'data/rubric.json', 'data/scenarios.json', 'data/model-quotes.json',
     'data/roadmap.json', 'data/workflows.json', 'data/creative-lanes.json',
     'examples/the-dry-seat.json', 'examples/same-old-handshake.json', 'examples/the-last-light.json']) copy(file);
@@ -97,6 +98,12 @@ test('real CLI validates custom packets, rejects stale resumes and rolls failed 
   assert.equal(result.status, 0, result.stderr);
   let manifest = read(path);
   assert.equal(manifest.productionFingerprint, productionRevision(manifest));
+  result = run('bundle', path, 'v001');
+  assert.equal(result.status, 0, result.stderr);
+  const bundle = read(`outputs/${scenario.id}/v001/metadata/bundle.json`);
+  assert.equal(bundle.finalUserApproval, false);
+  assert.equal(bundle.files.filter(item => item.path.replaceAll('\\', '/').startsWith('scripts/')).length, 10);
+  assert.match(run('bundle', path, 'v001').stderr, /version exists/);
   const castPath = 'media/cast.png';
   mkdirSync(resolve(fixture, 'media'), {recursive: true});
   writeFileSync(resolve(fixture, castPath), Buffer.from(

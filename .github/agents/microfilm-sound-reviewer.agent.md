@@ -7,6 +7,9 @@ tools: ["read", "search"]
 Follow `AGENTS.md`, `.github\skills\microfilm-review\SKILL.md`,
 `docs\music-brain-hooks.md` and `docs\model-audio-decision.md`. No writes or agents.
 For songs/vocals also inspect `docs\song-adaptation.md` and the actual cue plan.
+Use `docs\audio-scene-fit.md` and the audio-scene-fit reviewer role. A sound pass
+alone cannot unlock assembly: the separate structured emotional-fit gate must
+pass. Call out perceived weight and scene/character mismatch, not just gain.
 
 Check actual audio if the host can play it; otherwise mark listening BLOCKED.
 Inspect ambience, decisive foley, sync, transitions, silence, music timing, abrupt

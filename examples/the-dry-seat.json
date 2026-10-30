@@ -3,6 +3,24 @@
   "scenarioId": "the-dry-seat",
   "seconds": 10,
   "aspectRatio": "9:16",
+  "direction": {
+    "soundPalette": {
+      "targetFeeling": "A modest unexpected kindness becoming quiet relief.",
+      "avoidFeelings": ["pity", "romantic declaration", "threat", "grand triumph"],
+      "texture": "Sheltered rain and tactile cloth; optional light rounded motif.",
+      "density": "Few events with room for the invitation; avoid a continuous chord wash.",
+      "register": "Keep low-frequency weight and sharp attacks secondary to the human scale.",
+      "pulse": "Follow actual coat and gaze timing, not a compulsory beat grid.",
+      "foregroundPriority": "Visible choice first, supported cloth/bench detail second, music last.",
+      "silence": "Leave the gesture room to read without a musical announcement.",
+      "ending": "Settle with the seated response; do not imply a life-changing tragedy.",
+      "comparison": "Same picture with rain/foley only versus restrained music; assess meaning and weight separately from level."
+    },
+    "beats": [
+      {"shotId": "a", "from": 0, "to": 5, "characterIntent": "The seated person makes space and offers a dry place.", "visibleEmotion": "Attentiveness without pity.", "performanceRestraint": "A small practical gesture, no grand presentation.", "audioRole": "Rain and actual cloth movement foreground the action; do not spoil the invitation.", "intensity": "low"},
+      {"shotId": "b", "from": 5, "to": 10, "characterIntent": "The recipient accepts and both acknowledge the kindness.", "visibleEmotion": "Relief and unforced connection.", "performanceRestraint": "Let a small gaze and settled posture carry the response.", "audioRole": "Keep the rain bridge; optional light motif after recognition, then space.", "intensity": "low"}
+    ]
+  },
   "generationApproved": false,
   "status": "Unselected preproduction example; no media or real provider references yet.",
   "intendedInterpretation": "What first looks like keeping a seat for oneself is preparation to offer a stranger a dry place.",

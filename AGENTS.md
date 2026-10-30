@@ -12,6 +12,12 @@ Keep personal `*-user` and explicitly authorized `*-delegated` decisions distinc
 Legacy delegated records under user labels are history, not human acceptance.
 Require the [Wow & Enjoyment Analyst](docs/entertainment-review.md) on actual
 final playback; no dopamine measurement or audience result is inferred.
+Use `microfilm-production-direction` and `microfilm-sound-direction` for every
+new production. Export coordinated topic/version bundles, not flat loose files;
+see [bundle layout](docs/production-bundles.md). Require actual
+`audio-scene-fit` listening review before sound approval/assembly and on the
+final asset set. Heavy/mismatched music fails even when technical meters pass.
+Prioritize reusable workflow repairs over cosmetic rerolls; preserve good media.
 
 - Ask before writes outside an already approved scope. Never delete existing work.
 - Research, model forms and quotes are free reads; generation, reference uploads,

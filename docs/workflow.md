@@ -65,6 +65,13 @@ score: `film feedback <id> unrated select "<actual selection evidence>"`.
 
 ## 2. Story proof and direction
 
+Use the [production-direction bundle contract](production-bundles.md) and
+[sound-direction/fit contract](audio-scene-fit.md). Fill coordinated
+`direction.beats` and `soundPalette` before design lock or motion spending.
+Export the ten department scripts from one packet; do not maintain conflicting
+acting, audio, lighting and motion timelines. Actual user feedback should improve
+the reusable workflow before any optional asset repair.
+
 For the selected workspace create/revise the complete packet from the
 examples. Make identity/prop bible, spatial map, literal frames, motion prompts,
 single-pass alternative, required lightingPlan/shadow map, sound plan and pacing
@@ -198,7 +205,14 @@ it never sings, modifies a recording or clears rights.
 
 Set `soundDecision` to `silent`, `separate` or `native`. Separate audio needs a
 registered audio file; native requires `nativeAudioInspected:true` after actual
-inspection. Record sound review, then advance to `sound-approved`.
+inspection. Record sound review AND a structured `audio-scene-fit` pass, then
+advance to `sound-approved`. A technically clean, original but heavy/mismatched
+cue fails. If actual joined listening is unavailable, keep acceptance blocked.
+Use the [fit template and comparison protocol](audio-scene-fit.md).
+Before those listening reviews, a rough cut can use edit `purpose:"review"`
+and a `-review.mp4`/`-comparison.mp4` output. This explicit route needs locked
+design and registered, rights-cleared media, tolerates failed/pending sound,
+and grants no approval. Do not fake a sound pass merely to obtain a preview.
 
 The local FFmpeg assembler takes a reviewed edit plan:
 
@@ -215,7 +229,7 @@ The local FFmpeg assembler takes a reviewed edit plan:
     {"path": "media/the-dry-seat/b.mp4", "in": 0, "seconds": 5}
   ],
   "audio": {"route": "separate", "path": "media/the-dry-seat/mix.wav", "gain": 1, "rightsStatus": "cleared"},
-  "output": "outputs/the-dry-seat/final.mp4"
+  "output": "outputs/the-dry-seat/v001/finalVid/the-dry-seat-v001-review.mp4"
 }
 ```
 
@@ -239,6 +253,7 @@ final areas: silent-comprehension, intended-payoff, continuity,
 pacing-hook-reveal-hold, lighting-shadow-continuity, motion-contact,
 audio-rights-and-mix, research-claims,
 phone-and-export. Include `opening-hook`, `atmosphere-effects` and `entertainment-wow-enjoyment`;
+include the current structured `audio-scene-fit` report on the final asset set;
 the latter needs the [structured playback report](entertainment-review.md).
 Record actual user approval as `finalUserApproval:true` and a typed `final-user`
 review against the current final assets.

@@ -16,8 +16,11 @@ decode, black/freeze/dropout checks and audio-level measurement.
 Delivery is 1080x1920/30fps, upscaled/rate-converted from 720p/24fps sources.
 This is a **review preview**, not a sound/entertainment-approved master. Technical
 checks do not establish that the music or emotional flow is enjoyable. Actual
-listening, real-time/phone review, Wow/Enjoyment and personal final acceptance
-remain pending. No publication or audience result is claimed.
+user feedback now says the picture is good but its music is heavy/mismatched.
+The soundtrack is therefore rejected, not a pending technical pass. This
+feedback updates the reusable production workflow; no new media is commissioned
+here. Wow/Enjoyment, phone review and personal final acceptance remain pending.
+No publication or audience result is claimed.
 Actual media, job IDs, delegated decisions and credit reconciliation stay private.
 Synthetic tool-test fixtures are not creative reference analyses or films.
 The existing InterviewReel repository is untouched.
@@ -91,15 +94,28 @@ or promise of dopamine/retention. The assembler does not implement a compositor.
 
 | Component | Purpose |
 |---|---|
-| Seven [skills](.github/skills/emotional-microfilm/SKILL.md) | Studio, cinematography, lighting, music/pacing, song adaptation, reviews, reference reverse engineering |
-| Seven [reviewer roles](.github/agents/microfilm-entertainment-reviewer.agent.md) | Story, pacing, visuals, sound, evidence, delivery, Wow & Enjoyment; read-only |
+| Nine [skills](.github/skills/emotional-microfilm/SKILL.md) | Studio, cinematography, lighting, music/pacing, sound direction, production direction, song adaptation, reviews, reference analysis |
+| Eight [reviewer roles](.github/agents/microfilm-audio-scene-fit-reviewer.agent.md) | Story, pacing, visuals, sound, audio-scene fit, evidence, delivery, Wow & Enjoyment; read-only |
 | [Roadmap](data/roadmap.json) | Dependency-based milestones with actual exit evidence |
-| [Seven workflows](data/workflows.json) | Develop, previsualize, produce, sound/finish, learn, reverse engineer, critic loop |
+| [Eight workflows](data/workflows.json) | Coordinated production, develop, previsualize, produce, sound/finish, learn, reverse engineer, critic loop |
 | [Evidence-to-practice map](docs/evidence-to-practice.md) | Each finding becomes a rule, artifact, reviewer check and failure condition |
 
 Reviewer definitions do not run automatically or establish that a film was
 reviewed. All project instructions stay in this repository; no global/personal
 discovery skill remains.
+
+## Organized productions and coordinated scripts
+
+Use `outputs\<topic>\vNNN\` with `scripts`, `frames`, `metadata`, `tmpVids`,
+`audio`, `finalVid` and `reviews`. Ten department scripts derive from one packet
+and timeline: story, character/emotion, scene, frames, motion, lighting,
+camera/edit, audio/music, atmosphere/effects and delivery.
+[Bundle command and migration rules](docs/production-bundles.md).
+
+Before motion, specify character intent, emotional arc and the sound palette.
+Before sound approval/assembly, require a listened, timecoded
+[audio-scene-fit review](docs/audio-scene-fit.md). Quiet/original music can still
+be too heavy or imply the wrong feeling; codec/peak checks cannot pass this gate.
 
 ## Development, then explicit choice
 

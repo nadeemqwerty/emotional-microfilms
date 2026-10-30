@@ -6,10 +6,11 @@ import {
   productionRevision, rankScenarios, readJson, recordReview, refreshWorkspace,
   migrateDelegatedAcceptances,
   ACCEPTANCE_AREAS, REVIEW_AREAS, stageReady, STAGES,
-  validateFeedback, validatePacket, validateRubric, validateScenario, validateWorkspace, verifyAssets,
+  validateDirection, validateFeedback, validatePacket, validateRubric, validateScenario, validateWorkspace, verifyAssets,
 } from '../lib/workflow.mjs';
 import {planSongCue} from '../lib/music.mjs';
-import {claimWorkspace, handoffSnapshot, saveWorkspace, transferWorkspace, withWorkspaceLock} from '../lib/handoff.mjs';
+import {claimWorkspace, handoffSnapshot, saveWorkspace, transferWorkspace, withWorkspaceLock, workspaceOwner} from '../lib/handoff.mjs';
+import {createProductionBundle, validateDeliveryPath} from '../lib/production.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const load = path => readJson(inside(root, path));
@@ -68,6 +69,7 @@ function usage() {
   song-plan <workspace-relative-song-cue.json>
   feedback <scenario-id> <1-5|unrated> <shortlist|select|reject|rewrite> [note]
   packet <selected-scenario-id>
+  bundle <manifest> <vNNN> [unapproved-planning-packet.json]
   status <workspace-relative-manifest.json>
   handoff <manifest>
   claim <manifest> <owner-id>
@@ -79,8 +81,8 @@ function usage() {
   migrate-acceptance <manifest> <private-migration-receipt.json>
   advance <manifest> <next-stage>
 
-Feedback/packet/refresh/asset/review/advance WRITE local files; obtain user approval.
-Workspace writes require claim and FILM_OWNER. Use review-json for personal/delegated authority and structured entertainment evidence.
+Feedback/packet/bundle/refresh/asset/review/advance WRITE local files; obtain user approval.
+Workspace writes require claim and FILM_OWNER. Use review-json for personal/delegated authority, entertainment and audio-scene-fit evidence.
 Review areas: characters, characters-user, characters-delegated, keyframes, keyframes-user, keyframes-delegated, design-user, design-delegated, final-user, effect-preflight, motion, sound, ${REVIEW_AREAS.join(', ')}.
 Stages: ${STAGES.join(' -> ')}.
 No automatic spend, upload, publish, commit or push.`);
@@ -95,7 +97,9 @@ try {
     if (command === 'validate') {
       const packets = readdirSync(inside(root, 'examples')).filter(file => file.endsWith('.json'));
       for (const file of packets) {
-        validatePacket(load(`examples/${file}`), data.scenarios);
+        const packet = load(`examples/${file}`);
+        validatePacket(packet, data.scenarios);
+        validateDirection(packet);
       }
       if (args[0]) {
         const manifest = load(args[0]);
@@ -150,7 +154,7 @@ try {
         save(path, manifest);
       });
       console.log(`Created ${path}; generation remains unapproved, budget zero.`);
-    } else if (['status', 'handoff', 'claim', 'transfer', 'refresh', 'asset', 'review', 'review-json', 'migrate-acceptance', 'advance'].includes(command)) {
+    } else if (['status', 'handoff', 'claim', 'transfer', 'refresh', 'asset', 'review', 'review-json', 'migrate-acceptance', 'advance', 'bundle'].includes(command)) {
       invariant(args[0]?.startsWith('workspace/') || args[0]?.startsWith('workspace\\'),
         'Use an ignored workspace-relative manifest path.');
       const path = inside(root, args[0]);
@@ -158,7 +162,16 @@ try {
       let manifest = readJson(path);
       const persist = () => saveWorkspace(path, manifest, process.env.FILM_OWNER, expectedHash);
       if (command !== 'refresh') validateWorkspace(manifest, data);
-      if (command === 'claim') {
+      if (command === 'bundle') {
+        withWorkspaceLock(path, () => {
+          invariant(process.env.FILM_OWNER && workspaceOwner(path)?.owner === process.env.FILM_OWNER,
+            'Claim the workspace and set FILM_OWNER before exporting its private assets.');
+          invariant(fileHash(path) === expectedHash, 'Workspace changed; reload before creating a bundle.');
+          const result = createProductionBundle(root, manifest, args[1], {manifestPath: args[0],
+            ...(args[2] ? {packet: load(args[2])} : {})});
+          console.log(`Created ${result.path}. Originals retained; planning/media copies confer no approval.`);
+        });
+      } else if (command === 'claim') {
         console.log(JSON.stringify(claimWorkspace(path, args[1]), null, 2));
       } else if (command === 'transfer') {
         verifyAssets(root, manifest);
@@ -190,6 +203,7 @@ try {
       } else if (command === 'asset') {
         const [, kind, assetPath] = args;
         invariant(['character', 'keyframe', 'effect', 'video', 'audio', 'final'].includes(kind), 'Invalid asset kind.');
+        if (kind === 'final') validateDeliveryPath(root, assetPath, manifest.scenarioId);
         const referenceId = args[3] ?? basename(assetPath, extname(assetPath));
         const idField = {character: 'characterId', keyframe: 'keyframeId', effect: 'effectId'}[kind];
         const planned = {character: manifest.productionDraft?.characterPlan?.references,

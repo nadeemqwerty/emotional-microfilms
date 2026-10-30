@@ -1,0 +1,22 @@
+{
+  "area": "audio-scene-fit",
+  "result": "pending",
+  "evidence": "",
+  "report": {
+    "picture": "unavailable",
+    "audio": "unavailable",
+    "listeningConditions": "",
+    "comparison": {"samePicture": false, "listened": false, "baseline": "ambience-only", "observation": ""},
+    "dimensions": [
+      {"id": "emotional-congruence", "verdict": "pending", "evidence": []},
+      {"id": "perceived-weight", "verdict": "pending", "evidence": []},
+      {"id": "timbre-register", "verdict": "pending", "evidence": []},
+      {"id": "rhythm-space", "verdict": "pending", "evidence": []},
+      {"id": "sync-perspective", "verdict": "pending", "evidence": []},
+      {"id": "mix-hierarchy", "verdict": "pending", "evidence": []},
+      {"id": "ending-continuity", "verdict": "pending", "evidence": []}
+    ],
+    "segments": [],
+    "unresolvedFailures": ["Actual joined playback and listening not yet performed."]
+  }
+}

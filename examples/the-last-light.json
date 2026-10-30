@@ -3,6 +3,24 @@
   "scenarioId": "the-last-light",
   "seconds": 10,
   "aspectRatio": "9:16",
+  "direction": {
+    "soundPalette": {
+      "targetFeeling": "Gentle generosity with a visible, nonfatal cost.",
+      "avoidFeelings": ["robot death", "funeral", "disaster", "triumphal rescue"],
+      "texture": "Greenhouse air and one supported mechanical detail; optional restrained open tone.",
+      "density": "Sparse, leaving the changed light state readable.",
+      "register": "Avoid death-coded low drones and oppressive bass; no universal harmony/emotion rule assumed.",
+      "pulse": "Use the actual light transfer as a story event, not an excuse for a beat drop.",
+      "foregroundPriority": "The robot's choice and the seedling receiving light lead over music.",
+      "silence": "A music gap can clarify the lighting change without removing room tone.",
+      "ending": "Warm but modest continuation of life, not a descending power-down cue.",
+      "comparison": "Same picture with room/click only versus music; explicitly ask whether the robot seems to die."
+    },
+    "beats": [
+      {"shotId": "a", "from": 0, "to": 5, "characterIntent": "The robot notices the seedling's need and chooses to redirect light.", "visibleEmotion": "Attention and quiet resolve.", "performanceRestraint": "One clear choice, not a theatrical sacrifice.", "audioRole": "Room tone and a justified swivel detail; no danger-building drone.", "intensity": "low"},
+      {"shotId": "b", "from": 5, "to": 10, "characterIntent": "The robot accepts less light while the seedling benefits.", "visibleEmotion": "Care and continued presence, not death.", "performanceRestraint": "Stable posture and a readable benefit/cost hold.", "audioRole": "A modest opening after the transfer if useful, then decay without a death cue.", "intensity": "low"}
+    ]
+  },
   "generationApproved": false,
   "status": "Unselected preproduction example. Lamp/robot assets and output compliance untested.",
   "intendedInterpretation": "A small robot gives its comfortable pool of light to a seedling and accepts the shadow.",

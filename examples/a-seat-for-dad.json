@@ -3,6 +3,25 @@
   "scenarioId": "a-seat-for-dad",
   "seconds": 13,
   "aspectRatio": "9:16",
+  "direction": {
+    "soundPalette": {
+      "targetFeeling": "Small, familiar father-toddler tenderness; safety and quiet companionship.",
+      "avoidFeelings": ["heavy sentimentality", "sad farewell", "ominous tension", "grand triumph"],
+      "texture": "Ambience-led first. If music helps, audition a delicate rounded timbre with little low-mid mass.",
+      "density": "Very sparse; no continuous arpeggio or chord bed by default. Keep room between events.",
+      "register": "Avoid weighty bass and piercing bright attacks; choose by actual listening, not instrument name.",
+      "pulse": "Follow hesitant invitation, unhurried sitting and settled gaze; no compulsory BPM or cut accents.",
+      "foregroundPriority": "The child and father's small physical exchange lead; rain/cloth support; music stays secondary.",
+      "silence": "Allow music-free opening and action space while plausible sheltered ambience continues.",
+      "ending": "Let recognition breathe; a restrained decay, not a swelling finale or new musical idea.",
+      "comparison": "Same locked picture: ambience-only versus a sparse candidate at comfortable levels. Reject heaviness even if peak/LUFS pass."
+    },
+    "beats": [
+      {"shotId": "a", "from": 0, "to": 4, "characterIntent": "Minjun makes a small invitation; Junho notices rather than performing sadness.", "visibleEmotion": "Trust, attention and gentle curiosity.", "performanceRestraint": "One small hand gesture and natural glance; no exaggerated grin or pleading.", "audioRole": "Establish sheltered rain; leave the invitation unscored or almost unscored.", "intensity": "low"},
+      {"shotId": "sit", "from": 4, "to": 9, "characterIntent": "Junho accepts by turning and physically sitting near his son.", "visibleEmotion": "Ordinary care becoming shared comfort.", "performanceRestraint": "Plausible weight shift and settle; do not make bench contact a dramatic climax.", "audioRole": "Continuous ambience and supported quiet contact; no rising chord sequence or accent on every movement.", "intensity": "low"},
+      {"shotId": "b", "from": 9, "to": 13, "characterIntent": "Both recognize the familiar comfort of being together.", "visibleEmotion": "Understated warmth and ease.", "performanceRestraint": "Soft gaze and relaxed posture; let the hold register without overacting.", "audioRole": "Only if earned, one light musical gesture then space and decay; compare with ambience-only.", "intensity": "low"}
+    ]
+  },
   "generationApproved": false,
   "status": "Unapproved reusable template for the revised visible-sitting/sound pilot; private media and delegated decisions are not spending authorization.",
   "intendedInterpretation": "A toddler invites Dad to sit beside him; care travels in both directions through one small gesture.",
@@ -256,9 +275,9 @@
         "sound": "Continuous restrained synthesized rain bed and original soft-keyboard instrumental; no speech."
       }
     ],
-    "musicBrief": "Original sparse warm keyboard arpeggios at 88 BPM, gentle evolving consonant harmony and final resolution. Continuous across edits, no famous melody, lyrics or old-song imitation.",
+    "musicBrief": "Unapproved replacement brief, not an instruction to rerender now: ambience-led, delicate optional musical gestures after recognition, no continuous arpeggios, heavy bass or swelling chord bed. The user found v2's music heavy/mismatched despite liking its picture. Choose by joined listening, not a fixed BPM or a soft-keyboard label.",
     "rights": "New local synthesis from authored notes and deterministic noise, no external recordings, samples, copyrighted melody or paid music API.",
-    "test": "Verify actual audio stream, full duration, loudness, true peak, no clipping/dropouts and joins. Metering is not human listening; subjective sound approval remains pending."
+    "test": "Keep the accepted picture unchanged. Compare ambience-only and a sparse candidate on that same picture. Required audio-scene-fit review must call out felt weight, timbre/register, emotional meaning, density/space and ending as well as mix/sync/rights. Technical levels do not establish emotional fit."
   },
   "retryPlan": "Obtain scoped authorization, fresh live form and exact quote; use only genuine accepted references. One active job, 1000-credit whole-request cap, diagnose before repair, no blind rerolls. Review actual sitting motion, contact, boundaries and real sound; never substitute technical checks for subjective approval.",
   "reviewChecks": [

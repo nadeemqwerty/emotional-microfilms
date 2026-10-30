@@ -10,7 +10,7 @@
     "reverse": "node scripts/reverse.mjs",
     "audio": "node scripts/audio.mjs",
     "test": "node --test test",
-    "check": "node --check lib/workflow.mjs && node --check lib/handoff.mjs && node --check lib/audio.mjs && node --check lib/assembly.mjs && node --check lib/music.mjs && node --check lib/reverse.mjs && node --check scripts/film.mjs && node --check scripts/audio.mjs && node --check scripts/assemble.mjs && node --check scripts/reverse.mjs",
+    "check": "node --check lib/workflow.mjs && node --check lib/handoff.mjs && node --check lib/audio.mjs && node --check lib/assembly.mjs && node --check lib/production.mjs && node --check lib/music.mjs && node --check lib/reverse.mjs && node --check scripts/film.mjs && node --check scripts/audio.mjs && node --check scripts/assemble.mjs && node --check scripts/reverse.mjs",
     "validate": "node scripts/film.mjs validate"
   }
 }

@@ -26,7 +26,7 @@ test('audio rejects stale sources, uncleared rights, unsupported tempo, bad boun
 
 test('real audio CLI trims and tempo-fits a tone, checks peak/duration, refuses overwrite and missing encoder',
   {skip: !process.env.FFMPEG_PATH}, () => {
-    for (const file of ['scripts/audio.mjs', 'lib/audio.mjs', 'lib/assembly.mjs', 'lib/workflow.mjs']) {
+    for (const file of ['scripts/audio.mjs', 'lib/audio.mjs', 'lib/assembly.mjs', 'lib/workflow.mjs', 'lib/production.mjs']) {
       mkdirSync(dirname(resolve(fixture, file)), {recursive: true});
       copyFileSync(resolve(root, file), resolve(fixture, file));
     }

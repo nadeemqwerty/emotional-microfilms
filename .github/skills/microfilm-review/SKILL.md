@@ -55,6 +55,9 @@ Rank findings by story-breaking impact before polish.
   and temporal shadow continuity; declared stylization exceptions.
 - Sound perspective, synchronization, no accidental voice, appropriate music
   interpretation, replaceability and actual rights clearance.
+- Required `audio-scene-fit`: joined listening, same-picture baseline, complete
+  emotion timeline and all seven dimensions. Heavy/mismatched music is REVISE;
+  absent listening is BLOCKED, regardless of acceptable meters.
 - Science/vendor claims match their actual evidence and uncertainty.
 - Phone preview, actual encoding/audio inspection and accessible description.
 - Exact quote/consent, all charged attempts and resumable historyId ledger.

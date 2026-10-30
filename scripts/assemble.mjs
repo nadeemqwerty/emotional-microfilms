@@ -13,7 +13,7 @@ try {
   const ffmpeg = binary || process.env.FFMPEG_PATH || 'ffmpeg';
   const edit = readJson(inside(root, editPath));
   const manifest = readJson(inside(root, edit.manifest));
-  const {args, output} = assemblyArgs(root, edit, manifest);
+  const {args, output, purpose} = assemblyArgs(root, edit, manifest);
   const inspect = path => {
     const result = spawnSync(ffmpeg, ['-hide_banner', '-nostdin', '-i', inside(root, path)],
       {encoding: 'utf8', windowsHide: true});
@@ -32,7 +32,7 @@ try {
   mkdirSync(dirname(output), {recursive: true});
   const result = spawnSync(ffmpeg, args, {stdio: 'inherit', windowsHide: true});
   invariant(!result.error && result.status === 0, `Encoder failed: ${result.error?.message || result.status}`);
-  console.log(`Created ${output}. Register its hash and complete actual phone/audio/final review; nothing was published.`);
+  console.log(`Created ${purpose === 'review' ? 'UNAPPROVED REVIEW PREVIEW' : 'delivery candidate'} ${output}. Register its hash and complete actual phone/audio/final review; no approval was granted and nothing was published.`);
 } catch (error) {
   console.error(`Error: ${error.message}`);
   process.exitCode = 1;

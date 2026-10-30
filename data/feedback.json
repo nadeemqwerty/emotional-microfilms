@@ -6,7 +6,16 @@
       "rating": null,
       "decision": "select",
       "note": "Proceed with the provisional father-son pilot for character development only. Generated cast, scenes and final design remain subject to review.",
-      "at": "2026-10-30T16:05:27.161Z"
+      "at": "2026-10-30T16:05:27.161Z",
+      "productionFeedback": [
+        {
+          "version": "korean-toddler-v2-review",
+          "at": "2026-10-30T22:50:45.865+05:30",
+          "picture": "User says the video seems better and is good; not final release approval.",
+          "audio": "User says the music does not match the feelings/scene and is heavy.",
+          "instruction": "Improve and persist the workflow instead of optimizing this video: professional callouts, coordinated department scripts and topic/version artifact organization."
+        }
+      ]
     }
   ]
 }

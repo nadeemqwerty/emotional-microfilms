@@ -57,6 +57,12 @@ acceptance, not `*-user` labels. Read `docs\workflow.md` for authority records a
 
 ## The working loop
 
+For every new production also use `microfilm-production-direction` and
+`microfilm-sound-direction`. Read `docs\production-bundles.md` and
+`docs\audio-scene-fit.md`. Department scripts share one packet/timeline.
+Feedback first repairs the reusable process; it is not automatic consent to
+reroll a good picture or regenerate music.
+
 1. **Brief:** confirm target feeling, audience/context, realism/fantasy, limits,
    dialogue, budget and boundaries. Use reasonable creative defaults, not a
    presumed paid-generation budget.
@@ -115,6 +121,10 @@ acceptance, not `*-user` labels. Read `docs\workflow.md` for authority records a
     states plus an editorial cut for hard transformations; do not assume a model
     can morph without artifacts or obey frame-exact prose timestamps.
 11. **Sound:** build ambience/foley first, then test music or native audio.
+    Require scene/character emotional intent and a sound palette before motion.
+    A quiet mix can still feel heavy: review arrangement density, register,
+    timbre, space and dramatic implication on actual joined playback.
+    Required gate: `audio-scene-fit`, not a meter-only pass.
     Read `docs\music-brain-hooks.md`; no biochemical promises. Music supports or
     deliberately reframes action; it must not supply a missing plot. Clear actual
     compositions/recordings, platform/commercial scope and territories. The
@@ -151,6 +161,9 @@ acceptance, not `*-user` labels. Read `docs\workflow.md` for authority records a
   non-connection poetry/comedy; no compulsory relationship choice or reaction shot.
 - Audio cue sheet with actual synchronization points, music brief and silence,
   licensing state and replaceability. Never invent a music API or stems.
+- Coordinated `direction.beats` and `soundPalette`; topic/version bundle with
+  story, character/emotion, scene/frame, motion, lighting, camera/edit, atmosphere,
+  audio/music and delivery scripts derived from this same packet.
 - Retry plan, manual review checklist, accessible description and test hypothesis.
 
 ## Pacing and hook requirements

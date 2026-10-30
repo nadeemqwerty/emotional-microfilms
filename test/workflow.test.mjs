@@ -6,7 +6,7 @@ import {
   assetSetFingerprint, discountedCredits, diverseShortlist, editorialScore, ensureNoDuplicateJob,
   estimatePlan, fingerprint, inside, packetDraft, productionRevision, rankScenarios, readJson,
   recordReview, refreshWorkspace, migrateDelegatedAcceptances,
-  ENTERTAINMENT_DIMENSIONS, REVIEW_AREAS, requireAcceptance, requireReview, stageReady, validateFeedback, validateJob, validatePacket,
+  AUDIO_FIT_DIMENSIONS, ENTERTAINMENT_DIMENSIONS, REVIEW_AREAS, requireAcceptance, requireReview, stageReady, validateDirection, validateFeedback, validateJob, validatePacket,
   validateLightingPlan, validatePacing, validateRubric, validateScenario, validateSpend, validateTimeline,
   validateWorkspace, validateMotionReferences, validateSceneReferences, requireCharacterApproval,
 } from '../lib/workflow.mjs';
@@ -37,11 +37,71 @@ const entertainmentReport = () => ({picture: 'full-playback', audio: 'no-audio-s
   dimensions: ENTERTAINMENT_DIMENSIONS.map(id => ({id, score: 3,
     evidence: [{from: 0, to: 1, observation: 'Synthetic evidence, not a media review.'}]})),
   criteriaAssessment: 'Synthetic criteria met for fixture only.', unresolvedFailures: []});
+const audioFitReport = (seconds = 10) => ({picture: 'full-playback', audio: 'no-audio-streams',
+  listeningConditions: 'Synthetic test attestation only; no actual listening claimed.',
+  comparison: {samePicture: true, listened: true, baseline: 'silent', observation: 'Synthetic baseline.'},
+  dimensions: AUDIO_FIT_DIMENSIONS.map(id => ({id, verdict: 'pass',
+    evidence: [{from: 0, to: seconds, observation: 'Synthetic fit evidence only.'}]})),
+  segments: [{from: 0, to: seconds, intendedFeeling: 'Synthetic quiet connection',
+    heardFeeling: 'Synthetic quiet connection', weight: 'appropriate', relationship: 'supports',
+    observation: 'Synthetic complete-timeline fixture.'}], unresolvedFailures: []});
 const reviewFor = (manifest, area, result = 'pass') => recordReview(manifest, {
   area, result, evidence: 'Synthetic review',
   ...(area.endsWith('-user') ? {authority: {type: 'personal-user', personallyViewedByUser: true}} : {}),
   ...(area === 'entertainment-wow-enjoyment' ? {report: entertainmentReport()} : {}),
+  ...(area === 'audio-scene-fit' ? {report: audioFitReport(manifest.seconds)} : {}),
 }).reviews.at(-1);
+
+test('coordinated direction covers all shots and blocks legacy packets at new design lock', () => {
+  validateDirection(packet);
+  for (const change of [
+    draft => { delete draft.direction; },
+    draft => { draft.direction.beats[0].to -= 1; },
+    draft => { draft.direction.beats[0].shotId = 'unknown'; },
+    draft => { draft.direction.soundPalette.density = ''; },
+    draft => { draft.direction.beats[0].audioRole = ''; },
+  ]) {
+    const changed = structuredClone(packet);
+    change(changed);
+    assert.throws(() => validateDirection(changed), /direction|Direction|palette|soundPalette/);
+  }
+  const legacy = workspace({stage: 'keyframes-approved'});
+  delete legacy.productionDraft.direction;
+  legacy.productionFingerprint = productionRevision(legacy);
+  assert.equal(validateWorkspace(legacy, context), true, 'Historical workspaces remain readable.');
+  assert.throws(() => stageReady(legacy, 'design-locked', context), /Coordinated direction/);
+});
+
+test('audio fit rejects meter-only passes, heavy/mismatched segments and stale sound routes', () => {
+  let manifest = workspace({stage: 'motion-approved', soundDecision: 'silent'});
+  const pass = report => recordReview(manifest, {area: 'audio-scene-fit', result: 'pass',
+    evidence: 'Synthetic test evidence, not actual listening.', report});
+  for (const change of [
+    report => { report.audio = 'metered'; },
+    report => { report.picture = 'sampled-frames'; },
+    report => { report.comparison.listened = false; },
+    report => { report.dimensions.pop(); },
+    report => { report.dimensions[1].verdict = 'fail'; },
+    report => { report.segments[0].weight = 'too-heavy'; },
+    report => { report.segments[0].relationship = 'mismatch'; },
+    report => { report.segments[0].to = 9; },
+    report => { report.unresolvedFailures.push('Cue overpowers scene.'); },
+  ]) {
+    const report = audioFitReport();
+    change(report);
+    assert.throws(() => pass(report), /Audio-scene-fit|Compare|Resolve/);
+  }
+  manifest = recordReview(manifest, {area: 'sound', result: 'pass', evidence: 'Synthetic sound.'});
+  assert.throws(() => stageReady(manifest, 'sound-approved', context), /audio-scene-fit/);
+  manifest = pass(audioFitReport());
+  assert.equal(stageReady(manifest, 'sound-approved', context), true);
+  assert.throws(() => requireReview({...manifest, soundDecision: 'native'}, 'audio-scene-fit'), /stale/);
+  const failed = recordReview({...manifest, stage: 'final-approved', finalUserApproval: true},
+    {area: 'audio-scene-fit', result: 'fail', evidence: 'Synthetic user says music is heavy.'});
+  assert.equal(failed.stage, 'motion-approved');
+  assert.equal(failed.finalUserApproval, false);
+  assert.throws(() => stageReady(failed, 'sound-approved', context), /failed review/);
+});
 const sceneAssets = () => packet.keyframes.map(frame => ({path: `media/${frame.id}.png`,
   kind: 'keyframe', keyframeId: frame.id, sha256: 'a'.repeat(64), origin: 'generated',
   sourceHistoryId: `synthetic-${frame.id}`}));

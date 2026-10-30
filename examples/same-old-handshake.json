@@ -3,6 +3,24 @@
   "scenarioId": "same-old-handshake",
   "seconds": 10,
   "aspectRatio": "9:16",
+  "direction": {
+    "soundPalette": {
+      "targetFeeling": "Familiar recognition through a shared small ritual.",
+      "avoidFeelings": ["ominous robot awakening", "mechanical aggression", "overblown reunion"],
+      "texture": "Quiet workshop and distinct tactile taps; optional restrained sustained tone.",
+      "density": "Leave the tap pattern exposed; no musical pattern competing with it.",
+      "register": "Taps must be comfortably distinct, not harsh; avoid threatening sub-bass.",
+      "pulse": "The actual returned gesture sets rhythm; do not force it onto a song.",
+      "foregroundPriority": "Mirrored greeting and human response lead over music.",
+      "silence": "Musical space before the reply protects anticipation.",
+      "ending": "A modest release after recognition, not a power-down or heroic climax.",
+      "comparison": "Same picture: room/taps only versus a subtle cue; retain the greeting's meaning and clarity."
+    },
+    "beats": [
+      {"shotId": "a", "from": 0, "to": 5, "characterIntent": "The robot offers a familiar greeting and the human attends.", "visibleEmotion": "Hesitation and emerging recognition.", "performanceRestraint": "Precise small taps, no cartoon excitement.", "audioRole": "Place knocks on actual contact; music must not obscure the pattern or announce menace.", "intensity": "low"},
+      {"shotId": "b", "from": 5, "to": 10, "characterIntent": "The human returns the ritual and recognizes the bond.", "visibleEmotion": "Warm recognition and ease.", "performanceRestraint": "A small response followed by a quiet hold.", "audioRole": "Reply taps first; optional modest harmonic release after the answer.", "intensity": "low"}
+    ]
+  },
   "generationApproved": false,
   "status": "Unselected creative example. Robot/faces ungenerated; no accepted provider reference IDs.",
   "intendedInterpretation": "A familiar repeated greeting reveals an old connection; the human chooses to respond.",
