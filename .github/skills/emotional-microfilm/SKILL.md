@@ -72,15 +72,24 @@ Resume an existing job; a timeout is not permission to submit it again.
    model catalog, exact mode form and full-request quote. Choose image2video for
    a literal first frame, element2video for reusable subject references in a new
    composition. Inspect the specific model, not just its family marketing.
-9. **Keyframes:** use `docs\prompt-playbook.md` and the selected example packet.
-   Create an initial original identity anchor, then reference-guided shot frames.
+9. **Characters then scenes:** follow `docs\visual-development.md` and
+   `characterPlan.references[].prompt`. Generate a real cast reference and STOP
+   for user feedback on faces, ages, wardrobe, style and scale before scenes.
+   Then make reference-guided literal scene images for every changed composition
+   and light state; show the images, not diagrams, for user approval.
    Differentiate identity refs from literal start/end frames. Approve adjacent
    frames side by side before animation. Real provider references only.
    Every required frame must pass, not just one anchor. Read
    `docs\generation-preflight.md` for limits and conservative prompt ceilings;
    bind accepted frame IDs/files/provider refs and validate exact motion inputs.
-   The literal opening may double as the original identity/composition anchor
-   when it actually contains the readable cast; avoid a redundant paid image.
+   The current iterative workflow requires a separate cast gate; do not reuse
+   an unapproved opening as a shortcut. Reuse the accepted cast across scenes.
+   Require `hookPlan`, `sceneChanges` and `atmospherePlan`. Consider golden
+   butterflies, flowers, sakura, rain, wind/trees, autumn and illuminated props
+   as coherent visual options; set purpose, timing, masks/depth and light/shadow
+   behavior. Do not add all effects or imply they guarantee positive emotion.
+   After actual scene approval lock the final script, pacing, transitions,
+   effects, camera, lighting/shadows and sound route at `design-locked`.
 10. **Motion:** one readable primary action and one camera intention per shot.
     Preserve contact, geography and identity. Use separately rendered matched
     states plus an editorial cut for hard transformations; do not assume a model
@@ -104,6 +113,8 @@ Resume an existing job; a timeout is not permission to submit it again.
 - Intended first-view interpretation; lane-appropriate progression/payoff.
   Connection-led films retain setup / reveal / chosen response / hold.
 - Original identity bible and real-reference provenance/rights.
+- Real character-reference plan and user-approved images, structured first-frame/
+  first-motion hook, every scene transition and timed atmosphere/effect cue sheet.
 - Blocking: screen side, gaze target, contact point, prop owner and action axis.
 - Camera: shot size, height, one movement or locked choice; focus priority.
 - Required lightingPlan: motivated key/fill, exposure priority, caster/receiver

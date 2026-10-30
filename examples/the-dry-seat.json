@@ -6,6 +6,17 @@
   "generationApproved": false,
   "status": "Unselected preproduction example; no media or real provider references yet.",
   "intendedInterpretation": "What first looks like keeping a seat for oneself is preparation to offer a stranger a dry place.",
+  "characterPlan": {
+    "requiredIdentities": ["Mira", "Dev"],
+    "references": [{"id": "cast", "covers": ["Mira", "Dev"], "prompt": "One original cast-reference portrait, not a bus-shelter scene. Fictional Mira about 40, medium-brown skin, oval face, dark low bun, plain rust knitted sweater and charcoal trousers, beside fictional Dev about 35, medium-brown skin, short wavy dark hair, plain muted blue shirt, dark trousers and a dark canvas bag on his right shoulder. Natural adult scale, readable faces and clothing, separate relaxed standing poses. Plain neutral background, soft neutral light, grounded feet, portrait 9:16. No bench, rain, text, collage, brands, extra people or requested real-person likeness."}]
+  },
+  "hookPlan": {"firstFrame": "Coat occupies an empty place while a wet stranger stands nearby.", "firstMotion": "Restrained rain behind shelter; no distraction across faces or the seat.", "inspectSeconds": 1, "question": "Is the seat being withheld?", "payoff": "It was kept dry to be offered.", "test": "Inspect real 0s/1s opening muted at phone size; record what a fresh viewer can identify, not predicted retention."},
+  "sceneChanges": [{"at": 5, "fromShot": "a", "toShot": "b", "type": "ellipse", "informationChange": "Skip sitting and show the offered place accepted.", "lightingChange": "Same soft overcast right-side source and shelter fill."}],
+  "atmospherePlan": {
+    "motionBudget": "One coat action and a small response; low-density background rain.",
+    "omissionRationale": "No fantasy accents in this grounded baseline; select and previsualize any alternative palette before generation.",
+    "effects": [{"id": "rain", "route": "in-generation", "shotIds": ["a", "b"], "from": 0, "to": 10, "referenceFrameIds": ["a-start", "a-end", "b-start", "b-end"], "purpose": "Give the dry seat visible value.", "depth": "Background outside shelter.", "motion": "Steady gentle downward streaks.", "occlusion": "Keep faces, hands and dry patch clear.", "lightInteraction": "Soft damp-material highlights, no new light source.", "shadowInteraction": "Diffuse grounded shadows remain unchanged.", "continuity": "Match direction, density and perspective across cut.", "fallback": "Reduce background motion if it hides the story."}]
+  },
   "pacing": {
     "hypothesis": "Readable seat evidence followed by a quiet response feels earned without a fast-cut hook.",
     "hook": "Why is the commuter keeping a coat across an empty seat?",

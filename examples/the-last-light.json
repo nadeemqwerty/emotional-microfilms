@@ -6,6 +6,17 @@
   "generationApproved": false,
   "status": "Unselected preproduction example. Lamp/robot assets and output compliance untested.",
   "intendedInterpretation": "A small robot gives its comfortable pool of light to a seedling and accepts the shadow.",
+  "characterPlan": {
+    "requiredIdentities": ["Ivo", "plant", "lamp"],
+    "references": [{"id": "cast", "covers": ["Ivo", "plant", "lamp"], "prompt": "One original reference image with clear separate designs on a plain neutral surface, portrait 9:16. Original squat matte slate-blue maintenance robot Ivo with pale ceramic faceplate, exactly two warm-white circular eye lights, two broad paddle hands and an ochre left-shoulder patch. Beside it, one terracotta pot with one green seedling of exactly three broad leaves, and one pale-yellow task lamp with a short rigid swivel arm and clamp. Readable materials and relative scale, soft neutral illumination, no object overlap. Not a greenhouse scene or story keyframe. No franchise reference, collage, extra plants, text or magical growth."}]
+  },
+  "hookPlan": {"firstFrame": "Robot enjoys warm light while the adjacent seedling remains outside the pool.", "firstMotion": "A restrained noticing head turn; light contrast already presents the question.", "inspectSeconds": 1, "question": "Who will receive the limited pool of light?", "payoff": "The robot gives its light to the seedling and accepts cool fill.", "test": "Check actual opening at phone size: both giver and excluded plant must read before motion or music explains anything."},
+  "sceneChanges": [{"at": 5, "fromShot": "a", "toShot": "b", "type": "ellipse", "informationChange": "Omit lamp rotation and reveal the chosen new light state.", "lightingChange": "Warm pool moves left to right with matching highlights/shadows; cool dusk fill remains fixed."}],
+  "atmospherePlan": {
+    "motionBudget": "One noticing action then a small paddle response; the key light-state change happens across a deliberate cut.",
+    "omissionRationale": "No instant bloom, extra flowers or swarming particles; plant benefit and robot's relinquished comfort must stay legible.",
+    "effects": [{"id": "task-light", "route": "in-generation", "shotIds": ["a", "b"], "from": 0, "to": 10, "referenceFrameIds": ["a-start", "a-end", "b-start", "b-end"], "purpose": "Make the transferred benefit visible.", "depth": "Practical lamp at bench center with real receivers on both sides.", "motion": "Lamp stays fixed within each clip; direction changes only across the cut.", "occlusion": "No blown-out lamp halo hiding robot, pot or three-leaf silhouette.", "lightInteraction": "Warm illumination shifts consistently to the plant; cool fill remains.", "shadowInteraction": "Caster/receiver highlights and cast shadows agree with each approved lamp state.", "continuity": "One lamp, one warm pool, fixed clamp, same plant and exactly two robot eyes.", "fallback": "Use independently approved light states and a supported cut rather than a faulty continuous relight."}]
+  },
   "pacing": {
     "hypothesis": "The benefit and relinquished comfort must be readable together before the ending holds.",
     "hook": "What will the robot do when it notices the plant outside its light?",

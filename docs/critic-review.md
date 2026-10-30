@@ -48,7 +48,7 @@ extraction, expansion, no-overwrite, all three assembly routes and short-native-
 track timing. Documentation links and real custom-packet/stale-resume/failure CLI
 regressions passed. Only synthetic local fixtures were used.
 
-**Current readiness status: GREEN. Reviewed implementation delivery: verified.**
+**Earlier audited baseline: GREEN. That implementation delivery: verified.**
 Implementation commit `ce0be6a73a193cd8051086ecf05ff7567742fffd` was pushed to
 `origin/main`; local HEAD and the remote SHA matched, and the tracked worktree
 was clean. The following completion-record commit changes only this record and
@@ -58,7 +58,7 @@ automatic understanding of an actual reference or approval of generated media.
 
 ## Residual limits, not fabricated passes
 
-- No real reference supplied: actual playback/listening, timecoded interpretation
+- No playable reference ingested: actual playback/listening, timecoded interpretation
   and real adaptation feedback remain pending. A host without video/audio
   perception must stop at preparation; the CLI validates recorded attestations.
 - Instagram has no authorized resolver here; a page link returns
@@ -84,3 +84,26 @@ passing project checks, and verified commit/push when authorized. Missing real
 film/audio/viewer evidence remains a later BLOCKED production gate, not a fictional
 PASS. No current scenario selection, spend, creative generation or publication is
 authorized by an audit verdict.
+
+## Subsequent user-discovered visual-workflow gaps
+
+The earlier audit did not establish the iterative creative experience the user
+expected. Its green verdict must not be used to dismiss these omissions.
+
+| Gap | Current correction |
+|---|---|
+| Blocking sketches mistaken for useful keyframes | Explicitly labeled as nonproduction; image gates require real provenance linked to completed-job output hashes or authorized sources |
+| No enforced character-first/user-feedback stage | Separate `characters-approved`, source-bound character/user reviews and guided-scene helper |
+| No user scene-review/final design lock | Actual `keyframes-user` and `design-user`, `design-locked` before motion |
+| Hooks/nature/glow only loosely described | Required hook, every scene transition and timed atmosphere/effect/light-shadow plans in all four packets and reviewers |
+| Extra cast image omitted from pilot estimate | Five images; current 8s silent estimate 191, 10s silent 216; earlier totals clearly superseded |
+| Iteration could stall on failed assets or invalidate unchanged cast | Separately authorized repairs remain possible; unchanged cast/source approvals survive adding scene/video assets |
+| Declared composite mistaken for working implementation | Actual effect asset/rights/preflight required; no claim that the FFmpeg assembler implements particles, masks or relighting |
+
+This revision is directly reviewed and integration-tested, not a fresh
+independent multi-critic verdict. Syntax, **50 tests with zero skips including
+real FFmpeg**, project/packet validation and whitespace checks passed. The CLI
+tests use explicitly synthetic fixtures, not actual character approval.
+No creative image/video, model/effect benchmark, human playback/listening pass or
+viewer-retention result exists. The next creative artifact must be the actual
+authorized character image for user review, not another dummy panel.

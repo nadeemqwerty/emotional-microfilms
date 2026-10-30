@@ -26,9 +26,11 @@ Until the wrapper's routing is observed, keep every pilot motion prompt
 
 ## Media and frame checks before any video
 
-1. Generate every required literal keyframe first; no text2video shortcut.
-2. The opening keyframe may double as the original identity/composition anchor
-   if it actually contains the readable cast. Do not pay for a redundant sheet.
+1. Generate the separate actual cast reference first and stop for user approval.
+   Use `characterPlan`, real completed-job output hashes and provenance.
+2. Generate every required literal scene endpoint from approved cast references.
+   The earlier opening-as-identity shortcut is superseded by this iterative
+   character gate. No sketch or text2video shortcut; see visual-development.
 3. Generate later frames with genuine accepted references. Review all frames
    side by side: age/face, clothes, scale, screen side, hands, coat ownership,
    bench geometry, dry/wet evidence, light and intended action phase.
@@ -66,14 +68,14 @@ is rounded per unit: floor(list * 0.9 + 0.5), then quantity.
 | Native-audio clip | Same, audio true | 81 credits |
 | Native alternative | Seedance Mini, one 5s / 720p / 9:16, audio true | 180 credits |
 
-For `a-seat-for-dad`, four total keyframes include the opening identity anchor:
-**72 + 126 = 198** for the silent visual pilot, or **72 + 162 = 234**
-with PixVerse native audio. One repaired frame plus one repaired native clip
-adds 99, giving a **333** worst-case planned attempt total. A proposed 350-credit
-ceiling is **not approved** until the user expressly accepts it; no requirement
-to spend the reserve. Do not add a fifth identity image by habit.
+For `a-seat-for-dad`, the current separate cast plus four scene endpoints means
+**five images = 90 credits**. The unchanged 10s draft is **90 + 126 = 216**
+silent or **90 + 162 = 252** with PixVerse native audio. One repaired frame plus
+one repaired native clip adds 99, giving **351**; the old proposed 350 cap would
+not cover that full reserve. No ceiling is approved. The earlier 198/234 totals
+assumed four total images and are superseded, not actual charges.
 
-Start with only the opening image (18). If cast/composition is wrong, diagnose
+Start with only the character image (18). If cast/scale/style is wrong, diagnose
 before spending on remaining frames. Stop if the correction is not understood.
 All endpoints must pass before motion. Repair only a diagnosed failure within
 the specifically approved scope; no blind or repeated reroll.
@@ -83,8 +85,9 @@ the specifically approved scope; no blind or repeated reroll.
 The live PixVerse V6 form permits integer durations from 1 to 15 seconds; five
 seconds is a default, not a minimum or a mandatory editing block. Same-day
 configuration quotes for one 720p silent clip were 42 list / 38 discounted
-credits at 3s, 56 / 50 at 4s and 70 / 63 at 5s. With four 18-credit stills,
-5s+3s costs an estimated 173, 5s+4s 185 and 5s+5s 198 before repairs.
+credits at 3s, 56 / 50 at 4s and 70 / 63 at 5s. With the current five 18-credit
+images, 5s+3s costs an estimated 191, 5s+4s 203 and 5s+5s 216 before repairs.
+Earlier 173/185/198 alternatives used only four images and are superseded.
 
 A shorter reaction is a proposed pacing alternative, not a proven improvement.
 The canonical father-son draft remains 10s until user feedback accepts a revision.
@@ -137,7 +140,7 @@ No generation, upload, paid retry or publication has run. The opening quote is a
 first gate, not permission to spend. Full playback/listening and actual audience
 response remain untested; software checks do not substitute for either.
 
-Validation passed: syntax checks, 46 tests with zero skips (including real FFmpeg
+Validation passed: syntax checks, 50 tests with zero skips (including real FFmpeg
 smoke), 41-scenario/four-packet project validation and whitespace checks. The two
 proposed motion prompts are 923 and 805 characters, within the conservative
 2000-character ceiling. These are software/request checks, not media-quality proof.

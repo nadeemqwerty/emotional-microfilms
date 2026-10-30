@@ -6,7 +6,24 @@
   "generationApproved": false,
   "status": "Proposed father-son pilot; storyboard, cost ceiling and actual keyframes not yet approved.",
   "intendedInterpretation": "The son has quietly kept a dry place for his father; care can travel in both directions.",
-  "anchorReusesKeyframeId": "a-start",
+  "characterPlan": {
+    "requiredIdentities": ["Ishaan", "Ravi"],
+    "references": [{"id": "cast", "covers": ["Ishaan", "Ravi"], "prompt": "One original character-reference image, not a film scene or storyboard. Fictional seven-year-old boy Ishaan with medium-brown skin, short dark curls, a plain rust knitted sweater and beige trousers, beside fictional father Ravi about 38 with medium-brown skin, short dark hair, short stubble, a plain muted navy shirt and charcoal trousers. Relaxed separate standing poses, visible faces, natural adult-child scale and readable clothing in one portrait 9:16 composition. Plain neutral background, soft neutral illumination and grounded feet. No bench, rain, effects, text, collage, real-person likeness, extra people or physical contact. This image establishes identities and wardrobe; later scenes will establish their own lighting and blocking."}]
+  },
+  "hookPlan": {
+    "firstFrame": "Readable contrast: damp father standing beside his comfortably sheltered son and the conspicuously coat-covered empty seat.",
+    "firstMotion": "Gentle rain remains behind the shelter; keep attention on the boy, hand and covered seat, not a busy particle field.",
+    "inspectSeconds": 1,
+    "question": "Why is the boy keeping his coat across the empty place while Dad stands?",
+    "payoff": "The coat was protecting a dry place for his father.",
+    "test": "Review actual opening at 0s and 1s, muted at phone size. Compare coat/face framing alternatives before approving further scene spending; no retention result is assumed."
+  },
+  "sceneChanges": [{"at": 5, "fromShot": "a", "toShot": "b", "type": "ellipse", "informationChange": "Omit sitting; show father already accepting the saved place, with a slightly tighter response shot.", "lightingChange": "None: cloudy right-side key, shelter fill and exposure remain consistent."}],
+  "atmospherePlan": {
+    "motionBudget": "One primary coat action, then a small response; gentle background rain only.",
+    "omissionRationale": "Grounded baseline, not a rule against beauty. A golden-butterfly, sakura or autumn variant needs user style choice, revised scene images and a coherent season/light plan before it is activated.",
+    "effects": [{"id": "rain", "route": "in-generation", "shotIds": ["a", "b"], "from": 0, "to": 10, "referenceFrameIds": ["a-start", "a-end", "b-start", "b-end"], "purpose": "Explain the damp father and the value of the saved dry place.", "depth": "Outside the shelter, behind the cast and important seat evidence.", "motion": "Low-density gentle downward rain, stable direction and scale.", "occlusion": "No rain sheets or particles across faces, the right hand or dry patch.", "lightInteraction": "Soft cloudy highlights on damp material; no arbitrary golden glow or exposure jump.", "shadowInteraction": "Diffuse contact shadows persist; tiny rain streaks do not cast large hard shadows.", "continuity": "Same rain perspective, rate and direction across the cut.", "fallback": "Reduce rain density before motion if it competes with the reveal; never rerender good motion solely to decorate it."}]
+  },
   "pacing": {
     "structure": "connection",
     "hypothesis": "Readable dry-seat evidence and a restrained familiar response can carry a ten-second act of care without dialogue or shock.",
@@ -53,7 +70,7 @@
   "keyframes": [
     {
       "id": "a-start",
-      "prompt": "Generate the original identity/composition anchor AS the literal first frame, not a collage. Portrait 9:16, modest covered park bench during gentle rain. Fictional seven-year-old Ishaan, medium-brown skin, short dark curls, plain rust sweater and beige trousers, sits screen-left. His right hand rests on one matte dark-olive coat covering the empty right seat of the straight three-board bench. Fictional father Ravi, about 38, medium-brown skin, short dark hair and stubble, damp muted navy shirt and charcoal trousers, stands screen-right facing the bench with a gentle tired posture. Both faces, the boy's right hand and the full covered seat are clear in one medium-wide seated-eye-height view. Broad soft cloudy daylight from camera-right, gentle shelter fill, grounded soft shadows and restrained natural expressions. All key information central in the vertical frame. No title, text, brands, extra people, tears, hand contact, additional coat or extreme shallow blur."
+      "prompt": "Use the separately user-approved Ishaan/Ravi character reference for exact faces, ages, proportions and wardrobe. Make a literal film opening, not a character sheet or collage. Portrait 9:16, modest covered park bench during gentle rain. Ishaan in the rust sweater and beige trousers sits screen-left. His right hand rests on one matte dark-olive coat covering the empty right seat of the straight three-board bench. Ravi in the damp muted navy shirt and charcoal trousers stands screen-right facing the bench with a gentle tired posture. Both faces, the boy's right hand and the full covered seat are clear in one medium-wide seated-eye-height view. Broad soft cloudy daylight from camera-right, gentle shelter fill, grounded soft shadows and restrained natural expressions. Rain stays behind the shelter, away from faces and seat evidence. All key information central in the vertical frame. No title, text, brands, extra people, tears, hand contact, additional coat or extreme shallow blur."
     },
     {
       "id": "a-end",
@@ -90,6 +107,6 @@
     "rights": "No external recording selected or cleared. Native audio is a separately quoted option, not included or approved by this silent plan.",
     "test": "Visual-first cold-viewer comprehension before music. Actual listening is mandatory before any native/separate-audio pass; stream metadata does not establish sound quality."
   },
-  "retryPlan": "Start with a-start only: 18 quoted credits. If cast/scale/composition fails, diagnose before any more spending. Guide all later frames from accepted references; all four must pass before video. Initial silent route 198 credits including four stills; optional native route 234 after explicit selection/requote. At most one diagnosed frame repair plus one diagnosed clip repair within an expressly approved ceiling; never blind reroll or auto-upgrade models. Preserve all historyIds and charged failures.",
+  "retryPlan": "Start with only the separate cast reference: 18 quoted credits, pending authorization. Show the real character image and stop for user review before any scene image. Guide each scene from approved cast plus accepted continuity references; all four real endpoints need user review before final design lock or motion. Five images including cast cost an estimated 90; the current 10s silent route totals 216, native 252 before repairs. The separately proposed 8s silent route would total 191, not 173. Requote and obtain a new bounded ceiling; old 4-image estimates are superseded. No blind reroll or automatic model upgrade. Preserve historyIds and charged failures.",
   "reviewChecks": ["All four literal frames precede video", "Boy remains a child and father remains the same adult", "Dry patch reads at phone size", "Only one coat and correct right-hand ownership", "Father remains screen-right", "Sit is an explicit edit, not a morph", "Actual reveal has readable exposure", "Final response is not a forced grin", "Sound/listening and full-playback limits are recorded honestly"]
 }

@@ -29,13 +29,17 @@ An inspected Nano Banana 2 text2image form accepts:
 }
 ```
 
-This is documentation, not a ready/approved submission. The three example JSON
-packets contain full original anchor prompts, not just mood words. Quote the
+This is documentation, not a ready/approved submission. The example JSON
+packets contain full `characterPlan.references[].prompt` cast prompts. Use those,
+not the older scene-oriented `identityBible.anchorPrompt` study. Quote the
 chosen exact prompt and configuration after approval.
 
 After reviewing the anchor, reference it for later frames with genuine returned
 `visualReferences`. Text-only repeated descriptions do not establish persistent
 identity. Save accepted original media locally with hashes and provenance.
+Show the real cast image and stop for actual user approval before scene generation.
+Then review real scene endpoints and lock the complete design before motion;
+follow [iterative visual development](visual-development.md).
 
 ## Literal still prompt order
 
@@ -53,6 +57,12 @@ Separate invariant details from intentional changes.
 `literal starting state -> one primary action -> performance change -> camera
 intention -> target end state/hold -> invariants -> sound intent if supported ->
 exclusions`
+
+Translate chosen atmosphere cues into the actual prompt: motif, active interval,
+path/density, depth/occlusion, key light, spill/highlight/shadow behavior and what
+must remain clear. A named effect or glow adjective alone is not a complete plan.
+Do not invent butterfly, mask, particle or relighting API fields. A separate
+composite requires an actual tested editor/asset path, not an unimplemented promise.
 
 Use visible verbs and action phases, not only "cinematic", "emotional", or "8K".
 Keep motion simple enough to repair. Exact lens behavior, timestamps, tap counts,

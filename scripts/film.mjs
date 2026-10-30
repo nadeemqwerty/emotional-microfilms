@@ -68,12 +68,12 @@ function usage() {
   packet <selected-scenario-id>
   status <workspace-relative-manifest.json>
   refresh <workspace-relative-manifest.json>
-  asset <manifest> <keyframe|video|audio|final> <project-relative-file> [keyframe-id]
+  asset <manifest> <character|keyframe|effect|video|audio|final> <project-relative-file> [reference-id]
   review <manifest> <area> <pass|fail> <observed-evidence>
   advance <manifest> <next-stage>
 
 Feedback/packet/refresh/asset/review/advance WRITE local files; obtain user approval.
-Review areas: keyframes, motion, sound, ${REVIEW_AREAS.join(', ')}.
+Review areas: characters, characters-user, keyframes, keyframes-user, design-user, effect-preflight, motion, sound, ${REVIEW_AREAS.join(', ')}.
 Stages: ${STAGES.join(' -> ')}.
 No automatic spend, upload, publish, commit or push.`);
 }
@@ -162,29 +162,39 @@ try {
         }, null, 2));
       } else if (command === 'asset') {
         const [, kind, assetPath] = args;
-        invariant(['keyframe', 'video', 'audio', 'final'].includes(kind), 'Invalid asset kind.');
-        const keyframeId = kind === 'keyframe' ? args[3] ?? basename(assetPath, extname(assetPath)) : null;
-        if (kind === 'keyframe') invariant(manifest.productionDraft?.keyframes.some(frame =>
-          frame.id === keyframeId), 'Provide a keyframe ID from the selected production packet.');
+        invariant(['character', 'keyframe', 'effect', 'video', 'audio', 'final'].includes(kind), 'Invalid asset kind.');
+        const referenceId = args[3] ?? basename(assetPath, extname(assetPath));
+        const idField = {character: 'characterId', keyframe: 'keyframeId', effect: 'effectId'}[kind];
+        const planned = {character: manifest.productionDraft?.characterPlan?.references,
+          keyframe: manifest.productionDraft?.keyframes, effect: manifest.productionDraft?.atmospherePlan?.effects}[kind];
+        if (idField) invariant(planned?.some(item => item.id === referenceId), 'Provide a reference ID from the selected production packet.');
+        const source = manifest.assetSources?.[assetPath] ?? {};
+        if (['character', 'keyframe'].includes(kind)) invariant(
+          ['generated', 'authorized-reference'].includes(source.origin), 'Record real image provenance in assetSources; sketches are not production assets.');
         const asset = {kind, path: assetPath, sha256: fileHash(inside(root, assetPath)),
-          ...(keyframeId ? {keyframeId} : {})};
+          ...(idField ? {[idField]: referenceId} : {}),
+          ...Object.fromEntries(['origin', 'sourceHistoryId', 'permissionEvidence'].filter(key =>
+            source[key] !== undefined).map(key => [key, source[key]]))};
         const prior = manifest.assets.find(item => item.path === assetPath);
         const changed = !prior || prior.sha256 !== asset.sha256 || prior.kind !== kind ||
-          prior.keyframeId !== asset.keyframeId;
+          assetSetFingerprint([prior]) !== assetSetFingerprint([asset]);
         manifest.assets = [...manifest.assets.filter(item => item.path !== assetPath), asset];
         verifyAssets(root, manifest);
         if (changed) {
-          const earliest = {keyframe: 'preproduction', video: 'keyframes-approved',
+          const earliest = {character: 'preproduction', keyframe: 'characters-approved',
+            effect: 'keyframes-approved', video: 'design-locked',
             audio: 'motion-approved', final: 'sound-approved'}[kind];
           if (STAGES.indexOf(manifest.stage) > STAGES.indexOf(earliest)) manifest.stage = earliest;
           manifest.finalUserApproval = false;
           manifest.generationApproved = false;
+          manifest.publicationApproval = null;
         }
         save(path, manifest);
         console.log('Asset hashed. Changed assets invalidate downstream stage and spend approvals.');
       } else if (command === 'review') {
         const [, area, result, ...evidence] = args;
-        invariant(['keyframes', 'motion', 'sound', ...REVIEW_AREAS].includes(area), 'Unknown review area.');
+        invariant(['characters', 'characters-user', 'keyframes', 'keyframes-user', 'design-user',
+          'effect-preflight', 'motion', 'sound', ...REVIEW_AREAS].includes(area), 'Unknown review area.');
         invariant(['pass', 'fail'].includes(result) && evidence.join(' ').trim(),
           'Use pass/fail plus observed evidence; do not fabricate human review.');
         verifyAssets(root, manifest);

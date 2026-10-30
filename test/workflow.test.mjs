@@ -8,7 +8,7 @@ import {
   recordReview, refreshWorkspace,
   REVIEW_AREAS, stageReady, validateFeedback, validateJob, validatePacket,
   validateLightingPlan, validatePacing, validateRubric, validateScenario, validateSpend, validateTimeline,
-  validateWorkspace, validateMotionReferences,
+  validateWorkspace, validateMotionReferences, validateSceneReferences, requireCharacterApproval,
 } from '../lib/workflow.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -31,9 +31,25 @@ function workspace(patch = {}) {
   manifest.productionFingerprint = productionRevision(manifest);
   return manifest;
 }
-const reviewFor = (manifest, area, result = 'pass') => ({area, result, evidence: 'Synthetic review',
-  assetSetFingerprint: assetSetFingerprint(manifest.assets),
-  productionFingerprint: manifest.productionFingerprint});
+const reviewFor = (manifest, area, result = 'pass') => recordReview(manifest,
+  {area, result, evidence: 'Synthetic review'}).reviews.at(-1);
+const sceneAssets = () => packet.keyframes.map(frame => ({path: `media/${frame.id}.png`,
+  kind: 'keyframe', keyframeId: frame.id, sha256: 'a'.repeat(64), origin: 'generated',
+  sourceHistoryId: `synthetic-${frame.id}`}));
+function withCast(manifest) {
+  const cast = {path: 'media/cast.png', kind: 'character', characterId: 'cast',
+    sha256: 'b'.repeat(64), origin: 'generated', sourceHistoryId: 'synthetic-cast'};
+  manifest.assets = [cast, ...manifest.assets];
+  manifest.jobs = manifest.assets.filter(asset => asset.origin === 'generated').map(asset => ({
+    historyId: asset.sourceHistoryId, status: 'completed', chargedCredits: 18,
+    requestFingerprint: fingerprint({syntheticFixture: asset.path}),
+    outputAssetHashes: [asset.sha256],
+  }));
+  manifest.characterReferences = {cast: {type: 'image', id: 'synthetic-cast',
+    url: 'https://example.test/cast.png', label: 'Synthetic test cast'}};
+  for (const area of ['characters', 'characters-user']) manifest.reviews.push(reviewFor(manifest, area));
+  return manifest;
+}
 
 test('bank fits brief; malformed criteria and scores cannot silently rank', () => {
   validateRubric(rubric);
@@ -188,10 +204,13 @@ test('spend check binds exact quote and request, expiry, reserved budget and act
   const request = fingerprint({model: 'test', params: {duration: 5}});
   const quote = {at: new Date(at).toISOString(), unitCredits: 70, quantity: 1,
     discountPercent: 10, requestFingerprint: request};
-  const manifest = workspace({generationApproved: true,
+  const manifest = workspace({generationApproved: true, nextGenerationKind: 'character',
     spendApprovalEvidence: 'Synthetic test approval only', nextRequestFingerprint: request,
     approvedBudgetCredits: 200, spentCredits: 100, reservedCredits: 30});
   assert.equal(validateSpend(manifest, 63, quote, at, context), true);
+  for (const nextGenerationKind of [null, 'scene', 'motion']) {
+    assert.throws(() => validateSpend({...manifest, nextGenerationKind}, 63, quote, at, context), /Generation kind/);
+  }
   assert.throws(() => validateSpend({...manifest, generationApproved: false}, 63, quote, at, context), /approval/);
   assert.throws(() => validateSpend({...manifest, reservedCredits: 40}, 63, quote, at, context), /budget/);
   assert.throws(() => validateSpend(manifest, 62, quote, at, context), /exact quoted/);
@@ -233,39 +252,40 @@ test('active job must resume its historyId rather than submitting again', () => 
 });
 
 test('changed asset hashes invalidate reviews and a later failure supersedes an old pass', () => {
-  const assets = packet.keyframes.map(frame => ({path: `media/${frame.id}.png`,
-    kind: 'keyframe', keyframeId: frame.id, sha256: 'a'.repeat(64)}));
-  const manifest = workspace({assets});
+  const manifest = withCast(workspace({assets: sceneAssets(), stage: 'characters-approved'}));
+  const assets = manifest.assets;
+  const castReviews = [...manifest.reviews];
   const review = reviewFor(manifest, 'keyframes');
-  manifest.reviews = [review];
+  manifest.reviews.push(review, reviewFor(manifest, 'keyframes-user'));
   assert.equal(stageReady(manifest, 'keyframes-approved', context), true);
   assert.throws(() => stageReady({...manifest,
-    reviews: [review, {...review, result: 'fail'}]}, 'keyframes-approved', context), /review/);
+    reviews: [...castReviews, review, {...review, result: 'fail'}]}, 'keyframes-approved', context), /review/);
   assert.throws(() => stageReady({...manifest,
-    assets: assets.map((asset, i) => i === 0 ? {...asset, sha256: 'b'.repeat(64)} : asset)},
+    assets: assets.map((asset, i) => i === 1 ? {...asset, sha256: 'c'.repeat(64)} : asset),
+    jobs: manifest.jobs.map(job => job.historyId === assets[1].sourceHistoryId
+      ? {...job, outputAssetHashes: [...job.outputAssetHashes, 'c'.repeat(64)]} : job)},
   'keyframes-approved', context), /stale review/);
 });
 
 test('all endpoints precede motion and exact approved provider frames must be used', () => {
-  const assets = packet.keyframes.map(frame => ({path: `media/${frame.id}.png`,
-    kind: 'keyframe', keyframeId: frame.id, sha256: 'a'.repeat(64)}));
-  const manifest = workspace({assets});
-  manifest.reviews = [reviewFor(manifest, 'keyframes')];
+  const manifest = withCast(workspace({assets: sceneAssets(), stage: 'characters-approved'}));
+  const assets = manifest.assets;
   assert.throws(() => stageReady({...manifest, assets: assets.slice(0, 1)},
     'keyframes-approved', context), /Missing accepted keyframe/);
   assert.notEqual(assetSetFingerprint(assets), assetSetFingerprint(assets.map((asset, i) =>
     i === 0 ? {...asset, keyframeId: 'different-binding'} : asset)));
-  manifest.stage = 'keyframes-approved';
+  manifest.stage = 'design-locked';
   manifest.keyframeReferences = Object.fromEntries(packet.keyframes.map(frame => [frame.id, {
     type: 'image', id: `synthetic-${frame.id}`, url: `https://example.test/${frame.id}.png`,
     label: `Synthetic test ${frame.id}`,
   }]));
-  manifest.reviews = recordReview(manifest, {area: 'keyframes', result: 'pass',
-    evidence: 'Synthetic frame files and provider bindings reviewed together.'}).reviews;
+  for (const area of ['keyframes', 'keyframes-user', 'design-user']) manifest.reviews.push(reviewFor(manifest, area));
   const shot = packet.shots[0];
   const params = {...shot.paramsToQuote, prompt: shot.prompt,
     startFrame: manifest.keyframeReferences[shot.startFrameId],
     endFrame: manifest.keyframeReferences[shot.endFrameId]};
+  assert.equal(validateMotionReferences(manifest, shot.id, params), true);
+  manifest.assets.push({path: 'media/a.mp4', kind: 'video', sha256: 'd'.repeat(64)});
   assert.equal(validateMotionReferences(manifest, shot.id, params), true);
   assert.throws(() => validateMotionReferences({...manifest, stage: 'preproduction'}, shot.id, params), /before paid motion/);
   assert.throws(() => validateMotionReferences(manifest, shot.id, {...params, endFrame: null}), /endFrame/);
@@ -277,6 +297,84 @@ test('all endpoints precede motion and exact approved provider frames must be us
   rebound.keyframeReferences[shot.startFrameId] = params.endFrame;
   assert.throws(() => validateMotionReferences(rebound, shot.id,
     {...params, startFrame: params.endFrame}), /stale review/);
+});
+
+test('real user-approved characters precede guided scenes; sketches and swapped cast cannot pass', () => {
+  const manifest = withCast(workspace());
+  assert.equal(stageReady(manifest, 'characters-approved', context), true);
+  const sceneStage = {...manifest, stage: 'characters-approved'};
+  const params = {prompt: packet.keyframes[0].prompt, visualReferences: [manifest.characterReferences.cast]};
+  assert.equal(validateSceneReferences(sceneStage, 'a-start', params), true);
+  assert.throws(() => validateSceneReferences(manifest, 'a-start', params), /before scene/);
+  assert.throws(() => validateSceneReferences(sceneStage, 'a-start', {...params, visualReferences: []}), /Every approved/);
+  assert.throws(() => requireCharacterApproval({...manifest,
+    assets: [{...manifest.assets[0], origin: 'sketch'}]}), /not a sketch/);
+  assert.throws(() => requireCharacterApproval({...manifest, jobs: []}), /provenance/);
+  assert.throws(() => requireCharacterApproval({...manifest,
+    jobs: manifest.jobs.map(job => ({...job, outputAssetHashes: []}))}), /provenance/);
+  assert.throws(() => requireCharacterApproval({...manifest,
+    reviews: manifest.reviews.filter(item => item.area !== 'characters-user')}), /characters-user/);
+  manifest.assets.push(...sceneAssets());
+  assert.equal(requireCharacterApproval(manifest), true);
+  const swapped = structuredClone(manifest);
+  swapped.characterReferences.cast.url = 'https://example.test/different.png';
+  assert.throws(() => requireCharacterApproval(swapped), /stale review/);
+});
+
+test('hook, every scene change and timed effect light/shadow plans are required', () => {
+  for (const key of ['characterPlan', 'hookPlan', 'sceneChanges', 'atmospherePlan']) {
+    assert.throws(() => validatePacket({...packet, [key]: undefined}, scenarios));
+  }
+  assert.throws(() => validatePacket({...packet, characterPlan: {...packet.characterPlan,
+    references: [{...packet.characterPlan.references[0], covers: ['Mira']}]}}, scenarios), /Every required identity/);
+  const bad = structuredClone(packet);
+  bad.sceneChanges[0].at = 4;
+  assert.throws(() => validatePacket(bad, scenarios), /transition/);
+  const effect = packet.atmospherePlan.effects[0];
+  for (const patch of [{shadowInteraction: ''}, {occlusion: ''}, {to: 11},
+    {shotIds: ['a']}, {referenceFrameIds: ['a-start']}]) {
+    assert.throws(() => validatePacket({...packet,
+      atmospherePlan: {...packet.atmospherePlan, effects: [{...effect, ...patch}]}}, scenarios));
+  }
+});
+
+test('a failed cast blocks advancement but can receive a specifically authorized repair', () => {
+  const at = Date.parse('2026-10-30T14:00:00+05:30');
+  const request = fingerprint({syntheticFixture: 'diagnosed cast repair'});
+  const quote = {at: new Date(at).toISOString(), unitCredits: 20, quantity: 1,
+    discountPercent: 10, requestFingerprint: request};
+  const failed = recordReview(withCast(workspace({stage: 'characters-approved'})),
+    {area: 'characters', result: 'fail', evidence: 'Synthetic wrong wardrobe.'});
+  assert.equal(failed.stage, 'preproduction');
+  assert.throws(() => stageReady(failed, 'characters-approved', context), /failed review/);
+  assert.throws(() => validateSpend(failed, 18, quote, at, context), /generation approval/);
+  const repair = {...failed, generationApproved: true, nextGenerationKind: 'character',
+    spendApprovalEvidence: 'Synthetic exact consent: one diagnosed wardrobe repair, maximum 18.',
+    nextRequestFingerprint: request, approvedBudgetCredits: 36, spentCredits: 18};
+  assert.equal(validateSpend(repair, 18, quote, at, context), true);
+  assert.throws(() => stageReady(repair, 'characters-approved', context), /failed review/);
+});
+
+test('design lock needs user scene review and a tested cleared composite when selected', () => {
+  const manifest = withCast(workspace({assets: sceneAssets(), stage: 'keyframes-approved'}));
+  manifest.productionDraft.atmospherePlan.effects[0].route = 'composite';
+  manifest.productionFingerprint = productionRevision(manifest);
+  manifest.reviews.push(reviewFor(manifest, 'keyframes'));
+  assert.throws(() => stageReady(manifest, 'design-locked', context), /keyframes-user/);
+  manifest.reviews.push(reviewFor(manifest, 'keyframes-user'));
+  assert.throws(() => stageReady(manifest, 'design-locked', context), /Composite effect/);
+  manifest.assets.push({path: 'media/rain-overlay.mov', kind: 'effect', effectId: 'rain', sha256: 'f'.repeat(64)});
+  manifest.effectRights = {rain: 'Synthetic fixture rights evidence.'};
+  for (const area of ['keyframes', 'keyframes-user', 'effect-preflight', 'design-user']) {
+    manifest.reviews.push(reviewFor(manifest, area));
+  }
+  assert.equal(stageReady(manifest, 'design-locked', context), true);
+  const changedRights = structuredClone(manifest);
+  changedRights.effectRights.rain = 'Synthetic changed, unreviewed licence scope.';
+  assert.throws(() => stageReady(changedRights, 'design-locked', context), /stale review/);
+  const changed = structuredClone(manifest);
+  changed.productionDraft.atmospherePlan.effects[0].lightInteraction = 'A revised glow source.';
+  assert.throws(() => stageReady(changed, 'design-locked', context), /approval is stale/);
 });
 test('stage gates cannot skip, infer native sound inspection or publish', () => {
   assert.throws(() => stageReady({stage: 'selected'}, 'motion-approved'), /next workflow/);

@@ -14,6 +14,11 @@ creative rules to global memory/knowledge files.
 - Use Agency defaults. No custom controller. Delegate only bounded independent
   research when requested; use GPT-family agents for delegated reasoning.
 - The project contains no paid-generation client, API secrets or automatic upload.
+- Follow `docs\visual-development.md`: generate real cast references, show them
+  for user approval, then develop real scene images and obtain scene approval.
+  Sketches are not production keyframes. Lock script/hook/timing/transitions,
+  lighting/shadows, atmosphere/effects and sound route together before motion.
+  Consider beauty/nature accents deliberately, not as a compulsory overlay.
 - Generate and inspect every required keyframe before any video job. Motion must
   use the genuine approved per-shot frame references; never substitute text-only
   video or newly invented IDs. Check live limits and exact parameter combinations

@@ -9,6 +9,10 @@ Follow `AGENTS.md`, `.github\skills\microfilm-review\SKILL.md` and
 
 Identify the opening question and whether the ending repays it. Inspect the
 actual first readable setup, reveal exposure, response completion and hold.
+Inspect `hookPlan`, each `sceneChanges` entry and timed `atmospherePlan` cues.
+Does the first actual image/excerpt earn attention? Does a butterfly/petal/glow
+direct gaze or conceal a face/reveal? Do effect entrances spoil or delay payoff?
+An initial inspection window is a test choice, not a guaranteed anti-swipe rule.
 Response/hold are required when they carry a connection-led payoff. For a declared
 lane-specific poetry/comedy ending inspect progression/punchline exposure and its
 ending rationale; do not require a separate reaction merely to fill a template.

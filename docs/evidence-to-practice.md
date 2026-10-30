@@ -25,6 +25,8 @@ Updates stay in this project, never global skills or personal memory.
 | Familiar music may evoke personal memory [Janata 2009, song playbook] | Ask recognition/familiarity context, not just song age | Song candidates and viewer answers | Sound/evidence: no universal nostalgia assumption |
 | Warp mode/material changes artifact risk [Ableton manual] | Choose phrase/arrangement before blind speed-up; inspect actual vocals | Song cue, timing plan and listening review | Sound: block broken diction, artifacts or unclear rights |
 | User chose multi-genre scope [project direction] | Separate lane, mechanism, style and subtle local texture | Creative registry and diverse shortlist | Story: no forced sadness, twist or one rendering style |
+| User required iterative real-character/scene review | Cast approval precedes guided scenes; all scene images precede final design lock | Actual source-bound images and user review records | Character/scene/design gates reject missing provenance and approvals |
+| Emission and glare are different [Blender manuals; visual-development] | Plan light spill and receiver/shadow changes separately from bloom | Timed effect cue sheet plus actual endpoint/composite proof | Visual: block unsupported compositor claims or effects hiding the hook/payoff |
 
 Neuroscience details and exact scope are in `music-brain-hooks.md`; high-level
 reward claims here are constraints on interpretation, not a clinical protocol.

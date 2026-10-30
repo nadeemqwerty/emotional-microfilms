@@ -9,9 +9,11 @@ and hash-bound production reviews.
 No scenario selected, creative assets generated, credits spent, uploads or posts made.
 Synthetic tool-test fixtures are not creative reference analyses or films.
 The existing InterviewReel repository is untouched.
-Three independent AI critic lenses passed scoped preproduction readiness;
-the current integrated suite has **46 passing tests**, including real FFmpeg
-smoke and the additional all-keyframes/reference-binding pilot gates.
+Three independent AI critic lenses passed the earlier scoped preproduction baseline.
+The iterative character/scene/design flow is a subsequent correction, not proof
+that a film has passed review. The current checks include real FFmpeg smoke and
+character provenance/user approval, scene references, hook/effect/light plans and
+design-lock gates. **50 tests pass**, with zero skips.
 See the critic record for actual scope and remaining media/perception gates.
 
 ## Start
@@ -53,6 +55,18 @@ Skill discovery is not proof it is loaded into the present conversation.
    [Earlier opportunity context](docs/opportunity-context.md) retains makeovers,
    buyer-first real estate and product creatives as separate directions.
 9. [Generation limits and failure-prevention preflight](docs/generation-preflight.md).
+10. [Iterative characters, scene images, hooks and nature/effects](docs/visual-development.md).
+
+## Iterative production, not dummy frames
+
+**Real character image -> user feedback -> reference-guided scene images for all
+changes -> user feedback -> lock script/hook/timing/transitions/lighting/shadows/
+effects/sound route -> motion.** Sketches are planning aids, never production
+references. Unchanged cast can be reused; replacements invalidate its approvals.
+Nature/beauty options include golden butterflies, flowers, sakura, rain, wind/
+trees, autumn and illuminated/highlight accents, with explicit depth, motion,
+occlusion, light/spill/shadow and fallback design. No mandatory particle overlay
+or promise of dopamine/retention. The assembler does not implement a compositor.
 
 ## Project-local operating system
 

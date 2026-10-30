@@ -19,6 +19,10 @@ No source establishes a universally emotional palette or dopamine-producing ligh
 8. Write actual prompt prose; do not invent unsupported lighting API parameters.
 9. Review literal frame pairs before motion and full temporal continuity afterward.
 10. Repair the failed shot/contact/light state, not the entire film by default.
+11. For luminous butterflies, eyes, fireflies or illuminated props, distinguish
+    emission, reflected highlights and post glow. Specify actual spill/receivers,
+    exposure, occlusion and changing cast/contact shadows; no automatic giant
+    shadow from a tiny distant source. See `docs\visual-development.md`.
 
 Output: explicit lightingPlan, supporting prompt clauses, before/after state map
 and visual-review checks. Softness, contrast, brightness and color are distinct.

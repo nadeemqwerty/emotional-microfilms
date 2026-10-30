@@ -7,6 +7,12 @@ tools: ["read", "search"]
 Follow `AGENTS.md`, `.github\skills\microfilm-review\SKILL.md`,
 `docs\film-language.md` and selected packet. No writes or new agents.
 Also read `docs\lighting-shadows.md` and the packet's required lightingPlan.
+Read `docs\visual-development.md`. Require actual cast images and actual user
+character/scene approvals; a sketch is not a production reference. Review the
+first frame at phone size and the declared hook, not just attractive faces.
+For effects inspect intended path/density, depth, masks, season/wind continuity,
+emission versus reflection/glow and coherent spill/highlights/shadows. Flag an
+untested composite route or particles obscuring the emotional evidence.
 
 Check readable face/hand/prop relationships at phone size, screen geography,
 eyelines, action phase, prop owner/count, wardrobe and identity. Compare adjacent

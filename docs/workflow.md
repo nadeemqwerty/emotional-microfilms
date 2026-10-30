@@ -5,6 +5,12 @@ checklists and `data\roadmap.json` stores milestone status/exit evidence. Use
 `film roadmap` and `film workflow <id>` to resume. These are local checklists,
 not a multi-agent orchestration engine.
 
+The required iterative order is **real character images -> user approval ->
+real scene images -> user approval -> complete design lock -> motion**.
+Read [visual development](visual-development.md) for hook design, butterflies/
+nature/glow options, provenance and light/shadow integration. Schematics are
+planning aids only, never generated keyframes or accepted character references.
+
 ## 1. Develop -> choose
 
 Read brief, rubric, existing ideas and actual feedback. Generate original varied
@@ -38,7 +44,7 @@ viewers once without title or music for visual-first work. Explicit text-led
 formats include intended original text and test muted phone-size readability,
 contrast and exposure. Record answers, not a fictional pass.
 Use story/pacing/visual reviewer checklists. The actual user approves the
-storyboard; record `storyboardApproved:true` and `storyboardApprovalEvidence` in
+provisional storyboard; record `storyboardApproved:true` and `storyboardApprovalEvidence` in
 the manifest. `productionDraft` must contain the complete validated packet,
 including custom scenarios. Advancement binds the approval to scenario, brief,
 packet and a fresh approval revision.
@@ -59,7 +65,10 @@ Reference upload/import and rights need explicit approval too.
 
 Manifest fields: `generationApproved`, exact `spendApprovalEvidence`,
 `approvedBudgetCredits`, `spentCredits`, `reservedCredits`,
-`nextRequestFingerprint`. Quotes include `at`, unit/quantity/discount and the
+`nextRequestFingerprint`, and `nextGenerationKind` (`character`, `scene`, `motion`).
+Character spending is permitted only at `preproduction`, scene spending at
+`characters-approved`, and motion at `design-locked`; all still require consent.
+Quotes include `at`, unit/quantity/discount and the
 same request fingerprint. `validateSpend` fails closed without matching request,
 freshness, exact arithmetic or remaining budget. Pass current scenarios, brief
 and feedback as the helper's context argument; embedded revisions alone cannot
@@ -85,9 +94,20 @@ If a call times out, inspect/resume the returned job. `ensureNoDuplicateJob`
 rejects an active duplicate request. A completed rejected take still needs new
 approval within the user's repair scope before resubmission.
 
-## 4. Keyframes -> motion
+## 4. Real characters -> scenes -> design lock -> motion
 
-Create original anchor, then guided literal endpoints. Side-by-side review
+Use the full `characterPlan.references[].prompt`, submit only the authorized
+cast image, show the result and STOP for user review. Record genuine provider
+objects under `characterReferences`. For generated images, store their actual
+completed job's `outputAssetHashes` and `assetSources[path]` with
+`origin:"generated"` and actual `sourceHistoryId`; authorized reference images
+instead need `origin:"authorized-reference"` and actual permission evidence.
+Register the image with `asset <manifest> character <file> <reference-id>`,
+record `characters` and `characters-user`, and advance to `characters-approved`.
+No scene generation before those actual approvals.
+
+Call `validateSceneReferences` on the exact guided-image payload before spending.
+Then create literal endpoints from the approved cast. Side-by-side review
 identity, geography, hand/prop ownership, lighting and action phase. Use real
 accepted refs, never placeholders. Register accepted local files:
 
@@ -101,8 +121,18 @@ npm run film -- asset workspace\the-dry-seat\manifest.json keyframe media\the-dr
 npm run film -- asset workspace\the-dry-seat\manifest.json keyframe media\the-dry-seat\b-start.png
 npm run film -- asset workspace\the-dry-seat\manifest.json keyframe media\the-dry-seat\b-end.png
 npm run film -- review workspace\the-dry-seat\manifest.json keyframes pass "Observed continuity evidence."
+npm run film -- review workspace\the-dry-seat\manifest.json keyframes-user pass "<actual user scene approval>"
 npm run film -- advance workspace\the-dry-seat\manifest.json keyframes-approved
 ```
+
+Record provenance for every scene image too; a PNG of a sketch is not a real
+production endpoint. Before the next step finalize `hookPlan`, `sceneChanges`,
+`atmospherePlan`, script, beat timings, camera, lighting/shadows and sound route.
+For selected composites, register actual `effect` assets/IDs, `effectRights`
+evidence and `effect-preflight` review from a tested editor. This assembler does
+not implement particles, masks or relighting. Record actual `design-user`
+approval, then advance to `design-locked`. Prompt/design changes require renewed
+affected reviews; never fill these records with presumed approval.
 
 Each file must map to a packet keyframe ID (inferred from its filename or given
 as the final `asset` argument). Every required frame must exist; one endpoint is

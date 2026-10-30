@@ -6,6 +6,17 @@
   "generationApproved": false,
   "status": "Unselected creative example. Robot/faces ungenerated; no accepted provider reference IDs.",
   "intendedInterpretation": "A familiar repeated greeting reveals an old connection; the human chooses to respond.",
+  "characterPlan": {
+    "requiredIdentities": ["Anu", "Pip"],
+    "references": [{"id": "cast", "covers": ["Anu", "Pip"], "prompt": "One original character-reference image on a plain neutral background, portrait 9:16. Fictional adult Anu about 35 with medium-brown skin, short dark curls, olive overshirt over a cream tee and unbranded dark trousers, alongside original small companion robot Pip: matte-cream rounded rectangular head, exactly two circular amber eye lights, faded teal torso, two short arms ending in simple three-pad mitts, crescent scratch above its left eye. Show readable faces, materials, wardrobe and relative scale in separate relaxed poses. Soft neutral illumination and grounded feet/base. No workshop scene, greeting action, franchise design, text, collage or extra characters."}]
+  },
+  "hookPlan": {"firstFrame": "Adult watches an apparently dormant original companion robot; faces and resting mitt visible together.", "firstMotion": "Two eye lights brighten gently once before the counted greeting.", "inspectSeconds": 1, "question": "Will the familiar robot respond?", "payoff": "The human recognizes and returns the greeting.", "test": "Inspect actual opening and muted greeting count; compare framing before buying another take, no guaranteed swipe prevention."},
+  "sceneChanges": [{"at": 5, "fromShot": "a", "toShot": "b", "type": "cut", "informationChange": "Redirect attention from robot's cue to the adult's chosen reply.", "lightingChange": "Left window stays fixed; amber eyes remain steadily bright."}],
+  "atmospherePlan": {
+    "motionBudget": "Counted taps are primary; eye-light change is a single low-amplitude accent, not a flashing particle field.",
+    "omissionRationale": "Avoid butterflies/petals around hands because they could obscure the counted greeting.",
+    "effects": [{"id": "amber-eyes", "route": "in-generation", "shotIds": ["a", "b"], "from": 0, "to": 10, "referenceFrameIds": ["a-start", "a-end", "b-start", "b-end"], "purpose": "Signal attention and recognition without replacing the gesture.", "depth": "Fixed in the robot faceplate.", "motion": "One gentle brightening, then stable emission; no strobe.", "occlusion": "Do not bloom over the robot silhouette, human eyes or tap points.", "lightInteraction": "Small restrained amber accent; warm window remains the key.", "shadowInteraction": "No large new opposing shadow from tiny eye lights.", "continuity": "Exactly two eye lights with stable brightness after activation.", "fallback": "Reduce bloom and keep two readable amber discs if glow damages identity."}]
+  },
   "pacing": {
     "hypothesis": "Separated slow taps create a visible recognition pattern; the returned gesture needs its own time.",
     "hook": "Will the apparently dormant robot recognize the person beside it?",

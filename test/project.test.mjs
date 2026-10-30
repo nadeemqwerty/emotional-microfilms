@@ -4,7 +4,7 @@ import {copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, writeFil
 import {dirname, resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {spawnSync} from 'node:child_process';
-import {packetDraft, productionRevision} from '../lib/workflow.mjs';
+import {fileHash, fingerprint, packetDraft, productionRevision} from '../lib/workflow.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -96,6 +96,31 @@ test('real CLI validates custom packets, rejects stale resumes and rolls failed 
   assert.equal(result.status, 0, result.stderr);
   let manifest = read(path);
   assert.equal(manifest.productionFingerprint, productionRevision(manifest));
+  const castPath = 'media/cast.png';
+  mkdirSync(resolve(fixture, 'media'), {recursive: true});
+  writeFileSync(resolve(fixture, castPath), Buffer.from(
+    'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Wl6FYkAAAAASUVORK5CYII=', 'base64'));
+  result = run('asset', path, 'character', castPath, 'cast');
+  assert.equal(result.status, 1);
+  assert.match(result.stderr, /provenance/);
+  const castHash = fileHash(resolve(fixture, castPath));
+  manifest.assetSources = {[castPath]: {origin: 'generated', sourceHistoryId: 'synthetic-cli-cast'}};
+  manifest.jobs = [{historyId: 'synthetic-cli-cast', status: 'completed', chargedCredits: 18,
+    requestFingerprint: fingerprint({syntheticFixture: true}), outputAssetHashes: [castHash]}];
+  manifest.characterReferences = {cast: {type: 'image', id: 'synthetic-cli-cast',
+    url: 'https://example.test/cast.png', label: 'Synthetic one-pixel CLI test fixture, not a character'}};
+  write(path, manifest);
+  result = run('asset', path, 'character', castPath, 'cast');
+  assert.equal(result.status, 0, result.stderr);
+  result = run('review', path, 'characters', 'pass', 'Synthetic fixture only.');
+  assert.equal(result.status, 0, result.stderr);
+  result = run('advance', path, 'characters-approved');
+  assert.equal(result.status, 1);
+  assert.match(result.stderr, /characters-user/);
+  assert.equal(run('review', path, 'characters-user', 'pass', 'Synthetic user evidence, not actual feedback.').status, 0);
+  result = run('advance', path, 'characters-approved');
+  assert.equal(result.status, 0, result.stderr);
+  manifest = read(path);
   manifest.productionDraft.shots[0].prompt = 'Synthetic changed direction.';
   write(path, manifest);
   assert.match(run('status', path).stderr, /approval is stale/);

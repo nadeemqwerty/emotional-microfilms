@@ -117,3 +117,9 @@ photometric correctness, believable skin/materials or emotional interpretation.
 motivation, key/fill, exposure priority, a shadow map, invariants, intentional
 changes and review state. The lighting skill and visual reviewer must use it.
 The final `lighting-shadow-continuity` review is separate from prose completeness.
+
+For nature, glowing butterflies and illuminated-item accents, use the timed
+effect/light-interaction plan in [visual development](visual-development.md).
+Reflected gold, an emissive object and a lens/post glow are different; adding a
+halo does not itself produce correct spill or shadows. Check actual receivers,
+depth/occlusion, wet-material highlights, exposure and temporal continuity.
