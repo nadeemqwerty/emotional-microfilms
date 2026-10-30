@@ -43,6 +43,15 @@ recovery, check terminal status, backoff, net debit, fresh exact quote and remai
 step budget. One controlled retry and a researched provider alternative are not
 permission for unlimited rerolls, creative variants or dependent scene spending.
 
+An explicit instruction to finish a bounded reviewed pilot autonomously may
+delegate character/scene/design decisions to the agent. Record the exact
+instruction, scope, credit ceiling and `personallyViewedByUser:false` with every
+delegated decision; never describe it as personal human inspection. Default
+review stops still apply without that instruction. Keep final human approval
+and publication separately gated. A complete numbered-frame audit plus native
+detail checks is bounded agent visual evidence, not real-time playback, a
+physical phone test, cold-viewer comprehension or audio listening.
+
 ## The working loop
 
 1. **Brief:** confirm target feeling, audience/context, realism/fantasy, limits,

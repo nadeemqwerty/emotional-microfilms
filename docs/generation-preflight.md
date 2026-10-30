@@ -4,7 +4,9 @@ Verified 30 October 2026 against live OpenArt catalog/forms/quotes and the offic
 PixVerse references below. This is a conservative pilot policy, not proof that a
 valid request will render well or never fail. The initial Google cast request and
 one recovery retry failed upstream quota; a researched Wan provider alternative
-then produced the first actual cast image. User character approval is pending.
+then produced the first actual cast image. A later user-directed Korean toddler/
+30s father revision completed cast, four scene frames and two motion clips under
+explicit delegated review authority; personal human approval is not implied.
 Account identity and balance must not be copied into this public document.
 
 ## Live wrapper constraints
@@ -165,24 +167,30 @@ test. The original father/son pilot does not pretend to adapt unseen source shot
 
 ## Pilot execution checkpoint
 
-The user requested regeneration through the iterative flow and set a per-request
-credit ceiling. The father-son pilot was selected unrated for provisional
-preproduction, not final scene/design approval. The initial cast request and one
-controlled retry both reached terminal Google quota failures. A fresh-quoted Wan
-2.7 Image Pro alternative then completed the same cast prompt within the original
-step budget. Actual historyIds, fingerprints, failures, completed output/hash,
-real provider reference, derivative lineage and debit reconciliation are private.
-The full image and native-detail face/hand crops were inspected: identity/wardrobe
-review passed with a visible softbox and facial-light-direction caveat, not a
-scene-lighting pass. The user feedback form returned unavailable. No human cast
-approval was recorded and no scene image, video, upload or publication occurred.
-The real scene gate was checked and correctly blocked missing `characters-user`
-approval. Full playback/listening and audience response remain untested.
+The initial cast request and one controlled retry reached terminal Google quota
+failures. A researched Wan alternative succeeded; that older cast is retained
+but retired. The user then explicitly required autonomous completion and changed
+casting to a Korean toddler and father in his 30s. The revised real cast and four
+guided endpoints were inspected before two exact-reference motion requests.
+The jacket stayed on the toddler lap in actual frames, so the final action was
+simplified to a small invitation rather than forcing a cloth reveal or hand contact.
+Exact quotes, reservations, returned historyIds, hashes, genuine references,
+derivative lineage and debit reconciliation are private. Each 2K Pro scene image
+cost 14 discounted credits; each silent five-second 720p/count-one PixVerse clip
+cost 63. These dated configurations are not promises for other requests.
+
+All 242 source frames were inspected in sequential numbered sheets, with native
+face/hand detail crops. Both clips and the actual ten-second/300-frame H.264
+export passed full decode and black/freeze checks. The edit cuts at 5s, trims each
+121-frame source to five seconds and delivers 1080x1920/30fps by upscale/frame-rate
+conversion from 720p/24fps. It is not native 1080p generation. Silence is intentional.
+The agent's bounded review is not human real-time playback, a physical phone test,
+cold-viewer testing, listening or final publication approval. Those remain pending.
 
 Validation passed: syntax checks, 51 tests with zero skips (including real FFmpeg
-smoke), 41-scenario/four-packet project validation and whitespace checks. The two
-proposed motion prompts are 923 and 805 characters, within the conservative
-2000-character ceiling. These are software/request checks, not media-quality proof.
+smoke), 41-scenario/four-packet project validation and whitespace checks. Both
+actual motion prompts fit the conservative 2000-character ceiling. Software
+checks and actual bounded frame review are separate evidence, not audience proof.
 
 ## Primary sources actually inspected
 

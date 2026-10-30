@@ -1,11 +1,19 @@
 # Iterative visual development: real cast, real scenes, then motion
 
 The earlier four-panel preview was a blocking sketch, not production keyframes.
-The first actual cast image now exists and has an identity-only operator review;
-user approval is pending. No scene images or video exist. A diagram can explain
+The Korean toddler/30s father revision now has a real cast image, all four guided
+scene endpoints and an assembled silent video. Decisions were explicitly
+delegated to the agent for autonomous completion, not personally viewed by the
+user. Human playback/phone and final-release review remain pending. A diagram can explain
 geography but cannot establish faces, wardrobe, materials, lighting quality or
 usable references.
 Do not present it as a substitute for the actual images the user must review.
+
+Without explicit delegation, retain the review stops below. With it, preserve
+the exact authorizing instruction, scope and `personallyViewedByUser:false`;
+do not fabricate personal approval. This does not authorize publication.
+Refine motion against accepted actual endpoint poses: this pilot uses a hovering
+hand invitation, not an unsupported coat lift or guaranteed palm-seat contact.
 
 ## Required sequence and review stops
 

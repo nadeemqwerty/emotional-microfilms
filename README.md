@@ -5,12 +5,17 @@ seconds / 9:16**. It combines reusable agent skills, a 41-story development bank
 scored shortlisting, user decisions, complete prompt packets, model-cost evidence,
 and hash-bound production reviews.
 
-**Current state:** research and preproduction tooling, not a finished film.
-The father-son pilot has its first actual cast-reference image, generated with
-Wan 2.7 Image Pro after an initial Google quota failure and one failed recovery
-retry. Identity-only visual review is recorded with background/lighting caveats;
-user character approval is pending. No scene images, video, uploads or posts.
-Actual media, job IDs and balance reconciliation stay in the private workspace.
+**Current state:** an actual ten-second silent father-son picture pilot exists.
+It uses an original fictional Korean toddler and father in his 30s: one small
+invitation, then a cut to Dad already seated beside him. The revised real cast,
+four guided scene endpoints and two PixVerse clips were produced in that order.
+All 242 source frames and native face/hand crops were inspected; the 300-frame
+H.264 export passed full decode and black/freeze checks. Delivery is 1080x1920/
+30fps, upscaled/rate-converted from 720p/24fps sources, not native 1080p motion.
+Reviews were agent decisions under explicit autonomous-completion authority,
+not personal user viewing. Human real-time/phone review, final release approval
+and audience response remain pending. No soundtrack or publication is claimed.
+Actual media, job IDs, delegated decisions and credit reconciliation stay private.
 Synthetic tool-test fixtures are not creative reference analyses or films.
 The existing InterviewReel repository is untouched.
 Three independent AI critic lenses passed the earlier scoped preproduction baseline.
@@ -106,7 +111,7 @@ npm run film -- packet the-dry-seat
 `packet` creates an ignored `workspace\<scenario-id>\manifest.json`, refuses to
 overwrite an existing workspace, and leaves generation approval false and budget
 zero. The four example packets are unapproved creative drafts, not selections.
-`a-seat-for-dad` is a proposed father-son technical pilot: all four literal
+`a-seat-for-dad` is the father-son technical-pilot template: all four literal
 keyframes precede video and are bound to their actual provider references.
 Use `unrated` for a selection given without a numerical rating.
 
