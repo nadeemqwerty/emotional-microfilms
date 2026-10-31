@@ -727,7 +727,7 @@ Created non-destructive camera review variants from existing Quiet Crayon footag
 Private media and receipts are under `outputs\the-quiet-crayon\v002` and `v003`.
 The original Korean cast, original film and active manifest were not recast.
 
-### Approved next test and actual blocker
+### Approved test, resumed production and remaining acceptance
 
 The user explicitly selected the Quiet Crayon test only, English dialogue,
 delegated agent creative review and a **1,000-credit total ceiling**. The latest
@@ -740,19 +740,41 @@ No automatic retries, publication or fabricated personal acceptance.
 Prepared and validated the separate private packet/authorization in
 `workspace\the-quiet-crayon-camera-test`: Ananya33, Arjun35 and Diya6, the
 planned camera hold/push/hold and mother's original reassurance at 4-8s.
-This is a plan, not actual casting or a new spoken take. The motion prompt is
+The initial packet was a plan, not proof of actual casting or speech. Its motion prompt is
 within the conservative 2,000-character ceiling. Scene endpoints require the
 genuine newly accepted cast and stable table/axis/light; no old reference ID is
 silently reused for the Indian cast.
 
-Initial OpenArt live discovery failed with OAuth HTTP 401. The user confirmed
-reconnection; subsequent OpenArt discovery returned no tools. No fresh quote,
-upload or new paid generation was submitted; this session's new spend is zero.
-Resume through available official tools only: refresh live model/form/account/
-job/quote data, claim the separate test workspace, inspect the real cast before
-dependent scenes, bind accepted endpoints and submit at most the approved take.
-Actual full playback/listening, camera/per-line emotional/lip-sync review and
-user final acceptance remain **BLOCKED/PENDING**, not silently complete.
+Initial OpenArt discovery failed with OAuth HTTP 401 and then exposed no tools;
+that earlier zero-spend blocker was subsequently resolved. On 31 October,
+official tools produced the original Indian cast and both guided endpoints;
+the actual images received scoped delegated acceptance. An oversized-reference
+scene failure was retained and corrected once by converting the same cast to a
+full-canvas JPEG and verifying its official upload. No recasting or refund was
+assumed. One freshly quoted Seedance 2.0 10s/720p/native-audio take completed.
+
+The private **v004 native review** is byte-identical to the provider video:
+720x1280, 24fps, 241 decoded video frames, 10.08s decoded audio. Full audio/video
+decode succeeded; no black/frozen interval was detected at the recorded thresholds,
+and audio peak was -9.65dB. Existing cached local ASR returned the mother's exact
+original words, approximately 3.34-5.46s rather than the planned 4-8s. ASR is not
+listening or an emotional/lip-sync pass. This native review is not the planned
+1080p/30fps delivery master.
+
+**Camera plan FAIL:** 40 chronological overview samples and 20 speech-detail
+samples show a push that excludes the parents, then a return to wide near 7.75s,
+not the required continuous push/tighter hold with all faces protected.
+The similarly wide start/end compositions were not sufficient endpoint design
+for that camera path. Preserve the take; do not approve it from completed generation
+or repair missing faces with a claimed digital crop. The receipt includes positive
+sample-based casting/drawing observations, but no final Wow & Enjoyment pass.
+
+Conservative quote-based commitments total **776/1000 credits**, including the
+failed scene; zero remains reserved. No itemized debit ledger is available.
+The one authorized video attempt is exhausted. Actual joined playback/listening,
+emotional delivery/lip sync, acceptable camera execution and personal acceptance
+remain **PENDING/FAILED**. Another paid take needs renewed bounded attempt approval
+and a fresh exact quote; the remaining credits alone are not authorization.
 
 ### Software verification and source scope
 
@@ -776,4 +798,4 @@ addition. The live working tree's newer story remains untouched.
 Commit only this session's delta. Preserve concurrent Afternoon Again story/
 format/reference work and transcription/reverse changes; verify an isolated
 exact source snapshot before pushing. Source tests and source persistence are
-not proof that the blocked new camera/dialogue film was generated or accepted.
+not proof that the new camera/dialogue film meets actual creative acceptance.

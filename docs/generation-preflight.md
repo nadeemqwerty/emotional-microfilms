@@ -74,6 +74,17 @@ Until the wrapper's routing is observed, keep every pilot motion prompt
    unapproved parameters. It cannot prove
    that a human inspected the right content; never invent that evidence.
 
+Camera endpoint reconciliation is also a visual gate: a continuous push with a
+tighter final hold needs an actually tighter accepted endpoint that retains every
+protected face/prop. Similar wide start/end compositions do not support claiming
+that path. The 31 October Indian Quiet Crayon take pushed into a child close-up,
+cropped the parents, then returned abruptly to its wide ending reference. This
+is an observed failure, not proof of one provider cause. Resolve contradictory
+framing before motion: revise/approve the path or obtain an authorized corrected
+endpoint. Do not silently add an unplanned return move or assume prose overrides
+the reference; inspect achieved movement afterward. Digital cropping cannot
+recover faces absent from the source.
+
 ## Configuration prices and staged waste cap
 
 These are configuration quotes, not authorized or fully resolved media requests.
