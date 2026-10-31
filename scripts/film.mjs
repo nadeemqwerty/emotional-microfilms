@@ -97,7 +97,7 @@ function usage() {
 
 Feedback/packet/bundle/refresh/asset/review/advance WRITE local files; obtain user approval.
 Workspace writes require claim and FILM_OWNER. Use review-json for personal/delegated authority, entertainment and audio-scene-fit evidence.
-Review areas: characters, characters-user, characters-delegated, keyframes, keyframes-user, keyframes-delegated, design-user, design-delegated, final-user, effect-preflight, motion, sound, ${REVIEW_AREAS.join(', ')}.
+Review areas: characters, characters-user, characters-delegated, keyframes, keyframes-user, keyframes-delegated, design-user, design-delegated, final-user, effect-preflight, motion, camera-execution, sound, dialogue-performance, ${REVIEW_AREAS.join(', ')}.
 Stages: ${STAGES.join(' -> ')}.
 No automatic spend, upload, publish, commit or push.`);
 }
@@ -269,7 +269,8 @@ try {
           {area, result, evidence: evidence.join(' ')};
         invariant(['characters', 'keyframes', ...ACCEPTANCE_AREAS.flatMap(scope =>
           [`${scope}-user`, `${scope}-delegated`]), 'final-user',
-        'effect-preflight', 'motion', 'sound', ...REVIEW_AREAS].includes(review.area), 'Unknown review area.');
+        'effect-preflight', 'motion', 'camera-execution', 'sound', 'dialogue-performance',
+        ...REVIEW_AREAS].includes(review.area), 'Unknown review area.');
         invariant(['pass', 'fail'].includes(review.result) && review.evidence?.trim(),
           'Use pass/fail plus observed evidence; do not fabricate human review.');
         verifyAssets(root, manifest);

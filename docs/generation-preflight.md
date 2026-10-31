@@ -54,6 +54,13 @@ Until the wrapper's routing is observed, keep every pilot motion prompt
    label converted bytes as the provider's original output or regenerate good
    identities just to change file size. The cast is not a literal video endpoint;
    check the destination model's constraints and applicable upload approval.
+   Actual follow-up on 31 October: Wan 2.7 **image2image also rejects reference
+   images over 20 MB**, including its own 4K PNG output. Check reference bytes
+   before guided scene requests, not only before video. The Indian test cast's
+   22,613,793-byte original was retained and converted without recasting to a
+   full-canvas 902,681-byte JPEG. Official signed upload plus metadata acceptance
+   verified 3056x5432 and the smaller byte count. Preserve failed job, derivative
+   lineage and renewed reference-bound acceptance; do not assume a refund.
 6. Confirm actual provider references are accessible immediately before quoting
    and submission. A filename, thumbnail, expired URL or invented label/ID is not
    a valid reference. Refresh metadata, not generation, if a URL expires.

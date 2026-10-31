@@ -1,12 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readdirSync} from 'node:fs';
-import {dirname, resolve} from 'node:path';
+import {mkdirSync, mkdtempSync, readdirSync, writeFileSync} from 'node:fs';
+import {dirname, relative, resolve} from 'node:path';
+import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {cameraInstruction, dialogueInstruction, packetDraft, productionRevision, readJson,
   recordReview, requireReview, validateCameraPlan, validateCreationDirection, validateDialoguePlan,
   validatePacket, validateSpend} from '../lib/workflow.mjs';
 import {postCameraFilter} from '../lib/assembly.mjs';
+import {claimWorkspace} from '../lib/handoff.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const load = path => readJson(resolve(root, path));
@@ -146,4 +148,39 @@ test('camera execution acceptance requires full playback, not a few sampled fram
   invalid.segments[0].framingMaintained = false;
   assert.throws(() => record(invalid), /Camera/);
   requireReview(record(report), 'camera-execution');
+});
+
+test('real review-json CLI accepts both conditional camera and dialogue performance areas', () => {
+  const workspace = resolve(root, 'workspace');
+  mkdirSync(workspace, {recursive: true});
+  const directory = mkdtempSync(resolve(workspace, 'test-direction-'));
+  const path = resolve(directory, 'manifest.json');
+  const manifest = {...packetDraft(scenario, brief, feedback), productionDraft: quiet,
+    stage: 'motion-approved', approvalRevision: 1, soundDecision: 'native', reviews: [], assets: []};
+  manifest.productionFingerprint = productionRevision(manifest);
+  writeFileSync(path, JSON.stringify(manifest));
+  claimWorkspace(path, 'synthetic-direction-cli');
+  const reports = {
+    'camera-execution': {picture: 'full-playback', segments: [{
+      shotId: 'a', id: 'a-camera', from: 0, to: 10, movementMatches: true,
+      framingMaintained: true, focusMatches: true, continuityMaintained: true,
+      evidence: 'Synthetic unit-test observation, not real media acceptance.',
+    }], unresolvedFailures: []},
+    'dialogue-performance': {picture: 'full-playback', audio: 'listened',
+      listeningConditions: 'Synthetic unit-test attestation only.',
+      lines: [{id: 'reassurance', from: 4, to: 8, wordsVerified: true, speakerVerified: true,
+        intelligible: true, emotionalMatch: true, lipSync: 'pass',
+        evidence: 'Synthetic unit-test observation only.'}], unresolvedFailures: []},
+  };
+  for (const [area, report] of Object.entries(reports)) {
+    const reviewPath = resolve(directory, `${area}.json`);
+    writeFileSync(reviewPath, JSON.stringify({area, result: 'pass', report,
+      evidence: 'Synthetic CLI fixture, not a production review.'}));
+    const result = spawnSync(process.execPath, [resolve(root, 'scripts', 'film.mjs'),
+      'review-json', relative(root, path), relative(root, reviewPath)], {
+      cwd: root, encoding: 'utf8', env: {...process.env, FILM_OWNER: 'synthetic-direction-cli'},
+    });
+    assert.equal(result.status, 0, result.stderr);
+    requireReview(readJson(path), area);
+  }
 });
