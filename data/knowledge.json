@@ -3,6 +3,50 @@
   "policy": "Project-only reusable knowledge. Original summaries with evidence/read scope; no private jobs, account data, signed URLs or uninspected-source claims. Retrieve before external research.",
   "entries": [
     {
+      "id": "native-audio-relative-level-conformance",
+      "title": "Native audio streams can hide a forty-decibel scene mismatch",
+      "tags": ["audio", "native", "levels", "gain", "mix", "continuity", "picture", "hash", "derivative"],
+      "summary": "Actual attic and portrait-entry tracks measured mean -67.6 and -27.8 dB. Local per-source native-audio gains produced -37.7 and -37.8 dB with safe peaks, while encoded video-packet hashes remained identical. Eight audio-only derivatives fully decoded with unchanged frame counts; this is technical level conformance, not listening or emotional-fit approval.",
+      "rules": ["Compare relative scene levels and headroom; stream presence and a global gain are insufficient.", "Preserve original sources and history; record gain, transform, source/derivative hashes and verified picture-packet identity.", "Transfer already performed bounded visual inspection only with verified picture identity and fresh derivative decode/count evidence.", "Quiet attic and live child action need not share one level; arrangement, sound identity, timing and joined emotional fit still require actual hearing.", "Do not buy replacement picture merely to repair a soundtrack, or claim gain implemented a sound bridge."],
+      "evidenceType": "actual FFmpeg source/derivative meters, picture-packet hashing and full decoding; no listening or full-speed playback",
+      "freshness": "stable",
+      "reviewedAt": "2026-10-31",
+      "sources": [{"tool": "actual local source and audio-only derivative audits", "scope": "Eight original/derivative encoded-picture hashes matched; all frame counts and audio headroom checked. Three 24-second review exports decoded; native tracks have not been heard."}, {"path": "docs/visual-development.md", "scope": "Per-scene level, picture-preservation and honest evidence-transfer contract."}]
+    },
+    {
+      "id": "actual-pose-and-variant-department-conformance",
+      "title": "Conform adjacent poses and every department to actual references",
+      "tags": ["conformance", "actual", "pose", "eyeline", "gaze", "match-cut", "variant", "camera", "shadow", "bubble"],
+      "summary": "Inspected child reactions placed the eyes near 22 percent rather than the provisional 42. A source-guided present return matched that real composition without rerolling the good child. A bubble endpoint showed an up-right pointing pose, exposing a planned next-shot leftward-gaze jump and inherited swing instructions in camera/shadow/acting fields. The ungenerated response and all affected departmental plans were conformed before motion; this is not a successful-motion claim.",
+      "rules": ["Compare actual adjacent images, gaze, hand state, framing and light before locking motion.", "Preserve good media and original submitted requests; record source-bound planning conformance separately.", "Show an essential gaze/arm response in continuous action rather than hiding a completed change between scenes.", "For action variants cross-read continuity, pacing, per-actor intent, camera segments, contacts, shadows, sound and cut reasons, not just the shot prompt.", "A physical camera change must agree across the actual endpoints, timed plan and native prompt; inspect achieved movement separately."],
+      "evidenceType": "actual decoded still inspection plus cross-department planning correction; no video/playback/listening pass",
+      "freshness": "stable",
+      "reviewedAt": "2026-10-31",
+      "sources": [{"tool": "actual decoded endpoint and departmental packet inspection", "scope": "Thirteen actual endpoint roles inspected; child/teen return placement and pointing-to-response continuity compared. Positive inherited swing instructions found and corrected in the standing bubble design before motion. No personal user viewing claimed."}, {"path": "docs/visual-development.md", "scope": "Actual-pose and full-department variant conformance contract."}, {"path": "examples/afternoon-again.json", "scope": "Actual-reference-conformed endpoint planning and separate model/scenario comparison intent, not generated quality evidence."}]
+    },
+    {
+      "id": "isolate-multi-age-cast-guidance",
+      "title": "Separate identity guidance from a dominant portrait or group sheet",
+      "tags": ["cast", "identity", "teen", "mother", "child", "reference", "crop", "time-plane"],
+      "summary": "An actual attic image used the mother in a teal sari instead of the teen in an ivory shirt when guided by a three-person cast sheet and a solo mother portrait. Exact isolated identity crops plus explicit live-person versus photograph roles were followed by a corrected teen attic image. This single combined repair does not isolate a causal model-control effect.",
+      "rules": ["Inspect actual identity, age, costume and time plane before buying dependent motion.", "Preserve good generated faces through exact source crops where useful; retain source hash, crop transform, derivative hash and accepted upload reference.", "Use per-frame characterReferenceIds for the relevant approved identities, not compulsory offscreen cast guidance.", "A parent photograph is prop content, not a live replacement actor; retain failures and state the actual correction scope."],
+      "evidenceType": "bounded actual image inspection and implemented preflight regression tests; not final-video review",
+      "freshness": "stable",
+      "reviewedAt": "2026-10-31",
+      "sources": [{"tool": "actual decoded local cast, identity-crop and scene inspection", "scope": "Wrong mother attic image, three exact identity crops and corrected teen attic image viewed; later user-directed recasting is separate, no personal acceptance claimed."}, {"path": "docs/visual-development.md", "scope": "Identity isolation, provenance and live-versus-printed role contract."}, {"path": "test/narrative-format.test.mjs", "scope": "Required/unknown/duplicate identity and required prop-reference preflight cases."}]
+    },
+    {
+      "id": "held-photo-front-back-viewpoint",
+      "title": "A photograph has two physical sides, not a showcase pose",
+      "tags": ["photograph", "portrait", "frame", "hands", "eyeline", "viewpoint", "prop", "transition"],
+      "summary": "An inspected portrait-lift endpoint put the portrait front and rear easel stand on the same visible surface. It was rejected before motion. Actual replacement A/B sequences show a supported back-facing lift and over-shoulder front reveal; all numbered source frames and actual rendered cut samples were inspected, including the composition-matched portrait-to-live-mother seam. This is bounded visual evidence, not joined real-time playback or personal acceptance.",
+      "rules": ["Check which side the actor and camera can actually see, not merely whether a portrait is readable.", "Reject front/back hybrids, stands over the printed image and eyelines toward the wrong surface.", "Guide a reverse angle with both the actual physical scene geometry and exact portrait content, declared as sceneReferenceIds.", "Retain the failed take; separately verify actual hand support, camera movement, source/end states and joined cut boundaries."],
+      "evidenceType": "actual image failure, complete numbered-frame replacement-source inspection, rendered cut samples and reference tests; no real-time playback/listening",
+      "freshness": "stable",
+      "reviewedAt": "2026-10-31",
+      "sources": [{"tool": "actual decoded local endpoint inspection", "scope": "Teen holding a front/back hybrid actually viewed; no claim that a prompt revision fixed generated motion."}, {"path": "docs/visual-development.md", "scope": "Physical viewpoint and exact prop-content handoff."}, {"path": "examples/afternoon-again.json", "scope": "Revised back-facing reaction and over-shoulder front reveal design, not an actual quality pass."}]
+    },
+    {
       "id": "scene-specific-time-plane-prompts",
       "title": "Compile each prompt from its own scene and time plane",
       "tags": ["prompt", "scene", "memory", "present", "props", "lighting", "continuity"],

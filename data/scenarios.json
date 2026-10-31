@@ -622,22 +622,22 @@
       "lane": "emotion-led",
       "visualStyle": "grounded cinematic realism",
       "domain": "photo-cued ordinary nostalgia",
-      "relationship": "An original fictional adult Korean granddaughter and her grandmother.",
-      "logline": "A grandmother photograph recalls an ordinary afternoon cup of tea, and the granddaughter returns to the present with a small familiar smile.",
-      "setup": "Present: Nari sits RIGHT at a familiar wooden table, looking down at a small wooden photograph frame resting LEFT foreground angled toward the camera. It clearly depicts the exact silver-haired lavender-cardigan grandmother at the same table in the actual memory reference. Nari's hands rest separately near her own cup and frame, not gripping tiny objects.",
-      "turn": "Her gaze settles on the image; let the photographed grandmother/tea setting register before a motivated cut.",
-      "landing": "Return to precisely the present table, neutral window light, unchanged wooden photo frame and cream cup. Nari lifts her gaze slightly from the photograph, settles into a small closed-mouth familiar smile and keeps her hands resting separately. Grandmother remains only in the photograph, not physically present.",
-      "seconds": 15,
-      "shots": 3,
+      "relationship": "Original Indian daughter at 19 and at 7, with her mother aged 32 in a memory/old portrait.",
+      "logline": "While clearing an attic, a hurried nineteen-year-old finds her mother’s portrait; a camera move into it recalls a joyful childhood swing ride, and she returns to the present smiling.",
+      "setup": "Busy Meera19 moves aside the ivory cloth, discovers the single wooden portrait, carefully lifts it from the trunk to chest height and stops. Her brisk concentration becomes surprised recognition, not sadness.",
+      "turn": "Meera holds the portrait steady. Move through the frame boundary until the mother photograph fills the screen; the person stays a still photograph during this shot. No face morph, animated printed lips, transparent glass smear or invented room. This is a live childhood memory, not a photograph. Mother looks down toward her seven-year-old daughter, gently gives the low swing ONE small push, then smiles at her. Reveal the seated child holding both taut ropes as the swing makes a small safe forward arc. The child delights. All movement continuous and supported; no teleport, duplicate ropes, rigid mannequin or frozen hold.",
+      "landing": "Back in the attic at age 19, the same daughter supports the found portrait at chest height. Her recognition turns into a warm happy smile, shoulders and brow relax. She gives the portrait a small affectionate look and holds the happy expression naturally with a blink and breathing. No crying, grief cue, ghost or frozen still.",
+      "seconds": 24,
+      "shots": 5,
       "risks": [
-        "identity/age continuity",
-        "small expression legibility",
-        "hand/prop physics",
-        "actual native sound needs listening",
-        "photo likeness",
-        "present-memory-return geography"
+        "New cast/age continuity",
+        "Portrait identity and print stability",
+        "Physical frame lift",
+        "Face/eye-height match cuts",
+        "Rope/seat support through real swing motion",
+        "Actual audio and joined playback remain perceptual gates"
       ],
-      "feasibilityNote": "Low-complexity locked composition; actual cast and every endpoint before motion. Present and memory occupy the same familiar room/table in distinct time planes. Grandmother is explicitly offscreen in the present; no funeral, death or supernatural claim.",
+      "feasibilityNote": "User-directed multi-shot narrative revision: real discovery/lift, actual portrait push, face-aligned memory entry, supported swing action, child response and happy present return. All new cast and scene endpoints required.",
       "scores": {
         "emotion": 4,
         "clarity": 4,
@@ -648,7 +648,12 @@
         "silentRead": 4
       },
       "scoreRationale": "Agent editorial hypothesis under explicit autonomous slate instruction, not a user rating, audience measurement or prediction.",
-      "failedGates": []
+      "failedGates": [],
+      "formatOverride": {
+        "maximumSeconds": 30,
+        "maximumShots": 5,
+        "reason": "The user requested attic work, finding a parent portrait, camera focus into it, a childhood memory and a normal/urgent-to-happy emotional progression; the default 15s/3-shot restriction must not erase the causal actions."
+      }
     }
   ]
 }

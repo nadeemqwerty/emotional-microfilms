@@ -42,8 +42,15 @@
       "scenarioId": "afternoon-again",
       "rating": null,
       "decision": "select",
-      "note": "User explicitly requested this scenario category and autonomous production of all four pilots. Concrete title/staging are agent-designed, not personally viewed/selected images. Present and memory occupy the same familiar room/table in distinct time planes. Grandmother is explicitly offscreen in the present; no funeral, death or supernatural claim.",
-      "at": "2026-10-30T18:05:08.160Z"
+      "note": "User explicitly requested this scenario category and autonomous production of all four pilots. Concrete title/staging are agent-designed, not personally viewed/selected images. Present and memory occupy the same familiar room/table in distinct time planes. Grandmother is explicitly offscreen in the present; no funeral, death or supernatural claim. Latest explicit fictional casting request: \"use white indians like aishwarya rai bachchan, and salman khan in its prime\". Apply as original fair-complexioned Indian casting, maintaining story ages; not a claim of celebrity participation.",
+      "at": "2026-10-30T18:05:08.160Z",
+      "productionFeedback": [
+        {
+          "at": "2026-10-31T01:08:14.808Z",
+          "observation": "User requested new Indian teen/mother casting and actual attic discovery, camera-focused portrait entry, childhood memory and normal/urgent-to-happy expression arc; prior candidate felt like scene-only generation.",
+          "instruction": "we have budget on credits, use them and test out different scenerios. review the generation and more. this should be really good state of the art"
+        }
+      ]
     }
   ]
 }

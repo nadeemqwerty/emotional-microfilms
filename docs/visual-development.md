@@ -19,6 +19,34 @@ hand invitation, not an unsupported coat lift or guaranteed palm-seat contact.
 
 ## Organic action and sound are acceptance requirements
 
+### A film needs causal progression, not just animated scene illustrations
+
+For a discovery/memory story, specify the activity before discovery, physical
+object reveal and handling, the recognition, a motivated entry into one specific
+live memory, an actual response there, and a changed present-day expression.
+Do not begin with the person already posed beside the final story prop and
+assume a later cut supplies the missing discovery.
+
+Every transition needs actual outgoing/incoming composition, eyeline/action,
+prop and light continuity, camera/focus behavior and sound intent. A portrait
+push needs a genuinely moving shot and matching face geometry at the memory
+entry; a slow digital enlargement of an unrelated still is not that proof.
+Age/time-plane changes occur at designed edits, not through an accidental face
+morph. Inspect the motion around each actual boundary, not endpoints alone.
+
+Keep the 8-15s/three-shot default. When an explicitly requested narrative needs
+more room, a scenario may opt into `formatOverride` with a written reason,
+`maximumSeconds` no greater than 30 and `maximumShots` no greater than five.
+This changes that story's validation/assembly limits only; it grants no spending,
+reference, playback or release approval. A larger number is not itself better pacing.
+
+For quality experiments, keep the same cast, endpoint images, duration and
+requested action when comparing models. A different memory action is a separate
+scenario test, not a clean model comparison. Log exact quotes, configurations,
+source IDs/hashes and actual timecoded findings; retain failures and choose on
+observed narrative, acting, physics, camera, cut and sound evidence—not model
+price, resolution labels or "state of the art" marketing.
+
 A technically valid ellipse is not automatically a good emotional transition.
 The user rejected the silent first pilot and its skipped sitting action. When
 physical acceptance matters, show the turn, weight shift, lowering, seat contact
@@ -27,13 +55,28 @@ action with a dissolve that ghosts bodies, or call a teleport organic.
 
 Muted story proof is an intermediate test, not permission to deliver an
 unrequested silent finish. Plan a continuous ambience/music route and rights
-before motion, then verify the real track in the exported file. The revised
-pilot uses original local keyboard synthesis and filtered-noise rain, not an
-invented OpenArt music endpoint or a copied song. Meters/stream checks establish
+before motion, then verify the real track in the exported file. The retained
+earlier father/toddler preview used original local keyboard synthesis and
+filtered-noise rain, not an invented OpenArt music endpoint or a copied song.
+Its music was subsequently rejected, not established as a studio default.
+Meters/stream checks establish
 presence, continuity and level only. Until actual listening and joined playback
 occur, label it a review preview and leave sound, entertainment and human final
 approval pending. User rejection supersedes an earlier agent creative pass;
 preserve the rejected take and diagnose the actual complaint.
+
+Compare native sound **between scenes**, not just against clipping. Actual attic
+and portrait-entry sources differed by roughly 40 dB in mean level despite both
+having audio streams. A whole-film gain cannot repair that relative mismatch.
+Preserve good picture and originals: a measured per-source audio-only derivative
+can copy encoded video packets unchanged. Retain source history/hash, gain,
+transform, matching picture-packet hashes, derivative hash and fresh full decode,
+frame count and level evidence. Transfer bounded visual inspection only through
+that verified identity; do not manufacture a new playback/listening pass.
+Use scene intent rather than forcing quiet room tone and child action to the
+same level. Gain does not remove a heavy arrangement, verify native sound content
+or implement a J-cut/crossfade. Recheck actual export boundaries and require joined
+listening before any sound approval.
 
 ## Required sequence and review stops
 
@@ -78,6 +121,48 @@ direction that does not fully match the prompt. Those are reference-background
 caveats, not approved scene design. Preserve accepted faces, hair, wardrobe and
 scale only; explicitly exclude studio equipment and relight the actual location.
 User character acceptance remains independent of this operator assessment.
+
+For multi-age families, isolate each approved identity before scene work when a
+group sheet or dominant photograph could substitute the wrong person. Exact
+source crops can preserve good faces without another paid casting run: retain
+source hash, crop transform, derivative hash and accepted upload reference.
+Actually inspect the crops; reference-background fragments are not scene blocking.
+Declare separate `characterPlan.references` with identity `covers`, then select
+the relevant reference IDs in each keyframe's `characterReferenceIds`. Omission
+retains the legacy all-cast requirement; explicit selections cannot be empty,
+duplicate, unknown or satisfied by a different cast member. All identities still
+need actual cast approval. A parent printed in a photograph is a prop reference,
+not permission to replace the live teen with that parent. Inspect age, face,
+wardrobe and time plane before buying any dependent motion; retain failed takes.
+Declare `sceneReferenceIds` when both a geometry reference and exact prop content
+are required; preflight requires every declared genuine frame. Inspect physical
+viewpoint too: a person studying a photograph may show its back to the camera.
+Never accept a portrait front with an easel stand drawn over it. An over-shoulder
+reverse angle can reveal the front naturally; plan and inspect both sides.
+For an intended exact adjacent boundary, reuse the genuine image under both
+scene roles instead of buying a subtly different approximation. Record the
+alias, original job/source, byte-identical hashes and zero new-generation cost.
+Reconcile actual face position, gaze and crop in the design. This eliminates
+still-reference drift, not unverified video endpoint drift: inspect the actual
+last/first frames and the ensuing live performance before accepting the cut.
+
+Conform to observed poses, not provisional screen coordinates. If a good child
+reaction has its eyes near 22% rather than a planned 42%, guide the ungenerated
+return with that actual composition instead of rerolling the child for a number.
+Preserve the submitted request as history and separately record the conformed
+design. A pointing child looking up-right cannot cut to an already completed
+leftward response without an intentional ellipse: show the arm lowering and
+attention returning, or design another observable transition.
+
+An action variant must be cross-read through **every department**, not just its
+motion prompt. Trace identity/props, continuity, pacing, direction beats,
+per-actor intent/gaze, interval initial/intermediate/final states and contacts,
+camera segments/framing, shadow casters/receivers, sound cues and both cut reasons.
+A standing bubble-play candidate must not retain positive swing instructions in
+its shadow map or camera motivation. A source-motivated physical push-in must be
+declared consistently, not simultaneously called locked or faked with a crop.
+Reconcile all affected packets before design lock; keyword checks and filled
+fields cannot replace this semantic review or prove the generated result.
 
 The first scene uses accepted character references. Later scene images also use
 accepted geometry/prop references where useful. Preserve faces/wardrobe, but

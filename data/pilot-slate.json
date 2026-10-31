@@ -81,31 +81,117 @@
     },
     {
       "id": "afternoon-again",
-      "title": "Afternoon, Again",
+      "title": "Afternoon, Again — The Attic",
       "theme": "ordinary nostalgic memory",
-      "relationship": "An original fictional adult Korean granddaughter and her grandmother.",
-      "logline": "A grandmother photograph recalls an ordinary afternoon cup of tea, and the granddaughter returns to the present with a small familiar smile.",
-      "seconds": 15,
-      "researchQuery": "grandmother photograph nostalgia memory",
-      "creativeException": "Present and memory occupy the same familiar room/table in distinct time planes. Grandmother is explicitly offscreen in the present; no funeral, death or supernatural claim.",
+      "relationship": "Original Indian daughter at 19 and at 7, with her mother aged 32 in a memory/old portrait.",
+      "logline": "While clearing an attic, a hurried nineteen-year-old finds her mother’s portrait; a camera move into it recalls a joyful childhood swing ride, and she returns to the present smiling.",
+      "seconds": 24,
+      "researchQuery": "family photograph nostalgia autobiographical memory",
+      "creativeException": "User-directed longer causal narrative: present attic discovery, mother portrait, live childhood courtyard and happy present return. Three age-specific identities, five shots and distinct time planes are deliberate; no funeral, death or supernatural claim.",
       "characters": [
-        {"id": "Nari", "description": "Original fictional Korean adult woman about 27, naturally attractive oval face, expressive dark eyes, long dark hair loosely behind one ear, oatmeal knit sweater and muted blue trousers. Same original face in present and recent memory, no child transformation or celebrity resemblance.", "position": "Screen-right at the table in present and memory.", "intent": "Recognize the comfort of an ordinary remembered afternoon."},
-        {"id": "Grandmother", "description": "Original fictional Korean grandmother about 72, naturally warm lined face, kind dark eyes, short softly waved silver hair, dusty lavender cardigan over a plain cream blouse and dark comfortable trousers. Genuine older-adult skin texture, no celebrity resemblance.", "position": "Screen-left in the remembered afternoon and in its photograph; offscreen in present.", "intent": "Offer ordinary familiar companionship, not a mystical farewell."}
+        {
+          "id": "Meera19",
+          "description": "Original fictional Indian woman, age 19, youthful softly oval face, large expressive grey-green almond eyes, dark arched brows, fair/light natural skin with warm undertones, distinctive rounded chin, small simple bindi and long dark hair in a loose braid. Ivory cotton shirt with sleeves rolled once, indigo jeans and tiny plain studs. Natural age-appropriate beauty; no celebrity likeness or glamorous makeup. Current explicit user casting: fair/light natural complexion, light grey-green eyes, original Indian identity; retain the specified story age."
+        },
+        {
+          "id": "Meera7",
+          "description": "The same fictional Indian girl at age 7: related eye/brow shape, small simple bindi, rounder child face, child proportions, two simple dark braids, mustard cotton dress with pale floral detail and brown buttons, and flat sandals. Fully clothed, natural playful child, no makeup or adult styling. Current explicit user casting: fair/light natural complexion, light grey-green eyes, original Indian identity; retain the specified story age."
+        },
+        {
+          "id": "Mother32",
+          "description": "Original fictional Indian mother, age 32 in the remembered afternoon and in her old portrait, softly square face, expressive grey-green eyes, broad kind smile, dark hair in a long braid, small round maroon bindi. Plain teal cotton sari with a narrow cream border over a matching blouse; no celebrity likeness or heavy jewelry. Current explicit user casting: fair/light natural complexion, light grey-green eyes, original Indian identity; retain the specified story age."
+        }
       ],
-      "props": "One small wooden photo frame with a clear photograph of the actual designed grandmother/tea scene, one plain cream cup on the table. Memory uses two plain cream cups and a simple wooden table; grandmother keeps her cup on the table, no pouring or hand transfers.",
-      "light": "Present: soft neutral window daylight from camera-left and gentle room bounce. Memory: the same source direction slightly warmer in late-afternoon sun, soft face light and tabletop contact shadows; no sepia wash, glowing person or light source jump within a shot. Return exactly to present light.",
-      "atmosphere": "Memory has a small warm window patch and a gentle out-of-focus leaf shadow on the back wall; present is quieter/neutral. No floating glitter, butterflies, spectral figures or exaggerated dream dissolve.",
-      "audio": "Present quiet room tone with a subtle frame/table contact. Memory has familiar room ambience and one delicate cup-settle sound, no pouring, speech or music. Return to the same present room tone; unobtrusive short ambience crossfades at the two cuts. No sad piano, swelling score, song, bass or funeral cue.",
-      "setup": "Present: Nari sits RIGHT at a familiar wooden table, looking down at a small wooden photograph frame resting LEFT foreground angled toward the camera. It clearly depicts the exact silver-haired lavender-cardigan grandmother at the same table in the actual memory reference. Nari's hands rest separately near her own cup and frame, not gripping tiny objects.",
-      "landing": "Return to precisely the present table, neutral window light, unchanged wooden photo frame and cream cup. Nari lifts her gaze slightly from the photograph, settles into a small closed-mouth familiar smile and keeps her hands resting separately. Grandmother remains only in the photograph, not physically present.",
+      "props": "One honey-brown wooden frame contains the accepted vertical solo mother portrait with cream side matting. During the frontal reaction its photograph front faces Meera, so camera sees only flat brown backing and a folded flush easel leg. The over-shoulder reverse reveals the portrait front; never put the back stand over its image. Main memory has one low wooden swing with two taut ropes; the separate bubble variant replaces it with one held wand and a grounded standing child.",
+      "light": "Late-afternoon light through a small camera-left attic window, warm but neutral skin, soft dusty beam behind the actor, dark timber roof, readable eyes, stable hand/frame and floor contact shadows. Soft warm late-afternoon courtyard daylight from camera-left with leafy background bounce, same source direction as the old portrait, soft grounded swing/foot shadows, no sepia wash or artificial glowing faces.",
+      "atmosphere": "Sparse attic dust stays behind the teen; the courtyard has restrained leaf/braid movement and soft grounded afternoon shadows. No floating glitter, butterflies, spectral figures, sepia wash or exaggerated dream dissolve.",
+      "audio": "Music-free diegetic attic/courtyard sounds with brief child laughter; actual listening required.",
+      "setup": "Busy Meera19 moves aside the ivory cloth, discovers the single wooden portrait, carefully lifts it from the trunk to chest height and stops. Her brisk concentration becomes surprised recognition, not sadness.",
+      "landing": "Back in the attic at age 19, the same daughter supports the found portrait at chest height. Her recognition turns into a warm happy smile, shoulders and brow relax. She gives the portrait a small affectionate look and holds the happy expression naturally with a blink and breathing. No crying, grief cue, ghost or frozen still.",
       "beats": [
-        {"from": 0, "to": 2, "phase": "setup", "action": "Nari notices the clearly visible grandmother photograph on the table.", "feeling": "Quiet recognition rather than announced grief."},
-        {"from": 2, "to": 5, "phase": "reveal", "action": "Her gaze settles on the image; let the photographed grandmother/tea setting register before a motivated cut.", "feeling": "A familiar memory becoming present."},
-        {"from": 5, "to": 8, "phase": "response", "action": "Memory: grandmother LEFT and Nari RIGHT sit together in warm daylight, hands separate; grandmother gently settles her cup on the table.", "feeling": "Ordinary affectionate companionship."},
-        {"from": 8, "to": 10, "phase": "hold", "action": "Memory: a small exchanged smile holds, no new action or speech.", "feeling": "Comfort in a specific remembered routine."},
-        {"from": 10, "to": 13, "phase": "response", "action": "Return to the matching present pose and photo; Nari slowly raises her eyes a little.", "feeling": "Bittersweet warmth without a forced tear."},
-        {"from": 13, "to": 15, "phase": "hold", "action": "A restrained familiar smile settles while the photograph remains in the frame.", "feeling": "Memory kept close; no death or therapeutic claim."}
-      ]
+        {
+          "from": 0,
+          "to": 2,
+          "phase": "setup",
+          "action": "Clearing the attic briskly; cloth exposes a familiar frame.",
+          "feeling": "Busy/neutral urgency."
+        },
+        {
+          "from": 2,
+          "to": 5,
+          "phase": "reveal",
+          "action": "She lifts the portrait and stops what she was doing.",
+          "feeling": "Small surprise and recognition."
+        },
+        {
+          "from": 5,
+          "to": 7,
+          "phase": "response",
+          "action": "Her attention settles on the mother in the photograph.",
+          "feeling": "Absorbed recognition, no tears."
+        },
+        {
+          "from": 7,
+          "to": 10,
+          "phase": "reveal",
+          "action": "Camera moves into the portrait; mother face becomes the visual bridge.",
+          "feeling": "Anticipation of a specific memory."
+        },
+        {
+          "from": 10,
+          "to": 13,
+          "phase": "reveal",
+          "action": "The aligned face is now the living mother; camera reveals the childhood courtyard.",
+          "feeling": "Warm familiar recognition."
+        },
+        {
+          "from": 13,
+          "to": 17,
+          "phase": "response",
+          "action": "Mother gives the low swing a gentle push; the child delights.",
+          "feeling": "Playful shared happiness."
+        },
+        {
+          "from": 17,
+          "to": 20,
+          "phase": "hold",
+          "action": "Child laughter settles into a contented smile, preparing a matched eye-height return.",
+          "feeling": "Unforced childhood joy."
+        },
+        {
+          "from": 20,
+          "to": 22,
+          "phase": "response",
+          "action": "Matched present teen face recognizes that feeling while holding the portrait.",
+          "feeling": "Busy expression has become warmth."
+        },
+        {
+          "from": 22,
+          "to": 24,
+          "phase": "hold",
+          "action": "She relaxes and lets a happy smile breathe.",
+          "feeling": "Happy, not grieving or cured of a diagnosis."
+        }
+      ],
+      "status": "Three 24-second review cuts exported: v002 primary swing/Kling4, v003 bubble action, v004 controlled swing/Kling3. All 992 unique source frames plus native detail samples and actual rendered cut samples inspected; exports fully decoded. Not release-approved: joined real-time playback, listening, phone/Wow review and personal publication acceptance remain pending.",
+      "deliveryEvidence": {
+        "topic": "outputs\\afternoon-again",
+        "versions": ["v002", "v003", "v004"],
+        "secondsEach": 24,
+        "framesEach": 720,
+        "delivery": "720x1280, 30 fps; actual generated sources 24 fps.",
+        "audio": "Native source tracks, locally level-conformed with identical encoded picture hashes. No added score; native content not heard or emotionally approved.",
+        "comparisonScope": "One take per model with exact shared C endpoints/prompt/duration; native resolution/audio differ. Bubble action is a separate scenario, not model-ranking proof.",
+        "earlierMedia": "v001 retained unchanged.",
+        "releaseApproved": false
+      },
+      "castingDirection": {
+        "instruction": "use white indians like aishwarya rai bachchan, and salman khan in its prime",
+        "female": "Original fair/light-complexioned Indian faces, expressive light grey-green eyes, natural Indian features and age-appropriate styling; inspired casting mood, not literal celebrity copies.",
+        "male": "For male roles in the slate: original fair/light-complexioned Indian men with classic youthful features, expressive dark eyes, strong jaw and natural dark hair; age-appropriate, no literal celebrity copy.",
+        "thisFilm": "19-year-old daughter, mother32 and child7 only; do not invent a male character in a mother-daughter memory.",
+        "scope": "Current user-directed casting revision, not a compulsory skin-tone rule for the studio."
+      }
     }
   ]
 }
