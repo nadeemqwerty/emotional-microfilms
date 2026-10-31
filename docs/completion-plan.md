@@ -776,6 +776,29 @@ emotional delivery/lip sync, acceptable camera execution and personal acceptance
 remain **PENDING/FAILED**. Another paid take needs renewed bounded attempt approval
 and a fresh exact quote; the remaining credits alone are not authorization.
 
+### Approved targeted repair and review delivery
+
+The user's subsequent **"proceed"** approved one additional PixVerse V6 take
+at no more than 162 credits, still within 1000 total. Reused the actual accepted
+cast/endpoints; revised acquisition to locked-wide and renewed scoped design/
+reference binding before the fresh exact quote and single submission.
+The completed source was rendered into **v005 camera/dialogue review**:
+1080x1920, 30fps, 10 seconds/300 decoded frames, from native 720p/24fps footage.
+The explicit post digital push is 1.00-1.04 during 2-8s with stable surrounding
+holds, not a physical dolly. All 300 frames were viewed in chronological sheets;
+faces/crayon remain protected without the v004 close-up crop or wide-return jump.
+Both files fully decode without detected black/frozen intervals. Encoded native
+AAC payload hashes match exactly; local ASR again matches the original line.
+The private receipt preserves source/derivative hashes, render arguments and limits.
+
+Conservative quote-based commitments are now **938/1000**, zero reserved;
+no third take is authorized and no itemized debit is inferred. **Actual joined
+playback/listening and personal acceptance remain pending.** Frame review found
+camera-facing adult looks around 1.5-4s, broader smiles than directed and possible
+extra mouth movement requiring speaker/lip-sync adjudication. Neither the full
+frame audit nor the repair approval grants camera/dialogue/Wow & Enjoyment
+playback passes. The original film and v004 failure remain unchanged.
+
 ### Software verification and source scope
 
 The shared working tree passed syntax checks, project validation (45 scenarios,
