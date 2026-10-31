@@ -3,6 +3,160 @@
   "scenarioId": "a-seat-for-dad",
   "seconds": 13,
   "aspectRatio": "9:16",
+  "cameraPlan": {
+    "schemaVersion": 1,
+    "shots": [
+      {
+        "shotId": "a",
+        "purpose": "Establish the empty place and a small invitation.",
+        "axis": "Minjun is always screen-left; Junho is always screen-right. Camera stays on the path side of the bench axis. Both faces and the seat remain readable.",
+        "height": "Retain the designed eye-level relationship and readable action.",
+        "angle": "Retain the approved angle and screen sides; no unplanned axis crossing.",
+        "lensIntent": "Natural perspective; keep the required faces and story prop legible.",
+        "executionRoute": "in-generation",
+        "controlMapping": "Canonical prompt instruction only; no invented model camera parameters.",
+        "fallback": "Keep the accepted framing; quote any necessary repair separately.",
+        "segments": [
+          {
+            "id": "a-camera",
+            "from": 0,
+            "to": 4,
+            "move": "locked",
+            "direction": "none",
+            "speed": "still",
+            "easing": "none",
+            "startFraming": "Portrait bench two-shot; faces, small hand and empty seat visible.",
+            "endFraming": "Portrait bench two-shot; faces, small hand and empty seat visible.",
+            "subjectAnchor": "Child's invitation and father's recognition.",
+            "zoom": {
+              "mode": "none",
+              "from": 1,
+              "to": 1
+            },
+            "focus": {
+              "mode": "fixed",
+              "from": "Child's invitation and father's recognition.",
+              "to": "Child's invitation and father's recognition."
+            },
+            "parallax": "none",
+            "motivation": "Protect the performance and causal detail without an unmotivated reframe."
+          }
+        ],
+        "acceptance": [
+          "Inspect the entire shot, including its middle, for stable intended framing.",
+          "Faces, hands and the required story prop stay readable."
+        ],
+        "forbiddenArtifacts": [
+          "unplanned zoom or crop",
+          "axis jump",
+          "focus hunting",
+          "camera shake hiding action"
+        ]
+      },
+      {
+        "shotId": "sit",
+        "purpose": "Show Dad accepting through continuous physical action.",
+        "axis": "Minjun is always screen-left; Junho is always screen-right. Camera stays on the path side of the bench axis. Both faces and the seat remain readable.",
+        "height": "Retain the designed eye-level relationship and readable action.",
+        "angle": "Retain the approved angle and screen sides; no unplanned axis crossing.",
+        "lensIntent": "Natural perspective; keep the required faces and story prop legible.",
+        "executionRoute": "in-generation",
+        "controlMapping": "Canonical prompt instruction only; no invented model camera parameters.",
+        "fallback": "Keep the accepted framing; quote any necessary repair separately.",
+        "segments": [
+          {
+            "id": "sit-camera",
+            "from": 4,
+            "to": 9,
+            "move": "locked",
+            "direction": "none",
+            "speed": "still",
+            "easing": "none",
+            "startFraming": "Same bench axis; knees/seat contact and both identities remain legible.",
+            "endFraming": "Same bench axis; knees/seat contact and both identities remain legible.",
+            "subjectAnchor": "Plausible turn, lowering and seated contact.",
+            "zoom": {
+              "mode": "none",
+              "from": 1,
+              "to": 1
+            },
+            "focus": {
+              "mode": "fixed",
+              "from": "Plausible turn, lowering and seated contact.",
+              "to": "Plausible turn, lowering and seated contact."
+            },
+            "parallax": "none",
+            "motivation": "Protect the performance and causal detail without an unmotivated reframe."
+          }
+        ],
+        "acceptance": [
+          "Inspect the entire shot, including its middle, for stable intended framing.",
+          "Faces, hands and the required story prop stay readable."
+        ],
+        "forbiddenArtifacts": [
+          "unplanned zoom or crop",
+          "axis jump",
+          "focus hunting",
+          "camera shake hiding action"
+        ]
+      },
+      {
+        "shotId": "b",
+        "purpose": "Let the familiar warmth register.",
+        "axis": "Minjun is always screen-left; Junho is always screen-right. Camera stays on the path side of the bench axis. Both faces and the seat remain readable.",
+        "height": "Retain the designed eye-level relationship and readable action.",
+        "angle": "Retain the approved angle and screen sides; no unplanned axis crossing.",
+        "lensIntent": "Natural perspective; keep the required faces and story prop legible.",
+        "executionRoute": "in-generation",
+        "controlMapping": "Canonical prompt instruction only; no invented model camera parameters.",
+        "fallback": "Keep the accepted framing; quote any necessary repair separately.",
+        "segments": [
+          {
+            "id": "b-camera",
+            "from": 9,
+            "to": 13,
+            "move": "locked",
+            "direction": "none",
+            "speed": "still",
+            "easing": "none",
+            "startFraming": "Portrait seated two-shot on the same axis.",
+            "endFraming": "Portrait seated two-shot on the same axis.",
+            "subjectAnchor": "Both expressions and shared gaze.",
+            "zoom": {
+              "mode": "none",
+              "from": 1,
+              "to": 1
+            },
+            "focus": {
+              "mode": "fixed",
+              "from": "Both expressions and shared gaze.",
+              "to": "Both expressions and shared gaze."
+            },
+            "parallax": "none",
+            "motivation": "Protect the performance and causal detail without an unmotivated reframe."
+          }
+        ],
+        "acceptance": [
+          "Inspect the entire shot, including its middle, for stable intended framing.",
+          "Faces, hands and the required story prop stay readable."
+        ],
+        "forbiddenArtifacts": [
+          "unplanned zoom or crop",
+          "axis jump",
+          "focus hunting",
+          "camera shake hiding action"
+        ]
+      }
+    ]
+  },
+  "dialoguePlan": {
+    "schemaVersion": 1,
+    "mode": "none",
+    "route": "none",
+    "rationale": "Intentionally dialogue-free performance for this story; dialogue is available, not compulsory.",
+    "voices": [],
+    "lines": []
+  },
   "framePlan": {
     "schemaVersion": 1,
     "fps": 30,
@@ -278,7 +432,7 @@
         "generateAudio": false,
         "videoCount": 1
       },
-      "prompt": "Animate the actual accepted start image toward the actual accepted end image over five seconds. Locked portrait bench shot: Korean toddler Minjun seated LEFT with dangling feet; father Junho STANDING RIGHT within reach. The single olive jacket stays on the toddler lap throughout. After a brief readable pause, the toddler makes ONE short inviting gesture: his bench-side hand lifts from his lap and indicates the EMPTY SEAT beside him to his RIGHT, while he looks up at Dad. His other hand stays on the jacket. Dad only notices the little invitation. Finish in the actual end-image pose, with the small hand hovering toward the seat, and hold the look. Preserve exact faces, toddler proportions, rust sweater, navy rolled sleeves, jacket, bench geometry, soft overcast right-side light and restrained background rain. No forced hand-to-seat contact, jacket lift, sitting, camera move, body contact, repeated waving, morph, extra person, speech or text."
+      "prompt": "Animate the actual accepted start image toward the actual accepted end image over five seconds. Locked portrait bench shot: Korean toddler Minjun seated LEFT with dangling feet; father Junho STANDING RIGHT within reach. The single olive jacket stays on the toddler lap throughout. After a brief readable pause, the toddler makes ONE short inviting gesture: his bench-side hand lifts from his lap and indicates the EMPTY SEAT beside him to his RIGHT, while he looks up at Dad. His other hand stays on the jacket. Dad only notices the little invitation. Finish in the actual end-image pose, with the small hand hovering toward the seat, and hold the look. Preserve exact faces, toddler proportions, rust sweater, navy rolled sleeves, jacket, bench geometry, soft overcast right-side light and restrained background rain. No forced hand-to-seat contact, jacket lift, sitting, camera move, body contact, repeated waving, morph, extra person, speech or text. Camera direction: 0-4s locked none, still, none; zoom none 1 to 1; focus fixed from Child's invitation and father's recognition. to Child's invitation and father's recognition.; anchor Child's invitation and father's recognition.."
     },
     {
       "id": "sit",
@@ -294,7 +448,7 @@
         "generateAudio": false,
         "videoCount": 1
       },
-      "prompt": "A single uninterrupted realistic five-second shot connecting these exact start and end images. Same fictional Korean toddler and handsome father in his 30s under the rainy wooden shelter. Locked portrait camera; no cut or dissolve. The father starts STANDING on the RIGHT of the toddler and naturally accepts the invitation: he makes a small turn so the bench is behind his hips, bends his knees and hips, lowers his weight smoothly onto the empty bench seat beside the child, then settles with both hands resting separately on his own knees as in the actual final reference. Show the complete physical action, including lowering and believable seat contact; do NOT teleport or fade between standing and seated. The toddler stays seated LEFT, looks up at Dad, retracts his little inviting hand onto the single olive jacket on his own lap and watches quietly. Preserve the same toddler face, short limbs and dangling feet, same adult face, rust/beige and navy/charcoal wardrobe, bench geometry, camera axis, soft cloudy daylight, contact shadows and restrained background rain. One controlled adult sitting action, normal weight and anatomy. No hand holding, hug, body collision, changed face, extra limbs, new person, dialogue, text, morph, camera zoom or new scene. End already seated with the final reference pose and a brief natural settle."
+      "prompt": "A single uninterrupted realistic five-second shot connecting these exact start and end images. Same fictional Korean toddler and handsome father in his 30s under the rainy wooden shelter. Locked portrait camera; no cut or dissolve. The father starts STANDING on the RIGHT of the toddler and naturally accepts the invitation: he makes a small turn so the bench is behind his hips, bends his knees and hips, lowers his weight smoothly onto the empty bench seat beside the child, then settles with both hands resting separately on his own knees as in the actual final reference. Show the complete physical action, including lowering and believable seat contact; do NOT teleport or fade between standing and seated. The toddler stays seated LEFT, looks up at Dad, retracts his little inviting hand onto the single olive jacket on his own lap and watches quietly. Preserve the same toddler face, short limbs and dangling feet, same adult face, rust/beige and navy/charcoal wardrobe, bench geometry, camera axis, soft cloudy daylight, contact shadows and restrained background rain. One controlled adult sitting action, normal weight and anatomy. No hand holding, hug, body collision, changed face, extra limbs, new person, dialogue, text, morph, camera zoom or new scene. End already seated with the final reference pose and a brief natural settle. Camera direction: 0-5s locked none, still, none; zoom none 1 to 1; focus fixed from Plausible turn, lowering and seated contact. to Plausible turn, lowering and seated contact.; anchor Plausible turn, lowering and seated contact.."
     },
     {
       "id": "b",
@@ -310,7 +464,7 @@
         "generateAudio": false,
         "videoCount": 1
       },
-      "prompt": "Animate the actual accepted b-start toward the actual accepted b-end over five seconds as a restrained warm response. Locked portrait camera. The same Korean toddler Minjun stays seated LEFT with dangling feet and the single olive jacket on his lap under both little hands. His same handsome Korean father Junho in his 30s is ALREADY SEATED RIGHT, hands separately on his own knees. They maintain their mutual gaze, make only tiny natural head/expression adjustments, soften into small familiar smiles and settle into the ending. Preserve both exact identities, toddler scale, rust/beige and navy/charcoal wardrobe, jacket, bench, broad soft overcast light and gentle rain behind the shelter. No sitting action, new jacket movement, hug, hand contact, large head turn, leaning overlap, camera drift, added person, dialogue, text or new event."
+      "prompt": "Animate the actual accepted b-start toward the actual accepted b-end over five seconds as a restrained warm response. Locked portrait camera. The same Korean toddler Minjun stays seated LEFT with dangling feet and the single olive jacket on his lap under both little hands. His same handsome Korean father Junho in his 30s is ALREADY SEATED RIGHT, hands separately on his own knees. They maintain their mutual gaze, make only tiny natural head/expression adjustments, soften into small familiar smiles and settle into the ending. Preserve both exact identities, toddler scale, rust/beige and navy/charcoal wardrobe, jacket, bench, broad soft overcast light and gentle rain behind the shelter. No sitting action, new jacket movement, hug, hand contact, large head turn, leaning overlap, camera drift, added person, dialogue, text or new event. Camera direction: 0-4s locked none, still, none; zoom none 1 to 1; focus fixed from Both expressions and shared gaze. to Both expressions and shared gaze.; anchor Both expressions and shared gaze.."
     }
   ],
   "singlePassPrompt": "Planning only. Same Korean toddler and father: invitation, visible natural turn-and-sit, familiar response under a rainy shelter. Preserve actual cast and endpoint references; no text-only bypass, teleport, dissolve, camera move or contact-heavy embrace.",

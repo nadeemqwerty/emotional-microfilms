@@ -24,6 +24,13 @@ appealing, age-appropriate character design; reconcile it with accepted images.
 Use `film effects` for glitter/neon/golden butterfly dust/sakura flower dust and
 other choices; a palette is not a renderer or reason to decorate every story.
 
+Require canonical timed `cameraPlan` and explicit spoken/nonspoken `dialoguePlan`.
+Export them in frame, motion, camera/edit and audio scripts; keep native prompts
+bound to the same instructions. Plan movement versus zoom, focus and crop
+protection alongside speaker intent/subtext, emotional delivery and pauses.
+Cross-read achieved camera changes and actual speech together. New camera/
+dialogue requirements do not retrospectively certify existing takes.
+
 Real cast -> accepted scene frames -> coordinated design lock -> motion remains
 mandatory. Plan light/shadow/effect interplay, causal transitions, hook, reaction
 and hold where the lane needs them. Use the existing specialist skills; do not

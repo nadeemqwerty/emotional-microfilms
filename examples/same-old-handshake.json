@@ -3,6 +3,113 @@
   "scenarioId": "same-old-handshake",
   "seconds": 10,
   "aspectRatio": "9:16",
+  "cameraPlan": {
+    "schemaVersion": 1,
+    "shots": [
+      {
+        "shotId": "a",
+        "purpose": "Offer a recognizable two-tap ritual.",
+        "axis": "Pip screen-left, Anu screen-right. Both hands/mitts visible against the same uncluttered bench surface. Camera stays in front of bench.",
+        "height": "Retain the designed eye-level relationship and readable action.",
+        "angle": "Retain the approved angle and screen sides; no unplanned axis crossing.",
+        "lensIntent": "Natural perspective; keep the required faces and story prop legible.",
+        "executionRoute": "in-generation",
+        "controlMapping": "Canonical prompt instruction only; no invented model camera parameters.",
+        "fallback": "Keep the accepted framing; quote any necessary repair separately.",
+        "segments": [
+          {
+            "id": "a-camera",
+            "from": 0,
+            "to": 5,
+            "move": "locked",
+            "direction": "none",
+            "speed": "still",
+            "easing": "none",
+            "startFraming": "Portrait medium two-shot at robot eye height.",
+            "endFraming": "Portrait medium two-shot at robot eye height.",
+            "subjectAnchor": "Both faces and separated tap/contact points.",
+            "zoom": {
+              "mode": "none",
+              "from": 1,
+              "to": 1
+            },
+            "focus": {
+              "mode": "fixed",
+              "from": "Both faces and separated tap/contact points.",
+              "to": "Both faces and separated tap/contact points."
+            },
+            "parallax": "none",
+            "motivation": "Protect the performance and causal detail without an unmotivated reframe."
+          }
+        ],
+        "acceptance": [
+          "Inspect the entire shot, including its middle, for stable intended framing.",
+          "Faces, hands and the required story prop stay readable."
+        ],
+        "forbiddenArtifacts": [
+          "unplanned zoom or crop",
+          "axis jump",
+          "focus hunting",
+          "camera shake hiding action"
+        ]
+      },
+      {
+        "shotId": "b",
+        "purpose": "Return the ritual and hold recognition.",
+        "axis": "Pip screen-left, Anu screen-right. Both hands/mitts visible against the same uncluttered bench surface. Camera stays in front of bench.",
+        "height": "Retain the designed eye-level relationship and readable action.",
+        "angle": "Retain the approved angle and screen sides; no unplanned axis crossing.",
+        "lensIntent": "Natural perspective; keep the required faces and story prop legible.",
+        "executionRoute": "in-generation",
+        "controlMapping": "Canonical prompt instruction only; no invented model camera parameters.",
+        "fallback": "Keep the accepted framing; quote any necessary repair separately.",
+        "segments": [
+          {
+            "id": "b-camera",
+            "from": 5,
+            "to": 10,
+            "move": "locked",
+            "direction": "none",
+            "speed": "still",
+            "easing": "none",
+            "startFraming": "Slightly tighter same-axis portrait two-shot.",
+            "endFraming": "Slightly tighter same-axis portrait two-shot.",
+            "subjectAnchor": "Reply taps and final separated hand/mitt.",
+            "zoom": {
+              "mode": "none",
+              "from": 1,
+              "to": 1
+            },
+            "focus": {
+              "mode": "fixed",
+              "from": "Reply taps and final separated hand/mitt.",
+              "to": "Reply taps and final separated hand/mitt."
+            },
+            "parallax": "none",
+            "motivation": "Protect the performance and causal detail without an unmotivated reframe."
+          }
+        ],
+        "acceptance": [
+          "Inspect the entire shot, including its middle, for stable intended framing.",
+          "Faces, hands and the required story prop stay readable."
+        ],
+        "forbiddenArtifacts": [
+          "unplanned zoom or crop",
+          "axis jump",
+          "focus hunting",
+          "camera shake hiding action"
+        ]
+      }
+    ]
+  },
+  "dialoguePlan": {
+    "schemaVersion": 1,
+    "mode": "none",
+    "route": "none",
+    "rationale": "Intentionally dialogue-free performance for this story; dialogue is available, not compulsory.",
+    "voices": [],
+    "lines": []
+  },
   "framePlan": {
     "schemaVersion": 1, "fps": 30,
     "characterDesigns": [
@@ -125,13 +232,13 @@
       "id": "a", "start": 0, "end": 5, "startFrameId": "a-start", "endFrameId": "a-end",
       "modelCandidate": "pixverseV6", "mode": "image2video",
       "paramsToQuote": {"duration": 5, "resolution": "720p", "generateAudio": false, "videoCount": 1},
-      "prompt": "Five-second shot from the literal approved opening frame. Locked portrait medium two-shot at robot eye height; Pip stays left on the workbench, Anu stays right. Begin with a short readable still moment. Pip's exactly two amber eye lights gently brighten once, then its right padded mitt makes exactly two small slow taps on the table, separated enough to see. Anu keeps their own hand still and shifts their gaze toward the tapping mitt, expression becoming attentive. End after the second tap with Pip's mitt near the bench, holding the recognition setup. Preserve the robot's cream head, teal body, left-eye crescent scratch, two short arms, Anu's curls, olive overshirt, cream tee and soft warm window light from left. No fingers growing, interlocking hands, eye flicker, extra tap sequence, camera move, dialogue, text or transformation."
+      "prompt": "Five-second shot from the literal approved opening frame. Locked portrait medium two-shot at robot eye height; Pip stays left on the workbench, Anu stays right. Begin with a short readable still moment. Pip's exactly two amber eye lights gently brighten once, then its right padded mitt makes exactly two small slow taps on the table, separated enough to see. Anu keeps their own hand still and shifts their gaze toward the tapping mitt, expression becoming attentive. End after the second tap with Pip's mitt near the bench, holding the recognition setup. Preserve the robot's cream head, teal body, left-eye crescent scratch, two short arms, Anu's curls, olive overshirt, cream tee and soft warm window light from left. No fingers growing, interlocking hands, eye flicker, extra tap sequence, camera move, dialogue, text or transformation. Camera direction: 0-5s locked none, still, none; zoom none 1 to 1; focus fixed from Both faces and separated tap/contact points. to Both faces and separated tap/contact points.; anchor Both faces and separated tap/contact points.."
     },
     {
       "id": "b", "start": 5, "end": 10, "startFrameId": "b-start", "endFrameId": "b-end",
       "modelCandidate": "pixverseV6", "mode": "image2video",
       "paramsToQuote": {"duration": 5, "resolution": "720p", "generateAudio": false, "videoCount": 1},
-      "prompt": "Five-second continuation from approved b-start in the same portrait workshop geography, Pip left and Anu right. Keep the slightly tighter camera locked. Anu returns exactly two gentle visible taps with the right hand on the bench, mirroring Pip's preceding greeting. Then Anu lowers that hand flat beside the robot's resting mitt, with a small clear gap and no interlocking contact, looks to Pip and gives a modest recognition smile. Pip's eyes remain softly amber and its head inclines slightly toward Anu. Hold the final connection rather than adding a second event. Preserve all identity, hand ownership, light from camera-left and bench details. No robot transformation, human aging, hug, tears, text, dialogue or extra people."
+      "prompt": "Five-second continuation from approved b-start in the same portrait workshop geography, Pip left and Anu right. Keep the slightly tighter camera locked. Anu returns exactly two gentle visible taps with the right hand on the bench, mirroring Pip's preceding greeting. Then Anu lowers that hand flat beside the robot's resting mitt, with a small clear gap and no interlocking contact, looks to Pip and gives a modest recognition smile. Pip's eyes remain softly amber and its head inclines slightly toward Anu. Hold the final connection rather than adding a second event. Preserve all identity, hand ownership, light from camera-left and bench details. No robot transformation, human aging, hug, tears, text, dialogue or extra people. Camera direction: 0-5s locked none, still, none; zoom none 1 to 1; focus fixed from Reply taps and final separated hand/mitt. to Reply taps and final separated hand/mitt.; anchor Reply taps and final separated hand/mitt.."
     }
   ],
   "singlePassPrompt": "Make a ten-second original portrait emotional science-fiction scene from the approved workshop opening image. Pip, a small original cream-and-teal bench-top robot with two amber eyes and a crescent scratch above its left eye, sits screen-left. Anu, an adult with short dark curls, olive overshirt and cream tee, stands screen-right. Warm window light comes from left. In the first half Pip's eyes brighten and its right padded mitt makes two slow, unmistakable tabletop taps. Anu notices; a restrained change of expression suggests recognition. Around the middle, cut once to a slightly tighter two-shot on the same side. Anu returns two taps with the right hand and rests it beside Pip's mitt with a small gap; they look toward each other and hold still through the end. No interlocking fingers, complicated contact, text, dialogue, extra robot eyes or changing clothes. If sound is enabled, match four soft wooden taps to the actual actions, use quiet workshop room tone and a barely emerging warm sustained texture after recognition, without lyrics, voice or an early emotional swell. Timing targets and count compliance require output inspection.",

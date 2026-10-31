@@ -4,7 +4,7 @@ import {copyFileSync, mkdirSync, writeFileSync, existsSync} from 'node:fs';
 import {dirname, relative, resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {spawnSync} from 'node:child_process';
-import {assemblyArgs, parseMediaInfo} from '../lib/assembly.mjs';
+import {assemblyArgs, parseMediaInfo, postCameraFilter} from '../lib/assembly.mjs';
 import {AUDIO_FIT_DIMENSIONS, assetSetFingerprint, fileHash, packetDraft, productionRevision, readJson,
   recordReview, verifyAssets} from '../lib/workflow.mjs';
 
@@ -20,9 +20,10 @@ const scenario = scenarios.find(item => item.id === 'the-dry-seat');
 const feedback = {schemaVersion: 1, reviews: [{scenarioId: scenario.id, rating: 5,
   decision: 'select', note: 'Synthetic fixture only.', at: new Date().toISOString()}]};
 const context = {scenarios, brief, feedback};
-function approvedManifest(assets, route = 'silent') {
+function approvedManifest(assets, route = 'silent',
+  packet = readJson(resolve(root, 'examples', 'the-dry-seat.json'))) {
   const result = {...packetDraft(scenario, brief, feedback), stage: 'sound-approved',
-    productionDraft: readJson(resolve(root, 'examples', 'the-dry-seat.json')),
+    productionDraft: packet,
     approvalRevision: 1, soundDecision: route, nativeAudioInspected: true, assets};
   result.productionFingerprint = productionRevision(result);
   result.reviews = [{area: 'sound', result: 'pass', evidence: 'Synthetic fixture review.',
@@ -95,6 +96,44 @@ test('explicit rough previews permit failed/pending sound inspection without gra
   assert.throws(() => assemble({...preview, purpose: 'master'}, failed), /Approve/);
 });
 
+test('post camera binds the actual shot, needs explicit legacy preview mapping and cannot vanish from a master', () => {
+  const packet = structuredClone(manifest.productionDraft);
+  const camera = packet.cameraPlan.shots[0];
+  camera.executionRoute = 'post';
+  camera.segments[0].zoom = {mode: 'digital', from: 1, to: 1.08};
+  const state = approvedManifest([{...asset, shotId: camera.shotId}], 'silent', packet);
+  const reviewed = recordReview(state, {area: 'camera-execution', result: 'pass',
+    evidence: 'Synthetic unit-test attestation, not media acceptance.',
+    report: {picture: 'full-playback', unresolvedFailures: [],
+      segments: packet.cameraPlan.shots.flatMap(item => item.segments.map(segment => ({
+        shotId: item.shotId, id: segment.id, from: segment.from, to: segment.to,
+        movementMatches: true, framingMaintained: true, focusMatches: true,
+        continuityMaintained: true, evidence: 'Synthetic test evidence.',
+      })))},
+  });
+  const seconds = camera.segments[0].to - camera.segments[0].from;
+  const plan = {...edit, clips: [
+    {path: assetPath, in: 0, seconds, cameraShotId: camera.shotId},
+    {path: assetPath, in: seconds, seconds: edit.seconds - seconds},
+  ]};
+  assert.match(assemble(plan, reviewed).args.join(' '), /zoompan=/);
+  assert.throws(() => assemble(edit, reviewed), /omits a planned post camera/);
+  const mismapped = {...reviewed, assets: [{...asset, shotId: 'wrong-shot'}]};
+  assert.throws(() => assemble(plan, mismapped), /actual source shot/);
+  const preview = {...plan, purpose: 'review',
+    output: `outputs/the-dry-seat/${testVersion}/finalVid/the-dry-seat-${testVersion}-review.mp4`};
+  assert.throws(() => assemble(preview, mismapped), /actual source shot/);
+  const mapped = {...preview, clips: preview.clips.map((clip, index) => index ? clip : {
+    ...clip, cameraMappingEvidence: 'Synthetic legacy-source mapping, review only.',
+  })};
+  assert.match(assemble(mapped, mismapped).args.join(' '), /zoompan=/);
+  assert.throws(() => assemble({...mapped, purpose: 'master'}, mismapped), /actual source shot/);
+  const override = structuredClone(packet.cameraPlan);
+  override.shots[0].segments[0].zoom.to = 1.12;
+  assert.throws(() => assemble({...plan, cameraPlan: override}, reviewed), /new camera plan/);
+  assert.equal(assemble({...mapped, cameraPlan: override}, mismapped).purpose, 'review');
+});
+
 test('media inspection parses duration and distinguishes audio presence', () => {
   const info = parseMediaInfo('Duration: 00:00:08.05, start: 0\n Stream #0:0: Video: h264\n Stream #0:1: Audio: aac');
   assert.equal(info.seconds, 8.05);
@@ -103,6 +142,33 @@ test('media inspection parses duration and distinguishes audio presence', () => 
   assert.equal(parseMediaInfo('Duration: 00:00:08.00\n Stream #0:0: Video: h264').hasAudio, false);
   assert.throws(() => parseMediaInfo('invalid input'), /duration/);
 });
+
+test('real post-camera zoom changes image geometry and preserves duration/frame count',
+  {skip: !process.env.FFMPEG_PATH}, () => {
+    const output = resolve(fixtureDir, 'camera-zoom.mp4');
+    const segment = {move: 'locked', direction: 'none', parallax: 'none', easing: 'ease-in-out',
+      zoom: {mode: 'digital', from: 1, to: 1.5}, focus: {mode: 'fixed'}};
+    const run = args => {
+      const result = spawnSync(process.env.FFMPEG_PATH, args, {windowsHide: true});
+      assert.equal(result.status, 0, String(result.stderr));
+      return result;
+    };
+    const filter = postCameraFilter(segment, 180, 320, 10, 1);
+    run(['-hide_banner', '-nostdin', '-n', '-f', 'lavfi', '-i',
+      'color=black:s=180x320:r=10:d=1,drawbox=x=70:y=130:w=40:h=40:color=white:t=fill',
+      '-vf', filter, '-c:v', 'libx264', '-pix_fmt', 'yuv420p', output]);
+    const full = run(['-hide_banner', '-nostdin', '-i', output, '-f', 'null', '-']);
+    assert.match(String(full.stderr), /frame=\s*10\b/);
+    assert.equal(parseMediaInfo(String(full.stderr)).seconds, 1);
+    const brightPixels = at => {
+      const frame = run(['-hide_banner', '-nostdin', '-ss', at, '-i', output,
+        '-frames:v', '1', '-pix_fmt', 'gray', '-f', 'rawvideo', 'pipe:1']).stdout;
+      assert.equal(frame.length, 180 * 320);
+      return frame.reduce((count, value) => count + (value > 220 ? 1 : 0), 0);
+    };
+    assert.ok(brightPixels('0.9') > brightPixels('0') * 1.7,
+      'The subject must actually enlarge; a successful encode alone is insufficient.');
+  });
 
 test('optional FFmpeg smoke encodes 8s synthetic clips through silent, native and separate routes',
   {skip: !process.env.FFMPEG_PATH}, () => {

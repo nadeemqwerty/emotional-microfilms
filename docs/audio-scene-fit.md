@@ -26,6 +26,33 @@ counterpoint is allowed only with an explained story purpose and a listening tes
 Required at design lock and motion-spend validation; legacy packets remain
 readable, not permission to bypass this new-production gate.
 
+## Emotional dialogue
+
+`dialoguePlan` makes dialogue an explicitly directed performance, not merely an
+audio stream. Select `mode:"none", route:"none"` with a rationale for intentional
+dialogue-free films; do not force speech into every genre. For `mode:"spoken"`:
+
+- Declare real `native` or `separate` voice route, original speaker identities,
+  language, character voice, rights and prohibited imitation/cloning.
+- Give each exact original line a stable ID, shot, timing, speaker, emotional
+  intent/subtext and intensity, delivery, pace, pauses, breath, pronunciation,
+  visible body/gaze performance and visible/offscreen lip-sync requirement.
+- Resolve every overlapping line onto frame ranges. One speaker cannot say two
+  lines simultaneously; overlapping different voices must be explicitly allowed.
+- Put `dialogueInstruction(packet, shotId)` in native motion prompts; enable the
+  exposed native-audio control. Do not invent a voice API. Separate voice must
+  use an actually available authorized service/recording and synchronization route.
+
+Spoken films also require `dialogue-performance` before sound/master/final
+acceptance. Its report needs `picture:"full-playback"`, `audio:"listened"`,
+actual listening conditions, every line ID with observed `from/to`,
+`wordsVerified`, `speakerVerified`, `intelligible`, `emotionalMatch`, appropriate
+`lipSync:"pass"|"offscreen"` and specific evidence, plus no unresolved failures.
+These fields attest actual review; filling them without perception is forbidden.
+Audio presence, ASR text and lip movement alone cannot establish who spoke or
+whether remorse/reassurance sounded genuine. Preserve a rejected take and fix
+the implicated performance rather than hiding wrong words behind music or a cut.
+
 ## Required listening pass
 
 Use the read-only `microfilm-audio-scene-fit-reviewer` and sound-direction skill.

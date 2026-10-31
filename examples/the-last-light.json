@@ -3,6 +3,113 @@
   "scenarioId": "the-last-light",
   "seconds": 10,
   "aspectRatio": "9:16",
+  "cameraPlan": {
+    "schemaVersion": 1,
+    "shots": [
+      {
+        "shotId": "a",
+        "purpose": "Show Ivo noticing the plant outside its light pool.",
+        "axis": "Robot always screen-left; clamped lamp at center; pot screen-right. Camera on same bench side, no axis crossing.",
+        "height": "Retain the designed eye-level relationship and readable action.",
+        "angle": "Retain the approved angle and screen sides; no unplanned axis crossing.",
+        "lensIntent": "Natural perspective; keep the required faces and story prop legible.",
+        "executionRoute": "in-generation",
+        "controlMapping": "Canonical prompt instruction only; no invented model camera parameters.",
+        "fallback": "Keep the accepted framing; quote any necessary repair separately.",
+        "segments": [
+          {
+            "id": "a-camera",
+            "from": 0,
+            "to": 5,
+            "move": "locked",
+            "direction": "none",
+            "speed": "still",
+            "easing": "none",
+            "startFraming": "Portrait bench-height two-shot including robot, lamp and plant.",
+            "endFraming": "Portrait bench-height two-shot including robot, lamp and plant.",
+            "subjectAnchor": "All three story elements, not shallow blur over seedling.",
+            "zoom": {
+              "mode": "none",
+              "from": 1,
+              "to": 1
+            },
+            "focus": {
+              "mode": "fixed",
+              "from": "All three story elements, not shallow blur over seedling.",
+              "to": "All three story elements, not shallow blur over seedling."
+            },
+            "parallax": "none",
+            "motivation": "Protect the performance and causal detail without an unmotivated reframe."
+          }
+        ],
+        "acceptance": [
+          "Inspect the entire shot, including its middle, for stable intended framing.",
+          "Faces, hands and the required story prop stay readable."
+        ],
+        "forbiddenArtifacts": [
+          "unplanned zoom or crop",
+          "axis jump",
+          "focus hunting",
+          "camera shake hiding action"
+        ]
+      },
+      {
+        "shotId": "b",
+        "purpose": "Show the shared resource and continued presence of the giver.",
+        "axis": "Robot always screen-left; clamped lamp at center; pot screen-right. Camera on same bench side, no axis crossing.",
+        "height": "Retain the designed eye-level relationship and readable action.",
+        "angle": "Retain the approved angle and screen sides; no unplanned axis crossing.",
+        "lensIntent": "Natural perspective; keep the required faces and story prop legible.",
+        "executionRoute": "in-generation",
+        "controlMapping": "Canonical prompt instruction only; no invented model camera parameters.",
+        "fallback": "Keep the accepted framing; quote any necessary repair separately.",
+        "segments": [
+          {
+            "id": "b-camera",
+            "from": 5,
+            "to": 10,
+            "move": "locked",
+            "direction": "none",
+            "speed": "still",
+            "easing": "none",
+            "startFraming": "Same portrait bench-height view, robot and received light visible together.",
+            "endFraming": "Same portrait bench-height view, robot and received light visible together.",
+            "subjectAnchor": "Benefit and cost without losing robot's eyes.",
+            "zoom": {
+              "mode": "none",
+              "from": 1,
+              "to": 1
+            },
+            "focus": {
+              "mode": "fixed",
+              "from": "Benefit and cost without losing robot's eyes.",
+              "to": "Benefit and cost without losing robot's eyes."
+            },
+            "parallax": "none",
+            "motivation": "Protect the performance and causal detail without an unmotivated reframe."
+          }
+        ],
+        "acceptance": [
+          "Inspect the entire shot, including its middle, for stable intended framing.",
+          "Faces, hands and the required story prop stay readable."
+        ],
+        "forbiddenArtifacts": [
+          "unplanned zoom or crop",
+          "axis jump",
+          "focus hunting",
+          "camera shake hiding action"
+        ]
+      }
+    ]
+  },
+  "dialoguePlan": {
+    "schemaVersion": 1,
+    "mode": "none",
+    "route": "none",
+    "rationale": "Intentionally dialogue-free performance for this story; dialogue is available, not compulsory.",
+    "voices": [],
+    "lines": []
+  },
   "framePlan": {
     "schemaVersion": 1, "fps": 30,
     "characterDesigns": [
@@ -128,13 +235,13 @@
       "id": "a", "start": 0, "end": 5, "startFrameId": "a-start", "endFrameId": "a-end",
       "modelCandidate": "pixverseV6", "mode": "image2video",
       "paramsToQuote": {"duration": 5, "resolution": "720p", "generateAudio": false, "videoCount": 1},
-      "prompt": "Animate the approved a-start for five seconds as one noticing action, locked portrait medium two-shot at greenhouse bench height. Ivo stays screen-left in the lamp's warm light, center lamp stays clamped and aimed left, three-leaf seedling remains screen-right in cool shadow. Ivo pauses over its hands, then slowly turns its head toward the seedling and raises only the right paddle to rest beside the lamp's short swivel arm. Finish in a-end without rotating the lamp yet. Keep exactly two steady eye lights, slate-blue body, ochre shoulder patch, three leaves, terracotta pot and fixed greenhouse geometry. Cool dusk fill and lamp pool remain constant. No camera move, dialogue, plant growth, lamp deformation, battery removal, extra limbs or text."
+      "prompt": "Animate the approved a-start for five seconds as one noticing action, locked portrait medium two-shot at greenhouse bench height. Ivo stays screen-left in the lamp's warm light, center lamp stays clamped and aimed left, three-leaf seedling remains screen-right in cool shadow. Ivo pauses over its hands, then slowly turns its head toward the seedling and raises only the right paddle to rest beside the lamp's short swivel arm. Finish in a-end without rotating the lamp yet. Keep exactly two steady eye lights, slate-blue body, ochre shoulder patch, three leaves, terracotta pot and fixed greenhouse geometry. Cool dusk fill and lamp pool remain constant. No camera move, dialogue, plant growth, lamp deformation, battery removal, extra limbs or text. Camera direction: 0-5s locked none, still, none; zoom none 1 to 1; focus fixed from All three story elements, not shallow blur over seedling. to All three story elements, not shallow blur over seedling.; anchor All three story elements, not shallow blur over seedling.."
     },
     {
       "id": "b", "start": 5, "end": 10, "startFrameId": "b-start", "endFrameId": "b-end",
       "modelCandidate": "pixverseV6", "mode": "image2video",
       "paramsToQuote": {"duration": 5, "resolution": "720p", "generateAudio": false, "videoCount": 1},
-      "prompt": "Five-second quiet outcome shot from the approved b-start, after an intentional editorial ellipse. Locked same portrait greenhouse bench camera. The center-clamped pale-yellow lamp already points right and illuminates the three-leaf seedling in its unchanged terracotta pot. Ivo stays screen-left in soft cool shadow, both eye lights steadily on. Ivo slowly lowers its right paddle from beside the lamp to rest near the left paddle on its own side, keeping its gaze toward the plant, then remains still. Do not relight or grow the plant, dim robot eyes, rotate the lamp again, add a new action or move camera. Preserve robot identity, leaf count, bench, dusk fill and pot location. End with the giver and received light visible together; no dialogue, text or melodramatic collapse."
+      "prompt": "Five-second quiet outcome shot from the approved b-start, after an intentional editorial ellipse. Locked same portrait greenhouse bench camera. The center-clamped pale-yellow lamp already points right and illuminates the three-leaf seedling in its unchanged terracotta pot. Ivo stays screen-left in soft cool shadow, both eye lights steadily on. Ivo slowly lowers its right paddle from beside the lamp to rest near the left paddle on its own side, keeping its gaze toward the plant, then remains still. Do not relight or grow the plant, dim robot eyes, rotate the lamp again, add a new action or move camera. Preserve robot identity, leaf count, bench, dusk fill and pot location. End with the giver and received light visible together; no dialogue, text or melodramatic collapse. Camera direction: 0-5s locked none, still, none; zoom none 1 to 1; focus fixed from Benefit and cost without losing robot's eyes. to Benefit and cost without losing robot's eyes.; anchor Benefit and cost without losing robot's eyes.."
     }
   ],
   "singlePassPrompt": "Ten-second original portrait gentle science-fiction microfilm in a dusk greenhouse. Approved small slate-blue robot Ivo sits screen-left on a wooden bench, single clamped yellow-shaded task lamp at center aimed left toward its paddle hands, a three-leaf seedling in a terracotta pot screen-right just outside the warm light. Begin on Ivo enjoying the small warm pool. Ivo notices the seedling, turns its head and moves the right paddle toward the lamp's swivel. At about the midpoint make one clean editorial cut: same geography and camera, lamp now aimed right so the seedling receives the warm pool and Ivo rests in cool dusk fill. Ivo lowers its paddle and quietly looks at the plant; exactly two eye lights remain on throughout. Hold the final image. No plant growth, extracted power source, robot death, moving pot, extra leaves, text or dialogue. If sound is enabled: faint greenhouse wind, a single gentle lamp-swivel click across the cut, a restrained warm sustained tone after the choice, no triumph fanfare or synthetic voice. The cut between light states is intentional; do not turn it into a morph.",

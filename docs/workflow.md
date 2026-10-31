@@ -118,6 +118,16 @@ must obtain and honestly record it. The CLI has no paid-generation access.
 
 ## 3. Budget, references and live model choice
 
+New creation also requires `cameraPlan` and `dialoguePlan` (including explicit
+intentional no-dialogue). See [camera choreography](film-language.md#camera-choreography)
+and [emotional dialogue](audio-scene-fit.md#emotional-dialogue).
+Timed camera segments and spoken lines resolve into the same frame score;
+native prompts must contain their canonical instructions. Legacy packets remain
+readable, not authorized for new generation without these requirements.
+Actual camera changes need `camera-execution`; spoken lines need listened
+`dialogue-performance` before sound/master/final approval. Review previews may
+test unapproved alternatives without changing the source manifest or its reviews.
+
 Use `docs\model-audio-decision.md`; retrieve current catalog and exact form.
 Quote fully resolved requests, including actual refs and counts, immediately
 before spending. Record discount rounding, retry reserve and consent ceiling.

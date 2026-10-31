@@ -3,6 +3,113 @@
   "scenarioId": "the-dry-seat",
   "seconds": 10,
   "aspectRatio": "9:16",
+  "cameraPlan": {
+    "schemaVersion": 1,
+    "shots": [
+      {
+        "shotId": "a",
+        "purpose": "Reveal the protected dry place and offer it.",
+        "axis": "Mira remains screen-left. Dev approaches from screen-right facing left. Camera remains on the pavement side of the bench axis.",
+        "height": "Retain the designed eye-level relationship and readable action.",
+        "angle": "Retain the approved angle and screen sides; no unplanned axis crossing.",
+        "lensIntent": "Natural perspective; keep the required faces and story prop legible.",
+        "executionRoute": "in-generation",
+        "controlMapping": "Canonical prompt instruction only; no invented model camera parameters.",
+        "fallback": "Keep the accepted framing; quote any necessary repair separately.",
+        "segments": [
+          {
+            "id": "a-camera",
+            "from": 0,
+            "to": 5,
+            "move": "locked",
+            "direction": "none",
+            "speed": "still",
+            "easing": "none",
+            "startFraming": "Seated-eye-level medium-wide portrait two-shot.",
+            "endFraming": "Seated-eye-level medium-wide portrait two-shot.",
+            "subjectAnchor": "Coat, dry patch and separate hands with both faces readable.",
+            "zoom": {
+              "mode": "none",
+              "from": 1,
+              "to": 1
+            },
+            "focus": {
+              "mode": "fixed",
+              "from": "Coat, dry patch and separate hands with both faces readable.",
+              "to": "Coat, dry patch and separate hands with both faces readable."
+            },
+            "parallax": "none",
+            "motivation": "Protect the performance and causal detail without an unmotivated reframe."
+          }
+        ],
+        "acceptance": [
+          "Inspect the entire shot, including its middle, for stable intended framing.",
+          "Faces, hands and the required story prop stay readable."
+        ],
+        "forbiddenArtifacts": [
+          "unplanned zoom or crop",
+          "axis jump",
+          "focus hunting",
+          "camera shake hiding action"
+        ]
+      },
+      {
+        "shotId": "b",
+        "purpose": "Show acceptance and a modest shared acknowledgment.",
+        "axis": "Mira remains screen-left. Dev approaches from screen-right facing left. Camera remains on the pavement side of the bench axis.",
+        "height": "Retain the designed eye-level relationship and readable action.",
+        "angle": "Retain the approved angle and screen sides; no unplanned axis crossing.",
+        "lensIntent": "Natural perspective; keep the required faces and story prop legible.",
+        "executionRoute": "in-generation",
+        "controlMapping": "Canonical prompt instruction only; no invented model camera parameters.",
+        "fallback": "Keep the accepted framing; quote any necessary repair separately.",
+        "segments": [
+          {
+            "id": "b-camera",
+            "from": 5,
+            "to": 10,
+            "move": "locked",
+            "direction": "none",
+            "speed": "still",
+            "easing": "none",
+            "startFraming": "Slightly tighter portrait two-shot on same axis.",
+            "endFraming": "Slightly tighter portrait two-shot on same axis.",
+            "subjectAnchor": "Both faces and dry-seat edge.",
+            "zoom": {
+              "mode": "none",
+              "from": 1,
+              "to": 1
+            },
+            "focus": {
+              "mode": "fixed",
+              "from": "Both faces and dry-seat edge.",
+              "to": "Both faces and dry-seat edge."
+            },
+            "parallax": "none",
+            "motivation": "Protect the performance and causal detail without an unmotivated reframe."
+          }
+        ],
+        "acceptance": [
+          "Inspect the entire shot, including its middle, for stable intended framing.",
+          "Faces, hands and the required story prop stay readable."
+        ],
+        "forbiddenArtifacts": [
+          "unplanned zoom or crop",
+          "axis jump",
+          "focus hunting",
+          "camera shake hiding action"
+        ]
+      }
+    ]
+  },
+  "dialoguePlan": {
+    "schemaVersion": 1,
+    "mode": "none",
+    "route": "none",
+    "rationale": "Intentionally dialogue-free performance for this story; dialogue is available, not compulsory.",
+    "voices": [],
+    "lines": []
+  },
   "framePlan": {
     "schemaVersion": 1, "fps": 30,
     "characterDesigns": [
@@ -136,13 +243,13 @@
       "id": "a", "start": 0, "end": 5, "startFrameId": "a-start", "endFrameId": "a-end",
       "modelCandidate": "pixverseV6", "mode": "image2video",
       "paramsToQuote": {"duration": 5, "resolution": "720p", "generateAudio": false, "videoCount": 1},
-      "prompt": "Animate the approved literal start frame for five seconds. Locked seated-eye-level medium-wide camera, portrait composition unchanged. Mira stays seated on the left; Dev remains standing on the right, facing left. Begin with a brief readable pause on the coat-covered seat and Dev's tired posture. Mira then performs one controlled action: with her right hand she lifts the olive coat from the empty right bench seat and settles it on her lap, revealing the lighter dry rectangle beneath. Finish with a small open left palm toward the dry place; Dev shifts his gaze to it. Preserve identity, wardrobe, bench geometry, hand ownership, rain and soft overcast light from camera-right. End in the approved a-end pose and hold briefly if possible. No camera movement, dialogue, new people, morph, sitting action, object duplication or changes of screen side. Exact beat timings and endpoint compliance must be checked in the result, not assumed."
+      "prompt": "Animate the approved literal start frame for five seconds. Locked seated-eye-level medium-wide camera, portrait composition unchanged. Mira stays seated on the left; Dev remains standing on the right, facing left. Begin with a brief readable pause on the coat-covered seat and Dev's tired posture. Mira then performs one controlled action: with her right hand she lifts the olive coat from the empty right bench seat and settles it on her lap, revealing the lighter dry rectangle beneath. Finish with a small open left palm toward the dry place; Dev shifts his gaze to it. Preserve identity, wardrobe, bench geometry, hand ownership, rain and soft overcast light from camera-right. End in the approved a-end pose and hold briefly if possible. No camera movement, dialogue, new people, morph, sitting action, object duplication or changes of screen side. Exact beat timings and endpoint compliance must be checked in the result, not assumed. Camera direction: 0-5s locked none, still, none; zoom none 1 to 1; focus fixed from Coat, dry patch and separate hands with both faces readable. to Coat, dry patch and separate hands with both faces readable.; anchor Coat, dry patch and separate hands with both faces readable.."
     },
     {
       "id": "b", "start": 5, "end": 10, "startFrameId": "b-start", "endFrameId": "b-end",
       "modelCandidate": "pixverseV6", "mode": "image2video",
       "paramsToQuote": {"duration": 5, "resolution": "720p", "generateAudio": false, "videoCount": 1},
-      "prompt": "Animate the approved b-start image for five seconds as one quiet reaction shot. Locked portrait medium two-shot at seated eye height, Mira on the left and Dev already seated on the right. Dev slowly completes a small head turn toward Mira; their gazes meet, their shoulders soften, and each gives a modest natural relieved smile. Mira's olive coat remains on her lap; Dev's bag remains beside his right foot. Keep their hands separate and still. Preserve their exact identities, clothing, bench and right-side cloudy lighting. Hold the settled shared look for the ending. No sitting down, embrace, tears, large gestures, orbit, focus pull, added text or invented people. The invitation occurred in the preceding shot; do not repeat it or create a new action."
+      "prompt": "Animate the approved b-start image for five seconds as one quiet reaction shot. Locked portrait medium two-shot at seated eye height, Mira on the left and Dev already seated on the right. Dev slowly completes a small head turn toward Mira; their gazes meet, their shoulders soften, and each gives a modest natural relieved smile. Mira's olive coat remains on her lap; Dev's bag remains beside his right foot. Keep their hands separate and still. Preserve their exact identities, clothing, bench and right-side cloudy lighting. Hold the settled shared look for the ending. No sitting down, embrace, tears, large gestures, orbit, focus pull, added text or invented people. The invitation occurred in the preceding shot; do not repeat it or create a new action. Camera direction: 0-5s locked none, still, none; zoom none 1 to 1; focus fixed from Both faces and dry-seat edge. to Both faces and dry-seat edge.; anchor Both faces and dry-seat edge.."
     }
   ],
   "singlePassPrompt": "Ten-second portrait cinematic scene, grounded realism, one small bus shelter during gentle rain. Use the approved literal starting composition: Mira in a rust sweater sits screen-left with an olive coat spread across the empty right bench seat; rain-soaked Dev in a muted-blue shirt stands screen-right facing left, canvas bag on right shoulder. Initially it can look as if she is reserving the seat. Over the first half, she lifts the coat with her right hand onto her lap, revealing the dry lighter wood beneath, then offers the seat with her open left palm. At approximately the middle, make one clean editorial cut to the same geography in a slightly tighter two-shot: Dev is already seated on the right, bag beside his right foot. He turns toward Mira; they exchange a small relieved smile and remain quiet through the ending. Keep faces, wardrobe, bench boards, light from camera-right and screen positions consistent. No sitting transition, morph, dialogue or text. Sound if enabled: low rain outside the shelter, one gentle fabric lift, subtle wood movement at the edit; no voices, lyrics, melodramatic swell or early musical reveal. Suggested timing is a target to evaluate, not an expectation of frame-exact control.",

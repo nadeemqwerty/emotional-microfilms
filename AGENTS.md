@@ -38,6 +38,17 @@ provisional plan with actual approved references before design lock/motion.
 Legacy inspection remains readable; new preproduction and all paid preflights
 require the complete plan. Never retrofit historical media approval.
 
+New creation also requires canonical `cameraPlan` and `dialoguePlan`; see
+[camera choreography](docs/film-language.md#camera-choreography) and
+[emotional dialogue](docs/audio-scene-fit.md#emotional-dialogue).
+Plan camera paths, framing, axis, speed/easing, zoom type and focus by time;
+do not confuse a post crop with a physical dolly or optical zoom.
+Spoken lines need original words, speaker/voice/language, intent/subtext,
+emotion, delivery, pauses/breath, timing and lip-sync requirements. Explicitly
+dialogue-free remains valid, not compulsory. Require actual `camera-execution`
+review for camera/focus changes and `dialogue-performance` for spoken delivery;
+frame samples, ASR and audio meters cannot manufacture those playback/listening passes.
+
 - Ask before writes outside an already approved scope. Never delete existing work.
 - Research, model forms and quotes are free reads; generation, reference uploads,
   purchases, publication, commits and pushes require their own explicit approval.

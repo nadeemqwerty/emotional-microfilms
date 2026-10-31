@@ -78,6 +78,13 @@ cast/scene images before the final design lock. Legacy bundles need a complete
 unapproved next-planning packet, not invented historical requirements. New
 beauty/effect prose is not grounds to relabel or automatically regenerate media.
 
+`cameraPlan` and `dialoguePlan` are canonical too. Frame scripts resolve all
+overlapping camera segments/spoken lines; motion scripts carry both plans,
+camera/edit carries choreography, and audio/music carries emotional dialogue.
+Delivery lists actual `camera-execution` and `dialogue-performance` review gates
+when applicable. Native prompts bind these instructions; separate scripts are
+not permission to silently send a different camera move, speaker or line.
+
 Before spending, cross-read acting/emotion, scene, frame, motion, camera/edit,
 lighting/shadow, atmosphere and sound scripts against the same beat IDs.
 Ask what changes, what remains fixed, what the audience should notice and what

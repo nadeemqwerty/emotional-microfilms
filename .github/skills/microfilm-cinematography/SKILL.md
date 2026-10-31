@@ -36,5 +36,21 @@ Output: revised packet, continuity table, literal still prompts, per-shot motion
 prompts, single-pass alternative, actual model form mapping, dominant risk and
 cheapest repair. Preserve untested status and existing user work.
 
+## Required camera choreography
+
+Use canonical `cameraPlan`, not only a free-text "locked" field. Read
+`docs\film-language.md`, camera choreography. Time every segment against its
+actual shot; declare movement/direction, framing start/end, subject anchor,
+height/angle/lens intent, axis, speed/easing, zoom and focus. A motivated push,
+reveal, follow, orbit, whip pan or rack focus is a choice, not a compulsory effect.
+Optical zoom changes field of view; physical travel changes perspective; a
+digital crop cannot recreate parallax or new depth-of-field information.
+Use `cameraInstruction` in the exact native prompt and supported live form fields
+only. Reconcile endpoints and eye/hand visibility throughout the move, including
+the middle. Existing source edits may already crop away required faces.
+The assembler supports a bounded post digital crop/zoom/pan/tilt per referenced
+clip, not physical camera simulation. Camera changes need actual full-playback
+`camera-execution` evidence; source frames or a successful render are not a pass.
+
 Use the visual and pacing reviewer definitions for acceptance criteria. No
 reference upload, generation, licence purchase or spend permission is implied.

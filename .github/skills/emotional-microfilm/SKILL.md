@@ -74,6 +74,14 @@ plan with accepted actual references before motion; filled fields are not
 creative approval. Read `film effects` for glitter, neon, butterfly/dust,
 sakura/flower-dust and other options; select a coherent subset or explicitly none.
 
+Also require `cameraPlan` and `dialoguePlan` before creation. Camera moves,
+optical/digital zoom and focus changes need motivated timed choreography and
+real execution tests, not automatic locked shots or camera-word decoration.
+Spoken dialogue is supported when selected: exact original words, speaker,
+language, intention/subtext, emotional delivery, pauses/breath and lip sync.
+The dialogue-free default is not a ban. Read the cinematography/sound-direction
+skills and require actual camera/dialogue performance reviews when applicable.
+
 1. **Brief:** confirm target feeling, audience/context, realism/fantasy, limits,
    dialogue, budget and boundaries. Use reasonable creative defaults, not a
    presumed paid-generation budget.

@@ -40,6 +40,15 @@ Declare material/color, density, intensity, scale, emission/reflection,
 depth/occlusion/spill/shadows and route/fallback for selected effects. No default
 particle overload, child adultification, automatic recasting or renderer claims.
 
+Require `cameraPlan` and `dialoguePlan` at new creation gates. Distinguish pan/
+tilt/dolly/truck/orbit/crane/handheld/gimbal from optical or digital zoom, with
+timed framing, axis, focus and feasibility/fallback. Native prompts must include
+the canonical camera/dialogue instructions, not contradict independent scripts.
+Direct each spoken line's exact words, voice/language, intent, emotion/subtext,
+delivery, pace, pauses/breath and visible-speaker lip sync. Explicit no-dialogue
+is valid. Actual camera and dialogue review gates remain separate from schema/
+encoder success. Never call preserved old audio a newly generated performance.
+
 After workflow changes run check, tests and validation; obtain approval before
 expensive/full checks. Commit/push only the explicitly authorized session delta;
 preserve other sessions' edits and keep production media/credentials private.

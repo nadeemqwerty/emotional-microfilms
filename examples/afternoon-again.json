@@ -72,7 +72,7 @@
         "generateAudio": true,
         "videoCount": 1
       },
-      "prompt": "One uninterrupted photorealistic 5-second shot between these actual accepted start/end references, locked portrait camera, no internal cuts, morphs, dissolve, camera zoom or new scene. Preserve exact faces, ages, wardrobe, positions, props and soft contact shadows. Nari notices the clearly visible grandmother photograph on the table. Her gaze settles on the image; let the photographed grandmother/tea setting register before a motivated cut. Natural small movements, restrained micro-expressions and plausible weight/contact, no exaggerated grin or new person. Present: soft neutral window daylight from camera-left and gentle room bounce. Memory: the same source direction slightly warmer in late-afternoon sun, soft face light and tabletop contact shadows; no sepia wash, glowing person or light source jump within a shot. Return exactly to present light. SOUND: Present quiet room tone with a subtle frame/table contact. Memory has familiar room ambience and one delicate cup-settle sound, no pouring, speech or music. Return to the same present room tone; unobtrusive short ambience crossfades at the two cuts. No sad piano, swelling score, song, bass or funeral cue. No subtitles, captions, logos, added text or decorative overlays. This is the neutral present; grandmother exists ONLY inside the unchanged photograph."
+      "prompt": "One uninterrupted photorealistic 5-second shot between these actual accepted start/end references, locked portrait camera, no internal cuts, morphs, dissolve, camera zoom or new scene. Preserve exact faces, ages, wardrobe, positions, props and soft contact shadows. Nari notices the clearly visible grandmother photograph on the table. Her gaze settles on the image; let the photographed grandmother/tea setting register before a motivated cut. Natural small movements, restrained micro-expressions and plausible weight/contact, no exaggerated grin or new person. Present: soft neutral window daylight from camera-left and gentle room bounce. Memory: the same source direction slightly warmer in late-afternoon sun, soft face light and tabletop contact shadows; no sepia wash, glowing person or light source jump within a shot. Return exactly to present light. SOUND: Present quiet room tone with a subtle frame/table contact. Memory has familiar room ambience and one delicate cup-settle sound, no pouring, speech or music. Return to the same present room tone; unobtrusive short ambience crossfades at the two cuts. No sad piano, swelling score, song, bass or funeral cue. No subtitles, captions, logos, added text or decorative overlays. This is the neutral present; grandmother exists ONLY inside the unchanged photograph. Camera direction: 0-5s locked none, still, none; zoom none 1 to 1; focus fixed from Both expressions and the specific story prop/action, no gratuitous rack focus. to Both expressions and the specific story prop/action, no gratuitous rack focus.; anchor Both expressions and the specific story prop/action, no gratuitous rack focus.."
     },
     {
       "id": "b",
@@ -89,7 +89,7 @@
         "generateAudio": true,
         "videoCount": 1
       },
-      "prompt": "One uninterrupted photorealistic 5-second shot between these actual accepted start/end references, locked portrait camera, no internal cuts, morphs, dissolve, camera zoom or new scene. Preserve exact faces, ages, wardrobe, positions, props and soft contact shadows. Memory: grandmother LEFT and Nari RIGHT sit together in warm daylight, hands separate; grandmother gently settles her cup on the table. Memory: a small exchanged smile holds, no new action or speech. Natural small movements, restrained micro-expressions and plausible weight/contact, no exaggerated grin or new person. Present: soft neutral window daylight from camera-left and gentle room bounce. Memory: the same source direction slightly warmer in late-afternoon sun, soft face light and tabletop contact shadows; no sepia wash, glowing person or light source jump within a shot. Return exactly to present light. SOUND: Present quiet room tone with a subtle frame/table contact. Memory has familiar room ambience and one delicate cup-settle sound, no pouring, speech or music. Return to the same present room tone; unobtrusive short ambience crossfades at the two cuts. No sad piano, swelling score, song, bass or funeral cue. No subtitles, captions, logos, added text or decorative overlays. This is the warm remembered afternoon, grandmother physically present LEFT."
+      "prompt": "One uninterrupted photorealistic 5-second shot between these actual accepted start/end references, locked portrait camera, no internal cuts, morphs, dissolve, camera zoom or new scene. Preserve exact faces, ages, wardrobe, positions, props and soft contact shadows. Memory: grandmother LEFT and Nari RIGHT sit together in warm daylight, hands separate; grandmother gently settles her cup on the table. Memory: a small exchanged smile holds, no new action or speech. Natural small movements, restrained micro-expressions and plausible weight/contact, no exaggerated grin or new person. Present: soft neutral window daylight from camera-left and gentle room bounce. Memory: the same source direction slightly warmer in late-afternoon sun, soft face light and tabletop contact shadows; no sepia wash, glowing person or light source jump within a shot. Return exactly to present light. SOUND: Present quiet room tone with a subtle frame/table contact. Memory has familiar room ambience and one delicate cup-settle sound, no pouring, speech or music. Return to the same present room tone; unobtrusive short ambience crossfades at the two cuts. No sad piano, swelling score, song, bass or funeral cue. No subtitles, captions, logos, added text or decorative overlays. This is the warm remembered afternoon, grandmother physically present LEFT. Camera direction: 0-5s locked none, still, none; zoom none 1 to 1; focus fixed from Both expressions and the specific story prop/action, no gratuitous rack focus. to Both expressions and the specific story prop/action, no gratuitous rack focus.; anchor Both expressions and the specific story prop/action, no gratuitous rack focus.."
     },
     {
       "id": "c",
@@ -106,7 +106,7 @@
         "generateAudio": true,
         "videoCount": 1
       },
-      "prompt": "One uninterrupted photorealistic 5-second shot between these actual accepted start/end references, locked portrait camera, no internal cuts, morphs, dissolve, camera zoom or new scene. Preserve exact faces, ages, wardrobe, positions, props and soft contact shadows. Return to the matching present pose and photo; Nari slowly raises her eyes a little. A restrained familiar smile settles while the photograph remains in the frame. Natural small movements, restrained micro-expressions and plausible weight/contact, no exaggerated grin or new person. Present: soft neutral window daylight from camera-left and gentle room bounce. Memory: the same source direction slightly warmer in late-afternoon sun, soft face light and tabletop contact shadows; no sepia wash, glowing person or light source jump within a shot. Return exactly to present light. SOUND: Present quiet room tone with a subtle frame/table contact. Memory has familiar room ambience and one delicate cup-settle sound, no pouring, speech or music. Return to the same present room tone; unobtrusive short ambience crossfades at the two cuts. No sad piano, swelling score, song, bass or funeral cue. No subtitles, captions, logos, added text or decorative overlays. This is the neutral present; grandmother exists ONLY inside the unchanged photograph."
+      "prompt": "One uninterrupted photorealistic 5-second shot between these actual accepted start/end references, locked portrait camera, no internal cuts, morphs, dissolve, camera zoom or new scene. Preserve exact faces, ages, wardrobe, positions, props and soft contact shadows. Return to the matching present pose and photo; Nari slowly raises her eyes a little. A restrained familiar smile settles while the photograph remains in the frame. Natural small movements, restrained micro-expressions and plausible weight/contact, no exaggerated grin or new person. Present: soft neutral window daylight from camera-left and gentle room bounce. Memory: the same source direction slightly warmer in late-afternoon sun, soft face light and tabletop contact shadows; no sepia wash, glowing person or light source jump within a shot. Return exactly to present light. SOUND: Present quiet room tone with a subtle frame/table contact. Memory has familiar room ambience and one delicate cup-settle sound, no pouring, speech or music. Return to the same present room tone; unobtrusive short ambience crossfades at the two cuts. No sad piano, swelling score, song, bass or funeral cue. No subtitles, captions, logos, added text or decorative overlays. This is the neutral present; grandmother exists ONLY inside the unchanged photograph. Camera direction: 0-5s locked none, still, none; zoom none 1 to 1; focus fixed from Both expressions and the specific story prop/action, no gratuitous rack focus. to Both expressions and the specific story prop/action, no gratuitous rack focus.; anchor Both expressions and the specific story prop/action, no gratuitous rack focus.."
     }
   ],
   "hookPlan": {
@@ -349,6 +349,160 @@
     "Actual audio stream technically decodes",
     "No invented full playback/listening/phone/personal approval"
   ],
+  "cameraPlan": {
+    "schemaVersion": 1,
+    "shots": [
+      {
+        "shotId": "a",
+        "purpose": "Nari notices the clearly visible grandmother photograph on the table.",
+        "axis": "Nari: Screen-right at the table in present and memory. Grandmother: Screen-left in the remembered afternoon and in its photograph; offscreen in present.",
+        "height": "Retain the designed eye-level relationship and readable action.",
+        "angle": "Retain the approved angle and screen sides; no unplanned axis crossing.",
+        "lensIntent": "Natural perspective; keep the required faces and story prop legible.",
+        "executionRoute": "in-generation",
+        "controlMapping": "Canonical prompt instruction only; no invented model camera parameters.",
+        "fallback": "Keep the accepted framing; quote any necessary repair separately.",
+        "segments": [
+          {
+            "id": "a-camera",
+            "from": 0,
+            "to": 5,
+            "move": "locked",
+            "direction": "none",
+            "speed": "still",
+            "easing": "none",
+            "startFraming": "Present: Nari sits RIGHT at a familiar wooden table, looking down at a small wooden photograph frame resting LEFT foreground angled toward the camera. It clearly depicts the exact silver-haired lavender-cardigan grandmother at the same table in the actual memory reference. Nari's hands rest separately near her own cup and frame, not gripping tiny objects.",
+            "endFraming": "Present: Nari sits RIGHT at a familiar wooden table, looking down at a small wooden photograph frame resting LEFT foreground angled toward the camera. It clearly depicts the exact silver-haired lavender-cardigan grandmother at the same table in the actual memory reference. Nari's hands rest separately near her own cup and frame, not gripping tiny objects.",
+            "subjectAnchor": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+            "zoom": {
+              "mode": "none",
+              "from": 1,
+              "to": 1
+            },
+            "focus": {
+              "mode": "fixed",
+              "from": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+              "to": "Both expressions and the specific story prop/action, no gratuitous rack focus."
+            },
+            "parallax": "none",
+            "motivation": "Protect the performance and causal detail without an unmotivated reframe."
+          }
+        ],
+        "acceptance": [
+          "Inspect the entire shot, including its middle, for stable intended framing.",
+          "Faces, hands and the required story prop stay readable."
+        ],
+        "forbiddenArtifacts": [
+          "unplanned zoom or crop",
+          "axis jump",
+          "focus hunting",
+          "camera shake hiding action"
+        ]
+      },
+      {
+        "shotId": "b",
+        "purpose": "Memory: grandmother LEFT and Nari RIGHT sit together in warm daylight, hands separate; grandmother gently settles her cup on the table.",
+        "axis": "Nari: Screen-right at the table in present and memory. Grandmother: Screen-left in the remembered afternoon and in its photograph; offscreen in present.",
+        "height": "Retain the designed eye-level relationship and readable action.",
+        "angle": "Retain the approved angle and screen sides; no unplanned axis crossing.",
+        "lensIntent": "Natural perspective; keep the required faces and story prop legible.",
+        "executionRoute": "in-generation",
+        "controlMapping": "Canonical prompt instruction only; no invented model camera parameters.",
+        "fallback": "Keep the accepted framing; quote any necessary repair separately.",
+        "segments": [
+          {
+            "id": "b-camera",
+            "from": 5,
+            "to": 10,
+            "move": "locked",
+            "direction": "none",
+            "speed": "still",
+            "easing": "none",
+            "startFraming": "Present: Nari sits RIGHT at a familiar wooden table, looking down at a small wooden photograph frame resting LEFT foreground angled toward the camera. It clearly depicts the exact silver-haired lavender-cardigan grandmother at the same table in the actual memory reference. Nari's hands rest separately near her own cup and frame, not gripping tiny objects.",
+            "endFraming": "Present: Nari sits RIGHT at a familiar wooden table, looking down at a small wooden photograph frame resting LEFT foreground angled toward the camera. It clearly depicts the exact silver-haired lavender-cardigan grandmother at the same table in the actual memory reference. Nari's hands rest separately near her own cup and frame, not gripping tiny objects.",
+            "subjectAnchor": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+            "zoom": {
+              "mode": "none",
+              "from": 1,
+              "to": 1
+            },
+            "focus": {
+              "mode": "fixed",
+              "from": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+              "to": "Both expressions and the specific story prop/action, no gratuitous rack focus."
+            },
+            "parallax": "none",
+            "motivation": "Protect the performance and causal detail without an unmotivated reframe."
+          }
+        ],
+        "acceptance": [
+          "Inspect the entire shot, including its middle, for stable intended framing.",
+          "Faces, hands and the required story prop stay readable."
+        ],
+        "forbiddenArtifacts": [
+          "unplanned zoom or crop",
+          "axis jump",
+          "focus hunting",
+          "camera shake hiding action"
+        ]
+      },
+      {
+        "shotId": "c",
+        "purpose": "Return to the matching present pose and photo; Nari slowly raises her eyes a little.",
+        "axis": "Nari: Screen-right at the table in present and memory. Grandmother: Screen-left in the remembered afternoon and in its photograph; offscreen in present.",
+        "height": "Retain the designed eye-level relationship and readable action.",
+        "angle": "Retain the approved angle and screen sides; no unplanned axis crossing.",
+        "lensIntent": "Natural perspective; keep the required faces and story prop legible.",
+        "executionRoute": "in-generation",
+        "controlMapping": "Canonical prompt instruction only; no invented model camera parameters.",
+        "fallback": "Keep the accepted framing; quote any necessary repair separately.",
+        "segments": [
+          {
+            "id": "c-camera",
+            "from": 10,
+            "to": 15,
+            "move": "locked",
+            "direction": "none",
+            "speed": "still",
+            "easing": "none",
+            "startFraming": "Present: Nari sits RIGHT at a familiar wooden table, looking down at a small wooden photograph frame resting LEFT foreground angled toward the camera. It clearly depicts the exact silver-haired lavender-cardigan grandmother at the same table in the actual memory reference. Nari's hands rest separately near her own cup and frame, not gripping tiny objects.",
+            "endFraming": "Present: Nari sits RIGHT at a familiar wooden table, looking down at a small wooden photograph frame resting LEFT foreground angled toward the camera. It clearly depicts the exact silver-haired lavender-cardigan grandmother at the same table in the actual memory reference. Nari's hands rest separately near her own cup and frame, not gripping tiny objects.",
+            "subjectAnchor": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+            "zoom": {
+              "mode": "none",
+              "from": 1,
+              "to": 1
+            },
+            "focus": {
+              "mode": "fixed",
+              "from": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+              "to": "Both expressions and the specific story prop/action, no gratuitous rack focus."
+            },
+            "parallax": "none",
+            "motivation": "Protect the performance and causal detail without an unmotivated reframe."
+          }
+        ],
+        "acceptance": [
+          "Inspect the entire shot, including its middle, for stable intended framing.",
+          "Faces, hands and the required story prop stay readable."
+        ],
+        "forbiddenArtifacts": [
+          "unplanned zoom or crop",
+          "axis jump",
+          "focus hunting",
+          "camera shake hiding action"
+        ]
+      }
+    ]
+  },
+  "dialoguePlan": {
+    "schemaVersion": 1,
+    "mode": "none",
+    "route": "none",
+    "rationale": "Intentionally dialogue-free performance for this story; dialogue is available, not compulsory.",
+    "voices": [],
+    "lines": []
+  },
   "framePlan": {
     "schemaVersion": 1,
     "fps": 30,

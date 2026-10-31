@@ -5,7 +5,7 @@ import {
   assetSetFingerprint, diverseShortlist, estimatePlan, fileHash, inside, invariant, packetDraft,
   productionRevision, rankScenarios, readJson, recordReview, refreshWorkspace,
   migrateDelegatedAcceptances,
-  ACCEPTANCE_AREAS, REVIEW_AREAS, stageReady, STAGES,
+  ACCEPTANCE_AREAS, CAMERA_MOVES, REVIEW_AREAS, stageReady, STAGES,
   validateDirection, validateFeedback, validatePacket, validateRubric, validateScenario, validateWorkspace, verifyAssets,
 } from '../lib/workflow.mjs';
 import {planSongCue} from '../lib/music.mjs';
@@ -77,6 +77,7 @@ function usage() {
   shortlist [count]
   budgets
   effects
+  cameras
   roadmap
   workflow <workflow-id>
   song-plan <workspace-relative-song-cue.json>
@@ -138,6 +139,10 @@ try {
     } else if (command === 'song-plan') {
       invariant(args[0], 'Provide a filled song-cue JSON; the template is not a selected song.');
       console.log(JSON.stringify(planSongCue(load(args[0])), null, 2));
+    } else if (command === 'cameras') {
+      console.log(JSON.stringify({moves: CAMERA_MOVES, zoom: ['none', 'optical', 'digital'],
+        focus: ['fixed', 'tracking', 'rack'],
+        policy: 'Typed planning options, not verified provider controls. Post crop supports digital zoom/pan/tilt only.'}, null, 2));
     } else if (command === 'effects') {
       console.log(JSON.stringify(data.effects, null, 2));
     } else if (command === 'budgets') {

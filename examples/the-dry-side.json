@@ -67,7 +67,7 @@
         "negativePrompt": "zoom, dolly, push in, camera movement, walking toward camera, changing scale, cropped person, scene cut, face morph, detached umbrella handle",
         "enablePromptExpansion": false
       },
-      "prompt": "Static tripod full-body portrait two-shot, unchanged camera position and focal length throughout. Both people's entire heads and shoes stay in the frame and remain the same size, standing at the same distance from camera. The fictional woman stays screen-left in pink, man screen-right in olive, same original reference faces/clothes and wet path. Start with centered umbrella. His gripping hand slowly angles its single connected shaft upward-LEFT, shifting navy canopy over the woman on the LEFT, exposing his outer RIGHT shoulder to rain. She notices the damp shoulder and tilts her face up at him with a tiny grateful smile. They settle in the exact accepted ending positions. Tiny sideways closeness only; feet grounded, no forward walking. One restrained arm action, small eyeline response, no dialogue or new event. Preserve connected umbrella ribs/handle and believable grip, rain/pavement reflections, steady cloudy daylight. Camera and background remain completely fixed. No cut, morph, zoom or reframe."
+      "prompt": "Static tripod full-body portrait two-shot, unchanged camera position and focal length throughout. Both people's entire heads and shoes stay in the frame and remain the same size, standing at the same distance from camera. The fictional woman stays screen-left in pink, man screen-right in olive, same original reference faces/clothes and wet path. Start with centered umbrella. His gripping hand slowly angles its single connected shaft upward-LEFT, shifting navy canopy over the woman on the LEFT, exposing his outer RIGHT shoulder to rain. She notices the damp shoulder and tilts her face up at him with a tiny grateful smile. They settle in the exact accepted ending positions. Tiny sideways closeness only; feet grounded, no forward walking. One restrained arm action, small eyeline response, no dialogue or new event. Preserve connected umbrella ribs/handle and believable grip, rain/pavement reflections, steady cloudy daylight. Camera and background remain completely fixed. No cut, morph, zoom or reframe. Camera direction: 0-10s locked none, still, none; zoom none 1 to 1; focus fixed from Both expressions and the specific story prop/action, no gratuitous rack focus. to Both expressions and the specific story prop/action, no gratuitous rack focus.; anchor Both expressions and the specific story prop/action, no gratuitous rack focus.."
     }
   ],
   "hookPlan": {
@@ -281,6 +281,66 @@
     "Actual audio stream technically decodes",
     "No invented full playback/listening/phone/personal approval"
   ],
+  "cameraPlan": {
+    "schemaVersion": 1,
+    "shots": [
+      {
+        "shotId": "a",
+        "purpose": "Read both peers, the shared umbrella and the rain at its edges.",
+        "axis": "Hana: Screen-left. Minho: Screen-right.",
+        "height": "Retain the designed eye-level relationship and readable action.",
+        "angle": "Retain the approved angle and screen sides; no unplanned axis crossing.",
+        "lensIntent": "Natural perspective; keep the required faces and story prop legible.",
+        "executionRoute": "in-generation",
+        "controlMapping": "Canonical prompt instruction only; no invented model camera parameters.",
+        "fallback": "Keep the accepted framing; quote any necessary repair separately.",
+        "segments": [
+          {
+            "id": "a-camera",
+            "from": 0,
+            "to": 10,
+            "move": "locked",
+            "direction": "none",
+            "speed": "still",
+            "easing": "none",
+            "startFraming": "Portrait medium two-shot standing still under one navy umbrella on a quiet path, Hana LEFT and Minho RIGHT. The full canopy top and both faces are visible; umbrella initially centered, both look forward, small comfortable gap. Minho alone holds the handle.",
+            "endFraming": "Portrait medium two-shot standing still under one navy umbrella on a quiet path, Hana LEFT and Minho RIGHT. The full canopy top and both faces are visible; umbrella initially centered, both look forward, small comfortable gap. Minho alone holds the handle.",
+            "subjectAnchor": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+            "zoom": {
+              "mode": "none",
+              "from": 1,
+              "to": 1
+            },
+            "focus": {
+              "mode": "fixed",
+              "from": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+              "to": "Both expressions and the specific story prop/action, no gratuitous rack focus."
+            },
+            "parallax": "none",
+            "motivation": "Protect the performance and causal detail without an unmotivated reframe."
+          }
+        ],
+        "acceptance": [
+          "Inspect the entire shot, including its middle, for stable intended framing.",
+          "Faces, hands and the required story prop stay readable."
+        ],
+        "forbiddenArtifacts": [
+          "unplanned zoom or crop",
+          "axis jump",
+          "focus hunting",
+          "camera shake hiding action"
+        ]
+      }
+    ]
+  },
+  "dialoguePlan": {
+    "schemaVersion": 1,
+    "mode": "none",
+    "route": "none",
+    "rationale": "Intentionally dialogue-free performance for this story; dialogue is available, not compulsory.",
+    "voices": [],
+    "lines": []
+  },
   "framePlan": {
     "schemaVersion": 1,
     "fps": 30,

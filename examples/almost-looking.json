@@ -56,7 +56,7 @@
         "generateAudio": true,
         "videoCount": 1
       },
-      "prompt": "One uninterrupted photorealistic 10-second shot between these actual accepted start/end references, locked portrait camera, no internal cuts, morphs, dissolve, camera zoom or new scene. Preserve exact faces, ages, wardrobe, positions, props and soft contact shadows. Jiwon's small sideways glance establishes the question while Sora reads. Sora briefly looks up as Jiwon looks down, revealing mutual attention through timing. Their eyes briefly meet; a small caught reaction registers without big head turns. Both return their eyes to their books while trying to suppress a small smile. Natural small movements, restrained micro-expressions and plausible weight/contact, no exaggerated grin or new person. Broad soft late-afternoon window light from camera-left with a faint warm edge; neutral room bounce, readable eyes, steady soft contact shadows beneath hands/books. No exposure or time-of-day change. SOUND: Quiet library room tone, a very soft distant page movement and restrained natural cloth. No speech, voices, song, score, bass, swelling music or rhythmic bed. No subtitles, captions, logos, added text or decorative overlays. "
+      "prompt": "One uninterrupted photorealistic 10-second shot between these actual accepted start/end references, locked portrait camera, no internal cuts, morphs, dissolve, camera zoom or new scene. Preserve exact faces, ages, wardrobe, positions, props and soft contact shadows. Jiwon's small sideways glance establishes the question while Sora reads. Sora briefly looks up as Jiwon looks down, revealing mutual attention through timing. Their eyes briefly meet; a small caught reaction registers without big head turns. Both return their eyes to their books while trying to suppress a small smile. Natural small movements, restrained micro-expressions and plausible weight/contact, no exaggerated grin or new person. Broad soft late-afternoon window light from camera-left with a faint warm edge; neutral room bounce, readable eyes, steady soft contact shadows beneath hands/books. No exposure or time-of-day change. SOUND: Quiet library room tone, a very soft distant page movement and restrained natural cloth. No speech, voices, song, score, bass, swelling music or rhythmic bed. No subtitles, captions, logos, added text or decorative overlays.  Camera direction: 0-10s locked none, still, none; zoom none 1 to 1; focus fixed from Both expressions and the specific story prop/action, no gratuitous rack focus. to Both expressions and the specific story prop/action, no gratuitous rack focus.; anchor Both expressions and the specific story prop/action, no gratuitous rack focus.."
     }
   ],
   "hookPlan": {
@@ -243,6 +243,66 @@
     "Actual audio stream technically decodes",
     "No invented full playback/listening/phone/personal approval"
   ],
+  "cameraPlan": {
+    "schemaVersion": 1,
+    "shots": [
+      {
+        "shotId": "a",
+        "purpose": "Jiwon's small sideways glance establishes the question while Sora reads.",
+        "axis": "Sora: Screen-left. Jiwon: Screen-right.",
+        "height": "Retain the designed eye-level relationship and readable action.",
+        "angle": "Retain the approved angle and screen sides; no unplanned axis crossing.",
+        "lensIntent": "Natural perspective; keep the required faces and story prop legible.",
+        "executionRoute": "in-generation",
+        "controlMapping": "Canonical prompt instruction only; no invented model camera parameters.",
+        "fallback": "Keep the accepted framing; quote any necessary repair separately.",
+        "segments": [
+          {
+            "id": "a-camera",
+            "from": 0,
+            "to": 10,
+            "move": "locked",
+            "direction": "none",
+            "speed": "still",
+            "easing": "none",
+            "startFraming": "Medium seated two-shot at one library table, Sora LEFT reading her book; Jiwon RIGHT glances toward her with his chin barely turned. Both faces three-quarter visible, bodies separate and hands resting on their own books.",
+            "endFraming": "Medium seated two-shot at one library table, Sora LEFT reading her book; Jiwon RIGHT glances toward her with his chin barely turned. Both faces three-quarter visible, bodies separate and hands resting on their own books.",
+            "subjectAnchor": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+            "zoom": {
+              "mode": "none",
+              "from": 1,
+              "to": 1
+            },
+            "focus": {
+              "mode": "fixed",
+              "from": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+              "to": "Both expressions and the specific story prop/action, no gratuitous rack focus."
+            },
+            "parallax": "none",
+            "motivation": "Protect the performance and causal detail without an unmotivated reframe."
+          }
+        ],
+        "acceptance": [
+          "Inspect the entire shot, including its middle, for stable intended framing.",
+          "Faces, hands and the required story prop stay readable."
+        ],
+        "forbiddenArtifacts": [
+          "unplanned zoom or crop",
+          "axis jump",
+          "focus hunting",
+          "camera shake hiding action"
+        ]
+      }
+    ]
+  },
+  "dialoguePlan": {
+    "schemaVersion": 1,
+    "mode": "none",
+    "route": "none",
+    "rationale": "Intentionally dialogue-free performance for this story; dialogue is available, not compulsory.",
+    "voices": [],
+    "lines": []
+  },
   "framePlan": {
     "schemaVersion": 1,
     "fps": 30,

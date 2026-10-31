@@ -40,7 +40,7 @@ test('all local documentation links resolve and workflow reviewer dependencies a
 });
 
 test('read-only CLI entry points validate, rank, budget and resume project workflows', () => {
-  for (const args of [['validate'], ['rank', '3'], ['shortlist', '6'], ['budgets'], ['roadmap'], ['effects'],
+  for (const args of [['validate'], ['rank', '3'], ['shortlist', '6'], ['budgets'], ['roadmap'], ['effects'], ['cameras'],
     ['workflow', 'previsualize'], ['workflow', 'critic-loop'], ['workflow', 'reverse-engineer'],
     ['workflow', 'coordinated-production'], ['knowledge', 'heavy music scene emotion']]) {
     const result = spawnSync(process.execPath, [resolve(root, 'scripts', 'film.mjs'), ...args],
@@ -140,7 +140,7 @@ test('real CLI validates custom packets, rejects stale resumes and rolls failed 
   result = run('advance', path, 'characters-approved');
   assert.equal(result.status, 0, result.stderr);
   manifest = read(path);
-  manifest.productionDraft.shots[0].prompt = 'Synthetic changed direction.';
+  manifest.productionDraft.shots[0].prompt += ' Synthetic changed direction.';
   write(path, manifest);
   assert.match(run('status', path).stderr, /approval is stale/);
   assert.match(run('validate', path).stderr, /approval is stale/);

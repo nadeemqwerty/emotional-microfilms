@@ -29,3 +29,9 @@ result. Its limiter measures sample peak, not true-peak/loudness mastering;
 synthetic-tone tests do not establish singing, diction or listened-to sync.
 Assess the chosen genre's pleasure/anticipation/payoff with the entertainment
 analyst, without leading viewers or inventing a dopamine endpoint.
+
+For `dialoguePlan.mode:"spoken"`, require the additional `dialogue-performance`
+report: listen to every exact line, identify the actual speaker/voice/language,
+verify words, diction, emotional intent/subtext, pauses/breath and visible lip sync.
+Reject a child's voice/mouth substituting for an adult. ASR, stream presence and
+waveforms are supporting evidence, not proof of correct emotional performance.

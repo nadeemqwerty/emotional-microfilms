@@ -59,7 +59,7 @@
         "generateAudio": true,
         "videoCount": 1
       },
-      "prompt": "One continuous 10-second TRIPOD shot. Use the exact reference composition, framing, original fictional family, clothes, wooden table, crayon, paper and steady soft daylight. Everyone remains seated. Camera stays absolutely still at fixed focal length. 0-2 seconds: the TWO ADULTS briefly exchange a tense look and speak indistinctly in LOW voices to EACH OTHER, not to the child. Girl in mustard at CENTER notices and holds her blue crayon motionless over the paper, mouth CLOSED. 2-3 seconds: BOTH ADULTS stop, notice the paused child and turn eyes toward her; release their tense shoulders. 3-6.5 seconds: ONLY THE ADULT WOMAN ON THE LEFT IN SAGE GREEN speaks, using a gentle clearly ADULT FEMALE voice: 'We're sorry. This isn't your fault.' Synchronize ONLY THIS MOTHER'S LIPS to these words. Father RIGHT in blue and CHILD CENTER stay SILENT with mouths CLOSED. 6.5-10 seconds: mother finishes speaking, both parents stay calmly attentive to the child; the SILENT child resumes one small crayon stroke. A quiet repair, not sudden laughter. Child NEVER apologizes, talks, sings or mediates. Room tone, one faint crayon contact, no music, shouting or score. Preserve the still photo's original faces, hands, positions and believable paper contact. No walking, zoom, cuts, subtitles, camera movement, face morph or new person."
+      "prompt": "One continuous 10-second tripod shot using the exact original fictional family, composition, clothes, table, blue crayon and steady soft daylight. Everyone remains seated. 0-2s: adults exchange a tense look without intelligible speech; the girl in mustard at CENTER pauses her crayon, mouth closed. 2-4s: both adults notice her and relax their shoulders. 4-8s: ONLY Eunji, the ADULT WOMAN LEFT IN SAGE, gives the planned reassurance in a gentle clearly ADULT FEMALE voice; synchronize only her lips. Father RIGHT in blue and CHILD CENTER stay silent, mouths closed. 8-10s: mother stops; the child makes one small crayon stroke while both adults remain attentive. No laughter, shouting, music, singing, extra words, walking, cuts, subtitles, face morph or new person. Preserve faces, separate hands and paper contact. Camera direction: 0-10s locked none, still, none; zoom none 1 to 1; focus fixed from Both expressions and the specific story prop/action, no gratuitous rack focus. to Both expressions and the specific story prop/action, no gratuitous rack focus.; anchor Both expressions and the specific story prop/action, no gratuitous rack focus.. Dialogue direction: 4-8s Eunji says in English: \"We're sorry. This isn't your fault.\"; Gentle remorse settling into steady reassurance.; Soft, grounded and sincere, never a theatrical whisper.; Unhurried conversational delivery; finish within the planned four seconds.; One short natural pause after sorry; do not rush fault.. No extra words or speakers."
     }
   ],
   "hookPlan": {
@@ -246,6 +246,95 @@
     "Actual audio stream technically decodes",
     "No invented full playback/listening/phone/personal approval"
   ],
+  "cameraPlan": {
+    "schemaVersion": 1,
+    "shots": [
+      {
+        "shotId": "a",
+        "purpose": "The child's crayon visibly pauses while the adults exchange a brief tense look.",
+        "axis": "Eunji: Screen-left, seated behind the table. Taesung: Screen-right, seated behind the table. Yuna: Center foreground at the table, three-quarter face visible.",
+        "height": "Retain the designed eye-level relationship and readable action.",
+        "angle": "Retain the approved angle and screen sides; no unplanned axis crossing.",
+        "lensIntent": "Natural perspective; keep the required faces and story prop legible.",
+        "executionRoute": "in-generation",
+        "controlMapping": "Canonical prompt instruction only; no invented model camera parameters.",
+        "fallback": "Keep the accepted framing; quote any necessary repair separately.",
+        "segments": [
+          {
+            "id": "a-camera",
+            "from": 0,
+            "to": 10,
+            "move": "locked",
+            "direction": "none",
+            "speed": "still",
+            "easing": "none",
+            "startFraming": "Portrait medium-wide table three-shot, mother LEFT and father RIGHT behind the table, six-year-old child CENTER foreground three-quarter to camera. Adults look tensely toward each other, not yelling or threatening; child's blue crayon pauses above paper and the child looks toward them. All three faces and the crayon remain visible; all are already seated.",
+            "endFraming": "Portrait medium-wide table three-shot, mother LEFT and father RIGHT behind the table, six-year-old child CENTER foreground three-quarter to camera. Adults look tensely toward each other, not yelling or threatening; child's blue crayon pauses above paper and the child looks toward them. All three faces and the crayon remain visible; all are already seated.",
+            "subjectAnchor": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+            "zoom": {
+              "mode": "none",
+              "from": 1,
+              "to": 1
+            },
+            "focus": {
+              "mode": "fixed",
+              "from": "Both expressions and the specific story prop/action, no gratuitous rack focus.",
+              "to": "Both expressions and the specific story prop/action, no gratuitous rack focus."
+            },
+            "parallax": "none",
+            "motivation": "Protect the performance and causal detail without an unmotivated reframe."
+          }
+        ],
+        "acceptance": [
+          "Inspect the entire shot, including its middle, for stable intended framing.",
+          "Faces, hands and the required story prop stay readable."
+        ],
+        "forbiddenArtifacts": [
+          "unplanned zoom or crop",
+          "axis jump",
+          "focus hunting",
+          "camera shake hiding action"
+        ]
+      }
+    ]
+  },
+  "dialoguePlan": {
+    "schemaVersion": 1,
+    "mode": "spoken",
+    "route": "native",
+    "rationale": "A brief adult-owned reassurance supports the visible repair, not a narrated explanation.",
+    "voices": [
+      {
+        "identityId": "Eunji",
+        "language": "English",
+        "characterVoice": "Natural adult mother, intimate conversational register, restrained warmth.",
+        "rights": "Original fictional generic voice, no cloning or imitation; verify actual provider terms before release.",
+        "avoid": "No celebrity imitation, childlike voice, melodramatic sobbing or synthetic singsong."
+      }
+    ],
+    "lines": [
+      {
+        "id": "reassurance",
+        "shotId": "a",
+        "speakerId": "Eunji",
+        "from": 4,
+        "to": 8,
+        "text": "We're sorry. This isn't your fault.",
+        "emotion": "Gentle remorse settling into steady reassurance.",
+        "intent": "Take responsibility and help the child feel safe.",
+        "subtext": "The adults own their disagreement; the child does not have to repair it.",
+        "intensity": "low",
+        "delivery": "Soft, grounded and sincere, never a theatrical whisper.",
+        "pace": "Unhurried conversational delivery; finish within the planned four seconds.",
+        "pauses": "One short natural pause after sorry; do not rush fault.",
+        "breath": "Quiet settled breath, no sob, gasp or dramatic sigh.",
+        "pronunciation": "Clear natural English; preserve every word and contraction.",
+        "performance": "Mother looks toward the child, shoulders softened; father listens without mouthing the line.",
+        "lipSync": "visible",
+        "overlapAllowed": false
+      }
+    ]
+  },
   "framePlan": {
     "schemaVersion": 1,
     "fps": 30,

@@ -32,3 +32,16 @@ Deliver: coordinated emotional cue brief, baseline/candidate comparison plan,
 timecoded actual listening report, rights/source status and unresolved findings.
 Use `microfilm-song-adaptation` for songs/voices and music-pacing for temporal
 design; no universal key/BPM/instrument-to-emotion or dopamine promises.
+
+## Spoken emotional performance
+
+Fill `dialoguePlan` before creation, or explicitly select `mode:"none"` with a
+rationale. For speech specify the exact original line, visible/offscreen speaker,
+voice identity/language/rights, intention, subtext, emotion/intensity, delivery,
+pace, pauses, breath, pronunciation, body/eye performance and lip-sync window.
+No accidental overlap, undeclared background argument or child voicing an adult
+line. Native motion prompts must carry the canonical line and emotional direction;
+never invent a TTS/voice endpoint or clone a recognizable person.
+Review actual words, correct voice, intelligibility, emotional fit and lip sync
+under `dialogue-performance`, in addition to audio-scene-fit. ASR can assist
+word checking but cannot prove voice attribution, sincerity or natural delivery.

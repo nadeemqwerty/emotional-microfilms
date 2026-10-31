@@ -48,6 +48,7 @@ npm run film -- rank 6
 npm run film -- shortlist 6
 npm run film -- budgets
 npm run film -- effects
+npm run film -- cameras
 npm run film -- roadmap
 npm run film -- workflow previsualize
 npm run check
@@ -86,6 +87,11 @@ original age-appropriate characters, acting/emotion, camera, lighting/shadows,
 motion phases/physics/animation, effects, audio, transitions and acceptance.
 New preproduction and every paid preflight enforce this; bundle scripts resolve
 the shared requirements. Legacy media and approval history stay untouched.
+Canonical camera choreography now distinguishes physical moves, optical/digital
+zoom and focus changes. Spoken dialogue has per-speaker emotional delivery,
+timing and lip-sync requirements; dialogue-free remains an intentional option.
+The assembler implements bounded digital post crop/zoom/pan/tilt, not a physical
+dolly or voice synthesizer. Real playback/listening reviews remain mandatory.
 
 **Real character image -> personal or scoped delegated acceptance ->
 reference-guided scene images for all changes -> acceptance ->

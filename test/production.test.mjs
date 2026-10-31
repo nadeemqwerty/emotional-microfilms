@@ -60,6 +60,10 @@ test('bundle exports coordinated scripts, hash-verified media and honest unappro
   assert.equal(first.characters.length, manifest.productionDraft.characterPlan.requiredIdentities.length);
   assert.ok(first.motion.intermediateState && first.audio.palette && first.audio.role);
   assert.equal(first.audio.rights, manifest.productionDraft.soundPlan.rights);
+  assert.deepEqual(frames.cameraPlan, manifest.productionDraft.cameraPlan);
+  assert.deepEqual(frames.dialoguePlan, manifest.productionDraft.dialoguePlan);
+  assert.equal(first.cameraCues.length, 1);
+  assert.deepEqual(first.dialogueCues, []);
   const castScript = readJson(join(result.path, 'scripts', 'character-emotion.json'));
   assert.deepEqual(castScript.characterDesigns, frames.characterDesigns);
   assert.ok(first.effectCues[0].appearance && first.effectCues[0].lightMode);

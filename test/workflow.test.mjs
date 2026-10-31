@@ -69,6 +69,8 @@ test('coordinated direction covers all shots and blocks legacy packets at new de
   const legacy = workspace({stage: 'keyframes-approved'});
   delete legacy.productionDraft.direction;
   delete legacy.productionDraft.framePlan;
+  delete legacy.productionDraft.cameraPlan;
+  delete legacy.productionDraft.dialoguePlan;
   legacy.productionFingerprint = productionRevision(legacy);
   assert.equal(validateWorkspace(legacy, context), true, 'Historical workspaces remain readable.');
   assert.throws(() => stageReady(legacy, 'design-locked', context), /Coordinated direction/);

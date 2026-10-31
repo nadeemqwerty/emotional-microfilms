@@ -23,6 +23,13 @@ Inspect glitter, neon, butterfly dust and sakura/flower dust for material, scale
 density, emission/reflection and occlusion; a halo alone does not establish spill.
 Compare actual accepted images/motion to these requirements; prose is not proof.
 
+Inspect timed `cameraPlan`: motivation, path/direction, framing, axis, speed/
+easing, zoom type, focus and start/middle/end. Call out inherited editorial
+cutaways and unintended reframes; post zoom cannot restore cropped-off faces.
+For spoken dialogue inspect the intended speaker's eyes, body and mouth timing,
+but never infer heard words/voice/emotion from frames. A `camera-execution`
+pass requires actual full playback and timecoded segment findings.
+
 Check readable face/hand/prop relationships at phone size, screen geography,
 eyelines, action phase, prop owner/count, wardrobe and identity. Compare adjacent
 frames and declared cut invariants. Is light motivated and direction consistent?

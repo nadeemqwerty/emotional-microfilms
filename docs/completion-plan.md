@@ -689,3 +689,91 @@ committed coordinated-production baseline; unrelated transcription/reverse-
 engineering changes remain excluded. Actual effect demonstrations, capable
 playback/listening, phone/enjoyment review and personal final acceptance remain
 separate production gates. No paid call, upload or publication occurred here.
+
+## 10. Camera choreography, emotional dialogue and bounded production proof
+
+User-directed extension: implement camera plays/movement/zoom and emotional
+dialogue, then perform a real production test. Typed fields alone do not close
+the production requirement.
+
+| Change | Why / required result |
+|---|---|
+| Canonical `cameraPlan` | Time movement, axis/framing, direction, speed/easing, zoom type and focus for every shot. Distinguish physical travel/parallax from optical zoom or a digital crop; require feasibility, fallback and observable acceptance |
+| Canonical `dialoguePlan` | Explicit no-dialogue or original exact lines, voice/speaker/language, emotion/intensity, intent/subtext, delivery, pace, pauses/breath, pronunciation, body/gaze performance and visible/offscreen lip sync |
+| Creation/prompt/export binding | Require both plans before new creation; resolve overlapping cues into frame scripts and share motion/camera/edit/audio exports. Native prompts carry the canonical instructions; disabled exposed native audio blocks spoken dialogue |
+| Bounded post renderer | Actual digital zoom/pan/tilt, with easing/crop protection, source-shot binding and review-only explicit legacy mappings. Not a physical camera, optical lens, rack-focus or voice synthesizer |
+| Actual review gates | Camera changes require `camera-execution`; spoken lines require listened `dialogue-performance`. Full playback, every planned segment/line, timecoded findings and no unresolved failures. Samples, ASR, preserved audio and successful encoding do not grant these passes |
+
+Updated root instructions, studio/cinematography/production/sound skills, visual/
+sound reviewer roles and canonical workflow/film-language/audio/bundle/coverage
+docs. All eight current examples have intentional camera/dialogue plans; legacy
+inspection remains possible without retrospective media acceptance.
+
+### Real evidence and retained failure
+
+Created non-destructive camera review variants from existing Quiet Crayon footage:
+
+- **v002: sampled framing FAIL.** The inherited editorial child cutaway excludes
+  most adult faces, contradicting the proposed all-faces requirement. Retained
+  the video and failure receipt; a subtle crop cannot repair missing source faces.
+- **v003: technical proof and sampled framing only.** Used the continuous wide
+  source instead: hold 0-2s, digital push 1.00 to 1.08 during 2-8s, tighter hold
+  8-10s. Actual 1080x1920, 30fps, 10 seconds/300 decoded frames; no detected
+  black interval, encoded audio payload unchanged, original manifest unchanged.
+  Five viewed frames at 0/3/5/7/9.9s retain all three faces and blue crayon.
+  This does not certify full motion, mother-to-child gaze, emotional speech,
+  lip sync, physical dolly/parallax, phone playback or personal final approval.
+
+Private media and receipts are under `outputs\the-quiet-crayon\v002` and `v003`.
+The original Korean cast, original film and active manifest were not recast.
+
+### Approved next test and actual blocker
+
+The user explicitly selected the Quiet Crayon test only, English dialogue,
+delegated agent creative review and a **1,000-credit total ceiling**. The latest
+approved casting is an original fair-complexioned Indian family, classic
+cinematic glamour and an athletic young-adult male inspiration, not celebrity
+replicas. The child remains naturally age-appropriate. Approved maximum outputs:
+**one cast reference, up to two scene references and one video attempt**.
+No automatic retries, publication or fabricated personal acceptance.
+
+Prepared and validated the separate private packet/authorization in
+`workspace\the-quiet-crayon-camera-test`: Ananya33, Arjun35 and Diya6, the
+planned camera hold/push/hold and mother's original reassurance at 4-8s.
+This is a plan, not actual casting or a new spoken take. The motion prompt is
+within the conservative 2,000-character ceiling. Scene endpoints require the
+genuine newly accepted cast and stable table/axis/light; no old reference ID is
+silently reused for the Indian cast.
+
+Initial OpenArt live discovery failed with OAuth HTTP 401. The user confirmed
+reconnection; subsequent OpenArt discovery returned no tools. No fresh quote,
+upload or new paid generation was submitted; this session's new spend is zero.
+Resume through available official tools only: refresh live model/form/account/
+job/quote data, claim the separate test workspace, inspect the real cast before
+dependent scenes, bind accepted endpoints and submit at most the approved take.
+Actual full playback/listening, camera/per-line emotional/lip-sync review and
+user final acceptance remain **BLOCKED/PENDING**, not silently complete.
+
+### Software verification and source scope
+
+The shared working tree passed syntax checks, project validation (45 scenarios,
+eight packets), whitespace checks and **95 tests, zero failures/skips**, with
+existing real FFmpeg enabled. This includes concurrent narrative-format and
+reference-audio tests; those implementations are not this session's work.
+Focused regressions cover camera timing/type/zoom/focus contradictions, dialogue
+speaker/timing/emotion/visibility/overlap, disabled native audio, legacy versus
+new-creation gates, source-shot binding/legacy preview mapping, omitted post
+camera shots, stale approvals and rejection of sampled/meter-only evidence.
+A real synthetic pixel-area test verifies actual zoom enlargement and duration/
+frame count, not just encoder exit status.
+
+The separately restored session-only source also passed syntax checks, project
+validation and **88 tests, zero failures/skips**, with real FFmpeg enabled.
+It excludes concurrent narrative-format/reference-audio implementations and
+retains the original Afternoon Again story plus this session's camera/dialogue
+addition. The live working tree's newer story remains untouched.
+
+Commit only this session's delta. Preserve concurrent Afternoon Again story/
+format/reference work and transcription/reverse changes; verify an isolated
+exact source snapshot before pushing. Source tests and source persistence are
+not proof that the blocked new camera/dialogue film was generated or accepted.

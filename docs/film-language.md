@@ -68,6 +68,58 @@ the meaning, it follows the reveal and remains visible long enough to understand
 Other lanes need readable payoff exposure and a justified ending rhythm, not a
 compulsory response/hold. See [pacing.md](pacing.md).
 
+## Camera choreography
+
+`cameraPlan` is the canonical per-shot camera score. Inspect available planning
+options with `film cameras`. One motivated movement can enrich a film; movement
+is not a requirement for every shot or a substitute for performance.
+
+| Choice | What actually changes | Acceptance risk |
+|---|---|---|
+| Locked | Deliberate fixed viewpoint; an expressive hold can be the right choice | Unrequested model zoom/reframe or focus hunting, especially mid-shot |
+| Pan / tilt | Rotation left/right or up/down from a position | Cropped reveal, lost eyes/hands, confusing screen direction |
+| Dolly / truck / pedestal | Physical forward/back, lateral or vertical travel | Perspective/parallax, collision, axis and contact inconsistency |
+| Orbit / crane | Motivated arc or elevated spatial reveal | Unstable geography, excessive complexity, newly exposed missing geometry |
+| Handheld / gimbal follow | Deliberate supported following or controlled handheld energy | Shake hiding action, mismatched subject/camera travel |
+| Optical zoom | Planned optical field-of-view change, not camera translation | Claimed lens behavior unsupported by model/editor; no automatic dolly parallax |
+| Digital zoom / pan / tilt | Post crop within existing pixels | Resolution loss and clipped faces/props; no recovered offscreen information |
+| Rack / tracking focus | Attention across depth planes or a maintained moving target | Lost expressions, false blur, no actual depth information in a flat crop |
+
+Whip pans, reveals and crash zooms are deliberate speed/framing choices with
+settled endpoints, not extra magic API fields. A dolly zoom is an explicitly
+motivated compound movement, not an accidental mixture of contradictory terms.
+Camera speed/easing does not retime acting or audio.
+
+Each shot declares purpose, axis, height/angle/lens intent, execution route,
+actual control mapping, fallback and acceptance/forbidden artifacts. Its
+segments cover the exact shot with stable IDs, `from/to`, movement/direction,
+speed/easing, start/end framing, anchor, zoom mode/magnification and focus
+mode/targets. Physical travel declares expected parallax; rotations and crops
+do not pretend to create it. All canonical cues resolve onto delivery frames.
+Use `cameraInstruction(packet, shotId)` in the exact in-generation prompt.
+This binds intention, not a guarantee of provider compliance. Refresh live
+forms; do not invent `camera`, `zoom`, lens or tracking fields in a provider API.
+
+The local assembler implements digital post crop, zoom, pan and tilt only.
+Reference a canonical `post` camera shot with `edit.clips[].cameraShotId`.
+One continuous crop segment per clip is currently supported; split more complex
+edits explicitly. `zoom.mode:"digital"` uses relative factors >=1; pan/tilt
+needs overscan/crop margin and normalized `cropPosition.from/to` in [0,1] across
+the available crop space. Easing is linear, ease-in, ease-out or smooth
+ease-in-out. Output duration/FPS and audio timing stay unchanged.
+Post cannot synthesize dolly/parallax, optical zoom or rack focus.
+
+An alternate `edit.cameraPlan` is allowed for unapproved review only; masters
+must match the approved production plan and bind the actual source shot.
+Legacy source mappings need explicit review-only evidence, never automatic
+new acceptance. Existing editorial cutaways may already remove required faces:
+inspect actual source frames before adding another crop.
+
+Camera/focus changes require `camera-execution`: full playback, all planned
+shot/segment IDs, actual timecodes and observations that movement, framing,
+focus and continuity match, with no unresolved failures. Geometry/pixel tests
+and selected stills help diagnose but cannot grant that perceptual pass.
+
 ## Sound is part of the shot design
 
 Choose sound source, perspective and transition while storyboarding. A continuous
